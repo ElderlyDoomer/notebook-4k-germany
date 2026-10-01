@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkbook-16-g8-21sk0083ge
+Откуда: Icecat Lenovo 21SK0083GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21SK0083GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/3b9ab2660eaf5129af1ced8f31491563532c82f5.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/4f076aa5245c8817ac77e908b506058174659ec7.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/31037c0e475f4a99f8a4d734cf94b35eb788bf36.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/971b513d5b090f0ea83d6adc86c5d07aa2180cdd.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/79587cbcfe001947d923fd8f5e8845ebbd057193.jpg

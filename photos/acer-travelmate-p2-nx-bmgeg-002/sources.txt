@@ -1,0 +1,10 @@
+Ноутбук: acer-travelmate-p2-nx-bmgeg-002
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/9423dc6d41c1b99b2672e98ba9f16a8123aadca2.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/c0651a935a5eed2ed899a39287a97bedf5150d07.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/7eafe9c32a97bd70acd6733184229891e1c5701a.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/4fde5127951b3844f2d91139820ea63f058e6554.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/dcf375bb0a8e61804169b677ac23e88b1dc70ac8.jpg
+Источник: Icecat Acer NX.BLPEG.002 (TravelMate P2 TMP215-75-G2-TCO-54C5) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.BLPEG.002
+Фото модели/корпуса, не точного P/N: NX.BMGEG.002 (TMP215-75-G2-TCO-789W) нет в Icecat (проверены NX.BMGEG.001–030 и TMP215-75-G2-TCO-789W), acer.com не отвечает на curl, Chrome-расширение не подключено; снимки — тот же корпус TravelMate P2 15 TMP215-75-G2 (другая комплектация, Core Ultra 5 125H)

@@ -1,0 +1,8 @@
+Ноутбук: medion-sprchrgd-16-s1-30040202
+Откуда: Icecat Medion 30040202 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Medion&ProductCode=30040202
+
+01.jpg ← https://images.icecat.biz/img/gallery/dd1d223ad40211899b274400037c46e45c614025.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/f949ef5ddf68fdc064935e66b8f4686917d29b44.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/34ba8a92604ab0d3863d420206d7353fdf393623.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/de518b4ecf41f276a95e01467294ca7d841554ce.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/c1c98156e06a38ea0427a50ff89ed7624cb1a99a.jpg

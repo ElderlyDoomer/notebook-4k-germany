@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkpad-e16-g4-21y4006cge
+Откуда: Icecat Lenovo 21Y4006CGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21Y4006CGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/55f18db4fca9484befb02492b585db6cbdf04baf.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/677dc68be43838645229f98874b64141ac04cf01.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/de4c18a882afab6b059fb25eb5998ae3880e648c.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/86843f3581033646017b27d831af3dc908b33f19.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/975ddeb8e46a7f305304316698aa8306f457bd89.jpg

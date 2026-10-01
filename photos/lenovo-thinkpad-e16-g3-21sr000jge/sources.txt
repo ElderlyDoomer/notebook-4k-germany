@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkpad-e16-g3-21sr000jge
+Откуда: Icecat Lenovo 21SR000JGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21SR000JGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/9e328478a0635c162ff139e1b5ca97b4e1e2ccd6.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/a9fd08594dd33e4f9a4cf85553da189881de1ce4.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/c099361e1eb7ee6fea8f8d51a035c36f3b6cd36c.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c198f6db25610a181d868b9aca00cc9d94452c61.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/05bfb8ac1e8142404436e035ebd982abe115c440.jpg

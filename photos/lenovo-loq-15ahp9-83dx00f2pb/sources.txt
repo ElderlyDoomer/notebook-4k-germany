@@ -1,0 +1,10 @@
+Ноутбук: lenovo-loq-15ahp9-83dx00f2pb
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/4ce1e45e8b61913df0117e1d627ceb22a7fdf5c8.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/d6dd28132f58271556aaf28e1ccf29a1a28d9344.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/ad9b5c9677dbc7ed5f9f340e2d8a3a06d1f7da2c.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/f251d187a9dca7bcc33456bfdd7ba38742fe395d.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/37cd8b4c0d733ac1ca9578f8756da5bb55e63d60.jpg
+Источник: галерея Icecat Lenovo 83DX0046GE (LOQ 15AHP9, серый) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83DX0046GE (та же галерея у 83DX0048GE)
+Фото модели/корпуса, не точного P/N: 83DX00F2PB в Icecat нет; взяты фото соседнего SKU той же машины 83DX (LOQ 15AHP9, 15,6", серый корпус Luna Grey).

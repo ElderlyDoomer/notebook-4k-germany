@@ -1,0 +1,8 @@
+Ноутбук: hp-omnibook-7-16-bm9t4ea
+Откуда: Icecat HP BM9T4EA — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=BM9T4EA
+
+01.jpg ← https://images.icecat.biz/img/gallery/f1f2ffbcd5ee5d3d678dc475460c5cd70f50ea9f.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/31027700357717e7f147d60d3ecb9bd8b0ffd797.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/fe5bc6fa36b00cacfda1b31085e3dc57f3da9b12.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c06aa288f3aefc24dde7e6419c4de908a9a96fce.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/c7d074c6fa86f0df58bcfa713d901d339a673190.jpg

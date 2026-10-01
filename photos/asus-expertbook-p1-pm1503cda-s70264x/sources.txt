@@ -1,0 +1,8 @@
+Ноутбук: asus-expertbook-p1-pm1503cda-s70264x
+Откуда: Icecat ASUS 90NX09D1-M00A70 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NX09D1-M00A70
+
+01.jpg ← https://images.icecat.biz/img/gallery/c3cdea2716576f44455e94ba2bc5400351482f14.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/bc7b7c8232b53337a541412d09a3844a0b8d1c21.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/f04c497378ac31323358b1a93de2002cabe26191.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/aedba47b74c3ed85527b9648c95f5716e3f3747e.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/b1ccf7b89970bb6e82bd9c6f0e860aabc6d27a2c.jpg

@@ -1,0 +1,8 @@
+Ноутбук: acer-aspire-go-15-nx-jrreg-00b
+Откуда: Icecat Acer NX.JRREG.00B — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JRREG.00B
+
+01.jpg ← https://images.icecat.biz/img/gallery/31357cfdcb7820ec5f19c5eafb9c8325fadf7646.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/56b6df67a4fff4f6e1d18c362ba9e5005039a2fa.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/5a53c6255394aba14180a981b60aa4a319b2e9da.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/20acd2a7ba09fef6f6941632e5cd3272e63cf0c6.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/2c9f97a6235eec312261ab983f8d7ddfcd87e989.jpg

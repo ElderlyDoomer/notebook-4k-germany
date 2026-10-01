@@ -1,0 +1,9 @@
+Ноутбук: msi-cyborg-15-b2rwfkg-068
+Откуда: Icecat MSI Cyborg 15 B2RWFKG-020UK — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=MSI&ProductCode=Cyborg+15+B2RWFKG-020UK
+
+01.jpg ← https://images.icecat.biz/img/gallery/082c806734142d9bffeb9728533fb71d9aa10927.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/00679737d5015e6abd66f68fd22899e1cb48f772.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/4e57561ecf426153e02795ab626933e84e0d10ac.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/fc4028bc61d97eca9a9156479a6511efc3cfbe34.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/7efd4107dc0cddde5235e29b3e6c9b5e3f2c02e5.jpg
+Фото модели/корпуса, не точного P/N: в Icecat нет B2RWFKG-068 (ни по коду, ни по EAN 4711377366502); снимки — Icecat соседнего SKU Cyborg 15 B2RWFKG-020UK (тот же корпус Cyborg 15 B2RW, RTX 5060; раскладка UK, у нашего — QWERTZ)

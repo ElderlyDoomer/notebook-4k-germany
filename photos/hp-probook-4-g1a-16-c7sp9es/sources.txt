@@ -1,0 +1,10 @@
+Ноутбук: hp-probook-4-g1a-16-c7sp9es
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/c8dc97691cc45307d0d53cafa71706eabef2cd3f.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/cee6d1a29a5d5f090219fa311ca7d88bb7fdaf76.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/2860a47f263a04d5ebff285f6ae8ad75e5bae8ee.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c50b10cdb92681243a91cfde0e0c3333b8fd7ba5.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/1439e984d288e9984d4ac0a44c55cb08a5559cb4.jpg
+Источник: галерея Icecat HP AD2N2ET (ProBook 4 G1a AI PC 16", Ryzen 7 250, серебристый) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=AD2N2ET
+Фото модели/корпуса, не точного P/N: C7SP9ES (и C7SP9ES#ABD) в Icecat нет; взяты фото соседнего SKU AD2N2ET — тот же корпус HP ProBook 4 G1a 16" (у SKU этой модели в Icecat — C65TTES, C65TVES, C65T9ES, AD2N2ET — цвет серебристый; цвет именно C7SP9ES не сверялся).

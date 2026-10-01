@@ -1,0 +1,7 @@
+Ноутбук: acer-aspire-15-nx-jcjeg-00t
+Откуда: Icecat Acer NX.JCJEG.00T — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JCJEG.00T
+
+01.jpg ← https://images.icecat.biz/img/gallery/8ed11a74243c2ad585f41f6c6b7e0aabd6eb1e2a.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/303165631d834489835d37ba9a93ad7012bc40cd.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/bd9534232a5e8a837dabad048c9d5c9acd582f2e.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/ae63d2de19d2cdc8ef01adf8184e7dc3d9ecded5.jpg

@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16imh10-83v70037ge
+Откуда: ссылки вручную
+
+01.jpg ← https://psref.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_Slim_5_16IMH10/IdeaPad_Slim_5_16IMH10_CT1_01.png
+02.jpg ← https://psref.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_Slim_5_16IMH10/IdeaPad_Slim_5_16IMH10_CT2_01.png
+03.jpg ← https://psref.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_Slim_5_16IMH10/IdeaPad_Slim_5_16IMH10_CT2_03.png
+04.jpg ← https://psref.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_Slim_5_16IMH10/IdeaPad_Slim_5_16IMH10_CT2_02.png
+Фото модели/корпуса, не точного P/N: снимки платформы IdeaPad Slim 5 16IMH10 из Lenovo PSREF в цвете Cosmic Blue — цвет 83V70037GE по PSREF (https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83V70037GE&country_code=DE, «Case color - Cosmic Blue»); отдельных фото P/N нет ни в Icecat (P/N и EAN 199274493059 — 404), ни на idealo (карточки нет).

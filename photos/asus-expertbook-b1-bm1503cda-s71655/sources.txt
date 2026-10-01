@@ -1,0 +1,9 @@
+Ноутбук: asus-expertbook-b1-bm1503cda-s71655
+Откуда: Icecat ASUS 90NX0821-M01U90 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NX0821-M01U90
+
+01.jpg ← https://images.icecat.biz/img/gallery/56a6d8f48d72b5f31869807c5b233956eec01698.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/684ff3050c67b63a5ef6f57a9d5a46519fb96be7.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a1dbc9ff7b49628a6a28b1b896bf2e0a09316c13.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/fbdf8269ad2f0718817405c36cd664dc854b4ac5.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/d2f3379a1372d55073cf7625d5d3f579379473f8.jpg
+90NX0821-M01U90 — Icecat-заголовок «ASUS ExpertBook BM1 BM1503CDA-S71655 AMD Ryzen 7 170»

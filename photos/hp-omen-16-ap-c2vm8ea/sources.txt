@@ -1,0 +1,8 @@
+Ноутбук: hp-omen-16-ap-c2vm8ea
+Откуда: Icecat HP C2VM8EA — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=C2VM8EA
+
+01.jpg ← https://images.icecat.biz/img/gallery/cd66585edb2ceb8f30b235d27a2379a06b6c9362.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/b8f0311c4523729d6b0d3ec1e56676e23a7cfb3f.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/bf4b656bc88fc797bc9c1144cb1cd0002bec5a4b.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c55b40aa38f98f9925b9d5a0c765411e0cdb852a.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/55c1016ba0e3907aeb757b73cb31497aea6e4a48.jpg

@@ -1,0 +1,8 @@
+Ноутбук: acer-travelmate-p2-nx-bmceg-001
+Откуда: Icecat Acer NX.BMCEG.001 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.BMCEG.001
+
+01.jpg ← https://images.icecat.biz/img/gallery/c0651a935a5eed2ed899a39287a97bedf5150d07.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/d232313c43f99badab1860b2f720a9b4a56001f7.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/9423dc6d41c1b99b2672e98ba9f16a8123aadca2.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/dc4ecf78cce617056debc5139d99ffbfa3541c81.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/7eafe9c32a97bd70acd6733184229891e1c5701a.jpg

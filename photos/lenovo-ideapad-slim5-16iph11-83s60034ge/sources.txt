@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16iph11-83s60034ge
+Откуда: Icecat Lenovo 83S60034GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83S60034GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/c48cd3d9afcbbb48c85f2ad0fba0d0719d0e690e.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/3f95c0a6cb5dc5d0c3529003bbd196ebae16d220.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/f73d2967c5f2903bb6a152a68d9d42ba7d5cefd9.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/7388084ddda3d73c4a9ec347e2220c21019302e8.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/5139ea31afb1b11a992cd67e2f9291d2d99893b2.jpg

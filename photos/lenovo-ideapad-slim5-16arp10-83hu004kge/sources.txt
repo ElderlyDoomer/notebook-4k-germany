@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16arp10-83hu004kge
+Откуда: Icecat Lenovo 83HU004KGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83HU004KGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/4fb19adfef1bdc3c70444d24f4033788120b7290.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/c12f8136a60fd719f2aa34d454586e86f93f37bf.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a16e8b263c8d269b2597c113396d2414075e6525.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/0155552b03b1c461522c7e3910b9f03e4e7f8b5f.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/6ae7ba6bd1e7fd2628a92134ae67d0b9e8833225.jpg

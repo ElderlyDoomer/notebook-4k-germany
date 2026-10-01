@@ -1,0 +1,98 @@
+{
+ "update": {
+  "hp-elitebook-860-g11-9g0a4et": {
+   "model": "EliteBook 840 G11 14\" (155H) — в данных раньше ошибочно «860 G11»",
+   "fails": [
+    "memory",
+    "size",
+    "screen"
+   ],
+   "fail_notes": "P/N 9G0A4ET — EliteBook 840 G11 14\" (Ultra 7 155H, 32 ГБ, 1 ТБ), а не 860 G11 16\": так по HP PartSurfer (https://partsurfer.hp.com/partsurfer/?searchtext=9G0A4ET) и Icecat (https://live.icecat.biz/api?UserName=openIcecat-live&Language=en&Brand=HP&ProductCode=9G0A4ET); предложение на idealo тоже «EliteBook 840 G11 14\"». Не проходит: 14\", 1×32 (idealo), экран 14\" WUXGA 300 нит 45 % NTSC (BOM PartSurfer, QuickSpecs 840 G11 — https://www8.hp.com/h20195/V2/GetPDF.aspx/c08880575). HEVC по QuickSpecs 840 G11 поддерживается («Hardware Acceleration HEVC (H.265) CODEC is supported»).",
+   "screen": {
+    "size_in": 14,
+    "panel": "IPS",
+    "resolution": "1920×1200",
+    "nits": 300,
+    "gamut_spec": "45 % NTSC (QuickSpecs 840 G11, BOM N95485-001)",
+    "ok": false,
+    "source": "https://partsurfer.hp.com/partsurfer/?searchtext=9G0A4ET; https://www8.hp.com/h20195/V2/GetPDF.aspx/c08880575"
+   }
+  },
+  "medion-erazer-scout-e1-30039767": {
+   "model": "Erazer Scout 15 E1 (i5-13420H + RTX 5050)",
+   "fails": [
+    "memory"
+   ],
+   "fail_notes": "2×8 DDR5. Размер 15,6\" — по сервису Medion этот MSN 30039767 — «ERAZER Scout 15 E1 (MD 62766)», Clevo V255RNM, 15,6\" FHD non-glare (https://service.medion.com/de/product-detail/30039767); прежняя пометка «по geizhals это Scout 17 E1, 17,3\"» — ошибка geizhals.",
+   "screen": {
+    "size_in": 15.6,
+    "panel": "IPS",
+    "resolution": "1920×1080",
+    "srgb_measured": 58.4,
+    "gamut_spec": "не опубликован; 58,4 % sRGB — замер NBC у сестры Deputy 15 P1 (тот же 15\" Clevo)",
+    "ok": false,
+    "source": "https://service.medion.com/de/product-detail/30039767; https://www.notebookcheck.net/Medion-Erazer-Deputy-15-P1-review-Can-a-German-budget-gaming-laptop-compete-with-the-big-players.1232764.0.html"
+   }
+  },
+  "msi-venture-a16-ai-a3hmg-036": {
+   "fail_notes": "2×8, 512 ГБ — не проходит по памяти (с двумя планками 16 ГБ и SSD 1 ТБ — 1355,11 €, выше потолка). Экран — 16\" OLED 2048×1280 120 Гц, матовый, 100 % DCI-P3 (heise/geizhals; NBC — OLED 2048×1280 120 Гц у A3HMG).",
+   "screen": {
+    "size_in": 16,
+    "panel": "OLED",
+    "resolution": "2048×1280",
+    "hz": 120,
+    "gamut_spec": "100 % DCI-P3 (heise/geizhals); замера нет",
+    "ok": true,
+    "source": "https://preisvergleich.heise.de/msi-venture-a16-ai-a3hmg-036-00261k-036-a3523303.html; https://www.notebookcheck.net/MSI-Venture-A16-AI-A3HMG.1076671.0.html"
+   }
+  },
+  "asus-vivobook-16-oled-m1605naq": {
+   "fails": [
+    "memory",
+    "screen"
+   ],
+   "fail_notes": "8 ГБ распаяно + слот, максимум 24 ГБ — 32 ГБ невозможно. Несмотря на «OLED» в названии серии, у M1605NAQ панель IPS-level 300 нит 45 % NTSC (asus.com техспека M1605, столбец M1605NAQ; testbericht.de MB007W).",
+   "screen": {
+    "panel": "IPS",
+    "nits": 300,
+    "gamut_spec": "45 % NTSC (asus.com)",
+    "ok": false,
+    "source": "https://www.asus.com/de/laptops/for-home/vivobook/asus-vivobook-16-oled-m1605/techspec/; https://www.testbericht.de/produkte/asus-vivobook-16-oled-m1605naq-mb007w"
+   }
+  },
+  "hp-envy-x360-16-ad0177ng": {
+   "model": "Envy x360 16-ad0177ng (Ryzen 7 8840HS)",
+   "branch": "AMD",
+   "fail_notes": "16 ГБ LPDDR5 распаяно, слотов нет — 32 ГБ невозможно (NBC). 2,8K OLED. Раньше в данных ошибочно стоял Core Ultra 7 155H: 16-ad0177ng = Ryzen 7 8840HS / 1 ТБ (Icecat A4CM9EA, PartSurfer «MOTHERBOARD UMA R7 8840HS»), а 155U — у 16-ac0177ng.",
+   "cpu": {
+    "name": "Ryzen 7 8840HS",
+    "codename": "Hawk Point (Zen 4)",
+    "cores_threads": "8/16",
+    "tdp_w": 28,
+    "r23_single": null,
+    "cb2024_multi": null,
+    "cb2024_single": null,
+    "gb6_multi": null,
+    "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=A4CM9EA; https://www.notebookcheck.net/AMD-Ryzen-7-8840HS-Processor-Benchmarks-and-Specs.780985.0.html",
+    "note": null
+   },
+   "gpu": {
+    "name": "AMD Radeon 780M",
+    "type": "iGPU",
+    "steel_nomad_light": null,
+    "puget_resolve": null,
+    "puget_premiere": null,
+    "source": "https://www.notebookcheck.net/AMD-Radeon-780M-GPU-Benchmarks-and-Specs.680539.0.html; AMD/notes/perf-tables.md §2",
+    "note": null
+   },
+   "codecs": {
+    "hevc_422_decode": false,
+    "h264_422_decode": false,
+    "av1_encode": true,
+    "av1_decode": true,
+    "note": "AMD VCN 4.0.x: все кодеки только 4:2:0 («All codecs are 4:2:0»); AV1 — декод и кодирование",
+    "source": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support; сводка AMD/notes/perf-tables.md §4"
+   }
+  }
+ }
+}

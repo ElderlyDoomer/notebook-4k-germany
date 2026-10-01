@@ -1,0 +1,8 @@
+Ноутбук: asus-vivobook-16-m1607ga-mb020w
+Откуда: Icecat ASUS M1607GA-MB020W — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=M1607GA-MB020W
+
+01.jpg ← https://images.icecat.biz/img/gallery/53d4552b8df7c58a2e389338a363368756adb641.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/9d55f56517210a10eb32c8b2d9e3b5da6981e95b.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/e9e54eb3ba46378fe8a81077e21e9eda8dd71651.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c407ebf866a124f7a819307f42be99c922a3ee57.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/925f9d7ae90bc9f01d0750931329364f192e6436.jpg

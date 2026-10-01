@@ -1,0 +1,109 @@
+{
+ "_note": "Текстовые правки после ревью страницы 01.10.2026 (днём): «срок возврата» при покупке в магазине, битый источник FINAL-REPORT.v3.md. Применяется последним.",
+ "update": {
+  "acer-travelmate-p2-nx-bmgeg-002": {
+   "reliability": {
+    "model_issues": "лабораторных обзоров TMP215-75-G2 не нашёл (у NBC в списке ноутбуков с Ultra 7 155H его нет); риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет); 1×32 ГБ — одноканал до докупки второй планки"
+   }
+  },
+  "acer-aspire-go-16-nx-jtgeg-00p": {
+   "reliability": {
+    "model_issues": "корпус AG16-71P: шум под нагрузкой 46 дБ (overclockers.ua, версия i5); риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет); «Ethernet: Ja» в Icecat — ошибка, в даташите Acer RJ45 нет (Intel/notes/verify-acer-aspire.md)"
+   }
+  },
+  "acer-aspire-go-15-nx-jrreg-00b": {
+   "reliability": {
+    "model_issues": "AG15-72P: CHOICE — корпус гнётся, нет подсветки (по сниппету, страница за пейволлом); LaptopsExplained — шум вентилятора под нагрузкой (по сниппету); риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет)"
+   }
+  },
+  "acer-aspire-go-16-nx-js9eg-00a": {
+   "reliability": {
+    "model_issues": "корпус AG16-71P: от розетки 68 Вт при блоке 65 Вт, 46 дБ под нагрузкой (overclockers.ua, версия i5); покупатель LDLC (i9) — вентилятор шумноват; риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет)"
+   }
+  },
+  "acer-travelmate-p4-16-59mm": {
+   "reliability": {
+    "model_issues": "лабораторных обзоров TMP416-53 не нашёл (у NBC в списке ноутбуков с Ultra 5 125U его нет); у предшественника TMP416-51 NBC отмечал просадку частот под длительной нагрузкой; риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет)"
+   }
+  },
+  "acer-nitro-v15-anv15-52-74jq": {
+   "reliability": {
+    "model_issues": "NBC (ANV15-52-50S2, тот же корпус): пластиковый корпус с заметным прогибом местами, петли «a little loose», эпизодический троттлинг SSD, 48–54 дБ(A) под нагрузкой, на весах 2,096 кг; память DDR4; риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет); по NVDEC сообщений нет — проверять и декодер NVIDIA (Intel/notes/hevc-audit.md)"
+   }
+  },
+  "acer-aspire-16-ai-a16-61m-r4je": {
+   "reliability": {
+    "model_issues": "TechRadar (AI 7 350): «somewhat flimsy», прогиб корпуса, петля не самая устойчивая; Trusted Reviews: «generic» корпус, слабая автономность; тема Acer Community про «LCD» в BIOS у OLED — не дефект; риск: с 22.06.2026 часть устройств Acer в DE идёт «ohne HEVC-Codec» (программный кодек, по заявлению Acer) — проверить DXVA Checker в первый день (при покупке онлайн — в 14 дней на отказ; в магазине законного отказа нет); 32 ГБ LPDDR5X распаяны (NBC); P/N NX.JP0EG.00J: Cyberport — «R4JE», Icecat — «R583»"
+   }
+  },
+  "acer-aspire-16-ai-r2r1": {
+   "pros": [
+    "процессор вдвое сильнее R1FY (R23 16 014), графика в 3,3 раза (860M)",
+    "2× USB4, HDMI 2.1, microSD",
+    "массовый аккумулятор и OLED-матрица в продаже",
+    "при покупке онлайн переводом (computeruniverse, 1081,21 €) — 14 дней на отказ, у computeruniverse 30; в MEDIMAX Nettetal за наличные законного отказа нет"
+   ]
+  },
+  "acer-swift-air-16-r1fy": {
+   "sources": [
+    {
+     "title": "idealo NX.DL5EG.002",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211778543_-swift-air-16-oled-16-wuxga-amd-ryzen-ai-5-32gb-1tb-ssd-silber-nx-dl5eg-002-acer.html"
+    },
+    {
+     "title": "expert — карточка",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html"
+    },
+    {
+     "title": "FAQ expert (резерв, оплата в рынке)",
+     "url": "https://www.expert.de/nuernberg1/Footer/Service/Fragen-Antworten"
+    },
+    {
+     "title": "LaptopMedia DE — обзор Swift Air 16",
+     "url": "https://laptopmedia.com/de/review/acer-swift-air-16-sfa16-61m-review-a-16-inch-laptop-that-weighs-under-1-kg/"
+    },
+    {
+     "title": "Icecat NX.DL5EG.002",
+     "url": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.DL5EG.002"
+    },
+    {
+     "title": "NBC Ryzen AI 5 330",
+     "url": "https://www.notebookcheck.net/AMD-Ryzen-AI-5-330-Processor-Benchmarks-and-Specs.1049553.0.html"
+    },
+    {
+     "title": "NBC Radeon 820M",
+     "url": "https://www.notebookcheck.net/AMD-Radeon-820M-Benchmarks-and-Specs.1059782.0.html"
+    },
+    {
+     "title": "ChannelPartner — Acer без HEVC-кодека",
+     "url": "https://www.channelpartner.de/article/4187748/acer-und-asus-liefern-wieder.html"
+    },
+    {
+     "title": "Microsoft Store — HEVC-расширение 0 €",
+     "url": "https://apps.microsoft.com/detail/9N4WGH0Z6VHQ"
+    },
+    {
+     "title": "REPORT.md",
+     "url": "REPORT.md"
+    },
+    {
+     "title": "screen-verify-1.md",
+     "url": "AMD/notes/screen-verify-1.md"
+    },
+    {
+     "title": "expert Schmalkalden — R1FY 959,14 €",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=32354099"
+    },
+    {
+     "title": "store-availability.md — все 319 рынков",
+     "url": "AMD/notes/store-availability.md"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  }
+ },
+ "criteria_text": "Жёсткие критерии: новый, итог ≤ 1100 € с докупкой, оплата наличными, 15–16\", полный sRGB, 32 ГБ в двухканале, 1 ТБ, CPU для 4K. Данные — REPORT.md и заметки веток Intel/AMD."
+}

@@ -1,0 +1,9 @@
+Ноутбук: asus-expertbook-b1-bm1503cda-s72123
+Откуда: asus.com — страница серии https://www.asus.com/de/laptops/for-work/expertbook/asus-expertbook-bm1-bm1503/ (schema.org image)
+
+01.jpg ← https://dlcdnwebimgs.asus.com/gain/022d2c6c-3857-4d2b-a5a9-9deac4250356/
+02.jpg ← https://dlcdnwebimgs.asus.com/gain/aa3eaab9-f010-4e1d-b5bf-14f32629ac91/
+03.jpg ← https://dlcdnwebimgs.asus.com/gain/70ebe6f0-6810-46f7-ac83-aaeb6b87547e/
+04.jpg ← https://dlcdnwebimgs.asus.com/gain/2abbe0ed-e064-42a8-b429-0b2d5fc6adcc/
+05.jpg ← https://dlcdnwebimgs.asus.com/gain/3c540703-6131-49c4-8f58-beb4ad3b8870/
+Фото модели/корпуса, не точного P/N: в Icecat нет BM1503CDA-S72123 и 90NX0821-M02BX0; снимки — официальная галерея ASUS ExpertBook BM1 (BM1503), тот же корпус 15,6", цвет Gentle Grey — как у BM1503CDA с Ryzen 7 170 в карточках billiger.de (https://www.billiger.de/search?searchstring=BM1503CDA-S72123); у серии есть ещё Modern Black

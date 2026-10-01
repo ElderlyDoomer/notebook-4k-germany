@@ -1,0 +1,9 @@
+Ноутбук: hp-255r-g10-cu0r1es
+Откуда: Icecat HP CJ5Q2EA (255R G10, Turbo silver) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=CJ5Q2EA
+
+01.jpg ← https://images.icecat.biz/img/gallery/0d65856d093a3d07463ee383128027dff927fb8b.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/609e2540f5931d4d5b2b2f79cf8906292d4a869f.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/af0b4b180d3d8cfdd4133de65338278510bf73f8.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/e4c8558c96996d59a9c0d1236e8bdef16c49f5f8.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/8a985a1a6c68d25330a589fe6df10bcaa803c6a7.jpg
+Фото модели/корпуса, не точного P/N: в Icecat нет CU0R1ES (и CU0R1ES#ABD); снимки — Icecat соседнего SKU HP 255R G10 CJ5Q2EA (тот же корпус 15,6", цвет Turbo silver); цвет самого CU0R1ES не проверен (idealo/HP PartSurfer без браузера не открылись; у серии есть ещё Dark Ash Silver)

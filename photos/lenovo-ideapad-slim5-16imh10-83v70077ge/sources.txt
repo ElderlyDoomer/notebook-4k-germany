@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16imh10-83v70077ge
+Откуда: Icecat Lenovo 83V70077GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83V70077GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/20b1bb639c77d1b5faaf4bccf8c294207c5e1bf7.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/5fc7a877e1322b3c7f965570d4529d879bd68ed4.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/dadb16165c21053c7dcb5f78ff838460c8da795d.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/5fffbab065d63076d535e555b9e120d923bc5db4.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/a1415ff1d887de23a1c4ab41141ba4d2d7ebde86.jpg

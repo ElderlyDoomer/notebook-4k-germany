@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkbook-16-g9-ipl-21ur005age
+Откуда: Icecat Lenovo 21UR005AGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21UR005AGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/cb4c6c789fd85ee5b8aedfa1254c73a7caec1675.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/608701f009d7169c52bb3eb52ff0a264b9e0a26f.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a65ecbeb315798c9b0a356803086d759f0e7ee57.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/419b7b9ecc422969defa4203531ae94a5434e1dc.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/7b22f61bf9dca3739bad71498f8ce03f866bb80c.jpg

@@ -1,0 +1,8 @@
+Ноутбук: acer-aspire-go-15-nx-j4geg-00d
+Откуда: Icecat Acer NX.J4GEG.00D — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.J4GEG.00D
+
+01.jpg ← https://images.icecat.biz/img/gallery/18697a4f52dc71c965af02d74727b6a6dbab0941.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/56de4ec7205f5e6632a92d78f3f208955065a6bb.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/0b410691813fc176f80743028d6b2da09a526daf.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/6fc11568d6237fee18b5afe9d549d9ffc9efc151.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/45deb7cbacd164653c6b6d2c0f160db5a084ecb2.jpg

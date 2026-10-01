@@ -1,0 +1,8 @@
+Ноутбук: lenovo-v15-g6-arp-83uu001lge
+Откуда: Icecat Lenovo 83UU001LGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83UU001LGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/4076c69bf5184784dc12ff9ea30e920c5eb6f9fc.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/8c541eaaf6e814be97d127a0b9adfaffe9cd71d9.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/5b37e8be5d3554b463d81adf6f17618d9e570101.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/13bc2cf40f9ea6126709eb6205e906fa52ec9f3e.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/49d1cb1302f92ed9061c9167067e44c542c5181e.jpg

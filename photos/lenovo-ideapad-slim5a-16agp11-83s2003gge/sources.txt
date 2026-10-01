@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5a-16agp11-83s2003gge
+Откуда: Icecat Lenovo 83S2003GGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83S2003GGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/b37cb23570a341541eb16d60d5b9c95ba15257ef.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/18b9b4ce3f902c6762a69a2a939afffc6e8313c0.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/3497a67dc7984646a25d0c139e2b291cdb22d04d.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c27a3114c50ff53f3c72734ae640f653907e7d83.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/8f8c6dc52041e24dabfeab2f1dc611f6370c97c7.jpg

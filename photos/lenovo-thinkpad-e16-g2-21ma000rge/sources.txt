@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkpad-e16-g2-21ma000rge
+Откуда: Icecat Lenovo 21MA000RGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21MA000RGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/d18838d32e0e5952582fdfbfc0b0573ee6fef725.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/de676aca063e2dcec401a4a8021aaad22b1aa870.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/1ad1e9f83434de078080c004d133e62d272be77e.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/4b0db4d071b179e9acfbd34827ace9affa21d221.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f455c035cffd582870cb72f1168cc997998603cf.jpg

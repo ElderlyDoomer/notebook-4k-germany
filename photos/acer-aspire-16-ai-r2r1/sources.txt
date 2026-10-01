@@ -1,0 +1,8 @@
+Ноутбук: acer-aspire-16-ai-r2r1
+Откуда: Icecat Acer NX.JP0EG.00Z — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JP0EG.00Z
+
+01.jpg ← https://images.icecat.biz/img/gallery/e3c6da7caf707b89288c89464dab5acbb20448a0.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/13ebd75cb13bb4590ea3ebc26013a0800c1355c8.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a8b9f808849fa9b26ef8057fabee6f6ddc5f3998.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/2c6a080f2cb024e0fdb34418be628fbff210f44d.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/82a783e34814c14c3f4504155c4aaa84a729e91b.jpg

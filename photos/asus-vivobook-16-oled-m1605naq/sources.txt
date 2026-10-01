@@ -1,0 +1,9 @@
+Ноутбук: asus-vivobook-16-oled-m1605naq
+Откуда: asus.com — страница серии https://www.asus.com/de/laptops/for-home/vivobook/asus-vivobook-16-oled-m1605/ (schema.org image, цвет Indie Black)
+
+01.jpg ← https://dlcdnwebimgs.asus.com/gain/4bf85876-8373-43ff-9cda-303c1c63deca/
+02.jpg ← https://dlcdnwebimgs.asus.com/gain/4c6f02ac-e245-4b28-8e7e-d24986655eea/
+03.jpg ← https://dlcdnwebimgs.asus.com/gain/e292ca8b-8f83-4876-8244-dc25dad3c83a/
+04.jpg ← https://dlcdnwebimgs.asus.com/gain/09ce63ad-de83-477b-92f5-f1ded67397d0/
+05.jpg ← https://dlcdnwebimgs.asus.com/gain/78ca60b8-98f9-4664-bbfd-266123cc4571/
+Фото модели/корпуса, не точного P/N: в Icecat нет M1605NAQ-MB007W/-MB226W/-MB029W; снимки — официальная галерея ASUS Vivobook 16 OLED (M1605), тот же корпус 16", цвет Indie Black — как у M1605NAQ-MB007W на фото товара https://www.testbericht.de/produkte/asus-vivobook-16-oled-m1605naq-mb007w

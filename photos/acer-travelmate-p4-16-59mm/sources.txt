@@ -1,0 +1,8 @@
+Ноутбук: acer-travelmate-p4-16-59mm
+Откуда: Icecat Acer NX.B9BEG.001 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.B9BEG.001
+
+01.jpg ← https://images.icecat.biz/img/gallery/2472aeda99496e073fd1eebc8375e4c77f9f5fc5.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/ab27864499ccefc5d9ab1a9231e6ce84fd4c1cbe.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/619e624eade347ea85b1e7b15667130c632e0d4f.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/e66e786236b96c4fcb4970093776807be1edc5a1.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/2feae1585aa5475a744ecc991efc80725b7c7245.jpg

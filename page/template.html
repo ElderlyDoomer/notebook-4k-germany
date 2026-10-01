@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Ноутбук для 4K-монтажа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Apple-style: SF system font, grouped backgrounds, semantic labels, one accent (link blue) */
+:root{
+  --bg:#F5F5F7; --surface:#FFFFFF; --surface-2:#FAFAFC; --fill:#E8E8ED; --ink:#1D1D1F; --muted:#6E6E73; --tertiary:#86868B; --line:rgba(0,0,0,.1);
+  --accent:#0071E3; --link:#0066CC; --accent-ink:#FFFFFF; --accent-soft:rgba(0,113,227,.1);
+  --ok:#1F7A35; --ok-soft:rgba(52,199,89,.14); --warn:#B25000; --warn-soft:rgba(255,149,0,.16); --bad:#D70015; --bad-soft:rgba(255,59,48,.12);
+  --ring-track:#E8E8ED; --glass:rgba(251,251,253,.8); --shadow:0 2px 12px rgba(0,0,0,.06); --tile:#F5F5F7; --photo:#FFFFFF;
+  --f-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Helvetica Neue",Arial,sans-serif;
+  --f-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"SF Mono",ui-monospace,Menlo,"JetBrains Mono",Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#000000; --surface:#1C1C1E; --surface-2:#2C2C2E; --fill:#3A3A3C; --ink:#F5F5F7; --muted:#A1A1A6; --tertiary:#8E8E93; --line:rgba(255,255,255,.12);
+    --accent:#0A84FF; --link:#2997FF; --accent-ink:#FFFFFF; --accent-soft:rgba(10,132,255,.18);
+    --ok:#30D158; --ok-soft:rgba(48,209,88,.16); --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.16); --bad:#FF6961; --bad-soft:rgba(255,69,58,.16);
+    --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#000000; --surface:#1C1C1E; --surface-2:#2C2C2E; --fill:#3A3A3C; --ink:#F5F5F7; --muted:#A1A1A6; --tertiary:#8E8E93; --line:rgba(255,255,255,.12);
+  --accent:#0A84FF; --link:#2997FF; --accent-ink:#FFFFFF; --accent-soft:rgba(10,132,255,.18);
+  --ok:#30D158; --ok-soft:rgba(48,209,88,.16); --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.16); --bad:#FF6961; --bad-soft:rgba(255,69,58,.16);
+  --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+@media (max-width:600px){html{scroll-padding-top:104px}}
+body{background:var(--bg);color:var(--ink);font:17px/1.47 var(--f-body);letter-spacing:-.022em;margin:0;-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:none} a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:1024px;margin:0 auto;padding-inline:22px;padding-block:0 80px}
+header.top{padding-block:56px 8px;text-align:center;display:grid;gap:10px;justify-items:center}
+.eyebrow{font:600 14px/1.3 var(--f-body);letter-spacing:-.01em;color:var(--warn)}
+h1{font:600 clamp(34px,6.4vw,56px)/1.07 var(--f-display);letter-spacing:-.028em;margin:0;text-wrap:balance}
+.lede{color:var(--muted);font-size:clamp(17px,2.2vw,21px);line-height:1.4;max-width:34em;margin:4px 0 0;text-wrap:balance}
+h2{font:600 clamp(26px,3.6vw,34px)/1.12 var(--f-display);letter-spacing:-.022em;margin:0 0 14px;text-wrap:balance}
+h3{font:600 19px/1.25 var(--f-display);letter-spacing:-.018em;margin:0}
+.mono{font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.num{font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+section.block{margin-top:64px}
+section.block > .sub-lede{color:var(--muted);margin:-6px 0 18px;max-width:40em}
+.panel{background:var(--surface);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+
+/* verdict */
+.verdict{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.pickcard{background:var(--surface);border-radius:18px;padding:22px;box-shadow:var(--shadow);display:grid;grid-row:span 8;grid-template-rows:subgrid;gap:8px;align-content:start}
+.pickcard .points > span::before{content:"✓ ";color:var(--ok);font-weight:600}
+.pickcard .hero-ph{display:block}
+.pickcard .links{margin-top:auto;padding-top:6px}
+.pickcard .role{font:600 13px/1 var(--f-body);color:var(--warn)}
+.pickcard.main .role{color:var(--accent)}
+.pickcard .name{font:600 24px/1.15 var(--f-display);letter-spacing:-.02em}
+.pickcard .price{font:600 28px/1.1 var(--f-display);letter-spacing:-.02em}
+.pickcard .how{font-size:14px;color:var(--muted)}
+.pickcard .points{font-size:15px;color:var(--ink);display:grid;gap:4px;margin:4px 0}
+.more-link{font-size:15px}
+.more-link::after{content:" ›"}
+.note{background:var(--surface);border-radius:18px;padding:18px 22px;margin-top:16px;box-shadow:var(--shadow);font-size:16px}
+.note b{color:var(--warn)}
+
+/* what-if */
+.whatif{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.wi{background:var(--surface);border-radius:18px;padding:18px;box-shadow:var(--shadow);display:grid;gap:6px;align-content:start}
+.wi .cond{font:600 13px/1.3 var(--f-body);color:var(--muted)}
+.wi .m{font:600 17px/1.25 var(--f-body)}
+.wi .p{font:600 21px/1.1 var(--f-display);letter-spacing:-.02em}
+.wi .d{font-size:14px;color:var(--muted)}
+
+/* controls */
+.controls{display:grid;gap:20px}
+.ctl-row{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:flex-end}
+.ctl-row > .ctl{flex:1 1 160px}
+.ctl-row > .ctl:has(.seg){flex:0 0 auto}
+.ctl-row > .ctl:has(#sort){flex:1.5 1 230px}
+.ctl-row > .ctl select,.ctl-row > .ctl input[type=search],.ctl-row > .ctl input[type=range]{width:100%}
+.ctl-row + .ctl-row{margin-top:16px}
+.ctl{display:grid;gap:7px;min-width:0;max-width:100%;grid-template-columns:minmax(0,1fr)}
+.ctl select{max-width:100%;text-overflow:ellipsis}
+#codec,#refsel{width:min(100%,560px)}
+.ctl label,.ctl .lab{font:600 13px/1.2 var(--f-body);color:var(--muted);letter-spacing:-.01em}
+select,input[type="search"]{font:400 16px/1.2 var(--f-body);letter-spacing:-.01em;color:var(--ink);background:var(--fill);border:0;border-radius:10px;padding:9px 12px;min-height:38px;max-width:100%;appearance:none}
+select{padding-right:30px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 16px) 55%,calc(100% - 11px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+input[type="range"]{accent-color:var(--accent);width:180px;max-width:100%}
+.seg{display:inline-grid;grid-auto-flow:column;grid-auto-columns:auto;background:var(--fill);border-radius:10px;padding:2px;gap:2px}
+.seg button{font:500 15px/1 var(--f-body);letter-spacing:-.01em;color:var(--ink);background:transparent;border:0;border-radius:8px;padding:9px 14px;min-height:34px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.12),0 0 0 .5px rgba(0,0,0,.04);font-weight:600}
+.sw{display:inline-flex;gap:12px;align-items:center;cursor:pointer;font-size:16px;min-height:44px}
+.sw input{appearance:none;width:51px;height:31px;border-radius:999px;background:var(--fill);position:relative;flex:none;cursor:pointer;transition:background .2s;margin:0}
+.sw input::after{content:"";position:absolute;top:2px;left:2px;width:27px;height:27px;border-radius:50%;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.15),0 1px 1px rgba(0,0,0,.16);transition:transform .2s}
+.sw input:checked{background:#34C759} .sw input:checked::after{transform:translateX(20px)}
+.weights{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px 22px;margin-top:6px}
+.weights output{font:600 13px var(--f-body);color:var(--ink)}
+details.more > summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;font-weight:600;color:var(--link);min-height:32px}
+details.more > summary::after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+details.more[open] > summary::after{transform:rotate(-135deg) translate(-2px,-1px)}
+details > summary::-webkit-details-marker{display:none}
+
+/* sticky local nav (glass only on the floating bar) */
+.strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);margin-inline:-22px;padding:10px 22px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:40px}
+@media (prefers-reduced-transparency: reduce){.strip{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}}
+.strip .count{font:600 15px var(--f-body)}
+.strip .spacer{flex:1}
+.btn{font:400 15px/1 var(--f-body);letter-spacing:-.01em;background:transparent;color:var(--link);border:0;border-radius:980px;padding:9px 14px;min-height:36px;cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:disabled{opacity:.4;cursor:default}
+
+/* cards */
+.list{display:grid;gap:12px;margin-top:18px}
+.card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.card.fail .c-name,.card.fail .c-price .v{color:var(--muted)}
+.card > summary{cursor:pointer;list-style:none;padding:18px 20px;display:grid;grid-template-columns:auto 1fr auto 12px;gap:10px 16px;align-items:center}
+.card[open] > summary{border-bottom:1px solid var(--line)}
+.ring{width:54px;height:54px;flex:none;display:block}
+.thumb{width:84px;height:64px;border-radius:12px;background:var(--photo);object-fit:contain;padding:4px;display:block;flex:none}
+.c-lead{display:flex;gap:12px;align-items:center}
+.pickcard .hero{width:100%;aspect-ratio:4/3;max-width:100%;object-fit:contain;background:var(--photo);border-radius:14px;padding:10px;margin-bottom:6px}
+.gallery{display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;scroll-snap-type:x mandatory}
+.gallery button{flex:none;border:0;padding:0;background:var(--photo);border-radius:14px;cursor:zoom-in;scroll-snap-align:start}
+.gallery img{display:block;height:150px;width:auto;max-width:240px;object-fit:contain;padding:8px;border-radius:14px}
+.nophoto{display:grid;place-items:center;width:84px;height:64px;border-radius:12px;background:var(--fill);color:var(--tertiary);font-size:11px;text-align:center;flex:none}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1100px,96vw);max-height:92vh}
+dialog.lb::backdrop{background:rgba(0,0,0,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+dialog.lb img{display:block;max-width:min(1100px,96vw);max-height:82vh;background:var(--photo);border-radius:18px;padding:16px;object-fit:contain}
+dialog.lb .bar{display:flex;gap:10px;justify-content:center;align-items:center;margin-top:12px;color:#f5f5f7;font-size:15px}
+dialog.lb .bar button{font:500 15px var(--f-body);background:rgba(255,255,255,.16);color:#fff;border:0;border-radius:980px;padding:9px 16px;cursor:pointer;min-height:40px}
+.ring text{font:600 13px var(--f-body);letter-spacing:-.01em;fill:var(--ink)}
+.ring .lbl{font:500 8px var(--f-body);fill:var(--muted)}
+.c-title{display:grid;gap:3px;min-width:0}
+.c-name{font:600 19px/1.2 var(--f-display);letter-spacing:-.02em;overflow-wrap:anywhere}
+.c-pn{font-size:13px;color:var(--muted);overflow-wrap:anywhere;letter-spacing:-.005em}
+.c-price{text-align:right;display:grid;gap:3px;justify-items:end}
+.c-price .v{font:600 21px/1 var(--f-display);letter-spacing:-.02em}
+.c-price .s{font-size:12.5px;color:var(--muted);max-width:30ch;text-align:right}
+.c-meta .cmp{margin-left:auto}
+.c-meta{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:5px;font:500 12.5px/1 var(--f-body);letter-spacing:-.005em;padding:6px 10px;border-radius:999px;background:var(--fill);color:var(--ink);white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)} .pill.acc{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.meters{grid-column:1 / -1;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px 18px}
+.meter{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;font-size:12.5px;color:var(--muted)}
+.meter .track{height:5px;background:var(--ring-track);border-radius:3px;position:relative;overflow:hidden}
+.meter .fill{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px}
+.meter .val{font:600 12.5px var(--f-body);color:var(--ink);font-variant-numeric:tabular-nums}
+.cmp{display:inline-flex;gap:6px;align-items:center;font-size:13px;color:var(--link);cursor:pointer}
+.cmp input{accent-color:var(--accent);width:16px;height:16px}
+.chev{width:9px;height:9px;border-right:2px solid var(--tertiary);border-bottom:2px solid var(--tertiary);transform:rotate(45deg);justify-self:end;transition:transform .2s;grid-column:4;grid-row:1}
+.card[open] .chev{transform:rotate(-135deg)}
+.c-body{padding:20px;display:grid;gap:22px}
+.c-grid{columns:2 360px;column-gap:36px}
+.c-grid > div{break-inside:avoid;margin-bottom:24px}
+.c-grid.bal{columns:auto;display:flex;gap:36px;align-items:flex-start}
+.c-grid.bal > .col{flex:1 1 0;min-width:0;display:grid;gap:26px;align-content:start}
+.c-grid.bal > .col > div{margin:0}
+.c-body .sub{font:600 17px/1.3 var(--f-display);color:var(--ink);letter-spacing:-.016em;margin:0 0 6px}
+.c-grid.two{columns:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px 36px}
+.c-grid.two > div{margin:0}
+.scores{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.tile{background:var(--tile);border-radius:14px;padding:12px 12px 11px;display:grid;gap:6px;align-content:start;min-width:0}
+.tile .t{font:500 13px/1.2 var(--f-body);color:var(--muted);overflow-wrap:normal;hyphens:manual}
+.tile .n{font:600 26px/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tile .n small{font:500 13px var(--f-body);color:var(--tertiary);letter-spacing:0}
+.tile .track{height:4px;background:color-mix(in srgb,var(--ink) 12%,transparent);border-radius:2px;overflow:hidden}
+.tile .track i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.tile.avg{background:var(--accent-soft)} .tile.avg .n{color:var(--link)} .tile.avg .t{color:var(--link)}
+.tile.na .n{color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;font-size:15px;margin-top:2px}
+.facts b{font-weight:600}
+.facts .muted{font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.chips .pill{white-space:normal;line-height:1.25}
+details.how{margin-top:2px}
+details.how > summary{cursor:pointer;list-style:none;font-size:14px;color:var(--link);display:inline-flex;gap:6px;align-items:center;min-height:32px}
+details.how > summary::after{content:"";width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+details.how[open] > summary::after{transform:rotate(-135deg) translate(-1px,-1px)}
+details.how p{font-size:14px;color:var(--muted);margin:6px 0 0}
+.clamp2,.clamp3,.clamp4{display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.clamp4{-webkit-line-clamp:4;line-clamp:4} .clamp4.open{display:block;-webkit-line-clamp:unset;line-clamp:none}
+.more-btn{border:0;background:none;padding:4px 0 0;font:500 13.5px var(--f-body);color:var(--link);cursor:pointer;min-height:28px}
+.clamp2{-webkit-line-clamp:2;line-clamp:2} .clamp3{-webkit-line-clamp:3;line-clamp:3}
+.wi-none{font-size:14px;color:var(--muted);margin:12px 2px 0}
+.checklist{background:none;box-shadow:none;overflow:visible;border-radius:0}
+.ck-head{font:600 19px/1.3 var(--f-display);letter-spacing:-.016em;margin:22px 4px 10px}
+.ck-head:first-child{margin-top:0}
+.ck-card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.checklist .ck-note{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+.kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:0;font-size:15px;margin:0}
+.kv dt{padding-right:14px;overflow-wrap:break-word}
+@media (max-width:600px){.kv{grid-template-columns:minmax(0,40%) minmax(0,1fr)}}
+.kv dt,.kv dd{padding:7px 0;border-bottom:1px solid var(--line)}
+.kv dt{color:var(--muted)} .kv dd{margin:0;overflow-wrap:anywhere}
+.sub{font:600 13px/1 var(--f-body);color:var(--muted);margin:0 0 6px;letter-spacing:-.005em}
+ul.tight{margin:0;padding-left:20px;font-size:15px} ul.tight li{margin:3px 0}
+.src{font-size:14px}
+.why{background:var(--bad-soft);border-radius:12px;padding:12px 14px;font-size:15px}
+
+/* tables (compare page) */
+html{overflow-x:clip}
+.tablewrap{overflow-x:auto;background:var(--surface);border-radius:18px;box-shadow:var(--shadow)}
+.tablewrap.wide{width:min(1400px,calc(100vw - 64px));position:relative;left:50%;transform:translateX(-50%)}
+@media (max-width:1100px){.tablewrap.wide{width:auto;left:auto;transform:none}}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{padding:11px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;white-space:nowrap}
+td.tw{white-space:normal;min-width:130px}
+#cashtable{font-size:14px}
+#cashtable th,#cashtable td{padding:10px 11px}
+#cashtable td.tw{min-width:104px}
+#cashtable td.tw:first-child{min-width:150px}
+table[data-fixed]{table-layout:fixed}
+table[data-fixed] td,table[data-fixed] th{white-space:normal;overflow-wrap:anywhere;min-width:0!important;max-width:none!important}
+th .grip{position:absolute;top:0;right:-5px;width:11px;height:100%;cursor:col-resize;z-index:3;touch-action:none}
+th:last-child .grip{right:0;width:8px}
+th:last-child .grip::after{left:6px}
+th .grip::after{content:"";position:absolute;top:20%;bottom:20%;left:5px;width:1px;background:var(--line);transition:background .15s}
+th:hover .grip::after{background:var(--tertiary)}
+th .grip:hover::after,body.resizing th .grip::after{background:var(--accent);width:2px;left:4px}
+body.resizing{cursor:col-resize;user-select:none;-webkit-user-select:none}
+.hint{font-size:13px;color:var(--muted);margin:8px 2px 0}
+th{font:600 12.5px/1.25 var(--f-body);color:var(--muted);background:var(--surface);position:sticky;top:0;cursor:pointer;user-select:none;letter-spacing:-.005em}
+#cmptable th{font:600 16px/1.2 var(--f-display);color:var(--ink);cursor:default;white-space:normal;min-width:180px}
+th[aria-sort="descending"]::after{content:" ↓";color:var(--accent)} th[aria-sort="ascending"]::after{content:" ↑";color:var(--accent)}
+td.num{text-align:right;font-variant-numeric:tabular-nums}
+#reftable td{white-space:nowrap;font-size:13.5px}
+#reftable td:first-child{min-width:150px;max-width:240px;white-space:normal;font-weight:500}
+#reftable td:not(.num):not(:first-child){white-space:normal;min-width:120px;max-width:280px}
+#reftable code{font-size:12px}
+tr.dim td{color:var(--muted)}
+#perftable td:first-child{white-space:normal;min-width:220px;max-width:300px}
+#perftable td:nth-child(8){white-space:normal;min-width:120px;max-width:170px}
+#perftable tr>:first-child,#cmptable tr>:first-child{position:sticky;left:0;z-index:2;background:var(--surface)}
+#perftable th:first-child,#cmptable th:first-child{z-index:4}
+#cmptable{table-layout:fixed;min-width:600px;width:100%}
+#cmptable td,#cmptable th{white-space:normal;min-width:0}
+#cmptable tr>:first-child{width:160px}
+#cmptable td.num{text-align:left}
+tbody tr:last-child td{border-bottom:0}
+.best{font-weight:700;color:var(--ok)}
+
+/* brands, checklist, glossary */
+.brands{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.brands details + details{border-top:1px solid var(--line)}
+.brands summary{padding:16px 20px;cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(120px,170px) 1fr 12px;gap:12px 18px;align-items:center;font:600 17px/1.2 var(--f-body)}
+.brands summary .muted{font-size:14px;line-height:1.35}
+.brands summary::after{content:"";width:8px;height:8px;border-right:2px solid var(--tertiary);border-bottom:2px solid var(--tertiary);transform:rotate(-45deg);transition:transform .2s}
+.brands details[open] summary::after{transform:rotate(45deg)}
+.brands .b-body{padding:0 20px 16px}
+.codecgrid{display:grid;gap:10px}
+.checklist{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
+.checklist label{display:flex;gap:14px;align-items:flex-start;padding:14px 20px;cursor:pointer;font-size:16px}
+.checklist label + label{border-top:1px solid var(--line)}
+.checklist input{appearance:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--tertiary);flex:none;margin:1px 0 0;cursor:pointer;display:grid;place-content:center}
+.checklist input:checked{background:#34C759;border-color:#34C759}
+.checklist input:checked::after{content:"";width:6px;height:11px;border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(45deg) translate(-1px,-1px)}
+.checklist input:checked + span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tertiary)}
+.gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.gloss div{background:var(--surface);border-radius:18px;padding:18px;box-shadow:var(--shadow);font-size:15px;color:var(--muted)}
+.gloss b{display:block;margin-bottom:4px;color:var(--ink);font:600 17px/1.25 var(--f-body)}
+#compare[hidden]{display:none}
+.empty{padding:28px;text-align:center;color:var(--muted);background:var(--surface);border-radius:18px}
+footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;border-top:1px solid var(--line);padding-top:18px}
+@media (max-width:600px){
+  #cashtable,#cashtable tbody,#cashtable tr,#cashtable td{display:block;width:auto!important}
+  #cashtable thead{display:none}
+  #cashtable tr{padding:12px 0;border-bottom:1px solid var(--line)}
+  #cashtable tr:last-child{border-bottom:0}
+  #cashtable td{border:0;padding:4px 16px;min-width:0!important;white-space:normal}
+  #cashtable td::before{content:attr(data-label);display:block;font:600 12px/1.3 var(--f-body);color:var(--muted);margin-bottom:2px}
+  #cashtable td:first-child::before{display:none}
+  #cashtable td:first-child{font-size:16px;padding-top:6px}
+  body{font-size:16px}
+  .wrap{padding-inline:16px} .strip{margin-inline:-16px;padding-inline:16px}
+  header.top{padding-block:36px 4px}
+  .card > summary{grid-template-columns:1fr;padding:16px}
+  .thumb,.nophoto{width:112px;height:80px}
+  .c-price{grid-column:1 / -1;justify-items:start;text-align:left} .c-price .s{text-align:left;max-width:none}
+  .scores{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .ctl-row > .ctl:has(#budget),.ctl-row > .ctl:has(.seg){flex:1 1 100%}
+  .seg{display:grid;width:100%;grid-auto-columns:1fr} .seg button{white-space:normal;padding:8px 6px;font-size:14px;line-height:1.15}
+  .meters{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+  .meter{grid-template-columns:1fr auto;row-gap:4px} .meter .track{grid-column:1/-1;grid-row:2}
+  .pickcard .hero{aspect-ratio:16/9;max-height:170px}
+  #mktable,#mktable tbody,#mktable tr,#mktable td{display:block;width:auto!important}
+  #mktable thead{display:none}
+  #mktable tr{padding:10px 14px;border-bottom:1px solid var(--line)}
+  #mktable td{border:0;padding:2px 0;text-align:left}
+  #mktable td::before{content:attr(data-label) ": ";color:var(--muted);font-size:13px}
+  .chev{display:none}
+  input[type="range"]{width:100%}
+  .panel{padding:18px}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow" id="stamp">Германия · до 1100 € · монтаж 4K</span>
+    <h1>Ноутбук для 4K-монтажа.</h1>
+    <p class="lede">Intel и AMD, проверенные по даташитам и ценам idealo. Требования: экран с полным sRGB, оплата наличными, 32 ГБ в двухканале, 1 ТБ, не дороже 1100 €. Проходят все — только три ноутбука, они в «Итоге».</p>
+  </header>
+
+  <section class="block" aria-labelledby="h-verdict">
+    <h2 id="h-verdict">Итог.</h2>
+    <div class="verdict" id="verdict"></div>
+    <div class="note" id="verdict-note" hidden></div>
+  </section>
+
+  <section class="block" aria-labelledby="h-whatif">
+    <h2 id="h-whatif">Что если ослабить один критерий.</h2>
+    <p class="sub-lede">Лучший ноутбук, который не проходит ровно один жёсткий критерий. Так видно, чем приходится платить за каждое требование.</p>
+    <div class="whatif" id="whatif"></div>
+    <p class="wi-none" id="whatif-none" hidden></p>
+  </section>
+
+  <section class="block" aria-labelledby="h-filters">
+    <h2 id="h-filters">Подберите под себя.</h2>
+    <div class="panel controls">
+      <div class="ctl-row">
+        <div class="ctl"><span class="lab">Оплата</span>
+          <div class="seg" role="group" aria-label="Способ оплаты" id="pay">
+            <button type="button" data-v="cash" aria-pressed="true">Наличные</button>
+            <button type="button" data-v="transfer" aria-pressed="false">Наличные или перевод</button>
+            <button type="button" data-v="any" aria-pressed="false">Любая, с картой</button>
+          </div>
+        </div>
+        <div class="ctl"><label for="budget">Бюджет, € — <span class="mono" id="budget-v">1100</span></label>
+          <input type="range" id="budget" min="600" max="1600" step="10" value="1100"></div>
+        <div class="ctl"><label for="q">Поиск</label><input type="search" id="q" placeholder="модель, P/N, CPU"></div>
+      </div>
+      <div class="ctl-row">
+        <div class="ctl"><label for="sort">Сортировка</label>
+          <select id="sort">
+            <option value="personal">По вашим приоритетам</option>
+            <option value="avg">По оценке отчёта</option>
+            <option value="price">Цена ↑</option>
+            <option value="srgb">Экран (sRGB) ↓</option>
+            <option value="cpu">Процессор (R23) ↓</option>
+            <option value="gpu">Графика (Time Spy) ↓</option>
+            <option value="repair">Надёжность и ремонт ↓</option>
+          </select></div>
+        <div class="ctl"><label for="vendor">Процессор</label><select id="vendor"><option value="">Intel и AMD</option><option>Intel</option><option>AMD</option></select></div>
+        <div class="ctl"><label for="panel">Матрица</label><select id="panel"><option value="">Любая</option><option value="OLED">OLED</option><option value="IPS">IPS</option></select></div>
+        <div class="ctl"><label for="mem">Память</label><select id="mem"><option value="">Любая</option><option value="slots">Слоты SO-DIMM</option><option value="soldered">Распаянная</option></select></div>
+        <div class="ctl"><label for="brand">Бренд</label><select id="brand"><option value="">Все</option></select></div>
+      </div>
+      <div class="ctl-row">
+        <label class="sw"><input type="checkbox" id="onlypass"> Только проходящие все критерии</label>
+        <label class="sw"><input type="checkbox" id="screenok"> Только полный sRGB</label>
+      </div>
+      <details class="more" id="wdet">
+        <summary>Что для вас важнее</summary>
+        <p class="muted" style="margin:8px 0 10px;font-size:15px">Оценка отчёта считает пять критериев поровну. Здесь вы сами решаете, что важнее, — полоска «Ваша» на карточках и порядок списка пересчитываются сразу.</p>
+        <div class="weights" id="weights"></div>
+      </details>
+      <details class="more" id="codecdet">
+        <summary>Чем будут снимать? Проверить, потянет ли ноутбук файлы с камеры</summary>
+        <div class="codecgrid" style="margin-top:10px">
+          <div class="ctl"><label for="codec">Файл с камеры</label><select id="codec"><option value="">— не выбрано —</option></select></div>
+          <p class="muted" id="codec-hint" style="margin:0;font-size:15px">Выберите формат — на карточках появится отметка «аппаратно» или «на процессоре». Без аппаратного декода 4K-таймлайн тормозит, спасают прокси.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <div class="strip" id="strip">
+    <span class="count" id="count"></span>
+    <span class="spacer"></span>
+    <button class="btn" type="button" id="expand">Раскрыть все</button>
+    <button class="btn primary" type="button" id="cmpbtn" disabled>Сравнить (0)</button>
+  </div>
+
+  <section id="compare" class="block" hidden aria-labelledby="h-cmp">
+    <h2 id="h-cmp">Сравнение.</h2>
+    <div class="tablewrap wide"><table id="cmptable"></table></div>
+    <p><button class="btn" type="button" id="cmpclear">Очистить сравнение</button></p>
+  </section>
+
+  <section class="block" aria-labelledby="h-list">
+    <h2 id="h-list">Все ноутбуки.</h2>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section class="block" aria-labelledby="h-cash" id="cashsec" hidden>
+    <h2 id="h-cash">Как заплатить наличными.</h2>
+    <p class="sub-lede" id="cash-sum"></p>
+    <div class="tablewrap wide"><table id="cashtable"></table></div>
+    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
+    <div id="cash-markets" style="margin-top:16px"></div>
+    <div class="panel" id="cash-phone" style="margin-top:16px" hidden>
+      <p class="sub" style="margin-bottom:10px">Что сказать по телефону в магазине</p>
+      <pre id="phone-text" style="white-space:pre-wrap;font:15px/1.5 var(--f-body);margin:0 0 12px"></pre>
+      <button class="btn primary" type="button" id="phone-copy">Скопировать</button> <span class="muted" id="phone-copied" style="font-size:14px"></span>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="h-check">
+    <h2 id="h-check">Чек-лист для покупателя.</h2>
+    <p class="sub-lede">Для того, кто поедет в магазин: звонок, магазин, первый день дома — по порядку. Цель — не унести не ту комплектацию и сразу поймать брак. Откройте страницу на телефоне покупателя: галочки сохраняются только на том устройстве, где их ставили.</p>
+    <div class="checklist" id="checklist"></div>
+  </section>
+
+  <section class="block" aria-labelledby="h-perf">
+    <h2 id="h-perf">Производительность.</h2>
+    <p class="sub-lede">Медианы notebookcheck и Puget Bench для процессора и графики (в конкретном ноутбуке цифры зависят от лимита мощности). Нажмите на заголовок столбца, чтобы отсортировать. Показаны ноутбуки из списка выше.</p>
+    <div class="tablewrap wide"><table id="perftable"></table></div>
+    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
+  </section>
+
+  <section class="block" aria-labelledby="h-ref" id="refsec">
+    <h2 id="h-ref">Справочник производительности.</h2>
+    <p class="sub-lede">Все процессоры и видеоядра, которые встречались у кандидатов: медианы notebookcheck, Puget Bench для Resolve и Premiere, аппаратные кодеки. В скобках — сколько ноутбуков в выборке. Нажмите на заголовок столбца, чтобы отсортировать.</p>
+    <div class="ctl" style="margin-bottom:12px"><label for="refsel">Таблица</label><select id="refsel"></select></div>
+    <div class="tablewrap wide"><table id="reftable"></table></div>
+    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
+  </section>
+
+  <section class="block" aria-labelledby="h-brands">
+    <h2 id="h-brands">Производители.</h2>
+    <p class="sub-lede">Надёжность, сервис в Германии, гарантия, сколько лет выпускают запчасти и где их купить.</p>
+    <div class="brands" id="brands"></div>
+  </section>
+
+
+  <section class="block" aria-labelledby="h-gloss">
+    <h2 id="h-gloss">Словарик.</h2>
+    <div class="gloss" id="gloss"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+(function(){
+const D = JSON.parse(document.getElementById('data').textContent || '{}');
+const L = (D.laptops||[]).map((x,i)=>({...x, _i:i, id: x.id || x.pn || ('n'+i)}));
+const B = D.brands||[];
+const CF = D.codec_formats && D.codec_formats.length ? D.codec_formats : [
+  {id:'h264_420_8',label:'H.264 8 бит 4:2:0 (большинство камер и телефонов в режиме по умолчанию)',codec:'H.264',bit:8,chroma:'4:2:0'},
+  {id:'hevc_420_10',label:'HEVC 10 бит 4:2:0 (iPhone HDR, GoPro, DJI, Android)',codec:'HEVC',bit:10,chroma:'4:2:0'},
+  {id:'hevc_422_10',label:'HEVC 10 бит 4:2:2 (Sony XAVC HS 4:2:2, Canon, Fujifilm)',codec:'HEVC',bit:10,chroma:'4:2:2'},
+  {id:'h264_422_10',label:'H.264 10 бит 4:2:2 (Sony XAVC S / S-I 10 бит, Panasonic MOV)',codec:'H.264',bit:10,chroma:'4:2:2'},
+  {id:'av1',label:'AV1 (редко с камер; выгрузка на YouTube)',codec:'AV1',bit:10,chroma:'4:2:0'}
+];
+const $ = s=>document.querySelector(s);
+const esc = s=> (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const num = v=> (typeof v==='number' && isFinite(v)) ? v : (typeof v==='string' && v.trim()!=='' && isFinite(+v.replace(',','.')) ? +v.replace(',','.') : null);
+const eur = v=> v==null ? '—' : v.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
+const dec = v=> v==null ? '' : String(v).replace('.',',');
+const f1 = v=> v==null ? '—' : (+v).toFixed(1).replace('.',',');
+const shortSeller = s=> String(s||'').split(/,| — | \(|;/)[0].trim();
+const fmt = v=> v==null ? '—' : (Math.round(v)).toLocaleString('ru-RU');
+const store = { get(k,d){try{const v=localStorage.getItem('nb4k:'+k);return v==null?d:JSON.parse(v)}catch(e){return d}}, set(k,v){try{localStorage.setItem('nb4k:'+k,JSON.stringify(v))}catch(e){}} };
+const LIMIT = 1100;
+const SOFT=new Set(['cash_unknown']);
+
+/* ---------- derived fields ---------- */
+function addonsSum(x){ const a=(x.prices&&x.prices.addons)||[]; return a.reduce((s,y)=>s+(num(y.eur)||0),0); }
+function priceFor(x,mode){
+  const p=x.prices||{}; const add=addonsSum(x);
+  const cash = num(p.total_cash_eur) ?? (num(p.cash_eur)!=null ? num(p.cash_eur)+add : null);
+  const tr = num(p.transfer_eur)!=null ? num(p.transfer_eur)+add : null;
+  const any = num(p.total_any_eur) ?? (num(p.any_eur)!=null ? num(p.any_eur)+add : null);
+  if(mode==='cash'){
+    if(cash!=null) return {v:cash, how:(p.cash_seller||'')+(p.cash_method?' · '+p.cash_method:'')};
+    if((x.fails||[]).includes('cash')) return {v:null, how:'за наличные ≤ 1100 € нельзя'};
+    return {v:any, how: any==null ? 'нет цены нового товара' : 'наличные не проверены · цена любой оплатой', unknown:true};
+  }
+  if(mode==='transfer'){ const c=[cash,tr].filter(v=>v!=null); const v=c.length?Math.min(...c):null; return {v, how: v==null?'нет предложения':(v===cash?(p.cash_seller||'')+' · наличные':'предоплата переводом')}; }
+  return {v:any ?? cash ?? tr, how:p.any_seller||p.cash_seller||''};
+}
+function srgb(x){ const s=x.screen||{}; return num(s.srgb_measured) ?? num(s.srgb_spec); }
+function screenOk(x){ const s=x.screen||{}; if(typeof s.ok==='boolean') return s.ok; const v=srgb(x); return v!=null && v>=95; }
+function memKind(x){ const l=((x.memory||{}).layout||'').toLowerCase(); if(!l) return ''; return l.includes('solder')||l.includes('распа') ? 'soldered':'slots'; }
+function staticFails(x){ return (x.fails||[]).filter(f=>f!=='cash' && f!=='price'); }
+function failsFor(x,mode,budget){
+  const f=new Set(staticFails(x)); if(!screenOk(x)) f.add('screen');
+  const pr=priceFor(x,mode); if(pr.v==null) f.add(pr.unknown?'unavailable':(mode==='cash'?'cash':'price')); else if(pr.v>budget) f.add('price');
+  if(pr.unknown && pr.v!=null) f.add('cash_unknown');
+  return [...f];
+}
+const FAIL_LABEL={cash_unknown:'наличные не проверены',unverified:'данные не проверены',unavailable:'нет в продаже',screen:'экран без полного sRGB',cash:'нет оплаты наличными',price:'дороже бюджета',memory:'память не по критериям',cpu:'процессор-ловушка/слабый',hevc_disabled:'HEVC отключён',ssd:'SSD',size:'не 15–16"',used:'только б/у'};
+Object.assign(FAIL_LABEL, (D.criteria&&D.criteria.fail_labels)||{}, {cash_unknown:'наличные не проверены'});
+
+function codecSupport(x,fmt){
+  if(!fmt) return null; const c=x.codecs||{};
+  if(fmt.chroma==='4:2:2' && /hevc/i.test(fmt.codec)) return !!c.hevc_422_decode;
+  if(fmt.chroma==='4:2:2' || (/h\.?264/i.test(fmt.codec) && fmt.bit>8)) return !!c.h264_422_decode;
+  if(fmt.codec==='AV1') return c.av1_decode!==false;
+  return true;
+}
+
+/* ---------- personal score ---------- */
+const W_DEF={screen:3,power:3,repair:2,price:2,port:1};
+let W=store.get('weights',W_DEF);
+const WL={screen:'Экран',power:'Мощность',repair:'Надёжность и ремонт',price:'Цена',port:'Вес и батарея'};
+function sub(x,mode){
+  const s=x.scores||{}; const v=srgb(x);
+  const scr = v==null?3: Math.max(0,Math.min(10,(v-50)/5)) + ((x.screen||{}).panel==='OLED'?0.5:0);
+  const pr=priceFor(x,mode).v; const price = pr==null?0 : pr<=700?10 : pr<=1000? 10-(pr-700)/100 : pr<=1100? 7-(pr-1000)/50 : Math.max(1,5-(pr-1100)/50);
+  const rep = [num(s.repair),num(s.problems)].filter(v=>v!=null);
+  return {screen:Math.min(10,scr), power:num(s.power)??5, repair: rep.length? rep.reduce((a,b)=>a+b,0)/rep.length : 5, price, port:num(s.portability)??6};
+}
+function personal(x,mode){ const s=sub(x,mode); let a=0,w=0; for(const k in W){a+=s[k]*W[k];w+=W[k];} return w? a/w : 0; }
+
+/* ---------- state ---------- */
+const S = Object.assign({pay:'cash',budget:LIMIT,q:'',sort:'personal',onlypass:false,screenok:false,vendor:'',panel:'',mem:'',brand:'',codec:''}, store.get('state',{}));
+let CMP=new Set(store.get('cmp',[]));
+function save(){ store.set('state',S); store.set('cmp',[...CMP]); }
+
+/* ---------- controls ---------- */
+function initControls(){
+  const dm=String(D.prices_checked||D.generated||'').match(/\d{2}\.\d{2}\.\d{4}/); $('#stamp').textContent = 'Германия · до 1100 € · монтаж 4K'+(dm?' · цены на '+dm[0]:'');
+  document.querySelectorAll('#pay button').forEach(b=>{ b.setAttribute('aria-pressed', b.dataset.v===S.pay?'true':'false'); b.onclick=()=>{S.pay=b.dataset.v; document.querySelectorAll('#pay button').forEach(o=>o.setAttribute('aria-pressed',o===b?'true':'false')); render();}; });
+  const bud=$('#budget'); bud.value=S.budget; $('#budget-v').textContent=S.budget; bud.oninput=()=>{S.budget=+bud.value; $('#budget-v').textContent=bud.value; render();};
+  const bind=(id,key,ev='change',get=el=>el.value)=>{const el=$(id); if(el.type==='checkbox') el.checked=!!S[key]; else el.value=S[key]; el.addEventListener(ev,()=>{S[key]= el.type==='checkbox'?el.checked:get(el); render();});};
+  const brands=[...new Set(L.map(x=>x.brand).filter(Boolean))].sort(); const bs=$('#brand'); brands.forEach(b=>{const o=document.createElement('option');o.textContent=b;bs.appendChild(o);});
+  const cs=$('#codec'); CF.forEach(f=>{const o=document.createElement('option');o.value=f.id;o.textContent=f.label;cs.appendChild(o);});
+  bind('#q','q','input'); bind('#sort','sort'); bind('#onlypass','onlypass'); bind('#screenok','screenok'); bind('#vendor','vendor'); bind('#panel','panel'); bind('#mem','mem'); bind('#brand','brand'); bind('#codec','codec');
+  const wd=$('#weights');
+  Object.keys(W_DEF).forEach(k=>{ const id='w-'+k; const d=document.createElement('div'); d.className='ctl';
+    d.innerHTML=`<label for="${id}">${WL[k]} — <output id="${id}-o">${W[k]}</output></label><input type="range" id="${id}" min="0" max="5" step="1" value="${W[k]??W_DEF[k]}">`;
+    wd.appendChild(d); const r=d.querySelector('input'); r.oninput=()=>{W[k]=+r.value; d.querySelector('output').textContent=r.value; store.set('weights',W); render();}; });
+  $('#expand').onclick=()=>{ const cards=[...document.querySelectorAll('#list details.card')]; const open=!cards.every(c=>c.open); cards.forEach(c=>c.open=open); $('#expand').textContent=open?'Свернуть все':'Раскрыть все'; };
+  $('#cmpbtn').onclick=()=>{ renderCompare(); const c=$('#compare'); c.hidden=false; c.scrollIntoView({behavior:'smooth',block:'start'}); };
+  $('#cmpclear').onclick=()=>{ CMP.clear(); save(); $('#compare').hidden=true; render(); };
+}
+
+/* ---------- verdict ---------- */
+function renderVerdict(){
+  const pick=L.find(x=>x.status==='pick'), backup=L.filter(x=>x.status==='backup');
+  const v=$('#verdict'); v.innerHTML='';
+  const card=(x,role,main)=>{ let p=priceFor(x,'cash'); if(p.v==null||p.unknown){ const a=priceFor(x,'any'); p={v:a.v, how:'только переводом или онлайн · '+((x.prices||{}).any_seller||''), short:'только переводом · '+shortSeller((x.prices||{}).any_seller)}; } else p.short=shortSeller((x.prices||{}).cash_seller)+' · оплата в магазине'; const a=document.createElement('div'); a.className='pickcard'+(main?' main':'');
+    a.innerHTML=`${x.photos?`<img class="hero" src="${esc(x.photos.dir+x.photos.files[0])}" alt="${esc((x.brand||'')+' '+(x.model||''))}">`:'<span class="hero-ph"></span>'}<span class="role">${role}${(x.scores||{}).avg!=null?' · оценка '+esc(dec((x.scores||{}).avg))+' из 10':''}</span><span class="name">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="c-pn">${esc(x.pn||'')}</span>
+    <span class="price">${eur(p.v)}</span><span class="how" title="${esc(p.how)}">${esc(p.short)}</span>
+    <span class="points">${(x.pros||[]).slice(0,3).map(t=>'<span>'+esc(t)+'</span>').join('')}</span>
+    <span class="links"><a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a>${x.prices&&x.prices.idealo_url?` &nbsp; <a class="more-link" href="${esc(x.prices.idealo_url)}" target="_blank" rel="noopener">idealo</a>`:''}</span>`;
+    v.appendChild(a); };
+  if(pick) card(pick,'№1 — выбор',true);
+  backup.forEach((x,i)=>card(x,i===0?'№2 — если №1 не подтвердят':'№'+(i+2)+' — запасной',false));
+  if(!pick && !backup.length){ v.innerHTML='<div class="empty">Итоговый выбор ещё не определён — смотрите список ниже.</div>'; }
+  if(D.verdict_note){ const n=$('#verdict-note'); n.hidden=false; n.textContent=D.verdict_note; }
+  v.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{ const el=document.getElementById(a.dataset.open); if(el) el.open=true; }));
+}
+const cardId=x=>'nb-'+String(x.id).replace(/[^A-Za-z0-9._~-]/g,'-');
+
+/* ---------- what-if ---------- */
+const WI=[['cash','Если можно заплатить переводом или картой','transfer'],['price','Если бюджет можно поднять','cash'],['screen','Если смириться с экраном без полного sRGB','cash'],['memory','Если принять 16 ГБ или 1×32','cash'],['cpu','Если принять слабый процессор','cash']];
+function renderWhatIf(){
+  const el=$('#whatif'); const out=[], none=[];
+  for(const [c,label,mode] of WI){
+    const cands=L.filter(x=>{ const f=failsFor(x,'cash',LIMIT).filter(z=>!SOFT.has(z)); return f.length===1 && f[0]===c; })
+      .map(x=>({x,ps:personal(x,mode),avg:num((x.scores||{}).avg)??0,p:priceFor(x,mode).v ?? priceFor(x,'any').v})).sort((a,b)=>(b.avg-a.avg)||(b.ps-a.ps));
+    if(!cands.length){ none.push(label.replace(/^Если /,'').toLowerCase()); continue; }
+    const b=cands[0], x=b.x;
+    out.push(`<div class="wi"><span class="cond">${esc(label)}</span><span class="m">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="p">${eur(b.p)}</span><span class="d">${esc(x.fail_notes||'')}</span>${failsFor(x,'cash',LIMIT).includes('cash_unknown')?'<span class="pill warn" style="justify-self:start">? наличные не проверены</span>':''}${cands.length>1?`<span class="d">ещё ${cands.length-1} с той же уступкой — в списке ниже</span>`:''}<a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a></div>`);
+  }
+  el.innerHTML=out.join('');
+  const nn=$('#whatif-none'); if(nn){ nn.hidden=!none.length; nn.textContent=none.length?'Отдельного варианта нет для «'+none.join('» и «')+'»: все ноутбуки, которые упираются в эти критерии, не проходят ещё и другие.':''; }
+  el.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{ const d=document.getElementById(a.dataset.open); if(d) d.open=true; }));
+}
+
+/* ---------- list ---------- */
+function filtered(){
+  const q=S.q.trim().toLowerCase(); const fmt=CF.find(f=>f.id===S.codec);
+  let a=L.map(x=>({x, pr:priceFor(x,S.pay), fails:failsFor(x,S.pay,S.budget), ps:personal(x,S.pay), cs:codecSupport(x,fmt)}));
+  a=a.filter(r=>{ const x=r.x;
+    if(S.onlypass && r.fails.length) return false;
+    if(S.screenok && !screenOk(x)) return false;
+    if(S.vendor && x.branch!==S.vendor) return false;
+    if(S.panel && !(((x.screen||{}).panel||'').toUpperCase().includes(S.panel))) return false;
+    if(S.mem && memKind(x)!==S.mem) return false;
+    if(S.brand && x.brand!==S.brand) return false;
+    if(q && !([x.brand,x.model,x.pn,(x.cpu||{}).name,(x.gpu||{}).name].join(' ').toLowerCase().includes(q))) return false;
+    return true; });
+  const key={personal:r=>-r.ps, avg:r=>-(num((r.x.scores||{}).avg)??0), price:r=>r.pr.v??1e9, srgb:r=>-(srgb(r.x)??0), cpu:r=>-(num((r.x.cpu||{}).r23_multi)??0), gpu:r=>-(num((r.x.gpu||{}).timespy)??0), repair:r=>-sub(r.x,S.pay).repair}[S.sort]||(r=>-r.ps);
+  const BK=L.filter(x=>x.status==='backup'); const rank=x=>x.status==='pick'?0:x.status==='backup'?1+BK.indexOf(x):99;
+  a.sort((p,q)=> rank(p.x)-rank(q.x) || (p.fails.length?1:0)-(q.fails.length?1:0) || key(p)-key(q) || ((p.pr.v??1e9)-(q.pr.v??1e9)));
+  return a;
+}
+const maxOf=(f)=>Math.max(1,...L.map(f).filter(v=>v!=null));
+let MAXCPU=1,MAXGPU=1;
+function meter(label,val,max,cls,txt,tip){ const pct=val==null?0:Math.max(2,Math.min(100,val/max*100));
+  return `<div class="meter"${tip?` title="${esc(tip)}"`:''}><span>${label}</span><span class="track"><span class="fill ${cls||''}" style="width:${pct}%"></span></span><span class="val">${txt ?? (val==null?'—':fmt(val))}</span></div>`; }
+function ring(v,ok){ const r=22, c=2*Math.PI*r, f=v==null?0:Math.max(0,Math.min(100,v))/100;
+  const col = v==null?'var(--tertiary)': ok?'#34C759': v>=80?'#FF9F0A':'#FF3B30';
+  return `<svg class="ring" viewBox="0 0 54 54" role="img" aria-label="Охват sRGB ${v==null?'неизвестен':Math.round(v)+' %'}"><circle cx="27" cy="27" r="${r}" fill="none" stroke="var(--ring-track)" stroke-width="6"/><circle cx="27" cy="27" r="${r}" fill="none" stroke="${col}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${(c*f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 27 27)"/><text x="27" y="27" text-anchor="middle" dominant-baseline="central">${v==null?'?':Math.round(v)}</text><text class="lbl" x="27" y="39" text-anchor="middle">sRGB</text></svg>`; }
+const LONG=230; // символов: длиннее — сворачиваем до 4 строк
+function kv(rows){ return '<dl class="kv">'+rows.filter(r=>r[1]!=null && r[1]!=='').map(r=>{ const v=String(r[1]); const long=v.replace(/<[^>]+>/g,'').length>LONG; return `<dt>${r[0]}</dt><dd>${long?`<div class="clamp4">${v}</div><button type="button" class="more-btn" aria-expanded="false">Показать полностью</button>`:v}</dd>`; }).join('')+'</dl>'; }
+const MEM={'2x16':'2 × 16 ГБ SO-DIMM','1x16+slot':'1 × 16 ГБ SO-DIMM + свободный слот','1x24+slot':'1 × 24 ГБ SO-DIMM + свободный слот','soldered32':'32 ГБ распаяны','soldered16+slot':'16 ГБ распаяно + слот SO-DIMM','soldered16':'16 ГБ распаяны, слота нет','1x32':'1 × 32 ГБ — один канал','2x8':'2 × 8 ГБ'};
+const memLabel=l=> l==null?null:(MEM[String(l).toLowerCase().replace(/\s/g,'')]||l);
+const pair=(a,b)=> (num(a)==null&&num(b)==null)?null:`<span class="mono">${fmt(num(a))} / ${fmt(num(b))}</span>`;
+const one=a=> num(a)==null?null:`<span class="mono">${fmt(num(a))}</span>`;
+function scoresHTML(x){
+  const sc=x.scores||{};
+  const T=[['Надёжность',sc.problems,'в отчёте — «Проблемность»: надёжность бренда и модели, известные болячки, риск с HEVC; 10 — проблем нет'],['Ремонт',sc.repair,'слоты памяти и SSD, запчасти, сервис-мануал'],['Цена',sc.price,'итоговая сумма с докупкой: до 700 € — 10, 1000 € — 7, 1100 € — 5, дороже — меньше'],['Портатив\u00adность',sc.portability,'вес и батарея'],['Мощность',sc.power,'процессор, графика и кодеки, экран, порты']];
+  const tile=(t,v,tip,cls='')=>{ const n=num(v); return `<div class="tile${cls}${n==null?' na':''}" title="${esc(tip)}"><span class="t">${t}</span><span class="n">${n==null?'—':esc(dec(n))}</span><span class="track"><i style="width:${n==null?0:Math.max(0,Math.min(100,n*10))}%"></i></span></div>`; };
+  const facts=[['Вес',x.weight_kg!=null?esc(dec(x.weight_kg))+' кг':null],['Батарея',x.battery_wh!=null?esc(dec(x.battery_wh))+' Вт·ч':null]];
+  const note=String(sc.note||'').replace(/^шкала веток[^;]*;\s*/,'').replace(/Средн\./g,'Средняя').replace(/Пробл\./g,'Проблемность').replace(/Порт\./g,'Портативность').replace(/Мощн\./g,'Мощность');
+  return `<section class="scorebox" aria-label="Оценки отчёта"><p class="sub">Оценки отчёта, из 10</p>
+    <div class="scores">${tile('Средняя',sc.avg,'среднее пяти оценок, округление до 0,5',' avg')}${T.map(r=>tile(...r)).join('')}</div>
+    <div class="facts" style="margin-top:12px">${facts.map(f=>`<span><span class="muted">${f[0]}</span> ${f[1]==null?'<span class="muted">нет данных</span>':'<b>'+f[1]+'</b>'}</span>`).join('')}</div>
+    ${(x.ports||[]).length?`<div class="chips" style="margin-top:8px" aria-label="Порты">${x.ports.map(p=>'<span class="pill">'+esc(p)+'</span>').join('')}</div>`:'<div class="facts"><span class="muted">Порты: нет данных</span></div>'}
+    <details class="how"><summary>Что значат оценки и как посчитано</summary><p><b>Средняя</b> — среднее пяти оценок; 10 — лучше всего.<br>${T.map(r=>'<b>'+r[0].replace('\u00ad','')+'</b> — '+esc(r[2])).join('<br>')}</p>${note?`<p>${esc(note)}</p>`:''}${x.specs_source?`<p>Вес, батарея, порты: ${link(x.specs_source,'источник')}</p>`:''}</details>
+  </section>`;
+}
+// На GitHub Pages .md открываем на github.com — там они отрисованы, а не голым текстом
+const GH=(()=>{ const m=location.hostname.match(/^([^.]+)\.github\.io$/), repo=location.pathname.split('/')[1]; return m&&repo?`https://github.com/${m[1]}/${repo}/blob/main/`:null; })();
+function link(u,t){ if(!u) return ''; let h=/^(https?:|mailto:|#|\/|\.\.\/)/i.test(u)?u:'../'+u;
+  if(GH && /\.md(#.*)?$/i.test(u) && !/^(https?:|mailto:)/i.test(u)) h=GH+u.replace(/^(\.\.\/|\/)+/,'');
+  return `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(t||'источник')}</a>`; }
+function yn(v,y='да',n='нет'){ return v===true?`<span class="pill ok">${y}</span>`: v===false?`<span class="pill bad">${n}</span>`:'<span class="muted">не проверено</span>'; }
+
+function cardHTML(r){
+  const x=r.x, c=x.cpu||{}, g=x.gpu||{}, s=x.screen||{}, m=x.memory||{}, d=x.ssd||{}, p=x.prices||{}, rel=x.reliability||{}, sc=x.scores||{}, cd=x.codecs||{};
+  const v=srgb(x), ok=screenOk(x);
+  const status = x.status==='pick'?'<span class="pill acc">Выбор</span>':x.status==='backup'?'<span class="pill acc">Запасной</span>':'';
+  const failPills = r.fails.length ? r.fails.map(f=>`<span class="pill ${SOFT.has(f)?'warn':'bad'}">${SOFT.has(f)?'?':'✕'} ${esc(FAIL_LABEL[f]||f)}</span>`).join('') : '<span class="pill ok">✓ проходит все жёсткие критерии</span>';
+  const codecPill = r.cs==null?'' : r.cs?'<span class="pill ok">исходник: аппаратно</span>':'<span class="pill warn">исходник: на процессоре</span>';
+  const pr=r.pr;
+  const addons=(p.addons||[]).map(a=>`${esc(a.what)} — ${eur(num(a.eur))}`).join('; ');
+  const src=(x.sources||[]).map(z=>`<li>${link(z.url,z.title||z.url)}</li>`).join('');
+  const pc=priceFor(x,'cash'), pa=priceFor(x,'any');
+  return `<details class="card${r.fails.length?' fail':''}" id="${esc(cardId(x))}">
+  <summary>
+    <span class="c-lead">${x.photos?`<img class="thumb" loading="lazy" src="${esc(x.photos.dir+x.photos.thumb)}" alt="">`:'<span class="nophoto">нет фото</span>'}${ring(v,ok)}</span>
+    <div class="c-title"><span class="c-name">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="c-pn">${esc(x.pn||'')} · ${esc(c.name||'')}${g.name?' · '+esc(g.name):''}</span></div>
+    <div class="c-price"><span class="v">${eur(pr.v)}</span><span class="s clamp2" title="${esc(pr.how||'')}">${esc(pr.unknown ? (pr.v==null?'нет цены нового товара':shortSeller(p.any_seller)+' · любая оплата') : S.pay==='cash' ? shortSeller(p.cash_seller)+' · оплата в магазине' : (pr.how||''))}</span></div>
+    <div class="c-meta">${status}<span class="pill brand">${esc(x.branch||'')}</span>${failPills}${codecPill}
+      <label class="cmp" onclick="event.stopPropagation()"><input type="checkbox" data-cmp="${esc(x.id)}" ${CMP.has(x.id)?'checked':''}> сравнить</label></div>
+    <span class="chev" aria-hidden="true"></span>
+    <div class="meters">
+      ${meter('CPU',num(c.r23_multi),MAXCPU,'')}
+      ${meter('GPU',num(g.timespy),MAXGPU,'')}
+      ${meter('Отчёт',num((x.scores||{}).avg),10,'',f1(num((x.scores||{}).avg)),'Оценка из отчёта — среднее пяти оценок, как в плитках внутри карточки')}
+      ${meter('Ваша',r.ps,10,'',f1(r.ps),'Ваша оценка — по весам из «Что для вас важнее»')}
+    </div>
+  </summary>
+  <div class="c-body">
+    ${x.photos&&x.photos.files.length>1?`<div class="gallery" aria-label="Фотографии">${x.photos.files.map((f,i)=>`<button type="button" data-lb="${esc(x.id)}" data-i="${i}" aria-label="Фото ${i+1}"><img loading="lazy" src="${esc(x.photos.dir+f)}" alt=""></button>`).join('')}</div>`:''}
+    ${r.fails.length && x.fail_notes?`<div class="why"><b>Почему не проходит:</b> ${esc(x.fail_notes)}</div>`:''}
+    ${scoresHTML(x)}
+    ${(x.pros||[]).length||(x.cons||[]).length?`<div class="c-grid two"><div><p class="sub">Плюсы</p><ul class="tight">${(x.pros||[]).map(t=>'<li>'+esc(t)+'</li>').join('')}</ul></div><div><p class="sub">Минусы</p><ul class="tight">${(x.cons||[]).map(t=>'<li>'+esc(t)+'</li>').join('')}</ul></div></div>`:''}
+    <div class="c-grid">
+      <div><p class="sub">Цена и оплата</p>${kv([['Наличными',pc.unknown?'<span class="pill warn">не проверено</span>':pc.v==null?'<span class="pill bad">нельзя</span>':eur(pc.v)+(p.cash_seller?' · '+esc(p.cash_seller):'')+(p.cash_method?' · '+esc(p.cash_method):'')],['Переводом',p.transfer_eur!=null?eur(num(p.transfer_eur)+addonsSum(x)):null],['Любая оплата',(pc.unknown||pc.v==null||pa.v!==pc.v)?eur(pa.v)+(p.any_seller?' · '+esc(p.any_seller):''):null],['Докупка',addons||null],['Проверено',p.checked?`<span title="${esc(p.checked)}">${esc(String(p.checked).split(/ — | \(|; /)[0])}</span>`:null],['Ссылки',[link(p.idealo_url,'idealo'),link(p.shop_url,'магазин')].filter(Boolean).join(' · ')]])}</div>
+      <div><p class="sub">Экран</p>${kv([['Матрица',esc([s.size_in?dec(s.size_in)+'"':'',s.panel,s.resolution,s.hz?s.hz+' Гц':''].filter(Boolean).join(' · '))],['sRGB замер',s.srgb_measured!=null?esc(dec(s.srgb_measured))+' %':'нет замера'],['DCI-P3 замер',s.p3_measured!=null?esc(dec(s.p3_measured))+' %':null],['По даташиту',esc(s.srgb_spec!=null?s.srgb_spec+' % sRGB':'')],['Охват (даташит)',esc(s.gamut_spec)],['Яркость',s.nits?esc(s.nits)+' нит':null],['ШИМ',esc(s.pwm)],['Источник',link(s.source)]])}</div>
+      <div><p class="sub">Процессор</p>${kv([['Модель',esc(c.name)],['Архитектура',esc(c.codename)],['Ядра/потоки',esc(c.cores_threads)],['TDP',c.tdp_w?esc(c.tdp_w)+' Вт':null],['R23 Multi / Single',pair(c.r23_multi,c.r23_single)],['CB2024 Multi / Single',pair(c.cb2024_multi,c.cb2024_single)],['Geekbench 6 Multi',one(c.gb6_multi)],['Источник',link(c.source)]])}</div>
+      <div><p class="sub">Графика и кодеки</p>${kv([['GPU',esc(g.name)+(g.type?' ('+esc(g.type)+')':'')],['Time Spy',one(g.timespy)],['Steel Nomad Light',one(g.steel_nomad_light)],['Puget Resolve / Premiere',pair(g.puget_resolve,g.puget_premiere)],['HEVC 4:2:2 декод',yn(cd.hevc_422_decode)],['H.264 4:2:2 декод',yn(cd.h264_422_decode)],['AV1 кодирование',yn(cd.av1_encode)],['Заметка',esc(cd.note)],['Источник',link(g.source)]])}</div>
+      <div><p class="sub">Память и SSD</p>${kv([['Раскладка',esc(memLabel(m.layout))],['Тип',esc(m.type)],['Расширение',esc(m.upgrade_note)],['SSD',d.size_gb?esc(d.size_gb)+' ГБ':null],['Свободный M.2',d.free_m2===true?'есть':d.free_m2===false?'нет':null],['SSD заметка',esc(d.note)],['Источник',link(m.source)]])}</div>
+      <div><p class="sub">Надёжность и ремонт</p>${kv([['Бренд',esc(rel.brand_rank_note)],['Болячки модели',esc(rel.model_issues)],['Гарантия',esc(x.warranty)],['Запчасти, лет',esc(rel.parts_years)],['Детали в продаже',esc(rel.parts_available)],['Сервис-мануал',rel.service_manual===true?'есть':rel.service_manual===false?'нет':null],['Продаётся',esc(rel.prevalence)],['Источники',(rel.sources||[]).map((u,i)=>link(typeof u==='string'?u:u.url,typeof u==='string'?'['+(i+1)+']':(u.title||'['+(i+1)+']'))).join(' ')]])}</div>
+    </div>
+    ${src?`<details class="how src"><summary>Все источники (${(x.sources||[]).length})</summary><ul class="tight">${src}</ul></details>`:''}
+  </div></details>`;
+}
+
+function render(){
+  save();
+  const rows=filtered();
+  const pass=rows.filter(r=>!r.fails.length).length;
+  $('#count').textContent = `Показано ${rows.length} из ${L.length} · проходят все критерии: ${pass}`;
+  $('#list').innerHTML = rows.length? rows.map(cardHTML).join('') : '<div class="empty">Под эти фильтры ничего не подходит. Ослабьте бюджет, способ оплаты или требование к экрану.</div>';
+  document.querySelectorAll('[data-cmp]').forEach(cb=>cb.addEventListener('change',()=>{ if(cb.checked){ if(CMP.size>=3){cb.checked=false;return;} CMP.add(cb.dataset.cmp);} else CMP.delete(cb.dataset.cmp); updCmp(); save(); }));
+  updCmp(); renderPerf(rows);
+  if(!$('#compare').hidden) renderCompare();
+}
+function updCmp(){ const b=$('#cmpbtn'); b.textContent=`Сравнить (${CMP.size})`; b.disabled=CMP.size<2; }
+
+document.addEventListener('click',e=>{ const b=e.target.closest('.more-btn'); if(!b) return; const c=b.previousElementSibling; const open=c.classList.toggle('open'); b.setAttribute('aria-expanded',open); b.textContent=open?'Свернуть':'Показать полностью'; });
+
+/* ---------- две колонки без дыр: самое ровное разбиение блоков ---------- */
+function balance(card){
+  const g=card.querySelector('.c-grid:not(.two)'); if(!g) return;
+  const blocks=[...g.querySelectorAll(':scope > div:not(.col), :scope > .col > div')];
+  g.classList.remove('bal'); g.replaceChildren(...blocks);
+  if(g.clientWidth < 760) return;               // одна колонка — как на телефоне
+  const cols=[document.createElement('div'),document.createElement('div')]; cols.forEach(c=>c.className='col');
+  g.classList.add('bal'); g.replaceChildren(...cols);
+  cols[0].append(...blocks);                      // мерим в колонке нужной ширины
+  const hs=blocks.map(b=>b.offsetHeight+26), n=blocks.length, all=hs.reduce((s,v)=>s+v,0);
+  let best=1, bestD=Infinity;                     // 2^n разбиений (n = 6), первый блок — слева
+  for(let m=1;m<1<<n;m+=2){ let s=0; for(let i=0;i<n;i++) if(m>>i&1) s+=hs[i]; const d=Math.abs(all-2*s); if(d<bestD){bestD=d;best=m;} }
+  blocks.forEach((b,i)=>cols[best>>i&1?0:1].appendChild(b));
+}
+document.addEventListener('toggle',e=>{ if(e.target.matches&&e.target.matches('details.card')&&e.target.open) balance(e.target); },true);
+let balT; addEventListener('resize',()=>{ clearTimeout(balT); balT=setTimeout(()=>document.querySelectorAll('details.card[open]').forEach(balance),150); });
+document.addEventListener('click',e=>{ if(e.target.closest('.more-btn')){ const c=e.target.closest('details.card'); if(c) requestAnimationFrame(()=>balance(c)); } });
+
+/* ---------- lightbox ---------- */
+const LB=document.createElement('dialog'); LB.className='lb'; LB.innerHTML='<img alt=""><div class="bar"><button type="button" data-d="-1">‹ Назад</button><span class="n"></span><button type="button" data-d="1">Вперёд ›</button><button type="button" data-x>Закрыть</button></div>'; document.body.appendChild(LB);
+let LBS={x:null,i:0};
+function lbShow(){ const p=LBS.x.photos; LB.querySelector('img').src=p.dir+p.files[LBS.i]; LB.querySelector('.n').textContent=(LBS.i+1)+' / '+p.files.length; }
+LB.addEventListener('click',e=>{ const d=e.target.dataset; if(d.d){ const n=LBS.x.photos.files.length; LBS.i=(LBS.i+ +d.d+n)%n; lbShow(); } else if('x' in d || e.target===LB) LB.close(); });
+LB.addEventListener('keydown',e=>{ if(e.key==='ArrowRight'||e.key==='ArrowLeft'){ const n=LBS.x.photos.files.length; LBS.i=(LBS.i+(e.key==='ArrowRight'?1:-1)+n)%n; lbShow(); } });
+let tx=null; LB.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true}); LB.addEventListener('touchend',e=>{ if(tx==null) return; const dx=e.changedTouches[0].clientX-tx; tx=null; if(Math.abs(dx)>40){ const n=LBS.x.photos.files.length; LBS.i=(LBS.i+(dx<0?1:-1)+n)%n; lbShow(); } });
+document.addEventListener('click',e=>{ const b=e.target.closest('[data-lb]'); if(!b) return; const x=L.find(y=>String(y.id)===b.dataset.lb); if(!x||!x.photos) return; LBS={x,i:+b.dataset.i||0}; lbShow(); try{ LB.showModal(); }catch(_){ LB.setAttribute('open',''); } });
+
+/* ---------- resizable columns ---------- */
+let COLW=store.get('colw',{});
+function enhanceTable(t){
+  if(!t||!t.tHead||!t.tHead.rows.length) return;
+  const ths=[...t.tHead.rows[0].cells];
+  const key=t.id+':'+ths.map(c=>c.textContent.trim()).join('|').slice(0,240);
+  const apply=ws=>{ ths.forEach((th,i)=>th.style.width=ws[i]+'px'); t.style.width=ws.reduce((a,b)=>a+b,0)+'px'; t.dataset.fixed='1'; };
+  const freeze=()=>{ if(!t.dataset.fixed) apply(ths.map(th=>Math.round(th.getBoundingClientRect().width))); };
+  const reset=()=>{ delete COLW[key]; store.set('colw',COLW); delete t.dataset.fixed; t.style.width=''; ths.forEach(h=>h.style.width=''); };
+  if(COLW[key] && COLW[key].length===ths.length) apply(COLW[key]);
+  ths.forEach(th=>{
+    if(th.querySelector('.grip')) return;
+    const g=document.createElement('span'); g.className='grip'; g.setAttribute('role','separator'); g.setAttribute('aria-orientation','vertical');
+    g.title='Потяните, чтобы изменить ширину; двойной щелчок — сбросить';
+    g.addEventListener('click',e=>e.stopPropagation());
+    g.addEventListener('dblclick',e=>{ e.stopPropagation(); reset(); });
+    g.addEventListener('pointerdown',e=>{
+      if(e.button!==undefined && e.button!==0) return;
+      e.preventDefault(); e.stopPropagation(); freeze();
+      const x0=e.clientX, w0=th.getBoundingClientRect().width, tw0=t.getBoundingClientRect().width;
+      try{ g.setPointerCapture(e.pointerId); }catch(_){}
+      document.body.classList.add('resizing');
+      const mv=ev=>{ const w=Math.max(56,Math.round(w0+ev.clientX-x0)); th.style.width=w+'px'; t.style.width=Math.round(tw0+(w-w0))+'px'; };
+      const up=()=>{ g.removeEventListener('pointermove',mv); g.removeEventListener('pointerup',up); g.removeEventListener('pointercancel',up); document.body.classList.remove('resizing');
+        COLW[key]=ths.map(h=>Math.round(h.getBoundingClientRect().width)); store.set('colw',COLW); };
+      g.addEventListener('pointermove',mv); g.addEventListener('pointerup',up); g.addEventListener('pointercancel',up);
+    });
+    th.appendChild(g);
+  });
+}
+
+/* ---------- compare ---------- */
+function renderCompare(){
+  const xs=L.filter(x=>CMP.has(x.id)); const t=$('#cmptable');
+  if(xs.length<2){ $('#compare').hidden=true; return; }
+  const rowsDef=[
+    ['Цена ('+({cash:'наличные',transfer:'наличные/перевод',any:'любая'}[S.pay])+')',x=>priceFor(x,S.pay).v,v=>eur(v),'min'],
+    ['Наличные',x=>{const c=priceFor(x,'cash'); return c.unknown?'не проверены':c.v==null?'нельзя':'можно';}],
+    ['Экран sRGB, %',x=>srgb(x),v=>v==null?'—':Math.round(v),'max'],
+    ['Матрица',x=>[(x.screen||{}).panel,(x.screen||{}).resolution].filter(Boolean).join(' · ')],
+    ['Процессор',x=>(x.cpu||{}).name],
+    ['R23 Multi',x=>num((x.cpu||{}).r23_multi),fmt,'max'],
+    ['R23 Single',x=>num((x.cpu||{}).r23_single),fmt,'max'],
+    ['CB2024 Multi',x=>num((x.cpu||{}).cb2024_multi),fmt,'max'],
+    ['Графика',x=>(x.gpu||{}).name],
+    ['Time Spy',x=>num((x.gpu||{}).timespy),fmt,'max'],
+    ['Puget Resolve',x=>num((x.gpu||{}).puget_resolve),fmt,'max'],
+    ['HEVC 4:2:2',x=>(x.codecs||{}).hevc_422_decode,v=>v===true?'да':v===false?'нет':'—'],
+    ['H.264 4:2:2',x=>(x.codecs||{}).h264_422_decode,v=>v===true?'да':v===false?'нет':'—'],
+    ['Память',x=>memLabel((x.memory||{}).layout)],
+    ['Вес, кг',x=>num(x.weight_kg),v=>v==null?'—':dec(v),'min'],
+    ['Ремонт / Надёжность',x=>[(x.scores||{}).repair,(x.scores||{}).problems].map(v=>v==null?'—':dec(v)).join(' / ')],
+    ['Оценка отчёта',x=>num((x.scores||{}).avg),v=>v==null?'—':dec(v),'max'],
+    ['Ваша оценка',x=>personal(x,S.pay),f1,'max'],
+    ['Не проходит',x=>failsFor(x,S.pay,S.budget).map(f=>FAIL_LABEL[f]||f).join(', ')||'—'],
+  ];
+  let h='<thead><tr><th></th>'+xs.map(x=>`<th>${esc(x.brand||'')} ${esc(x.model||'')}<br><span class="c-pn">${esc(x.pn||'')}</span></th>`).join('')+'</tr></thead><tbody>';
+  rowsDef.forEach(([lab,get,f,best])=>{ const vals=xs.map(get); let bi=-1;
+    if(best){ const nums=vals.map(v=>typeof v==='number'?v:null); const cand=nums.filter(v=>v!=null); if(cand.length>1){ const b=best==='max'?Math.max(...cand):Math.min(...cand); bi=nums.indexOf(b);} }
+    h+=`<tr><td class="muted">${lab}</td>`+vals.map((v,i)=>`<td class="${typeof v==='number'?'num':''} ${bi>=0&&vals[i]===vals[bi]?'best':''}">${esc(f?f(v):(v??'—'))}</td>`).join('')+'</tr>'; });
+  t.innerHTML=h+'</tbody>';
+  enhanceTable(t);
+}
+
+/* ---------- perf table ---------- */
+let PSORT={k:'r23m',d:-1};
+function renderPerf(rows){
+  const cols=[['model','Ноутбук',r=>`${r.x.brand||''} ${r.x.model||''}`],['cpu','Процессор',r=>(r.x.cpu||{}).name||''],['r23m','R23 M',r=>num((r.x.cpu||{}).r23_multi)],['r23s','R23 S',r=>num((r.x.cpu||{}).r23_single)],['cb24m','CB24 M',r=>num((r.x.cpu||{}).cb2024_multi)],['cb24s','CB24 S',r=>num((r.x.cpu||{}).cb2024_single)],['gb6','GB6 M',r=>num((r.x.cpu||{}).gb6_multi)],['gpu','Графика',r=>(r.x.gpu||{}).name||''],['ts','Time Spy',r=>num((r.x.gpu||{}).timespy)],['snl','Steel Nomad L',r=>num((r.x.gpu||{}).steel_nomad_light)],['pr','Puget Resolve',r=>num((r.x.gpu||{}).puget_resolve)],['pp','Puget Premiere',r=>num((r.x.gpu||{}).puget_premiere)]];
+  const c=cols.find(z=>z[0]===PSORT.k)||cols[2];
+  const rs=[...rows].sort((a,b)=>{const va=c[2](a),vb=c[2](b); if(typeof va==='string'||typeof vb==='string') return String(va).localeCompare(String(vb))*PSORT.d; return ((va??-1e9)-(vb??-1e9))*PSORT.d;});
+  const t=$('#perftable');
+  t.innerHTML='<thead><tr>'+cols.map(z=>`<th data-k="${z[0]}" ${z[0]===PSORT.k?`aria-sort="${PSORT.d<0?'descending':'ascending'}"`:''}>${z[1]}</th>`).join('')+'</tr></thead><tbody>'+
+    rs.map(r=>'<tr class="'+(r.fails.length?'dim':'')+'">'+cols.map((z,i)=>{const v=z[2](r); return i<2||i===7?`<td>${esc(v)}</td>`:`<td class="num">${fmt(v)}</td>`;}).join('')+'</tr>').join('')+'</tbody>';
+  t.querySelectorAll('th').forEach(th=>th.onclick=()=>{ const k=th.dataset.k; PSORT = PSORT.k===k?{k,d:-PSORT.d}:{k,d:(k==='model'||k==='cpu'||k==='gpu')?1:-1}; renderPerf(rows); });
+  enhanceTable(t);
+}
+
+/* ---------- reference tables ---------- */
+const REF=D.reference||[]; let RSORT={t:0,c:-1,d:-1};
+const plain=h=>{const d=document.createElement('div'); d.innerHTML=h; return d.textContent.trim();};
+const refNum=h=>{const s=plain(h).replace(/[\u00a0\u202f\s]/g,'').replace(',','.'); const m=s.match(/^[-+]?\d+(\.\d+)?/); return m?+m[0]:null;};
+function renderRef(){
+  const sec=$('#refsec'); if(!REF.length){ sec.hidden=true; return; }
+  const sel=$('#refsel'); if(!sel.options.length){ REF.forEach((r,i)=>{const o=document.createElement('option'); o.value=i; o.textContent=r.title+' ('+r.rows.length+')'; sel.appendChild(o);}); sel.value=store.get('ref',0); sel.onchange=()=>{RSORT={t:+sel.value,c:-1,d:-1}; store.set('ref',+sel.value); renderRef();}; }
+  const ti=+sel.value||0, T=REF[ti]; if(RSORT.t!==ti) RSORT={t:ti,c:-1,d:-1};
+  let rows=T.rows.slice();
+  if(RSORT.c>=0){ const c=RSORT.c; rows.sort((a,b)=>{const va=refNum(a[c]||''),vb=refNum(b[c]||''); if(va==null&&vb==null) return plain(a[c]||'').localeCompare(plain(b[c]||''))*RSORT.d; if(va==null) return 1; if(vb==null) return -1; return (va-vb)*RSORT.d;}); }
+  const t=$('#reftable');
+  t.innerHTML='<thead><tr>'+T.headers.map((h,i)=>`<th data-c="${i}" ${i===RSORT.c?`aria-sort="${RSORT.d<0?'descending':'ascending'}"`:''}>${h}</th>`).join('')+'</tr></thead><tbody>'+
+    rows.map(r=>'<tr>'+r.map((c,i)=>`<td class="${i>0&&refNum(c)!=null?'num':''}">${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+  t.querySelectorAll('th').forEach(th=>th.onclick=()=>{ const c=+th.dataset.c; RSORT = RSORT.c===c?{t:ti,c,d:-RSORT.d}:{t:ti,c,d:-1}; renderRef(); });
+  enhanceTable(t);
+}
+
+/* ---------- cash guide ---------- */
+function renderCash(){
+  const G=D.cash_guide; if(!G) return; $('#cashsec').hidden=false;
+  $('#cash-sum').textContent=G.summary||'';
+  const pillFor=w=>/^да/i.test(w||'')?'<span class="pill ok">да</span>':/^част/i.test(w||'')?'<span class="pill warn">частично</span>':'<span class="pill bad">нет</span>';
+  $('#cashtable').innerHTML='<thead><tr><th>Способ</th><th>Работает</th><th>Где</th><th>Лимит</th><th>Комиссия</th><th>Нужен счёт</th><th>Источник</th></tr></thead><tbody>'+
+    (G.methods||[]).map(m=>`<tr><td class="tw" data-label="Способ"><b>${esc(m.method)}</b></td><td data-label="Работает">${pillFor(m.works)}</td><td class="tw" data-label="Где">${esc(m.where)}</td><td class="tw" data-label="Лимит">${esc(m.limit)}</td><td class="tw" data-label="Комиссия">${esc(m.fee)}</td><td class="tw" data-label="Нужен счёт">${esc(m.needs_account)}</td><td data-label="Источник">${link(m.source)}</td></tr>`).join('')+'</tbody>';
+  const mk=G.markets||[];
+  enhanceTable($('#cashtable'));
+  if(mk.length){ $('#cash-markets').innerHTML='<p class="sub">Где купить №1–№3: магазины, адреса, цены</p><div class="tablewrap wide"><table id="mktable"><thead><tr><th>Магазин</th><th>Город</th><th>Цена</th><th>Статус</th></tr></thead><tbody>'+
+    mk.map(m=>`<tr><td class="tw" data-label="Магазин">${m.url?link(m.url,m.market):esc(m.market)}</td><td class="tw" data-label="Город">${esc(m.city)}</td><td class="num" data-label="Цена">${eur(num(m.price_eur))}</td><td class="tw" data-label="Статус">${esc(m.status)}</td></tr>`).join('')+'</tbody></table></div>'; enhanceTable($('#mktable')); }
+  if(G.phone_script_de){ $('#cash-phone').hidden=false; $('#phone-text').textContent=G.phone_script_de;
+    $('#phone-copy').onclick=()=>{ const done=()=>{$('#phone-copied').textContent='Скопировано';}; try{ navigator.clipboard.writeText(G.phone_script_de).then(done,()=>{ const r=document.createRange(); r.selectNodeContents($('#phone-text')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#phone-copied').textContent='Текст выделен — скопируйте вручную'; }); }catch(e){} }; }
+}
+
+/* ---------- brands ---------- */
+function renderBrands(){
+  const el=$('#brands'); if(!B.length){ el.innerHTML='<div class="empty">Нет данных о брендах.</div>'; return; }
+  el.innerHTML=B.map(b=>`<details><summary><span>${esc(b.brand)}</span><span class="muted" style="font-weight:400">${esc(b.warranty||'')}</span></summary><div class="b-body">${kv([['Надёжность',esc(b.reliability)],['Сервис в Германии',esc(b.service_de)],['Гарантия',esc(b.warranty)],['Запчасти',esc(b.parts_policy)],['Где купить детали',esc(b.parts_shop_de)],['HEVC',esc(b.hevc_policy)],['Индекс ремонта',esc(b.repair_index)],['Заметки',esc(b.notes)],['Источники',(b.sources||[]).map((u,i)=>link(typeof u==='string'?u:u.url,typeof u==='string'?'['+(i+1)+']':(u.title||'['+(i+1)+']'))).join(' ')]])}</div></details>`).join('');
+}
+
+/* ---------- checklist & glossary ---------- */
+const CHECK=[
+  ['До поездки — дома, по телефону',[
+    ['Позвонить в магазин: есть ли ноутбук новым, в заводской упаковке, по цене с сайта; можно ли заплатить наличными; можно ли отложить; есть ли добровольный обмен (Umtausch) и на сколько дней.','Готовый текст по-немецки — <a href="#cash-phone">«Что сказать по телефону»</a>, кнопка «Скопировать». MEDIMAX по телефону не резервирует — только на сайте.'],
+    ['Решить, где взять SSD на 1 ТБ (M.2 2280, NVMe).','Medion — в том же expert Bad Salzungen: Verbatim Vi3000, 149,99 €; Lenovo — MediaMarkt: WD Blue SN5100, 159,99 €; Acer — не нужен, 1 ТБ уже стоит.'],
+    ['Взять наличные с запасом.','Цена в магазине может отличаться от сайта (AGB MEDIMAX, п. 3). Паспорт при оплате наличными до 10 000 € не нужен.']
+  ]],
+  ['В магазине, до оплаты',[
+    ['Сверить коробку: модель и номер P/N, коробка новая и запечатанная.','__PN__ Не брать «Aussteller» (витринный), «Vorführgerät» (демонстрационный) и «B-Ware» (уценка); «Restposten» (остаток снятой модели) — только в запечатанной коробке.'],
+    ['Если магазин обещает обмен — попросить отметку на чеке («Umtausch bis …»).','Закон не даёт 14 дней на отказ при покупке в магазине: это право есть только при покупке на расстоянии (онлайн, по телефону) и вне магазина (§ 312g BGB). Резерв на сайте expert или MEDIMAX покупкой онлайн не считается — договор заключают на кассе.'],
+    ['Сохранить чек.','2 года продавец по закону отвечает за брак (Gewährleistung, § 438 BGB), в первый год доказывать, что брак был сразу, не нужно (§ 477 BGB). Это не гарантия производителя: у Medion на аккумулятор её нет, у Lenovo на аккумулятор — 1 год.']
+  ]],
+  ['Дома, в первый день — до того как вскрывать корпус',[
+    ['Конфигурация совпадает с коробкой: Einstellungen → System → Info (Параметры → Система → О системе).','Процессор: Medion — Core Ultra 5 228V, Acer — Ryzen AI 5 330, Lenovo — Ryzen 7 7735HS. Память — 32 ГБ («доступно» может быть меньше: часть берёт графика). У всех трёх память распаяна и двухканальная по устройству платы — каналы проверять не нужно.'],
+    ['Графика определилась полным именем: Task-Manager → Leistung → GPU 0 (Диспетчер задач → Производительность → Графический процессор 0).','Medion — Intel Arc 130V (в даташите и на expert.de ошибочно «140V» — это не подмена); Acer — AMD Radeon 820M; Lenovo — AMD Radeon 680M. «Microsoft Basic Display Adapter» — нет драйвера: обновить Windows.'],
+    ['Аппаратный HEVC включён: DXVA Checker → Decoder Devices — есть HEVC_VLD_Main и HEVC_VLD_Main10.','Medion — ещё HEVC_VLD_Main422_10_Intel (аппаратный HEVC 4:2:2). У Acer и Lenovo строк 4:2:2 нет — так и должно быть. Нет HEVC_VLD_Main10 — сразу в тот же магазин с чеком и коробкой.'],
+    ['Видео с той камеры или телефона, на которые будут снимать, идёт плавно.','Взять 1–2 минуты исходника на флешке. Не открывается в «Фото» или в бесплатном DaVinci Resolve — поставить «HEVC-Videoerweiterungen vom Gerätehersteller» (0 €, Microsoft Store).'],
+    ['Экран: белый, серый и чёрный фон на весь экран — нет ли битых пикселей, пятен и полос.','Цвет: включить режим sRGB, если он есть. ШИМ: яркость 20–30 %, снять экран телефоном в замедленной съёмке — полосы означают мерцание (это не брак; если устают глаза — держать яркость выше).'],
+    ['Нагрузка: Cinebench R23 → Multi Core, 10 минут, от сети, режим «Производительность».','Ориентир — медиана notebookcheck для этого процессора: Medion ~9 900, Acer ~7 800, Lenovo ~13 100. Меньше на 20 % и больше — проверить режим питания и обновления. Шум и нагрев — записать.'],
+    ['Аппаратное кодирование: HandBrake → пресет «H.265 QSV 2160p 4K» (Medion) или «H.265 VCN 2160p 4K» (Acer, Lenovo), экспорт короткого ролика.','В списке Video Encoder должен быть «H.265 10-bit (Intel QSV)» или «H.265 10-bit (AMD VCE)». Нет — не установлен драйвер графики.'],
+    ['Обновить Windows и BIOS.','Acer — BIOS 1.07 («Modify fan table», сайт поддержки Acer). Medion — если заряд стоит на ~89 %, проверить в утилите Medion бережную зарядку и зарядить до 100 % (heise).'],
+    ['Только после всех проверок — ставить SSD.','Medion: слот M.2 один — SSD встаёт вместо заводского; клонировать диск (нужен USB-корпус для M.2 NVMe) или поставить Windows заново с флешки. Lenovo: второй слот свободен — просто добавить. Acer: ставить ничего не нужно. Вскрытый ноутбук магазин может не взять на обмен; коробку и чек не выбрасывать.']
+  ]]
+];
+function renderChecklist(){
+  const st=store.get('check3',{}); const el=$('#checklist'); let n=0;
+  const pk=L.find(x=>x.status==='pick'), bk=L.filter(x=>x.status==='backup');
+  const pn=[pk,...bk].filter(Boolean).map((x,i)=>`№${i+1} ${x.brand} — ${x.pn}`).join('; ')+'.';
+  el.innerHTML=CHECK.map(([g,items])=>`<h3 class="ck-head">${esc(g)}</h3><div class="ck-card">`+items.map(([tx,note])=>{ const i=n++; return `<label for="ck-${i}"><input type="checkbox" id="ck-${i}" ${st[i]?'checked':''}><span>${esc(tx)}${note?`<span class="ck-note">${note.replace('__PN__',esc(pn))}</span>`:''}</span></label>`; }).join('')+'</div>').join('');
+  el.querySelectorAll('input').forEach(c=>c.addEventListener('change',()=>{ st[+c.id.slice(3)]=c.checked; store.set('check3',st); }));
+}
+const GLOSS=[
+  ['Gewährleistung и гарантия','Gewährleistung — по закону 2 года продавец отвечает за брак; в первый год доказывать, что брак был сразу, не нужно (§ 438, § 477 BGB). Идти — в тот же магазин с чеком. Гарантия — добровольное обещание производителя, условия свои (Medion — без аккумулятора, Lenovo — аккумулятор 1 год).'],
+  ['R14 / R30','Срок возврата у интернет-магазина — 14 или 30 дней, как пишет idealo. Действует только при покупке онлайн. В магазине за наличные — только то, что магазин даёт сам.'],
+  ['Aussteller, Vorführgerät, B-Ware, Restposten','Aussteller — стоял на витрине; Vorführgerät — демонстрационный, им пользовались; B-Ware — уценка (возврат, вскрытая или мятая упаковка); Restposten — остаток снятой модели, бывает и новым. Нужен новый в запечатанной коробке.'],
+  ['sRGB и Rec.709','Цветовое пространство интернета и HD/4K-видео. Экран, который покрывает его не полностью (45 % NTSC ≈ 60 % sRGB), показывает цвета блеклыми — оценить цвет на нём нельзя.'],
+  ['DCI-P3','Более широкое пространство. OLED с 100 % DCI-P3 покрывает sRGB целиком, но без режима sRGB или управления цветом показывает sRGB-видео перенасыщенным.'],
+  ['4:2:0 и 4:2:2','Как хранится цвет. 4:2:0 — телефоны, GoPro, дроны; 4:2:2 — «профессиональные» режимы беззеркалок. 4:2:2 аппаратно декодируют не все: HEVC 4:2:2 — Intel 11+; H.264 4:2:2 — NVIDIA RTX 50 и Intel Panther Lake.'],
+  ['HEVC (H.265) и H.264','Самые частые кодеки камер. Если ноутбук не декодирует исходник аппаратно, 4K-таймлайн грузит процессор; выход — прокси-файлы.'],
+  ['Отключённый HEVC','HP, Dell и часть Acer отключают аппаратный HEVC прошивкой. Проверяется DXVA Checker в первый день.'],
+  ['SO-DIMM и распайка','SO-DIMM — сменные планки памяти. Распаянную память не расширить и не заменить. 2×16 ГБ в двух слотах — эталон.'],
+  ['Двухканал','Две планки работают вдвое быстрее одной. Встроенная графика при одной планке теряет до 40–45 %.'],
+  ['ШИМ (PWM)','Мерцание подсветки на низкой яркости. У многих OLED есть; частота ниже ~500 Гц утомляет глаза чувствительных людей.'],
+  ['Nachnahme','Наложенный платёж: платите наличными курьеру при доставке, плюс сбор (обычно 5–10 €).'],
+  ['Cinebench R23 / 2024','Тест процессора на рендеринг: Multi — все ядра (экспорт, эффекты), Single — одно ядро (отзывчивость).'],
+  ['Time Spy / Steel Nomad','Тесты графики 3DMark. Для монтажа важны эффекты и цветокоррекция на GPU — их лучше видно в Puget Bench.'],
+  ['Puget Bench','Тест реальной работы в DaVinci Resolve и Premiere Pro: воспроизведение, эффекты, экспорт.']
+];
+function renderGloss(){ $('#gloss').innerHTML=GLOSS.map(g=>`<div><b>${esc(g[0])}</b>${esc(g[1])}</div>`).join(''); }
+
+MAXCPU=maxOf(x=>num((x.cpu||{}).r23_multi)); MAXGPU=maxOf(x=>num((x.gpu||{}).timespy));
+initControls(); renderVerdict(); renderWhatIf(); renderRef(); renderCash(); renderBrands(); renderChecklist(); renderGloss(); render();
+$('#foot').innerHTML = `Цены финалистов — сайты expert и MEDIMAX, 01.10.2026, 02:58–03:15; остальных — idealo.de, дата — в строке «Проверено» у каждой карточки. Цены меняются несколько раз в день — перед поездкой позвоните в магазин. Подробный разбор — ${link('REPORT.md','REPORT.md')}. ${D.criteria_text?esc(D.criteria_text):''}`;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkbook-16-g9-ahp-21ut004qge
+Откуда: Icecat Lenovo 21UT004QGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21UT004QGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/265961fef4bdc65b1d497c80c324746369fa7a72.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/3c5bb1717a10806b5c07a4d8c9754bc607cf3846.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a1b6fcefc55c6be824d5da3461a6f31ab3697ee8.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/e126badc46b0cd1a45ac7d020282aa3c0008cb76.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/ef86e81ba8055e66970fb8bdf15dc4ccdf442d5f.jpg

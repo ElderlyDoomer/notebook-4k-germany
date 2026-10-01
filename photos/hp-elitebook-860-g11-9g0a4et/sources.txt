@@ -1,0 +1,10 @@
+Ноутбук: hp-elitebook-860-g11-9g0a4et
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/ed94d5e3cf033438cda8581ca012725dfa388496.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/1801e24792e672612461b88aca70180e68b4704f.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/b04f6918d03a09ea6f3b398ef7f10ac4ed6679eb.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/456364da203a402b0302ba60e91675dddb272c2f.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/ddf21309c6cf6069d8fa437c1f73305b6fa9fcb6.jpg
+Icecat HP 9G0A4ET (Language=en; в de карточка не выпущена): https://live.icecat.biz/api?UserName=openIcecat-live&Language=en&Brand=HP&ProductCode=9G0A4ET
+ВНИМАНИЕ: по данным HP в Icecat P/N 9G0A4ET — EliteBook 840 G11 14" (Ultra 7 155H, 32 ГБ, 1 ТБ), а не 860 G11 16"; фото — точного P/N, т.е. 840 G11. Титул предложения на idealo тоже «EliteBook 840 G11 14"».

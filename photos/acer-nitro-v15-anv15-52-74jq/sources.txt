@@ -1,0 +1,10 @@
+Ноутбук: acer-nitro-v15-anv15-52-74jq
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/9e243f45a6f521fd20383793122103f32bd254d7.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/7370bb98f31fe6acc84be67a33e0aef5c4b1bbde.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/2f9f36c6536c583567dbb7769c62f59398c5480e.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/efaddc9f7673f84ee2338984c0a0db44ea628b15.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/203416e4d803f05e53b652f40162840c5e22f2df.jpg
+Источник: галерея Icecat Acer NH.QZ9EG.002 (Nitro V 15 ANV15-52-50S2) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NH.QZ9EG.002
+Фото модели/корпуса, не точного P/N: NH.QZ9EG.00B (ANV15-52-74JQ) в Icecat нет; взяты фото соседнего SKU той же серии NH.QZ9EG (ANV15-52, 15,6", чёрный корпус, тот же корпус, другой CPU).

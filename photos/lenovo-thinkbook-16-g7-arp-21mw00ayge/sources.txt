@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkbook-16-g7-arp-21mw00ayge
+Откуда: Icecat Lenovo 21MW00AYGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21MW00AYGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/90f166c5dbdff617860c9afc037eb14f98f2c597.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/3b347d1235a4079e42eedcec11ba32f98b906791.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/31317383f4527fd0589b78561caedb9f8ca450fb.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/9d3baafd8666ee4a44e29ba1358abda32a625ad4.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/87754d038aa5356ef7111f4dc50f9265633f7b93.jpg

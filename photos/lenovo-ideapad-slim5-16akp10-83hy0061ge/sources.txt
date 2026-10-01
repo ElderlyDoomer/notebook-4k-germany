@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16akp10-83hy0061ge
+Откуда: Icecat Lenovo 83HY0061GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83HY0061GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/1357edfbb8c976c31e9bc74e71d12a0c42c4c5fe.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/34dc44222eb82bab1a347edc75bc9c87f73449e5.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/798f9165eff5d2ffea28107021b97ce024894a75.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/d341c7f435eb3d5acf0d82992e218b97e15ff1cf.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/bc6027903d15ba0bdb3768b6c6cc2bc44e6cd9e2.jpg

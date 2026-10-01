@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkpad-e16-g3-amd-21st004gge
+Откуда: Icecat Lenovo 21ST004GGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21ST004GGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/9e328478a0635c162ff139e1b5ca97b4e1e2ccd6.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/73492210c81b84287c6e7b3ab090b24b0ae9f0b7.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/5610e4c523f20e4fdfb391f71d14149a8be64364.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/e5fbd4c7a1568d26c2b6b4b0581dd4feda794fe4.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/05bfb8ac1e8142404436e035ebd982abe115c440.jpg

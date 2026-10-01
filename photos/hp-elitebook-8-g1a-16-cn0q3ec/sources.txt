@@ -1,0 +1,8 @@
+Ноутбук: hp-elitebook-8-g1a-16-cn0q3ec
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/53c65d87c836af69b9180a3aacb1a38ba8fc0a1d.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/abf41455fc9f098fb7acc08936731e521bdf0510.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/e31a65204d0d9c7a4030e0b1a562e32e79574689.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/dc8242d6408c5f4c0f33a1681061b47491c36ebb.jpg
+Фото модели/корпуса, не точного P/N: CN0Q3EC (и #ABD) в Icecat нет; снимки — Icecat HP AD3F9ET (тот же корпус EliteBook 8 G1a 16", серебристый; у AD3F9ET есть слот NanoSIM/5G) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=AD3F9ET; EAN 0199251502835 найден на billiger.de

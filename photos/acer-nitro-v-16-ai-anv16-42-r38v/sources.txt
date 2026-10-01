@@ -1,0 +1,8 @@
+Ноутбук: acer-nitro-v-16-ai-anv16-42-r38v
+Откуда: Icecat Acer NH.U1GEG.003 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NH.U1GEG.003
+
+01.jpg ← https://images.icecat.biz/img/gallery/d23b66b84caf1121e4b70caa299ab240d3a2f2fb.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/a4037a5472dfc172b9c1ca6adb45f786cf6dfed8.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/3ae02e65158a688f5536bfdc93b338176c6a1ea7.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/44196ebdaa029b71e11c2b65e2257e2c24757dc6.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f4f08bab42e1c5c00bb920bcdfc4157523886ad7.jpg

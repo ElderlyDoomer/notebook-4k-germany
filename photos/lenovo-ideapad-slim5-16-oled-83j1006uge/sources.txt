@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16-oled-83j1006uge
+Откуда: Icecat Lenovo 83J1006UGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83J1006UGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/5fc7a877e1322b3c7f965570d4529d879bd68ed4.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/20b1bb639c77d1b5faaf4bccf8c294207c5e1bf7.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/dadb16165c21053c7dcb5f78ff838460c8da795d.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/5f652c5fd0b3046948456132ece98e14764b08c9.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f669f2e4bf62fde33c1d5b5c0cebee334d2b021f.jpg

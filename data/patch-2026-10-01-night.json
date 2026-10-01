@@ -1,0 +1,1133 @@
+{
+ "update": {
+  "medion-sprchrgd-16-s1-30040202": {
+   "status": "pick",
+   "fails": [],
+   "fail_notes": "Новый выбор (01.10, ночь) — при условии звонка. Проходит все жёсткие критерии в одном рынке: expert Bad Salzungen — 797 € + SSD 1 ТБ Verbatim Vi3000 149,99 € там же = 946,99 € наличными (резерв онлайн, оплата в рынке). Там 1 шт.; в остальных 15 рынках с резервом — 1079–1099 €, и 13 из них — «Restposten» (8), «Aussteller» (4) или «Vorführgerät» (1) → 797 € на 282 € ниже прочих и может быть ошибкой цены. Не подтвердили по телефону → Swift Air R1FY (в том же Bad Salzungen 999 €, в Schmalkalden в 18 км — 959,14 €).",
+   "gpu": {
+    "note": "Premiere — версия 16 ГБ (11 прогонов); Resolve есть только у 8 ГБ — 2304, < 10 прогонов. В даташите Medion и на expert.de написано «Arc 140V», но у Core Ultra 5 228V по Intel ARK — Arc 130V (https://www.intel.com/content/www/us/en/products/sku/240955/intel-core-ultra-5-processor-228v-8m-cache-up-to-4-50-ghz/specifications.html)"
+   },
+   "memory": {
+    "upgrade_note": "распайка (в корпусе процессора), не расширить; у 228V по Intel ARK «Max # of Memory Channels: 2», максимум 32 ГБ — двухканал",
+    "source": "даташит Medion 30040202 «32 GB LPDDR5x RAM» (https://media.medion.com/prod/medion/de_DE/0833/0732/0659/30040202.pdf); Intel ARK (https://www.intel.com/content/www/us/en/products/sku/240955/intel-core-ultra-5-processor-228v-8m-cache-up-to-4-50-ghz/specifications.html); CHIP (https://www.chip.de/test/Medion-SPRCHRGD-16-S1-OLED-im-Test_186892299.html)"
+   },
+   "ssd": {
+    "note": "512 ГБ PCIe4 (даташит); M.2 2280 один (CHIP, IPC) → 1 ТБ только заменой, Windows переустановить или склонировать. SSD за наличные в том же рынке: Verbatim Vi3000 1 ТБ (PCIe 3.0) 149,99 € или Samsung 990 EVO Plus 1 ТБ 199,90 € — по 1 шт. (API expert 02:58)"
+   },
+   "screen": {
+    "gamut_spec": "100 % DCI-P3, 500 нит, 2880×1800, 120 Гц — даташит Medion этого P/N; замер CHIP (версия с Core Ultra 9): 100 % sRGB / 100 % DCI-P3, 93 % AdobeRGB",
+    "source": "даташит Medion 30040202 — https://media.medion.com/prod/medion/de_DE/0833/0732/0659/30040202.pdf; замер CHIP на версии с Core Ultra 9 — https://www.chip.de/test/Medion-SPRCHRGD-16-S1-OLED-im-Test_186892299.html"
+   },
+   "prices": {
+    "any_eur": 797.0,
+    "any_seller": "expert Bad Salzungen (в рынке, любая оплата)",
+    "cash_eur": 797.0,
+    "cash_seller": "expert Bad Salzungen, Bahnhofstraße 23, 36433 Bad Salzungen, тел. 03695 69630 — 1 шт.",
+    "cash_method": "«Reservieren und sofort abholen» — резерв онлайн, оплата в рынке; слова «bar» в FAQ expert нет — спросить по телефону",
+    "addons": [
+     {
+      "what": "SSD 1 ТБ M.2 2280 Verbatim Vi3000 — expert Bad Salzungen, в рынке, 1 шт. (webcode 17320020417)",
+      "eur": 149.99
+     }
+    ],
+    "total_cash_eur": 946.99,
+    "total_any_eur": 946.99,
+    "shop_url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17040041553-sprchrgd-16-s1-oled-16-zoll-wqxga-intel-core-ultra-5-228v-32-gb-512-gb-ssd-intel-arc-140v.html?branch_id=32354097",
+    "checked": "01.10.2026 03:14 — то же в Chrome (критик): «797.- inkl. MwSt.», «Reservieren und sofort abholen», API без изменений. 02:58 — API expert, которым пользуется сама карточка: 797 €, RESERVE, AVAILABLE, 1 шт., itemOnDisplay = false; Vi3000 149,99 € и 990 EVO Plus 199,90 € — по 1 шт. Ранее: 01:54 и 02:14 (AMD/notes/store-availability.md), 02:44 — в Chrome «797.- … Reservieren und sofort abholen» (AMD/notes/night-verify.md)",
+    "note": "Опрос всех 319 рынков expert 01.10 02:59–03:00: резерв — 16 рынков; Bad Salzungen 797 €, остальные 1079–1099 €, из них 13 — «Restposten» (8), «Aussteller» (4), «Vorführgerät» (1); новые, кроме Bad Salzungen, — только Soltau и Geesthacht (по 1079 €). Онлайн (idealo 01:52): eBay МП 999, expert.de / Kaufland МП / OTTO МП 1079, MediaMarkt / Saturn 1089 (наличными при самовывозе) + SSD → > 1100 €. Риск: цена на 282 € ниже остальных — возможна ошибка цены; 1 шт.",
+    "addons_source": "SSD — API expert и карточка https://www.expert.de/shop/unsere-produkte/computer-zubehor/speichermedien/interne-festplatten/17320020417-vi3000-pcie-nvme-m-2-ssd-1tb-interne-festplatte-49375.html?branch_id=32354097 (01.10 02:58)"
+   },
+   "warranty": "2 года Medion (даташит: «Garantie: 24 Monate», «externes Type-C Netzteil» в комплекте); на аккумулятор гарантии нет (https://www.medion.com/de/shop/garantiebedingungen); законных 14 дней на отказ при покупке в магазине нет",
+   "scores": {
+    "price": 7.5,
+    "avg": 6.5,
+    "note": "шкала веток; Цена 7,5 — за 946,99 € наличными (Bad Salzungen); Средн. (6 + 4 + 7,5 + 9 + 7) / 5 = 6,7 → 6,5. При 1199,99 € было Цена 3 → 5,8"
+   },
+   "pros": [
+    "2,8K OLED 120 Гц: даташит 100 % DCI-P3, 500 нит; замер CHIP 100 % sRGB",
+    "аппаратный декод HEVC 4:2:2 (Lunar Lake) — важно, раз кодек камеры неизвестен",
+    "Arc 130V — Time Spy 3401, в 4,3 раза больше 820M у R1FY",
+    "946,99 € наличными вместе с SSD 1 ТБ, всё в одном рынке (expert Bad Salzungen)",
+    "USB4, HDMI 2.0, microSD, 80,5 Вт·ч"
+   ],
+   "cons": [
+    "797 € — 1 шт. в одном рынке (запад Тюрингии); в остальных 1079–1099 € → возможна ошибка цены, нужен звонок",
+    "процессор слабый в многопотоке (R23 9932 — лишь на 27 % больше R1FY)",
+    "512 ГБ, M.2 один — SSD 1 ТБ только заменой; RAM распаяна",
+    "на аккумулятор гарантии нет, у heise — заряд застревает на ~89 %; запчастей к модели почти нет",
+    "в магазине нет законных 14 дней на отказ"
+   ],
+   "sources": [
+    {
+     "title": "idealo 30040202",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/207222210_-sprchrgd-16-s1-30040202-medion.html"
+    },
+    {
+     "title": "CHIP — тест",
+     "url": "https://www.chip.de/test/Medion-SPRCHRGD-16-S1-OLED-im-Test_186892299.html"
+    },
+    {
+     "title": "даташит Medion 30040200",
+     "url": "https://media.medion.com/prod/medion/de_DE/0781/0810/0773/30040200.pdf"
+    },
+    {
+     "title": "Intel/REPORT.md — «Условные»",
+     "url": "Intel/REPORT.md"
+    },
+    {
+     "title": "даташит Medion 30040202",
+     "url": "https://media.medion.com/prod/medion/de_DE/0833/0732/0659/30040202.pdf"
+    },
+    {
+     "title": "expert Bad Salzungen — Medion 797 €",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17040041553-sprchrgd-16-s1-oled-16-zoll-wqxga-intel-core-ultra-5-228v-32-gb-512-gb-ssd-intel-arc-140v.html?branch_id=32354097"
+    },
+    {
+     "title": "expert Bad Salzungen — SSD Vi3000 149,99 €",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/speichermedien/interne-festplatten/17320020417-vi3000-pcie-nvme-m-2-ssd-1tb-interne-festplatte-49375.html?branch_id=32354097"
+    },
+    {
+     "title": "Intel ARK Core Ultra 5 228V",
+     "url": "https://www.intel.com/content/www/us/en/products/sku/240955/intel-core-ultra-5-processor-228v-8m-cache-up-to-4-50-ghz/specifications.html"
+    },
+    {
+     "title": "FAQ expert (резерв, оплата в рынке)",
+     "url": "https://www.expert.de/nuernberg1/Footer/Service/Fragen-Antworten"
+    },
+    {
+     "title": "store-availability.md",
+     "url": "AMD/notes/store-availability.md"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  },
+  "acer-swift-air-16-r1fy": {
+   "status": "backup",
+   "fail_notes": "Проходит все жёсткие критерии. Запасной к Medion: если в Bad Salzungen не подтвердят 797 € — брать этот (в том же рынке 999 €, 2 шт.; в Schmalkalden в 18 км — 959,14 €). Самый доступный за наличные: 102 рынка expert с новым товаром и резервом. Для 4K слабый (4 ядра, 820M) — скорее всего, понадобятся прокси.",
+   "prices": {
+    "any_eur": 959.14,
+    "any_seller": "expert Schmalkalden (в рынке, любая оплата)",
+    "cash_eur": 959.14,
+    "cash_seller": "expert Schmalkalden, Haindorfsgasse 3, 98574 Schmalkalden, тел. 03683 4692811 — 1 шт.; в остальных 101 рынке с новым товаром — 989–1199 € (обычно 999 €)",
+    "cash_method": "«Reservieren und sofort abholen» — резерв онлайн, оплата в рынке; сбора нет; слова «bar» в FAQ expert нет — спросить по телефону",
+    "total_cash_eur": 959.14,
+    "total_any_eur": 959.14,
+    "shop_url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=32354099",
+    "checked": "01.10.2026 03:14–03:15 — в Chrome (критик): Schmalkalden «959.14 inkl. MwSt.», «Reservieren und sofort abholen» (API: 1 шт., новый); Bad Salzungen 999 € (2 шт.). 02:59 — API expert по всем 319 рынкам: резерв 121, из них новых 102, «Aussteller» 19; Schmalkalden 959,14 € (1 шт., новый). Ранее: 01:46 (AMD/notes/store-availability.md), 02:46–02:49 — idealo и expert в Chrome (AMD/notes/night-verify.md)",
+    "note": "Цены в рынках с новым товаром: 959,14 € — 1 (Schmalkalden), 989 € — 18 (Bening: 1029 − 40 € Sofort-Rabatt; действует ли на кассе — не проверено), 998,98 € — 3, 999 € — 70, 999,99 € — 4, 1029,99 / 1049 € — по 1, 1199 € — 4. Peine 986,51 € — «Aussteller» (выставочный, без упаковки) — не считается. idealo (02:46): Kaufland МП (expertDeutschland) 999,00 и expert.de 999,00 — только онлайн-оплата; Nachnahme ни у кого. MediaMarkt/Saturn, Euronics, NBB, MEDIMAX, Cyberport — этого SKU нет"
+   },
+   "scores": {
+    "price": 7.5,
+    "note": "шкала веток (AMD/REPORT.md №9); Цена 7,5 — за 959,14 € (Schmalkalden; при 999,99 € — 7); Средн. (4,5 + 3,5 + 7,5 + 8,5 + 4,5) / 5 = 5,7 → 5,5. Ремонт 3,5 — из AMD/notes/reliability.md"
+   },
+   "pros": [
+    "лучший измеренный экран в бюджете: 100 % sRGB / 100 % DCI-P3, ΔE 1,6",
+    "за наличные в 102 рынках expert (резерв, оплата в рынке): 959,14–1199 € (в 96 из них — не дороже 999,99 €)",
+    "докупать нечего: 32 ГБ, 1 ТБ, зарядка 65 Вт в комплекте",
+    "1,1 кг",
+    "аппаратно декодирует H.264 8 бит и HEVC 8/10 бит 4:2:0, AV1 — декод и кодирование"
+   ],
+   "sources": [
+    {
+     "title": "idealo NX.DL5EG.002",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211778543_-swift-air-16-oled-16-wuxga-amd-ryzen-ai-5-32gb-1tb-ssd-silber-nx-dl5eg-002-acer.html"
+    },
+    {
+     "title": "expert — карточка",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html"
+    },
+    {
+     "title": "FAQ expert (резерв, оплата в рынке)",
+     "url": "https://www.expert.de/nuernberg1/Footer/Service/Fragen-Antworten"
+    },
+    {
+     "title": "LaptopMedia DE — обзор Swift Air 16",
+     "url": "https://laptopmedia.com/de/review/acer-swift-air-16-sfa16-61m-review-a-16-inch-laptop-that-weighs-under-1-kg/"
+    },
+    {
+     "title": "Icecat NX.DL5EG.002",
+     "url": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.DL5EG.002"
+    },
+    {
+     "title": "NBC Ryzen AI 5 330",
+     "url": "https://www.notebookcheck.net/AMD-Ryzen-AI-5-330-Processor-Benchmarks-and-Specs.1049553.0.html"
+    },
+    {
+     "title": "NBC Radeon 820M",
+     "url": "https://www.notebookcheck.net/AMD-Radeon-820M-Benchmarks-and-Specs.1059782.0.html"
+    },
+    {
+     "title": "ChannelPartner — Acer без HEVC-кодека",
+     "url": "https://www.channelpartner.de/article/4187748/acer-und-asus-liefern-wieder.html"
+    },
+    {
+     "title": "Microsoft Store — HEVC-расширение 0 €",
+     "url": "https://apps.microsoft.com/detail/9N4WGH0Z6VHQ"
+    },
+    {
+     "title": "FINAL-REPORT.v3.md",
+     "url": "FINAL-REPORT.v3.md"
+    },
+    {
+     "title": "screen-verify-1.md",
+     "url": "AMD/notes/screen-verify-1.md"
+    },
+    {
+     "title": "expert Schmalkalden — R1FY 959,14 €",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=32354099"
+    },
+    {
+     "title": "store-availability.md — все 319 рынков",
+     "url": "AMD/notes/store-availability.md"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  },
+  "acer-aspire-16-ai-r2r1": {
+   "status": "fails",
+   "fails": [
+    "screen"
+   ],
+   "fail_notes": "Больше не запасной: есть три варианта, которые проходят все критерии. Экран по букве не подтверждён (у Acer «95% DCI-P3», 100 % — только Icecat, замера нет). Наличными теперь можно: резерв в MEDIMAX Nettetal, 1099 €, оплата в рынке (слова «bar» нет) — в 1 € от потолка. Картой — Galaxus 1015,87 € (справка).",
+   "prices": {
+    "any_eur": 1015.87,
+    "any_seller": "Galaxus (сайт; карта / Klarna / PayPal; на idealo этой цены нет; Vorkasse на сайте Galaxus нет)",
+    "cash_eur": 1099.0,
+    "cash_seller": "MEDIMAX Nettetal, Johannes-Cleven-Straße 4, 41334 Nettetal, тел. +49 2153 910860 — «Marktlager», «in 1-3 Werktagen abholbereit»",
+    "cash_method": "«Reservierung» онлайн (форму отправляет сам покупатель), оплата в рынке «mit den dort akzeptierten Zahlungsmitteln» (AGB MEDIMAX (7)); слова «bar» нет; цена в рынке может отличаться (AGB (3))",
+    "total_cash_eur": 1099.0,
+    "total_any_eur": 1015.87,
+    "shop_url": "https://www.medimax.de/p/1535583",
+    "checked": "01.10.2026 02:38–02:46 (AMD/notes/night-verify.md): MEDIMAX 1099 €, резерв только Nettetal; idealo — computeruniverse 1081,21; Galaxus 1015,87; API рынков MEDIMAX 03:01 — Nettetal «in 1-3 Werktagen abholbereit»",
+    "note": "Наличными: MEDIMAX Nettetal 1099 € (резерв); computeruniverse Vorkasse 1081,21 + взнос в Sparkasse ~10 € = ~1091,21 € (условно: паспорт от 1000 €, Sparkasse должна брать взносы от не-клиентов, товар не резервируется); Amazon МП (AVISTA) 1112,99 € — > 1100. Cyberport Store 2539 €. Картой (справка): Galaxus 1015,87 €; через PaysafeWallet (+5 %) — 1069,44 €. Предложения 794–855 € на idealo — 16-ГБ модели под чужим кодом (Cyberport 1C26-CVU, EP R5H7)"
+   },
+   "scores": {
+    "price": 5,
+    "avg": 5.5,
+    "note": "шкала веток (AMD/REPORT.md №10); Цена 5 — за 1099 € наличными (MEDIMAX Nettetal); Средн. (4 + 4 + 5 + 8 + 6,5) / 5 = 5,5"
+   },
+   "cons": [
+    "экран подтверждён только даташитом (у Acer 95 % P3), ШИМ не проверен",
+    "за наличные — только MEDIMAX Nettetal за 1099 € (в 1 € от потолка)",
+    "HEVC 4:2:2 не декодирует (ни один AMD)",
+    "RAM распаяна",
+    "корпус гнётся (TechRadar)"
+   ],
+   "sources": [
+    {
+     "title": "idealo NX.JP0EG.00Z",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211631508_-aspire-16-ai-a16-61m-r2r1-acer.html"
+    },
+    {
+     "title": "даташит Acer (gzhls)",
+     "url": "https://gzhls.at/blob/ldb/e/9/9/4/1b8b6ae3e1047dc798a552be0d80e9a0f0ab.pdf"
+    },
+    {
+     "title": "Icecat NX.JP0EG.00Z",
+     "url": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JP0EG.00Z"
+    },
+    {
+     "title": "TechRadar — обзор",
+     "url": "https://www.techradar.com/computing/windows-laptops/acer-aspire-16-ai-review"
+    },
+    {
+     "title": "Trusted Reviews — обзор (2K-OLED)",
+     "url": "https://www.trustedreviews.com/reviews/acer-aspire-16-ai"
+    },
+    {
+     "title": "MEDIMAX AGB",
+     "url": "https://www.medimax.de/agb"
+    },
+    {
+     "title": "screen-verify-1.md",
+     "url": "AMD/notes/screen-verify-1.md"
+    },
+    {
+     "title": "NBC сборник A16-61M",
+     "url": "https://www.notebookcheck.net/Acer-Aspire-16-AI-A16-61M.1237489.0.html"
+    },
+    {
+     "title": "MEDIMAX 1535583 — R2R1 1099 €",
+     "url": "https://www.medimax.de/p/1535583"
+    },
+    {
+     "title": "Galaxus — R2R1 1015,87 €",
+     "url": "https://www.galaxus.de/de/s1/product/acer-aspire-16-ai-oled-16-1000-gb-32-gb-de-amd-ryzen-ai-7-350-notebook-66522762"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  }
+ },
+ "add": [
+  {
+   "id": "lenovo-ideapad-slim5-15arp10-83j3006gge",
+   "pn": "83J3006GGE",
+   "brand": "Lenovo",
+   "model": "IdeaPad Slim 5 15ARP10 OLED (Ryzen 7 7735HS, 32/512)",
+   "branch": "AMD",
+   "status": "backup",
+   "fails": [],
+   "fail_notes": "Проходит все жёсткие критерии (вариант «512 ГБ + SSD самому»), сильнее R1FY по процессору (×1,67) и графике (×2,9). Наличными — только резерв в трёх рынках MEDIMAX: Meißen, Frankfurt/Oder (Lenné-Passagen), Kempen; 899 € + SSD 1 ТБ 159,99 € (MediaMarkt) = 1058,99 €. Минусы: Zen 3+ 2022 года, драйверы RDNA 2 только в поддержке, нет AV1-кодирования и 4:2:2, экран только по даташиту.",
+   "cpu": {
+    "name": "Ryzen 7 7735HS",
+    "codename": "Rembrandt-R (Zen 3+)",
+    "cores_threads": "8/16",
+    "tdp_w": 35,
+    "r23_multi": 13106,
+    "r23_single": 1546,
+    "cb2024_multi": 620,
+    "cb2024_single": 90,
+    "gb6_multi": 9970,
+    "source": "медианы NBC (в скобках в perf-tables.md — n) — https://www.notebookcheck.net/AMD-Ryzen-7-7735HS-Processor-Benchmarks-and-Specs.681410.0.html; сводка AMD/notes/perf-tables.md §1",
+    "note": "Rembrandt-R — «только если очень дёшево» (AMD/notes/amd-cpu.md); драйверы RDNA 2 — maintenance mode с 10.2025"
+   },
+   "gpu": {
+    "name": "AMD Radeon 680M",
+    "type": "iGPU",
+    "timespy": 2303,
+    "steel_nomad_light": 2119,
+    "puget_resolve": null,
+    "puget_premiere": null,
+    "source": "Time Spy Graphics / Steel Nomad Light — медианы NBC (https://www.notebookcheck.net/AMD-Radeon-680M-GPU-Benchmarks-and-Specs.589860.0.html); Puget — Resolve Studio 20.0–20.3 PB 1.2 Standard и Premiere 25.1–25.2 PB 1.x, только ≥ 10 прогонов (AMD/notes/perf-tables.md §2–3)",
+    "note": "Puget: в Resolve нет, Premiere 10 463 при < 10 прогонах — выброс, не берём"
+   },
+   "codecs": {
+    "hevc_422_decode": false,
+    "h264_422_decode": false,
+    "av1_encode": false,
+    "av1_decode": true,
+    "note": "AMD VCN 3.1 (Rembrandt): все кодеки только 4:2:0; AV1 — только декод",
+    "source": "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support; сводка AMD/notes/perf-tables.md §4"
+   },
+   "memory": {
+    "layout": "soldered32",
+    "type": "LPDDR5X-6400 (работает как LPDDR5)",
+    "upgrade_note": "«32GB Soldered LPDDR5X-6400», «Memory soldered to systemboard, no slots, dual-channel» — двухканал, расширить нельзя",
+    "source": "PSREF https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83J3006GGE&country_code=DE"
+   },
+   "ssd": {
+    "size_gb": 512,
+    "free_m2": true,
+    "note": "512 ГБ M.2 2242 PCIe 4.0 + «Two M.2 2280 PCIe 4.0 x4 slots» — второй слот свободен (PSREF), SSD 1 ТБ просто добавить"
+   },
+   "screen": {
+    "size_in": 15.1,
+    "panel": "OLED",
+    "resolution": "2560×1600",
+    "hz": 165,
+    "nits": 500,
+    "srgb_measured": null,
+    "p3_measured": null,
+    "srgb_spec": 100,
+    "gamut_spec": "100 % DCI-P3 (PSREF), DisplayHDR True Black 600, глянец — по даташиту, замера нет",
+    "pwm": "не проверено",
+    "source": "PSREF https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83J3006GGE&country_code=DE",
+    "ok": true
+   },
+   "prices": {
+    "any_eur": 899.0,
+    "any_seller": "MEDIMAX (онлайн и в рынке)",
+    "cash_eur": 899.0,
+    "cash_seller": "MEDIMAX Meißen (Neumarkt 5, +49 3521 408660) / Frankfurt/Oder Lenné-Passagen (Karl-Marx-Straße 194, +49 335 387270) / Kempen (Kleinbahnstraße 20, +49 2152 20570) — «Marktlager», «in 1-3 Werktagen abholbereit»",
+    "cash_method": "«Reservierung» онлайн (форму отправляет сам покупатель; по телефону не резервируют — AGB (4)), оплата в рынке «mit den dort akzeptierten Zahlungsmitteln» (AGB (7)); слова «bar» нет; цена в рынке может отличаться (AGB (3)). При «Abholung nach Bestellung» — только онлайн-оплата",
+    "transfer_eur": 899.0,
+    "addons": [
+     {
+      "what": "SSD 1 ТБ M.2 SanDisk WD Blue SN5100 — MediaMarkt, самовывоз с оплатой наличными (продавец MediaMarkt; наличие в рынке не проверено)",
+      "eur": 159.99
+     }
+    ],
+    "total_cash_eur": 1058.99,
+    "total_any_eur": 1058.99,
+    "idealo_url": null,
+    "shop_url": "https://www.medimax.de/p/1505157/ideapad-slim-5-15arp10",
+    "checked": "01.10.2026 03:00–03:01 — medimax.de: «899.00», P/N 83J3006GGE на карточке; API выбора рынка: резерв — Meißen, Frankfurt/Oder, Kempen. Ранее 02:38–02:43 (AMD/notes/night-verify.md), SSD MediaMarkt 159,99 € — 02:43",
+    "note": "Своей карточки на idealo нет (поиск https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=83J3006GGE → чужие модели); близнец 83J3008LGE — https://www.idealo.de/preisvergleich/OffersOfProduct/211964640_-ideapad-slim-5-15-83j3008lge-lenovo.html от 1299 € (только lenovo.com). Онлайн SSD дешевле (Verbatim Vi3000 120,99 € у NBB), но это не наличные. Рынки MEDIMAX — франчайзи: цену и наличные подтвердить звонком"
+   },
+   "weight_kg": 1.49,
+   "battery_wh": 70,
+   "ports": [
+    "2× USB-C 10 Гбит/с (PD 45–65 Вт, DP)",
+    "2× USB-A 5 Гбит/с",
+    "HDMI 2.1 (до 4K/60)",
+    "microSD",
+    "без USB4/TB, без Ethernet"
+   ],
+   "warranty": "2 года Lenovo (Courier or Carry-in), аккумулятор — 1 год (PSREF); законных 14 дней на отказ при покупке в магазине нет",
+   "reliability": {
+    "brand_rank_note": "Lenovo — 5-е место из 10 (CR + PCMag 2025), ремонт по опросу NBC 2024 «простой» (data/laptops.json, brands)",
+    "model_issues": "не проверено (обзоров с замером нет)",
+    "parts_years": "не проверено",
+    "parts_available": "не проверено",
+    "service_manual": null,
+    "prevalence": "редкая: своей карточки idealo нет, в продаже — 3 рынка MEDIMAX",
+    "sources": [
+     "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83J3006GGE&country_code=DE"
+    ]
+   },
+   "scores": {
+    "problems": null,
+    "repair": null,
+    "price": 6,
+    "portability": null,
+    "power": null,
+    "avg": null,
+    "note": "по шкале целиком не оценивался (ночная находка); Цена 6 — по формуле шкалы для 1058,99 €"
+   },
+   "pros": [
+    "процессор в 1,67 раза и графика в 2,9 раза сильнее R1FY (R23 13 106, Time Spy 2303)",
+    "15,1\" 2,5K OLED 165 Гц, 500 нит, 100 % DCI-P3 (PSREF)",
+    "второй M.2 2280 свободен — SSD 1 ТБ просто добавить",
+    "HDMI 2.1, зарядка 65 Вт в комплекте"
+   ],
+   "cons": [
+    "Zen 3+ (Rembrandt-R) 2022 года; драйверы RDNA 2 только в поддержке",
+    "нет аппаратного 4:2:2 и AV1-кодирования",
+    "экран только по даташиту: замера и данных о ШИМ нет",
+    "только 3 рынка MEDIMAX; «bar» не написано; цена в рынке может отличаться",
+    "SSD — отдельно, в другой сети (MediaMarkt)",
+    "своей карточки idealo нет"
+   ],
+   "sources": [
+    {
+     "title": "PSREF 83J3006GGE",
+     "url": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83J3006GGE&country_code=DE"
+    },
+    {
+     "title": "MEDIMAX 1505157 — 899 €",
+     "url": "https://www.medimax.de/p/1505157/ideapad-slim-5-15arp10"
+    },
+    {
+     "title": "MEDIMAX Hilfe (резерв, оплата в рынке)",
+     "url": "https://www.medimax.de/help"
+    },
+    {
+     "title": "AGB MEDIMAX",
+     "url": "https://www.medimax.de/agb"
+    },
+    {
+     "title": "MediaMarkt — SSD SN5100 1 ТБ 159,99 €",
+     "url": "https://www.mediamarkt.de/de/product/_sandisk-wd-bluer-sn5100-nvmetm-festplatte-1-tb-ssd-m2-via-nvme-intern-2999770.html"
+    },
+    {
+     "title": "NBC Ryzen 7 7735HS",
+     "url": "https://www.notebookcheck.net/AMD-Ryzen-7-7735HS-Processor-Benchmarks-and-Specs.681410.0.html"
+    },
+    {
+     "title": "NBC Radeon 680M",
+     "url": "https://www.notebookcheck.net/AMD-Radeon-680M-GPU-Benchmarks-and-Specs.589860.0.html"
+    },
+    {
+     "title": "retail-cash-sweep.md",
+     "url": "AMD/notes/retail-cash-sweep.md"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  },
+  {
+   "id": "medion-avantum-15-s2-30042355",
+   "pn": "30042355",
+   "brand": "Medion",
+   "model": "Avantum 15 S2 MD600071 (Core Ultra 7 258V, 32/500)",
+   "branch": "Intel",
+   "status": "fails",
+   "fails": [
+    "screen",
+    "price"
+   ],
+   "fail_notes": "FHD IPS 250 нит, охват в даташите не указан → экран не подтверждён; 500 ГБ и без блока питания («KEIN NETZTEIL») → с SSD и зарядкой > 1100 €.",
+   "cpu": {
+    "name": "Core Ultra 7 258V",
+    "codename": "Lunar Lake",
+    "cores_threads": null,
+    "tdp_w": null,
+    "r23_multi": null,
+    "r23_single": null,
+    "cb2024_multi": null,
+    "cb2024_single": null,
+    "gb6_multi": null,
+    "source": null,
+    "note": null
+   },
+   "gpu": {
+    "name": "Intel Arc 140V",
+    "type": "iGPU",
+    "timespy": null,
+    "steel_nomad_light": null,
+    "puget_resolve": null,
+    "puget_premiere": null,
+    "source": null,
+    "note": null
+   },
+   "codecs": {
+    "hevc_422_decode": null,
+    "h264_422_decode": null,
+    "av1_encode": null,
+    "av1_decode": null,
+    "note": null,
+    "source": null
+   },
+   "memory": {
+    "layout": "soldered32",
+    "type": "LPDDR5X (в корпусе процессора)",
+    "upgrade_note": null,
+    "source": "medion.com 30042355A1"
+   },
+   "ssd": {
+    "size_gb": 500,
+    "free_m2": null,
+    "note": "500 ГБ PCIe (medion.com)"
+   },
+   "screen": {
+    "size_in": 15.6,
+    "panel": "IPS",
+    "resolution": "1920×1080",
+    "hz": null,
+    "nits": 250,
+    "srgb_measured": null,
+    "p3_measured": null,
+    "srgb_spec": null,
+    "gamut_spec": "охват не указан",
+    "pwm": null,
+    "source": "https://www.medion.com/de/shop/p/multimedia-notebooks-medion-avantum-15-s2-laptop-intel-core-ultra-7-258v-windows-11-home-39-5-cm-15-6--fhd-display-500-gb-ssd-32-gb-ram-kein-netzteil-30042355A1",
+    "ok": false
+   },
+   "prices": {
+    "any_eur": 999.0,
+    "any_seller": "MediaMarkt / Saturn / eBay МП",
+    "cash_eur": 999.0,
+    "cash_seller": "MediaMarkt / Saturn",
+    "cash_method": "самовывоз с оплатой наличными",
+    "transfer_eur": null,
+    "addons": [],
+    "total_cash_eur": 999.0,
+    "total_any_eur": 999.0,
+    "idealo_url": "https://www.idealo.de/preisvergleich/OffersOfProduct/214036721_-avantum-15-s2-30042355-medion.html",
+    "shop_url": null,
+    "checked": "01.10.2026 ~02:10 и 02:46 (retail-cash-sweep.md, night-verify.md)",
+    "note": "medion.com 1049,95 €; без SSD 1 ТБ и зарядки"
+   },
+   "weight_kg": null,
+   "battery_wh": null,
+   "ports": [],
+   "warranty": null,
+   "reliability": {
+    "brand_rank_note": null,
+    "model_issues": null,
+    "parts_years": null,
+    "parts_available": null,
+    "service_manual": null,
+    "prevalence": null,
+    "sources": []
+   },
+   "scores": {
+    "problems": null,
+    "repair": null,
+    "price": null,
+    "portability": null,
+    "power": null,
+    "avg": null,
+    "note": null
+   },
+   "pros": [],
+   "cons": [],
+   "sources": [
+    {
+     "title": "medion.com 30042355A1",
+     "url": "https://www.medion.com/de/shop/p/multimedia-notebooks-medion-avantum-15-s2-laptop-intel-core-ultra-7-258v-windows-11-home-39-5-cm-15-6--fhd-display-500-gb-ssd-32-gb-ram-kein-netzteil-30042355A1"
+    },
+    {
+     "title": "idealo 30042355",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/214036721_-avantum-15-s2-30042355-medion.html"
+    },
+    {
+     "title": "night-verify.md",
+     "url": "AMD/notes/night-verify.md"
+    }
+   ]
+  },
+  {
+   "id": "lenovo-ideapad-slim5-16irh10-83hs00a2ge",
+   "pn": "83HS00A2GE",
+   "brand": "Lenovo",
+   "model": "IdeaPad Slim 5 16IRH10 (i5-13420H, 2×16/512)",
+   "branch": "Intel",
+   "status": "fails",
+   "fails": [
+    "screen"
+   ],
+   "fail_notes": "Экран «16\" WUXGA IPS 300nits Anti-glare, 45% NTSC» (PSREF) — не проходит; память при этом эталон 2×16 SO-DIMM. MediaMarkt 699 €.",
+   "cpu": {
+    "name": "Core i5-13420H",
+    "codename": "Raptor Lake-H",
+    "cores_threads": null,
+    "tdp_w": null,
+    "r23_multi": null,
+    "r23_single": null,
+    "cb2024_multi": null,
+    "cb2024_single": null,
+    "gb6_multi": null,
+    "source": null,
+    "note": null
+   },
+   "gpu": {
+    "name": null,
+    "type": "iGPU",
+    "timespy": null,
+    "steel_nomad_light": null,
+    "puget_resolve": null,
+    "puget_premiere": null,
+    "source": null,
+    "note": null
+   },
+   "codecs": {
+    "hevc_422_decode": null,
+    "h264_422_decode": null,
+    "av1_encode": null,
+    "av1_decode": null,
+    "note": null,
+    "source": null
+   },
+   "memory": {
+    "layout": "2x16",
+    "type": "DDR5-5600 SO-DIMM",
+    "upgrade_note": null,
+    "source": "PSREF"
+   },
+   "ssd": {
+    "size_gb": 512,
+    "free_m2": null,
+    "note": null
+   },
+   "screen": {
+    "size_in": 16,
+    "panel": "IPS",
+    "resolution": "1920×1200",
+    "hz": 60,
+    "nits": 300,
+    "srgb_measured": null,
+    "p3_measured": null,
+    "srgb_spec": null,
+    "gamut_spec": "45 % NTSC (PSREF)",
+    "pwm": null,
+    "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83HS00A2GE&country_code=DE",
+    "ok": false
+   },
+   "prices": {
+    "any_eur": 699.0,
+    "any_seller": "MediaMarkt",
+    "cash_eur": null,
+    "cash_seller": null,
+    "cash_method": null,
+    "transfer_eur": null,
+    "addons": [],
+    "total_cash_eur": null,
+    "total_any_eur": null,
+    "idealo_url": null,
+    "shop_url": null,
+    "checked": "01.10.2026 ~02:00 (retail-cash-sweep.md)",
+    "note": null
+   },
+   "weight_kg": null,
+   "battery_wh": null,
+   "ports": [],
+   "warranty": null,
+   "reliability": {
+    "brand_rank_note": null,
+    "model_issues": null,
+    "parts_years": null,
+    "parts_available": null,
+    "service_manual": null,
+    "prevalence": null,
+    "sources": []
+   },
+   "scores": {
+    "problems": null,
+    "repair": null,
+    "price": null,
+    "portability": null,
+    "power": null,
+    "avg": null,
+    "note": null
+   },
+   "pros": [],
+   "cons": [],
+   "sources": [
+    {
+     "title": "PSREF 83HS00A2GE",
+     "url": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83HS00A2GE&country_code=DE"
+    },
+    {
+     "title": "retail-cash-sweep.md",
+     "url": "AMD/notes/retail-cash-sweep.md"
+    }
+   ]
+  },
+  {
+   "id": "lenovo-ideapad-5-2in1-15agp11-83um002yge",
+   "pn": "83UM002YGE",
+   "brand": "Lenovo",
+   "model": "IdeaPad 5 2-in-1 15AGP11 (2×8/…)",
+   "branch": "AMD",
+   "status": "fails",
+   "fails": [
+    "screen",
+    "memory"
+   ],
+   "fail_notes": "«15.3\" WUXGA IPS 400nits Glossy, 45% NTSC», «2x 8GB SODIMM DDR5-5600», «No Power Adapter» (PSREF) — не проходит. Euronics 849 €.",
+   "cpu": {
+    "name": null,
+    "codename": null,
+    "cores_threads": null,
+    "tdp_w": null,
+    "r23_multi": null,
+    "r23_single": null,
+    "cb2024_multi": null,
+    "cb2024_single": null,
+    "gb6_multi": null,
+    "source": null,
+    "note": null
+   },
+   "gpu": {
+    "name": null,
+    "type": "iGPU",
+    "timespy": null,
+    "steel_nomad_light": null,
+    "puget_resolve": null,
+    "puget_premiere": null,
+    "source": null,
+    "note": null
+   },
+   "codecs": {
+    "hevc_422_decode": null,
+    "h264_422_decode": null,
+    "av1_encode": null,
+    "av1_decode": null,
+    "note": null,
+    "source": null
+   },
+   "memory": {
+    "layout": "2x8",
+    "type": "DDR5-5600 SO-DIMM",
+    "upgrade_note": null,
+    "source": "PSREF"
+   },
+   "ssd": {
+    "size_gb": null,
+    "free_m2": null,
+    "note": null
+   },
+   "screen": {
+    "size_in": 15.3,
+    "panel": "IPS",
+    "resolution": "1920×1200",
+    "hz": null,
+    "nits": 400,
+    "srgb_measured": null,
+    "p3_measured": null,
+    "srgb_spec": null,
+    "gamut_spec": "45 % NTSC (PSREF)",
+    "pwm": null,
+    "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83UM002YGE&country_code=DE",
+    "ok": false
+   },
+   "prices": {
+    "any_eur": 849.0,
+    "any_seller": "Euronics",
+    "cash_eur": null,
+    "cash_seller": null,
+    "cash_method": null,
+    "transfer_eur": null,
+    "addons": [],
+    "total_cash_eur": null,
+    "total_any_eur": null,
+    "idealo_url": null,
+    "shop_url": null,
+    "checked": "01.10.2026 ~02:45 (retail-cash-sweep.md)",
+    "note": null
+   },
+   "weight_kg": null,
+   "battery_wh": null,
+   "ports": [],
+   "warranty": null,
+   "reliability": {
+    "brand_rank_note": null,
+    "model_issues": null,
+    "parts_years": null,
+    "parts_available": null,
+    "service_manual": null,
+    "prevalence": null,
+    "sources": []
+   },
+   "scores": {
+    "problems": null,
+    "repair": null,
+    "price": null,
+    "portability": null,
+    "power": null,
+    "avg": null,
+    "note": null
+   },
+   "pros": [],
+   "cons": [],
+   "sources": [
+    {
+     "title": "PSREF 83UM002YGE",
+     "url": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83UM002YGE&country_code=DE"
+    },
+    {
+     "title": "retail-cash-sweep.md",
+     "url": "AMD/notes/retail-cash-sweep.md"
+    }
+   ]
+  }
+ ],
+ "cash_guide": {
+  "summary": "Без банковского счёта и карты реально работает один путь — купить в магазине или зарезервировать онлайн и заплатить на кассе: 0 €, паспорт не нужен. Выбор — Medion SPRCHRGD 16 S1 OLED 30040202 в expert Bad Salzungen: 797 € + SSD 1 ТБ 149,99 € = 946,99 € в одном рынке, но это 1 шт. и, возможно, ошибка цены — сначала позвонить. Не подтвердят — Swift Air R1FY: 102 рынка expert с новым товаром, дешевле всего Schmalkalden (18 км) — 959,14 €. Карта ничего явно лучшего не даёт.",
+  "methods": [
+   {
+    "method": "Купить в магазине или зарезервировать онлайн и заплатить на кассе",
+    "works": "да",
+    "where": "Наличные прямо написаны: MediaMarkt, Saturn (кроме маркетплейса), Euronics (у рынка-продавца), Cyberport Stores, Alternate Linden. Оплата в магазине без слова «bar»: expert (наш выбор и R1FY), notebooksbilliger Stores, резерв MEDIMAX. MEDIMAX «Abholung nach Bestellung» — только онлайн-оплата",
+    "limit": "Cyberport ≤ 9999 €, Alternate ≤ 10 000 € (онлайн-заказ на самовывоз ≤ 3000 €); паспорт по закону не нужен, пока наличными < 10 000 € (§ 10 Abs. 6a GwG)",
+    "fee": "0 €",
+    "needs_account": "нет; для онлайн-резерва — имя и e-mail",
+    "source": "https://www.mediamarkt.de/de/service/zahlung/zahlungsmoeglichkeiten"
+   },
+   {
+    "method": "Vorkasse + взнос наличными в Sparkasse на счёт магазина",
+    "works": "частично",
+    "where": "computeruniverse, Kaufland.de (у Galaxus DE Vorkasse на сайте нет). Нужна Sparkasse, которая берёт взносы от не-клиентов (Nordhorn — да, Barnim — нет); Postbank и Commerzbank — нет",
+    "limit": "от 1000 € — паспорт (§ 10 Abs. 3 Nr. 2a GwG); товар и цена на время перевода не резервируются; зачисление 2–4 рабочих дня",
+    "fee": "~10 € (Sparkasse Nordhorn)",
+    "needs_account": "счёт не нужен, паспорт нужен",
+    "source": "https://www.sparkasse-nordhorn.de/content/dam/myif/ksk-nordhorn/work/dokumente/pdf/preise-leistungen/preis-leistungsverzeichnis.pdf"
+   },
+   {
+    "method": "Rechnung (Klarna) + оплата счёта взносом в Sparkasse",
+    "works": "частично",
+    "where": "Klarna позволяет «manuelle Überweisung»; одобрит ли Klarna покупателя без счёта и примет ли такой платёж — не проверено. OTTO прямо требует счёт в SEPA; у Euronics Rechnung — не Klarna, а Openbank Pay и только 20–750 €",
+    "limit": "проверка Bonität; паспорт в банке от 1000 €",
+    "fee": "~10 €",
+    "needs_account": "регистрация в Klarna; счёт — не ясно",
+    "source": "https://www.klarna.com/de/kundenservice/wie-kann-ich-meine-rechnung-bei-klarna-bezahlen/"
+   },
+   {
+    "method": "Nachnahme (наложенный платёж)",
+    "works": "нет",
+    "where": "Крупные магазины (NBB, computeruniverse, Cyberport, Alternate, OTTO, Kaufland, MediaMarkt, Saturn, expert, Euronics, Conrad, Galaxus) не предлагают; у idealo ни у одного продавца наших кандидатов нет",
+    "limit": "DHL — до 3500 €",
+    "fee": "обычно 5–10 €",
+    "needs_account": "нет",
+    "source": "https://www.alternate.de/HILFE/Zahlungsarten"
+   },
+   {
+    "method": "Barzahlen / viacash, PaysafeCash",
+    "works": "нет",
+    "where": "Магазины электроники не принимают; viacash 2026 — взнос на свой счёт и оплата счетов (коммунальные, связь); PaysafeCash в Германии — «Live? No»",
+    "limit": "PaysafeCash ≤ 1000 € за операцию",
+    "fee": "—",
+    "needs_account": "для viacash — свой банк",
+    "source": "https://www.viacash.com/de/faq/"
+   },
+   {
+    "method": "paysafecard напрямую",
+    "works": "нет",
+    "where": "Магазины электроники не принимают",
+    "limit": "50 € на код; аккаунт «Unlimited» — 1000 € за операцию",
+    "fee": "4 €/мес за неиспользованный код после 30 дней",
+    "needs_account": "для аккаунта — паспорт и подтверждение адреса",
+    "source": "https://www.paysafecard.com/de-de/gebuehren-limits/"
+   },
+   {
+    "method": "Amazon vor Ort aufladen (наличные на баланс Amazon)",
+    "works": "частично",
+    "where": "Только Amazon.de. Из кандидатов там только R2R1 у продавца AVISTA за 1112,99 € (> 1100) → сейчас ничего не открывает",
+    "limit": "5–500 € за операцию, дневные лимиты у кассы",
+    "fee": "0 €",
+    "needs_account": "аккаунт Amazon (нужна ли карта — не проверено)",
+    "source": "https://www.amazon.de/b?ie=UTF8&node=13847038031"
+   },
+   {
+    "method": "eBay: оплата наличными при самовывозе",
+    "works": "нет",
+    "where": "Разрешено только для недвижимости, машин и лодок",
+    "limit": "—",
+    "fee": "—",
+    "needs_account": "аккаунт eBay",
+    "source": "https://www.ebay.de/help/selling/listings/choosing-get-paid/accepting-other-payment-methods?id=4184"
+   },
+   {
+    "method": "Справка: PaysafeWallet (Debit Mastercard с IBAN, пополнение наличными через paysafecard)",
+    "works": "частично",
+    "where": "Где берут Mastercard (Galaxus, Kaufland.de); примут ли именно e-money-карту — не проверено. Это уже «оформить карту»",
+    "limit": "пополнение 1000 €/день, оплата картой 2000 €/день; статус «Unlimited», 18+",
+    "fee": "5 % пополнения + 0,10 € за оплату (Start)",
+    "needs_account": "банковский счёт не нужен, но это e-кошелёк с IBAN; паспорт и адрес",
+    "source": "https://www.paysafecard.com/de-de/paysafewallet/fees-and-limits/"
+   },
+   {
+    "method": "Справка: Basiskonto (счёт по закону для всех)",
+    "works": "да",
+    "where": "Любой банк обязан открыть",
+    "limit": "договор — не позже 10 рабочих дней (§ 31 ZKG)",
+    "fee": "по тарифу банка",
+    "needs_account": "это и есть счёт; паспорт",
+    "source": "https://www.gesetze-im-internet.de/zkg/__31.html"
+   }
+  ],
+  "phone_script_de": "Звонок в рынок (по-немецки). Подставить товар:\n• Medion: «MEDION SPRCHRGD 16 S1 OLED, Artikelnummer 30040202, expert-Webcode 17040041553»; SSD: «Verbatim Vi3000 1 TB, Webcode 17320020417» (или «Samsung 990 EVO Plus 1 TB, Webcode 17320146488»).\n• Acer: «Acer Swift Air 16 OLED, SFA16-61M-R1FY, Teilenummer N-X-Punkt-D-L-5-E-G-Punkt-0-0-2, expert-Webcode 17041266033».\n• Lenovo (MEDIMAX): «Lenovo IdeaPad Slim 5 15ARP10, Teilenummer 83J3006GGE, MEDIMAX-Artikel 1505157».\n\n1. Guten Tag, ich interessiere mich für das Notebook [Modell], Teilenummer [P/N], aus Ihrem Online-Shop, Webcode [Webcode].\n2. Ist das Gerät bei Ihnen im Markt vorrätig – neu und originalverpackt, kein Ausstellungsstück und kein Restposten?\n3. Auf der Website steht [Preis] Euro. Gilt dieser Preis auch an der Kasse?\n   (Bad Salzungen: „Auf der Website steht 797 Euro für das Medion – ist das richtig, kein Preisfehler?“ · Bening: „Gilt der Sofort-Rabatt von 40 Euro auch beim Kauf im Markt?“)\n4. Kann ich im Markt bar bezahlen? Gibt es dafür eine Obergrenze?\n5. Können Sie mir das Gerät bis [Tag] zurücklegen? Auf welchen Namen?\n   (MEDIMAX nimmt laut AGB keine telefonischen Reservierungen an – dort nur fragen, ob das Gerät da ist; reservieren über die Website.)\n6. Haben Sie auch eine SSD 1 TB, M.2 2280, NVMe vorrätig? Welche und zu welchem Preis?\n7. Gibt es ein Umtausch- oder Rückgaberecht, wenn das Gerät unbenutzt ist – wie viele Tage und unter welchen Bedingungen?\n8. Vielen Dank! Bis wann haben Sie heute geöffnet?\n\nWenn nicht vorrätig: Können Sie das Gerät bestellen? Wie lange dauert das, was kostet es, und kann ich bei Abholung bar bezahlen?",
+  "markets": [
+   {
+    "market": "expert Bad Salzungen — Medion 30040202 (выбор)",
+    "city": "36433 Bad Salzungen, Bahnhofstraße 23",
+    "price_eur": 946.99,
+    "status": "797 € + SSD Vi3000 1 ТБ 149,99 € в том же рынке; Medion — «Reservieren», 1 шт., не Aussteller (API 02:58, Chrome 03:14). Здесь же R1FY 999 € (2 шт.). Тел. 03695 69630",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17040041553-sprchrgd-16-s1-oled-16-zoll-wqxga-intel-core-ultra-5-228v-32-gb-512-gb-ssd-intel-arc-140v.html?branch_id=32354097"
+   },
+   {
+    "market": "expert Schmalkalden — Swift Air R1FY",
+    "city": "98574 Schmalkalden, Haindorfsgasse 3",
+    "price_eur": 959.14,
+    "status": "«Reservieren», 1 шт., новый; 18 км от Bad Salzungen. Тел. 03683 4692811",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=32354099"
+   },
+   {
+    "market": "ESC — Swift Air R1FY",
+    "city": "15834 Rangsdorf, Klein Kienitzer Straße 2",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Berlin 25 км, Leipzig 130 км. Тел. 033708 939810",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=32472581"
+   },
+   {
+    "market": "expert Bening — Swift Air R1FY",
+    "city": "21614 Buxtehude, Ostmoorweg 12",
+    "price_eur": 989,
+    "status": "«Reservieren», 1 шт., новый (1029 € − 40 € Sofort-Rabatt; на кассе — уточнить); ближайший для: Hamburg 20 км. Тел. 04161-5005-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907543"
+   },
+   {
+    "market": "expert TeVi — Swift Air R1FY",
+    "city": "84030 Landshut, Ottostraße 20b",
+    "price_eur": 999.99,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: München 63 км. Тел. 0871 430 751 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907071"
+   },
+   {
+    "market": "expert Herfort — Swift Air R1FY",
+    "city": "51465 Bergisch Gladbach, Richard-Zanders-Str. 11",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Köln 13 км, Düsseldorf 36 км, Duisburg 56 км, Wuppertal 30 км. Тел. 02202 18880",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=28570377"
+   },
+   {
+    "market": "expert klein — Swift Air R1FY",
+    "city": "65719 Hofheim-Wallau, Am Wandersmann 6",
+    "price_eur": 999,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: Frankfurt am Main 23 км, Wiesbaden 10 км. Тел. 06122 70340 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=17314681"
+   },
+   {
+    "market": "expert Schlagenhauf — Swift Air R1FY",
+    "city": "73431 Aalen, Carl-Zeiss-Straße 20",
+    "price_eur": 999,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: Stuttgart 65 км. Тел. 07361 94760",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907470"
+   },
+   {
+    "market": "expert Brumberg — Swift Air R1FY",
+    "city": "59174 Kamen, Kämerstraße 21-25 + 14",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Dortmund 16 км, Essen 47 км, Bochum 33 км. Тел. 02307 91700",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=30553851"
+   },
+   {
+    "market": "expert Bening — Swift Air R1FY",
+    "city": "27753 Delmenhorst, Stedinger Straße 247",
+    "price_eur": 989,
+    "status": "«Reservieren», 1 шт., новый (1029 € − 40 € Sofort-Rabatt; на кассе — уточнить); ближайший для: Bremen 11 км. Тел. 04221-9425-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907227"
+   },
+   {
+    "market": "ESC — Swift Air R1FY",
+    "city": "02625 Bautzen, Dresdener Straße 50",
+    "price_eur": 999,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: Dresden 49 км, Chemnitz 111 км. Тел. 03591 351990",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=25254885"
+   },
+   {
+    "market": "expert Walsrode — Swift Air R1FY",
+    "city": "29664 Walsrode, Verdener Straße 60",
+    "price_eur": 999,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: Hannover 55 км. Тел. 05161 4818-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=39962719"
+   },
+   {
+    "market": "expert TeVi — Swift Air R1FY",
+    "city": "90425 Nürnberg, Kilianstraße 90",
+    "price_eur": 999.99,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Nürnberg 2 км. Тел. 0911 36508 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907313"
+   },
+   {
+    "market": "expert Bening — Swift Air R1FY",
+    "city": "32758 Detmold, Niemeierstraße 8",
+    "price_eur": 989,
+    "status": "«Reservieren», 2 шт., новый (1029 € − 40 € Sofort-Rabatt; на кассе — уточнить); ближайший для: Bielefeld 23 км. Тел. 05231-98104-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=8971625"
+   },
+   {
+    "market": "expert klein — Swift Air R1FY",
+    "city": "53721 Siegburg, Zum Hohen Ufer 4",
+    "price_eur": 999,
+    "status": "«Reservieren», 2 шт., новый; ближайший для: Bonn 10 км. Тел. 02241 95965 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=27613192"
+   },
+   {
+    "market": "expert Promedia — Swift Air R1FY",
+    "city": "48231 Warendorf, August-Wessing-Damm Nr. 82-84",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Münster 24 км. Тел. 02581 78300-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=37711505"
+   },
+   {
+    "market": "expert klein — Swift Air R1FY",
+    "city": "67663 Kaiserslautern, Merkurstraße 57",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Mannheim 55 км, Karlsruhe 70 км. Тел. 0631 200616-0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=39923995"
+   },
+   {
+    "market": "expert Elektroland — Swift Air R1FY",
+    "city": "89520 Heidenheim, Aufhausener Straße 38",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Augsburg 67 км. Тел. 07321 92577 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907423"
+   },
+   {
+    "market": "expert Neumünster — Swift Air R1FY",
+    "city": "24539 Neumünster, Haart 190",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Kiel 30 км. Тел. 04321 9874 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=38877255"
+   },
+   {
+    "market": "expert Gifhorn — Swift Air R1FY",
+    "city": "38518 Gifhorn, Eysselheideweg 5",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Magdeburg 83 км, Braunschweig 21 км. Тел. 05371 8150 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=38226027"
+   },
+   {
+    "market": "expert Wismar — Swift Air R1FY",
+    "city": "23968 Wismar, Zierower Landstraße 3",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Rostock 50 км. Тел. 03841 64092 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=38877256"
+   },
+   {
+    "market": "expert klein — Swift Air R1FY",
+    "city": "36251 Bad Hersfeld, Gutenbergstraße 2",
+    "price_eur": 999,
+    "status": "«Reservieren», 3 шт., новый; ближайший для: Kassel 52 км. Тел. 06621 79945 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=2268069"
+   },
+   {
+    "market": "expert Überlingen — Swift Air R1FY",
+    "city": "88662 Überlingen, Abigstraße 1",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Freiburg 103 км. Тел. 07551 947 080",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=2144945"
+   },
+   {
+    "market": "expert klein — Swift Air R1FY",
+    "city": "66333 Völklingen, Zechenstraße 8",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Saarbrücken 9 км. Тел. 06898 933 960 0",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=34511888"
+   },
+   {
+    "market": "expert Dingolfing — Swift Air R1FY",
+    "city": "84130 Dingolfing, Pappelweg 8",
+    "price_eur": 999,
+    "status": "«Reservieren», 1 шт., новый; ближайший для: Regensburg 51 км. Тел. 08731 37660",
+    "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/notebooks/laptops/17041266033-swift-air-16-oled-silber-16-zoll-wuxga-amd-ryzen-ai-5-330-32-gb-1024-gb-ssd-amd-radeon-820m.html?branch_id=1907172"
+   },
+   {
+    "market": "MEDIMAX Meißen — Lenovo 83J3006GGE",
+    "city": "01662 Meißen, Neumarkt 5",
+    "price_eur": 899.0,
+    "status": "резерв, «in 1-3 Werktagen abholbereit» (03:01); + SSD 1 ТБ отдельно (MediaMarkt 159,99 €) = 1058,99 €; «bar» не написано. Тел. +49 3521 408660",
+    "url": "https://www.medimax.de/p/1505157/ideapad-slim-5-15arp10"
+   },
+   {
+    "market": "MEDIMAX Frankfurt/Oder, Lenné-Passagen — Lenovo 83J3006GGE",
+    "city": "15230 Frankfurt (Oder), Karl-Marx-Straße 194",
+    "price_eur": 899.0,
+    "status": "резерв, «in 1-3 Werktagen abholbereit» (03:01); + SSD 1 ТБ отдельно (MediaMarkt 159,99 €) = 1058,99 €; «bar» не написано. Тел. +49 335 387270",
+    "url": "https://www.medimax.de/p/1505157/ideapad-slim-5-15arp10"
+   },
+   {
+    "market": "MEDIMAX Kempen — Lenovo 83J3006GGE",
+    "city": "47906 Kempen, Kleinbahnstraße 20",
+    "price_eur": 899.0,
+    "status": "резерв, «in 1-3 Werktagen abholbereit» (03:01); + SSD 1 ТБ отдельно (MediaMarkt 159,99 €) = 1058,99 €; «bar» не написано. Тел. +49 2152 20570",
+    "url": "https://www.medimax.de/p/1505157/ideapad-slim-5-15arp10"
+   },
+   {
+    "market": "MEDIMAX Nettetal — Aspire R2R1 (справка)",
+    "city": "41334 Nettetal, Johannes-Cleven-Straße 4",
+    "price_eur": 1099.0,
+    "status": "резерв, оплата в рынке; экран не подтверждён (у Acer 95 % DCI-P3). Тел. +49 2153 910860",
+    "url": "https://www.medimax.de/p/1535583"
+   }
+  ]
+ },
+ "criteria": {
+  "budget_eur": 1100,
+  "budget_rule": "итог ≤ 1100 € включая докупку планки / SSD / зарядки и сбор за Nachnahme; только новый; покупка сейчас (без «ждать»)",
+  "payment": "только наличными: покупка в магазине, резерв или самовывоз с оплатой на месте (MediaMarkt/Saturn, expert, Euronics, Cyberport-Stores, MEDIMAX-резерв и т. п.), Nachnahme (сбор прибавить). Банковского счёта у покупателя нет (владелец, 01.10.2026): Vorkasse/Überweisung — только через взнос наличными в банке (условно, с паспортом), цены картой — справка. Только карта / PayPal / Klarna / Apple Pay — не считается",
+  "size_in": "15–16\"",
+  "screen": "полный sRGB: ≥ ~95 % sRGB по лабораторному замеру этой матрицы / модели, либо 100 % sRGB / 100 % DCI-P3 в даташите производителя (помечено «по даташиту»). «45 % NTSC» и «62,5 % sRGB» — нет",
+  "memory": "32 ГБ в двухканале: 2×16 SO-DIMM; 1×16 (1×24) + свободный слот + планка; распайка 32; 16 распайки + слот + планка. Не подходит: 1×32, 2×8, 16 распайки без слота",
+  "ssd": "1 ТБ, или 512 ГБ + SSD во второй слот / на замену (ставит владелец)",
+  "cpu": "Intel или AMD, пригодный для 4K; Raptor Lake-H i7/i9 — допустимо как «старое»; Raptor Lake-U, Mendocino, Barcelo — нет; 4-ядерные урезанные — слабо",
+  "owner": [
+   "кодек камеры и программа монтажа неизвестны навсегда",
+   "внешнего монитора нет",
+   "планку и SSD ставит сам",
+   "порты — бонус"
+  ],
+  "fail_labels": {
+   "screen": "экран без полного sRGB (или не подтверждён)",
+   "cash": "нет оплаты наличными ≤ 1100 €",
+   "price": "дороже 1100 € с докупкой",
+   "memory": "память не по критериям",
+   "cpu": "процессор-ловушка / слабый",
+   "hevc_disabled": "HEVC аппаратно отключён",
+   "ssd": "SSD",
+   "size": "не 15–16\"",
+   "used": "только б/у",
+   "unavailable": "нет в продаже новым",
+   "unverified": "ключевые данные не проверены"
+  },
+  "sources": [
+   "CLAUDE.md",
+   "idealo-howto.md"
+  ]
+ },
+ "prices_checked": "01.10.2026 02:58–03:01 (expert — ещё раз 03:14 в Chrome) — выбор и запасные перепроверены (API expert по 319 рынкам: Medion, R1FY, SSD; medimax.de: 83J3006GGE); ночные заметки 01:40–02:54 (AMD/notes/cash-channels.md, retail-cash-sweep.md, store-availability.md, night-verify.md); остальные ноутбуки — prices.checked у каждого",
+ "verdict_note": "Medion выбран при условии звонка: 797 € — 1 шт. в одном рынке (expert Bad Salzungen), в остальных он стоит 1079–1099 €, так что это может быть ошибка цены. Если не подтвердят — Swift Air R1FY: проходит все критерии, есть в 102 рынках expert, но для 4K слабый. Lenovo 83J3006GGE сильнее R1FY по процессору и графике, но есть только в трёх рынках MEDIMAX и на старой платформе Zen 3+."
+}

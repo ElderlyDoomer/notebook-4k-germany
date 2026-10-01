@@ -1,0 +1,8 @@
+Ноутбук: asus-tuf-a16-fa607nuq-rl038w
+Откуда: Icecat ASUS 90NR0QF3-M00570 — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NR0QF3-M00570
+
+01.jpg ← https://images.icecat.biz/img/gallery/fc2ed71497bed59d2448800edb860538267ac476.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/f7e423565bae80308985520d36e407a0aff16c6f.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/9d7f1c246173fb47e7f6970dd70267efc1dd2036.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/887b9bcff441bef7f1c1f74ff5e135d4e6b92cb4.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f62e84d37c68170bf05a1003aeafd117e4ae9fcc.jpg

@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-15arp10-83j3005fge
+Откуда: Icecat Lenovo 83J3005FGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83J3005FGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/4d766ebc4863441c210545c9d2db10c0b1276d91.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/867637aa197709498c47917f8c8322c6b6631bb8.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a748600bb971dcf14b5dd72270754b705321857e.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/d0528a0260d454ed0d357896d1df81e80302ff30.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/c02ae2c0bc8c106c915e6c155a8594fa11505015.jpg

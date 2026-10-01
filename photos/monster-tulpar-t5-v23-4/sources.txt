@@ -1,0 +1,9 @@
+Ноутбук: monster-tulpar-t5-v23-4
+Откуда: ссылки вручную
+
+01.jpg ← https://m.media-amazon.com/images/I/61RIPvKLuzL._AC_SL1500_.jpg
+02.jpg ← https://m.media-amazon.com/images/I/61n1BWb2JRL._AC_SL1471_.jpg
+03.jpg ← https://m.media-amazon.com/images/I/61cOkwVFWML._AC_SL1480_.jpg
+04.jpg ← https://m.media-amazon.com/images/I/61G4ucx-jiL._AC_SL1414_.jpg
+05.jpg ← https://m.media-amazon.com/images/I/51CtkWJnSGL._AC_SL1456_.jpg
+Страница товара: https://www.amazon.de/dp/B0D2R83MY4 («TULPAR T5 V23.4 Gaming Laptop … i7 12700H | 16 GB RAM | 1 TB SSD | RTX 4060»; фото модели T5 V23.4 — P/N в данных нет, комплектация памяти на фото не видна). Официальный сайт monsternotebook.com.tr отдаёт 403, idealo — 403, Chrome-расширение не подключено; баннер «Serviceversprechen» из галереи исключён

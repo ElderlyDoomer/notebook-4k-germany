@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-5-2in1-15agp11-83um002bge
+Откуда: Icecat Lenovo 83UM002BGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83UM002BGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/7d3446ddb5e9586181a9d6d67f9bfa801cc967a0.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/13bc587535a4840291ad24ad37d2afb268cae8f2.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/00d130b6bd56474c6c75b0e2888289a7fb6cdd99.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/53f7e1395da1cd36b79b3e08d72242660051344e.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/b7bc6b1ee0ac1308b8c154c364445177b94fdbb9.jpg

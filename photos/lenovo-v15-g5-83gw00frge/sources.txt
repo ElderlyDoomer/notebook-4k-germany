@@ -1,0 +1,8 @@
+Ноутбук: lenovo-v15-g5-83gw00frge
+Откуда: Icecat Lenovo 83GW00FRGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83GW00FRGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/b786a5f10eda9630d7ade8c2ca37b4d35f7ddeff.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/6d79772b848210bc47c17fef5b2f119da0afb9f8.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/34e762e7c2425a0c59fb5e412785caf7b5e818ae.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/b48329aa1114b1247ffc3fd7e1c43e9dca518174.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f58143020db58f737f9cd9cad40540ade7c3c30e.jpg

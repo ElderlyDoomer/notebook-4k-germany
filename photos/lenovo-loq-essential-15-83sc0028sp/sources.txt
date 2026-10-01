@@ -1,0 +1,8 @@
+Ноутбук: lenovo-loq-essential-15-83sc0028sp
+Откуда: Icecat Lenovo 83SC0028SP — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83SC0028SP
+
+01.jpg ← https://images.icecat.biz/img/gallery/cbfc9fd204ad00470be6c761897934a2992b7de5.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/a72ec4215fbb49fa9efeac0a64e9f9ba88b0cdbd.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/0686182a9390f74de3782641022e449884d45afc.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/9d0b070f0f4974dfd518299c9363e63ea34d3e32.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/698789f51cee9926ed9244f5e3e49e411510f048.jpg

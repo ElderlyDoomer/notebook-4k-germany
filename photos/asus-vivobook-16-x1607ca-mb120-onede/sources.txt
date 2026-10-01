@@ -1,0 +1,9 @@
+Ноутбук: asus-vivobook-16-x1607ca-mb120-onede
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/c41c7738ad38fcbf706c3dff89e93366d92f2df7.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/bf505d400eaa4274326b46569aec64befb01a39a.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/abbfa12d2ff871737d09a73cdcc7059ae0e9c352.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/6d160a2f142adfe7a284d7aa425fff8bcc90afa9.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/50d6e8a94e0d784a1095996869358b4cf0167759.jpg
+Фото модели/корпуса, не точного P/N: X1607CA-MB120 (сборка one.de, EAN 4049998799219) в Icecat нет; снимки — Icecat ASUS X1607CA-MB045W (тот же корпус Vivobook 16 X1607CA, цвет Quiet Blue) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=X1607CA-MB045W; кадры с наклейкой Snapdragon из галереи исключены

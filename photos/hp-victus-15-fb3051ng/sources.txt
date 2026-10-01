@@ -1,0 +1,9 @@
+Ноутбук: hp-victus-15-fb3051ng
+Откуда: ссылки вручную
+
+01.jpg ← https://images.icecat.biz/img/gallery/14ca7c02bc96747f6f8f10e13c921b786d51665e.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/52fa716174be8558ddc421d75293091ec761e27d.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/b350ed84641dfbb6fcc4aadcc67f706539220d66.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/c7532ca68fcf5bb4efa90db5708aaaec3d8a61da.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/9c1fdfb12f381320cb723cc4b5204259c419affd.jpg
+Источник: Icecat HP BV8D4EA (= 15-fb3051ng, номер найден через support.hp.com) — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=BV8D4EA; баннеры пропущены (в т. ч. баннер с чужой конфигурацией Ryzen AI 7 / RTX 5060)

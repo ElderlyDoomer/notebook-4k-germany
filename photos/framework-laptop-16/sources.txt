@@ -1,0 +1,9 @@
+Ноутбук: framework-laptop-16
+Откуда: ссылки вручную
+
+01.jpg ← https://images.frame.work/frameworkmarketplace/aJnDqKTt2nPbaJcn_fw16_family_overview_choice_pre-built.jpg
+02.jpg ← https://images.prismic.io/frameworkmarketplace/aK2ni2GNHVfTOUNf_fw16_family_meta.jpg
+03.jpg ← https://images.frame.work/frameworkmarketplace/aIdNf1GsbswqTVlN_fw16_family_overview_summary_swappable-gpu.jpg
+04.jpg ← https://images.frame.work/frameworkmarketplace/aJnDsaTt2nPbaJco_fw16_family_overview_choice_diy.jpg
+05.jpg ← https://images.frame.work/frameworkmarketplace/aIdc2FGsbswqTVs1_fw16_family_overview_capabilities_expansion-cards.png
+Страница товара: https://frame.work/de/de/laptop16 (официальные снимки Framework Laptop 16; ноутбук собирается в конфигураторе, отдельного P/N нет; снимки общие для семейства Laptop 16, без привязки к поколению CPU)

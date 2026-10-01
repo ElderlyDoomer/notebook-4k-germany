@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkpad-e16-g2-amd-21m5002dge
+Откуда: Icecat Lenovo 21M5002DGE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21M5002DGE
+
+01.jpg ← https://images.icecat.biz/img/gallery/d18838d32e0e5952582fdfbfc0b0573ee6fef725.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/de676aca063e2dcec401a4a8021aaad22b1aa870.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/5e22ae4bd42516fbfe1ada3046f82e3caeb04ea6.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/d67702ff24eb09e59b00e336d5f5f25ca6c9bc7b.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/f455c035cffd582870cb72f1168cc997998603cf.jpg

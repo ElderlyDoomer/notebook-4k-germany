@@ -1,0 +1,10 @@
+Ноутбук: asus-expertbook-p1-p1503cva-s72336
+Откуда: ссылки вручную
+
+01.jpg ← https://dlcdnwebimgs.asus.com/gain/8211eafd-5db5-48bb-9b0a-bae929fcf5f5/w1200
+02.jpg ← https://dlcdnwebimgs.asus.com/gain/e3ec8e2c-7619-4f21-ad78-2ef3067f1928/w1200
+03.jpg ← https://dlcdnwebimgs.asus.com/gain/69677b31-3bca-4edb-970e-e7f05b014a78/w1200
+04.jpg ← https://dlcdnwebimgs.asus.com/gain/f15f547d-880c-4d47-b8cf-9a2d09c57b35/w1200
+05.jpg ← https://dlcdnwebimgs.asus.com/gain/fb47eb68-aa6a-4b18-87d1-602696027130/w1200
+Источник: официальная галерея ASUS ExpertBook P1 (P1503) — https://www.asus.com/de/laptops/for-work/expertbook/expertbook-p1-p1503/ (API https://odinapi.asus.com/recent-data/apiv2/PDGallery?SystemCode=asus&WebsiteCode=de&ProductWebPath=expertbook-p1-p1503)
+Фото модели/корпуса, не точного P/N: P1503CVA-S72336 (сборка one.de) в Icecat нет; фото — общая галерея модели ExpertBook P1 P1503 (15,6", серый/серебристый корпус) с сайта ASUS.

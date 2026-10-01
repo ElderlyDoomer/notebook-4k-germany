@@ -1,0 +1,8 @@
+Ноутбук: lenovo-thinkbook-16-g6-abp-21kk0074ge
+Откуда: Icecat Lenovo 21KK0074GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=21KK0074GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/ce5755534cc31d3e6980c916dfcfce84d539655f.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/21bcb68729ac4d8fc7812165feca7de7dba9580e.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/4c940e04b36bd7d3987d0560467d0d59f05a146d.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/a8dc51bb3604c864c2e6e4610f190b3f75de6028.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/7aba57acdca7000e1643307f7923e2cf665c4153.jpg

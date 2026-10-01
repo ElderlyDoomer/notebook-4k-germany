@@ -1,0 +1,9 @@
+Ноутбук: acer-aspire-go-16-nx-js9eg-009
+Откуда: Icecat Acer NX.JS9EG.00A — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JS9EG.00A
+
+01.jpg ← https://images.icecat.biz/img/gallery/25ecd0eb1979b722eaa3ae9a2fc1c49003e34a74.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/8b5888e7d1851033ec88d8783fe646311a09070d.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/a683ef40d90db09923d79c0ce75acdbcc590df0b.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/d2f5062039f0194a99269bd6be0507dde549da32.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/62e3c46e177776163743de4e8edae3f450c4fa2d.jpg
+Фото модели/корпуса, не точного P/N: в Icecat нет NX.JS9EG.009 (AG16-71P-96VZ); снимки — Icecat соседнего SKU той же серии NX.JS9EG.00A (AG16-71P-952H, тот же корпус Aspire Go 16 AG16-71P, цвет Silber). icecat-specs.json соседнего SKU удалён (у него 60 Гц, у нашего 120 Гц).

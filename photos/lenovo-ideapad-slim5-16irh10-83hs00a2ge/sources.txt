@@ -1,0 +1,8 @@
+Ноутбук: lenovo-ideapad-slim5-16irh10-83hs00a2ge
+Откуда: Icecat Lenovo 83HS00A2GE — https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83HS00A2GE
+
+01.jpg ← https://images.icecat.biz/img/gallery/193adfb3844a546fa56ab996520f2c28434df5ab.jpg
+02.jpg ← https://images.icecat.biz/img/gallery/05b5f267bf4f1c539076c9b82c358b636a682c63.jpg
+03.jpg ← https://images.icecat.biz/img/gallery/295406084e68e13d5ad4843b071460c0dae04f5f.jpg
+04.jpg ← https://images.icecat.biz/img/gallery/8089aa1bd663cd28b7fbdffd9eae5efe9fa9498c.jpg
+05.jpg ← https://images.icecat.biz/img/gallery/bc6027903d15ba0bdb3768b6c6cc2bc44e6cd9e2.jpg
