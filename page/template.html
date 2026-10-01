@@ -25,7 +25,7 @@
     --bg:#000000; --surface:#1C1C1E; --surface-2:#2C2C2E; --fill:#3A3A3C; --ink:#F5F5F7; --muted:#A1A1A6; --tertiary:#8E8E93; --line:rgba(255,255,255,.12);
     --accent:#0A84FF; --link:#2997FF; --accent-ink:#FFFFFF; --accent-soft:rgba(10,132,255,.18);
     --ok:#30D158; --ok-soft:rgba(48,209,88,.16); --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.16); --bad:#FF6961; --bad-soft:rgba(255,69,58,.16);
-    --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6;
+    --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6; --panel-up:#2C2C2E;
   }
 }
 :root[data-theme="dark"]{
@@ -33,7 +33,7 @@
   --bg:#000000; --surface:#1C1C1E; --surface-2:#2C2C2E; --fill:#3A3A3C; --ink:#F5F5F7; --muted:#A1A1A6; --tertiary:#8E8E93; --line:rgba(255,255,255,.12);
   --accent:#0A84FF; --link:#2997FF; --accent-ink:#FFFFFF; --accent-soft:rgba(10,132,255,.18);
   --ok:#30D158; --ok-soft:rgba(48,209,88,.16); --warn:#FF9F0A; --warn-soft:rgba(255,159,10,.16); --bad:#FF6961; --bad-soft:rgba(255,69,58,.16);
-  --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6;
+  --ring-track:#3A3A3C; --glass:rgba(22,22,23,.8); --shadow:none; --tile:#2C2C2E; --photo:#D1D1D6; --panel-up:#2C2C2E;
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:76px}
@@ -83,6 +83,39 @@ section.block > .sub-lede{color:var(--muted);margin:-6px 0 18px;max-width:40em}
 /* controls */
 .controls{display:grid;gap:20px}
 .ctl-row{display:flex;flex-wrap:wrap;gap:16px 22px;align-items:flex-end}
+.facets{position:relative;display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.facet > summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;font:500 15px/1 var(--f-body);letter-spacing:-.01em;padding:10px 14px;border-radius:999px;background:var(--fill);color:var(--ink);min-height:38px;white-space:nowrap}
+.facet > summary::-webkit-details-marker{display:none}
+.facet > summary::after{content:"";width:6px;height:6px;border-right:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.facet[open] > summary::after{transform:rotate(-135deg) translate(-1px,-1px)}
+.facet.on > summary{background:var(--accent);color:#fff}
+.facet > summary .n{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:10px;background:rgba(255,255,255,.25);font:600 12px/1 var(--f-body);padding:0 5px}
+.fpanel{position:absolute;left:0;top:calc(100% + 8px);background:var(--panel-up,var(--surface));z-index:20;width:min(600px,100%);max-height:min(70vh,560px);overflow:auto;background:var(--surface);border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.2),0 0 0 .5px var(--line);padding:18px;display:grid;gap:16px}
+.fgroup{display:grid;gap:8px}
+.fgroup > .lab{font:600 13px/1.2 var(--f-body);color:var(--muted)}
+.opts{display:flex;flex-wrap:wrap;gap:6px}
+.opt{position:relative;display:inline-flex;align-items:center;gap:6px;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:400 15px/1.1 var(--f-body);cursor:pointer;user-select:none;min-height:38px}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt:has(input:checked),.opt.sel{background:var(--accent-soft);border-color:var(--accent);color:var(--link);font-weight:600}
+.opt:has(input:focus-visible){outline:3px solid color-mix(in srgb,var(--accent) 55%,transparent);outline-offset:2px}
+.opt .c{color:var(--muted);font-size:13px;font-weight:400}
+.opt.zero{opacity:.45}
+.prange{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:8px;align-items:center;max-width:320px}
+.prange input{font:400 16px/1.2 var(--f-body);color:var(--ink);background:var(--fill);border:0;border-radius:10px;padding:9px 12px;min-height:38px;width:100%;min-width:0}
+.listsep{margin:28px 4px 10px;font:600 15px/1.35 var(--f-body);color:var(--muted)}
+.tile{grid-template-rows:auto 1fr auto} .tile .n{align-self:end}
+@media (pointer:coarse){.hint.resize{display:none}}
+.fpanel .done{justify-self:start}
+.sortrow{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:flex-end;margin-top:18px}
+.sortctl{display:flex;gap:8px;flex-wrap:wrap}
+.sortctl select{min-width:220px}
+.btn.dir{white-space:nowrap}
+.active{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.active:empty{display:none}
+.chip{display:inline-flex;gap:8px;align-items:center;background:var(--accent-soft);color:var(--link);border:0;border-radius:999px;padding:7px 12px;font:500 14px/1.1 var(--f-body);cursor:pointer;min-height:32px}
+.chip::after{content:"×";font-size:17px;line-height:1;opacity:.8}
+.chip.reset{background:none;color:var(--link);text-decoration:underline}
+.chip.reset::after{content:none}
 .ctl-row > .ctl{flex:1 1 160px}
 .ctl-row > .ctl:has(.seg){flex:0 0 auto}
 .ctl-row > .ctl:has(#sort){flex:1.5 1 230px}
@@ -110,6 +143,7 @@ details.more[open] > summary::after{transform:rotate(-135deg) translate(-2px,-1p
 details > summary::-webkit-details-marker{display:none}
 
 /* sticky local nav (glass only on the floating bar) */
+.strip.away{visibility:hidden;opacity:0}
 .strip{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);margin-inline:-22px;padding:10px 22px;display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-top:40px}
 @media (prefers-reduced-transparency: reduce){.strip{background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}}
 .strip .count{font:600 15px var(--f-body)}
@@ -159,7 +193,8 @@ dialog.lb .bar button{font:500 15px var(--f-body);background:rgba(255,255,255,.1
 .cmp input{accent-color:var(--accent);width:16px;height:16px}
 .chev{width:9px;height:9px;border-right:2px solid var(--tertiary);border-bottom:2px solid var(--tertiary);transform:rotate(45deg);justify-self:end;transition:transform .2s;grid-column:4;grid-row:1}
 .card[open] .chev{transform:rotate(-135deg)}
-.c-body{padding:20px;display:grid;gap:22px}
+.c-body{padding:20px;display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.why{overflow-wrap:anywhere}
 .c-grid{columns:2 360px;column-gap:36px}
 .c-grid > div{break-inside:avoid;margin-bottom:24px}
 .c-grid.bal{columns:auto;display:flex;gap:36px;align-items:flex-start}
@@ -175,6 +210,8 @@ dialog.lb .bar button{font:500 15px var(--f-body);background:rgba(255,255,255,.1
 .tile .n small{font:500 13px var(--f-body);color:var(--tertiary);letter-spacing:0}
 .tile .track{height:4px;background:color-mix(in srgb,var(--ink) 12%,transparent);border-radius:2px;overflow:hidden}
 .tile .track i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.tile.avg.fail{background:var(--tile)} .tile.avg.fail .n,.tile.avg.fail .t{color:var(--muted)} .tile.avg.fail .track i{background:var(--tertiary)}
+.meter .fill.mute{background:var(--tertiary)}
 .tile.avg{background:var(--accent-soft)} .tile.avg .n{color:var(--link)} .tile.avg .t{color:var(--link)}
 .tile.na .n{color:var(--muted)}
 .facts{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;font-size:15px;margin-top:2px}
@@ -192,11 +229,6 @@ details.how p{font-size:14px;color:var(--muted);margin:6px 0 0}
 .more-btn{border:0;background:none;padding:4px 0 0;font:500 13.5px var(--f-body);color:var(--link);cursor:pointer;min-height:28px}
 .clamp2{-webkit-line-clamp:2;line-clamp:2} .clamp3{-webkit-line-clamp:3;line-clamp:3}
 .wi-none{font-size:14px;color:var(--muted);margin:12px 2px 0}
-.checklist{background:none;box-shadow:none;overflow:visible;border-radius:0}
-.ck-head{font:600 19px/1.3 var(--f-display);letter-spacing:-.016em;margin:22px 4px 10px}
-.ck-head:first-child{margin-top:0}
-.ck-card{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
-.checklist .ck-note{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
 .kv{display:grid;grid-template-columns:150px minmax(0,1fr);gap:0;font-size:15px;margin:0}
 .kv dt{padding-right:14px;overflow-wrap:break-word}
 @media (max-width:600px){.kv{grid-template-columns:minmax(0,40%) minmax(0,1fr)}}
@@ -238,6 +270,19 @@ td.num{text-align:right;font-variant-numeric:tabular-nums}
 #reftable td:not(.num):not(:first-child){white-space:normal;min-width:120px;max-width:280px}
 #reftable code{font-size:12px}
 tr.dim td{color:var(--muted)}
+.mv{display:block;font-weight:600;font-variant-numeric:tabular-nums}
+.mn{display:block;font-size:12.5px;color:var(--muted);font-weight:400;white-space:nowrap}
+.pc{display:grid;gap:3px;font-size:13.5px;line-height:1.3;min-width:260px;white-space:normal}
+.pc .p::before{content:"+ ";color:var(--ok);font-weight:700}
+.pc .m::before{content:"− ";color:var(--bad);font-weight:700}
+.pc .src-links{font-size:12px;color:var(--muted)}
+#reftable.withpc tr>:first-child{position:sticky;left:0;z-index:2;background:var(--surface);min-width:150px}
+#reftable.withpc th:first-child{z-index:4}
+#reftable.withpc td:nth-child(2){min-width:300px;max-width:380px}
+.pcm{display:none}
+.pcm > summary{cursor:pointer;color:var(--link);font-size:13.5px;margin-top:6px;list-style:none}
+@media (max-width:600px){ #reftable .pccol{display:none} .pcm{display:block} #reftable.withpc tr>:first-child{min-width:200px;max-width:240px;white-space:normal} .pcm .pc{min-width:0} }
+#perfwrap,#refwrap{max-height:82vh;overflow:auto}
 #perftable td:first-child{white-space:normal;min-width:220px;max-width:300px}
 #perftable td:nth-child(8){white-space:normal;min-width:120px;max-width:170px}
 #perftable tr>:first-child,#cmptable tr>:first-child{position:sticky;left:0;z-index:2;background:var(--surface)}
@@ -249,7 +294,7 @@ tr.dim td{color:var(--muted)}
 tbody tr:last-child td{border-bottom:0}
 .best{font-weight:700;color:var(--ok)}
 
-/* brands, checklist, glossary */
+/* brands, glossary */
 .brands{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
 .brands details + details{border-top:1px solid var(--line)}
 .brands summary{padding:16px 20px;cursor:pointer;list-style:none;display:grid;grid-template-columns:minmax(120px,170px) 1fr 12px;gap:12px 18px;align-items:center;font:600 17px/1.2 var(--f-body)}
@@ -258,13 +303,6 @@ tbody tr:last-child td{border-bottom:0}
 .brands details[open] summary::after{transform:rotate(45deg)}
 .brands .b-body{padding:0 20px 16px}
 .codecgrid{display:grid;gap:10px}
-.checklist{background:var(--surface);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
-.checklist label{display:flex;gap:14px;align-items:flex-start;padding:14px 20px;cursor:pointer;font-size:16px}
-.checklist label + label{border-top:1px solid var(--line)}
-.checklist input{appearance:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--tertiary);flex:none;margin:1px 0 0;cursor:pointer;display:grid;place-content:center}
-.checklist input:checked{background:#34C759;border-color:#34C759}
-.checklist input:checked::after{content:"";width:6px;height:11px;border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(45deg) translate(-1px,-1px)}
-.checklist input:checked + span{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--tertiary)}
 .gloss{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
 .gloss div{background:var(--surface);border-radius:18px;padding:18px;box-shadow:var(--shadow);font-size:15px;color:var(--muted)}
 .gloss b{display:block;margin-bottom:4px;color:var(--ink);font:600 17px/1.25 var(--f-body)}
@@ -287,16 +325,22 @@ footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;borde
   .thumb,.nophoto{width:112px;height:80px}
   .c-price{grid-column:1 / -1;justify-items:start;text-align:left} .c-price .s{text-align:left;max-width:none}
   .scores{grid-template-columns:repeat(3,minmax(0,1fr))}
-  .ctl-row > .ctl:has(#budget),.ctl-row > .ctl:has(.seg){flex:1 1 100%}
+  #perftable td:nth-child(n+2):not(:nth-child(3)):not(:nth-child(9)),#perftable th:nth-child(n+2):not(:nth-child(3)):not(:nth-child(9)){display:none}
+  .brands summary .muted{display:none}
+  .brands summary{grid-template-columns:1fr 12px}
+  .ctl-row > .ctl:has(.seg){flex:1 1 100%}
+  .fpanel{width:100%;max-height:65vh}
+  .sortctl select{min-width:0;flex:1 1 180px}
   .seg{display:grid;width:100%;grid-auto-columns:1fr} .seg button{white-space:normal;padding:8px 6px;font-size:14px;line-height:1.15}
   .meters{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
   .meter{grid-template-columns:1fr auto;row-gap:4px} .meter .track{grid-column:1/-1;grid-row:2}
   .pickcard .hero{aspect-ratio:16/9;max-height:170px}
-  #mktable,#mktable tbody,#mktable tr,#mktable td{display:block;width:auto!important}
-  #mktable thead{display:none}
-  #mktable tr{padding:10px 14px;border-bottom:1px solid var(--line)}
-  #mktable td{border:0;padding:2px 0;text-align:left}
-  #mktable td::before{content:attr(data-label) ": ";color:var(--muted);font-size:13px}
+  #mktable,#mktable tbody,#mktable tr,#mktable td,#mktable2,#mktable2 tbody,#mktable2 tr,#mktable2 td{display:block;width:auto!important}
+  #mktable thead,#mktable2 thead{display:none}
+  #mktable tr,#mktable2 tr{padding:10px 14px;border-bottom:1px solid var(--line)}
+  #mktable td,#mktable2 td{border:0;padding:2px 0;text-align:left}
+  #mktable td::before,#mktable2 td::before{content:attr(data-label) ": ";color:var(--muted);font-size:13px}
+  .hint.resize{display:none}
   .chev{display:none}
   input[type="range"]{width:100%}
   .panel{padding:18px}
@@ -310,7 +354,7 @@ footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;borde
   <header class="top">
     <span class="eyebrow" id="stamp">Германия · до 1100 € · монтаж 4K</span>
     <h1>Ноутбук для 4K-монтажа.</h1>
-    <p class="lede">Intel и AMD, проверенные по даташитам и ценам idealo. Требования: экран с полным sRGB, оплата наличными, 32 ГБ в двухканале, 1 ТБ, не дороже 1100 €. Проходят все — только три ноутбука, они в «Итоге».</p>
+    <p class="lede">Intel и AMD, проверенные по даташитам и ценам idealo. Требования: 15–16", экран с полным sRGB, современный процессор, 32 ГБ в двухканале, 1 ТБ, оплата наличными, не дороже 1100 € вместе с докупкой. Проходят все — только три ноутбука, они в «Итоге».</p>
   </header>
 
   <section class="block" aria-labelledby="h-verdict">
@@ -324,6 +368,7 @@ footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;borde
     <p class="sub-lede">Лучший ноутбук, который не проходит ровно один жёсткий критерий. Так видно, чем приходится платить за каждое требование.</p>
     <div class="whatif" id="whatif"></div>
     <p class="wi-none" id="whatif-none" hidden></p>
+    <p class="wi-none">«Где купить за наличные — не проверяли»: магазины с оплатой на кассе мы искали только для трёх ноутбуков из «Итога». У остальных цена из интернета (картой или онлайн).</p>
   </section>
 
   <section class="block" aria-labelledby="h-filters">
@@ -337,33 +382,18 @@ footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;borde
             <button type="button" data-v="any" aria-pressed="false">Любая, с картой</button>
           </div>
         </div>
-        <div class="ctl"><label for="budget">Бюджет, € — <span class="mono" id="budget-v">1100</span></label>
-          <input type="range" id="budget" min="600" max="1600" step="10" value="1100"></div>
-        <div class="ctl"><label for="q">Поиск</label><input type="search" id="q" placeholder="модель, P/N, CPU"></div>
+        <div class="ctl"><label for="q">Поиск</label><input type="search" id="q" placeholder="модель, P/N, процессор, видеокарта" autocomplete="off"></div>
       </div>
-      <div class="ctl-row">
+      <div class="facets" id="facets" aria-label="Фильтры"></div>
+      <div class="sortrow">
         <div class="ctl"><label for="sort">Сортировка</label>
-          <select id="sort">
-            <option value="personal">По вашим приоритетам</option>
-            <option value="avg">По оценке отчёта</option>
-            <option value="price">Цена ↑</option>
-            <option value="srgb">Экран (sRGB) ↓</option>
-            <option value="cpu">Процессор (R23) ↓</option>
-            <option value="gpu">Графика (Time Spy) ↓</option>
-            <option value="repair">Надёжность и ремонт ↓</option>
-          </select></div>
-        <div class="ctl"><label for="vendor">Процессор</label><select id="vendor"><option value="">Intel и AMD</option><option>Intel</option><option>AMD</option></select></div>
-        <div class="ctl"><label for="panel">Матрица</label><select id="panel"><option value="">Любая</option><option value="OLED">OLED</option><option value="IPS">IPS</option></select></div>
-        <div class="ctl"><label for="mem">Память</label><select id="mem"><option value="">Любая</option><option value="slots">Слоты SO-DIMM</option><option value="soldered">Распаянная</option></select></div>
-        <div class="ctl"><label for="brand">Бренд</label><select id="brand"><option value="">Все</option></select></div>
-      </div>
-      <div class="ctl-row">
+          <div class="sortctl"><select id="sort"></select><button class="btn dir" type="button" id="sortdir"></button></div></div>
         <label class="sw"><input type="checkbox" id="onlypass"> Только проходящие все критерии</label>
-        <label class="sw"><input type="checkbox" id="screenok"> Только полный sRGB</label>
       </div>
+      <div class="active" id="active" aria-label="Выбранные фильтры"></div>
       <details class="more" id="wdet">
         <summary>Что для вас важнее</summary>
-        <p class="muted" style="margin:8px 0 10px;font-size:15px">Оценка отчёта считает пять критериев поровну. Здесь вы сами решаете, что важнее, — полоска «Ваша» на карточках и порядок списка пересчитываются сразу.</p>
+        <p class="muted" style="margin:8px 0 10px;font-size:15px">Оценка считает пять критериев поровну. Здесь вы сами решаете, что важнее: 0 — не важно, 5 — очень важно. Полоска «Ваша» на карточках пересчитывается сразу; чтобы выстроить список по ней, выберите сортировку «Ваша оценка». Пока вы ничего не меняли, экран и мощность считаются важнее остального.</p>
         <div class="weights" id="weights"></div>
       </details>
       <details class="more" id="codecdet">
@@ -398,34 +428,30 @@ footer{margin-top:64px;color:var(--muted);font-size:12.5px;line-height:1.5;borde
     <h2 id="h-cash">Как заплатить наличными.</h2>
     <p class="sub-lede" id="cash-sum"></p>
     <div class="tablewrap wide"><table id="cashtable"></table></div>
-    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
-    <div id="cash-markets" style="margin-top:16px"></div>
+    <p class="hint resize">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
     <div class="panel" id="cash-phone" style="margin-top:16px" hidden>
       <p class="sub" style="margin-bottom:10px">Что сказать по телефону в магазине</p>
       <pre id="phone-text" style="white-space:pre-wrap;font:15px/1.5 var(--f-body);margin:0 0 12px"></pre>
       <button class="btn primary" type="button" id="phone-copy">Скопировать</button> <span class="muted" id="phone-copied" style="font-size:14px"></span>
     </div>
+    <div id="cash-markets" style="margin-top:16px"></div>
   </section>
 
-  <section class="block" aria-labelledby="h-check">
-    <h2 id="h-check">Чек-лист для покупателя.</h2>
-    <p class="sub-lede">Для того, кто поедет в магазин: звонок, магазин, первый день дома — по порядку. Цель — не унести не ту комплектацию и сразу поймать брак. Откройте страницу на телефоне покупателя: галочки сохраняются только на том устройстве, где их ставили.</p>
-    <div class="checklist" id="checklist"></div>
-  </section>
 
   <section class="block" aria-labelledby="h-perf">
     <h2 id="h-perf">Производительность.</h2>
-    <p class="sub-lede">Медианы notebookcheck и Puget Bench для процессора и графики (в конкретном ноутбуке цифры зависят от лимита мощности). Нажмите на заголовок столбца, чтобы отсортировать. Показаны ноутбуки из списка выше.</p>
-    <div class="tablewrap wide"><table id="perftable"></table></div>
-    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
+    <p class="sub-lede">Баллы тестов процессора и графики — <b>больше — быстрее</b>. Это типичные результаты (медианы notebookcheck и Puget Bench), в конкретном ноутбуке они зависят от лимита мощности. Нажмите на заголовок столбца, чтобы отсортировать. Показаны ноутбуки из списка выше, с учётом фильтров.</p>
+    <div class="tablewrap wide" id="perfwrap"><table id="perftable"></table></div>
+    <p class="hint resize">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
   </section>
 
   <section class="block" aria-labelledby="h-ref" id="refsec">
     <h2 id="h-ref">Справочник производительности.</h2>
-    <p class="sub-lede">Все процессоры и видеоядра, которые встречались у кандидатов: медианы notebookcheck, Puget Bench для Resolve и Premiere, аппаратные кодеки. В скобках — сколько ноутбуков в выборке. Нажмите на заголовок столбца, чтобы отсортировать.</p>
+    <p class="sub-lede">Все процессоры и видеоядра, которые встречались у кандидатов. Числа — баллы тестов: <b>больше — быстрее</b> (только у Blender время в секундах — меньше лучше). Крупно — типичный результат (медиана notebookcheck), под ним — сколько ноутбуков протестировано (у видеоядер — ещё от худшего до лучшего результата). У процессоров и видеоядер второй столбец — плюсы и минусы для монтажа 4K. Нажмите на заголовок столбца, чтобы отсортировать.</p>
     <div class="ctl" style="margin-bottom:12px"><label for="refsel">Таблица</label><select id="refsel"></select></div>
-    <div class="tablewrap wide"><table id="reftable"></table></div>
-    <p class="hint">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
+    <div class="tablewrap wide" id="refwrap"><table id="reftable"></table></div>
+    <p class="hint" id="refnote"></p>
+    <p class="hint resize">Ширину столбца можно менять, потянув за границу в заголовке; двойной щелчок по границе — вернуть как было.</p>
   </section>
 
   <section class="block" aria-labelledby="h-brands">
@@ -462,11 +488,19 @@ const num = v=> (typeof v==='number' && isFinite(v)) ? v : (typeof v==='string' 
 const eur = v=> v==null ? '—' : v.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2})+' €';
 const dec = v=> v==null ? '' : String(v).replace('.',',');
 const f1 = v=> v==null ? '—' : (+v).toFixed(1).replace('.',',');
-const shortSeller = s=> String(s||'').split(/,| — | \(|;/)[0].trim();
+const shortSeller = s=> String(s||'').split(/,| — | \(|;/)[0].trim().replace(/\s*МП$/,' (маркетплейс)');
+const critOf = x=> num((x.prices||{}).criteria_total);
 const fmt = v=> v==null ? '—' : (Math.round(v)).toLocaleString('ru-RU');
 const store = { get(k,d){try{const v=localStorage.getItem('nb4k:'+k);return v==null?d:JSON.parse(v)}catch(e){return d}}, set(k,v){try{localStorage.setItem('nb4k:'+k,JSON.stringify(v))}catch(e){}} };
 const LIMIT = 1100;
 const SOFT=new Set(['cash_unknown']);
+function cashHow(u){ const it=(((D.upgrade_prices||{}).items||{})[((u.buy||[])[0]||{}).what]||{}).cash||{}; const h=String(it.how||''); return /Nachnahme/i.test(h)?'наложенный платёж, '+shortSeller(it.seller)+' — наличными курьеру':/Abholung/i.test(h)?'самовывоз в '+shortSeller(it.seller)+', оплата на кассе':shortSeller(it.seller)||'см. цены докупки'; }
+function memUpText(x,short){ const u=x.mem_upgrade; if(!u) return null;
+  if(!u.possible) return short?'до 32 ГБ нельзя':'Довести до 32 ГБ в двухканале нельзя: '+(u.path||'');
+  const k=((x.prices||{}).criteria_kind==='cash')?'cost_cash':'cost_any'; const c=u[k]??u.cost_any, tot=critOf(x);
+  if(short) return c!=null?'память: +'+eur(c)+' до 32 ГБ':'память: можно докупить';
+  return (u.path||'')+(u.cost_any!=null?` — +${eur(u.cost_any)} при любой оплате`:'')+(u.cost_cash!=null?`, +${eur(u.cost_cash)} наличными (${esc(cashHow(u))})`:', за наличные — не нашли')+(tot!=null?` → итого с SSD до 1 ТБ ${eur(tot)}${tot>LIMIT?' (дороже потолка 1100 €)':''}`:''); }
+const CASH_TIP='Магазины, где этот ноутбук можно купить за наличные (оплата на кассе), искали только у тех, кто прошёл остальные критерии. Цена показана для любой оплаты.';
 
 /* ---------- derived fields ---------- */
 function addonsSum(x){ const a=(x.prices&&x.prices.addons)||[]; return a.reduce((s,y)=>s+(num(y.eur)||0),0); }
@@ -478,23 +512,23 @@ function priceFor(x,mode){
   if(mode==='cash'){
     if(cash!=null) return {v:cash, how:(p.cash_seller||'')+(p.cash_method?' · '+p.cash_method:'')};
     if((x.fails||[]).includes('cash')) return {v:null, how:'за наличные ≤ 1100 € нельзя'};
-    return {v:any, how: any==null ? 'нет цены нового товара' : 'наличные не проверены · цена любой оплатой', unknown:true};
+    return {v:any, how: any==null ? 'нет цены нового товара' : 'цена любой оплатой (наличные не проверяли)', unknown:true};
   }
   if(mode==='transfer'){ const c=[cash,tr].filter(v=>v!=null); const v=c.length?Math.min(...c):null; return {v, how: v==null?'нет предложения':(v===cash?(p.cash_seller||'')+' · наличные':'предоплата переводом')}; }
   return {v:any ?? cash ?? tr, how:p.any_seller||p.cash_seller||''};
 }
 function srgb(x){ const s=x.screen||{}; return num(s.srgb_measured) ?? num(s.srgb_spec); }
 function screenOk(x){ const s=x.screen||{}; if(typeof s.ok==='boolean') return s.ok; const v=srgb(x); return v!=null && v>=95; }
-function memKind(x){ const l=((x.memory||{}).layout||'').toLowerCase(); if(!l) return ''; return l.includes('solder')||l.includes('распа') ? 'soldered':'slots'; }
 function staticFails(x){ return (x.fails||[]).filter(f=>f!=='cash' && f!=='price'); }
 function failsFor(x,mode,budget){
   const f=new Set(staticFails(x)); if(!screenOk(x)) f.add('screen');
-  const pr=priceFor(x,mode); if(pr.v==null) f.add(pr.unknown?'unavailable':(mode==='cash'?'cash':'price')); else if(pr.v>budget) f.add('price');
+  const pr=priceFor(x,mode); if(pr.v==null) f.add(pr.unknown||mode==='any'?'unavailable':mode==='transfer'?'no_cash_tr':'cash'); else if(pr.v>budget) f.add('price');
+  const ct=critOf(x); if(pr.v!=null && ct!=null && ct>budget) f.add('price');
   if(pr.unknown && pr.v!=null) f.add('cash_unknown');
   return [...f];
 }
 const FAIL_LABEL={cash_unknown:'наличные не проверены',unverified:'данные не проверены',unavailable:'нет в продаже',screen:'экран без полного sRGB',cash:'нет оплаты наличными',price:'дороже бюджета',memory:'память не по критериям',cpu:'процессор-ловушка/слабый',hevc_disabled:'HEVC отключён',ssd:'SSD',size:'не 15–16"',used:'только б/у'};
-Object.assign(FAIL_LABEL, (D.criteria&&D.criteria.fail_labels)||{}, {cash_unknown:'наличные не проверены'});
+Object.assign(FAIL_LABEL, (D.criteria&&D.criteria.fail_labels)||{}, {cash_unknown:'где купить за наличные — не проверяли', cash:'за наличные не продают', cpu:'старый или слабый процессор', no_cash_tr:'ни за наличные, ни переводом не продают', price:'дороже 1100 € с докупкой до 32 ГБ и 1 ТБ'});
 
 function codecSupport(x,fmt){
   if(!fmt) return null; const c=x.codecs||{};
@@ -511,26 +545,31 @@ const WL={screen:'Экран',power:'Мощность',repair:'Надёжнос�
 function sub(x,mode){
   const s=x.scores||{}; const v=srgb(x);
   const scr = v==null?3: Math.max(0,Math.min(10,(v-50)/5)) + ((x.screen||{}).panel==='OLED'?0.5:0);
-  const pr=priceFor(x,mode).v; const price = pr==null?0 : pr<=700?10 : pr<=1000? 10-(pr-700)/100 : pr<=1100? 7-(pr-1000)/50 : Math.max(1,5-(pr-1100)/50);
+  const pr=(x.mem_upgrade&&x.mem_upgrade.possible===false)?null:(critOf(x) ?? priceFor(x,mode).v); const price = pr==null?0 : pr<=700?10 : pr<=1000? 10-(pr-700)/100 : pr<=1100? 7-(pr-1000)/50 : Math.max(1,5-(pr-1100)/50);
   const rep = [num(s.repair),num(s.problems)].filter(v=>v!=null);
   return {screen:Math.min(10,scr), power:num(s.power)??5, repair: rep.length? rep.reduce((a,b)=>a+b,0)/rep.length : 5, price, port:num(s.portability)??6};
 }
 function personal(x,mode){ const s=sub(x,mode); let a=0,w=0; for(const k in W){a+=s[k]*W[k];w+=W[k];} return w? a/w : 0; }
 
 /* ---------- state ---------- */
-const S = Object.assign({pay:'cash',budget:LIMIT,q:'',sort:'personal',onlypass:false,screenok:false,vendor:'',panel:'',mem:'',brand:'',codec:''}, store.get('state',{}));
+const F0={brand:[],vendor:[],gpu:[],ram:[],mem:[],upg:[],size:[],panel:[],srgbg:[],ssd:[],codec:[],weight:[],ports:[]};
+const S = Object.assign({pay:'cash',budget:LIMIT,pmin:null,pmax:null,q:'',sort:'rec',dir:'desc',onlypass:false,codec:''}, store.get('state2',{}));
+S.f=Object.assign(JSON.parse(JSON.stringify(F0)), S.f||{});
 let CMP=new Set(store.get('cmp',[]));
-function save(){ store.set('state',S); store.set('cmp',[...CMP]); }
+function save(){ store.set('state2',S); store.set('cmp',[...CMP]); }
 
 /* ---------- controls ---------- */
 function initControls(){
   const dm=String(D.prices_checked||D.generated||'').match(/\d{2}\.\d{2}\.\d{4}/); $('#stamp').textContent = 'Германия · до 1100 € · монтаж 4K'+(dm?' · цены на '+dm[0]:'');
   document.querySelectorAll('#pay button').forEach(b=>{ b.setAttribute('aria-pressed', b.dataset.v===S.pay?'true':'false'); b.onclick=()=>{S.pay=b.dataset.v; document.querySelectorAll('#pay button').forEach(o=>o.setAttribute('aria-pressed',o===b?'true':'false')); render();}; });
-  const bud=$('#budget'); bud.value=S.budget; $('#budget-v').textContent=S.budget; bud.oninput=()=>{S.budget=+bud.value; $('#budget-v').textContent=bud.value; render();};
   const bind=(id,key,ev='change',get=el=>el.value)=>{const el=$(id); if(el.type==='checkbox') el.checked=!!S[key]; else el.value=S[key]; el.addEventListener(ev,()=>{S[key]= el.type==='checkbox'?el.checked:get(el); render();});};
-  const brands=[...new Set(L.map(x=>x.brand).filter(Boolean))].sort(); const bs=$('#brand'); brands.forEach(b=>{const o=document.createElement('option');o.textContent=b;bs.appendChild(o);});
   const cs=$('#codec'); CF.forEach(f=>{const o=document.createElement('option');o.value=f.id;o.textContent=f.label;cs.appendChild(o);});
-  bind('#q','q','input'); bind('#sort','sort'); bind('#onlypass','onlypass'); bind('#screenok','screenok'); bind('#vendor','vendor'); bind('#panel','panel'); bind('#mem','mem'); bind('#brand','brand'); bind('#codec','codec');
+  bind('#q','q','input'); bind('#onlypass','onlypass'); bind('#codec','codec');
+  const so=$('#sort'); SORTS.forEach(([k,lab])=>{ const o=document.createElement('option'); o.value=k; o.textContent=lab; so.appendChild(o); });
+  if(!SORTS.some(z=>z[0]===S.sort)) S.sort='rec'; so.value=S.sort;
+  so.onchange=()=>{ S.sort=so.value; S.dir=(SORTS.find(z=>z[0]===S.sort)||[])[2]||'desc'; render(); };
+  $('#sortdir').onclick=()=>{ S.dir=S.dir==='asc'?'desc':'asc'; render(); };
+  initFacets();
   const wd=$('#weights');
   Object.keys(W_DEF).forEach(k=>{ const id='w-'+k; const d=document.createElement('div'); d.className='ctl';
     d.innerHTML=`<label for="${id}">${WL[k]} — <output id="${id}-o">${W[k]}</output></label><input type="range" id="${id}" min="0" max="5" step="1" value="${W[k]??W_DEF[k]}">`;
@@ -548,49 +587,127 @@ function renderVerdict(){
     a.innerHTML=`${x.photos?`<img class="hero" src="${esc(x.photos.dir+x.photos.files[0])}" alt="${esc((x.brand||'')+' '+(x.model||''))}">`:'<span class="hero-ph"></span>'}<span class="role">${role}${(x.scores||{}).avg!=null?' · оценка '+esc(dec((x.scores||{}).avg))+' из 10':''}</span><span class="name">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="c-pn">${esc(x.pn||'')}</span>
     <span class="price">${eur(p.v)}</span><span class="how" title="${esc(p.how)}">${esc(p.short)}</span>
     <span class="points">${(x.pros||[]).slice(0,3).map(t=>'<span>'+esc(t)+'</span>').join('')}</span>
-    <span class="links"><a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a>${x.prices&&x.prices.idealo_url?` &nbsp; <a class="more-link" href="${esc(x.prices.idealo_url)}" target="_blank" rel="noopener">idealo</a>`:''}</span>`;
+    <span class="links"><a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a> &nbsp; <a class="more-link" href="#cashsec">Где купить и что сказать по телефону</a>${x.prices&&x.prices.idealo_url?` &nbsp; <a class="more-link" href="${esc(x.prices.idealo_url)}" target="_blank" rel="noopener">idealo</a>`:' &nbsp; <span class="muted" style="font-size:14px">своей карточки на idealo нет</span>'}</span>`;
     v.appendChild(a); };
   if(pick) card(pick,'№1 — выбор',true);
   backup.forEach((x,i)=>card(x,i===0?'№2 — если №1 не подтвердят':'№'+(i+2)+' — запасной',false));
   if(!pick && !backup.length){ v.innerHTML='<div class="empty">Итоговый выбор ещё не определён — смотрите список ниже.</div>'; }
   if(D.verdict_note){ const n=$('#verdict-note'); n.hidden=false; n.textContent=D.verdict_note; }
-  v.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{ const el=document.getElementById(a.dataset.open); if(el) el.open=true; }));
 }
 const cardId=x=>'nb-'+String(x.id).replace(/[^A-Za-z0-9._~-]/g,'-');
 
+function openCard(id){ let el=document.getElementById(id);
+  if(!el){ S.f=JSON.parse(JSON.stringify(F0)); S.pmin=S.pmax=null; S.q=''; $('#q').value=''; S.onlypass=false; $('#onlypass').checked=false; render(); el=document.getElementById(id); }
+  if(el){ el.open=true; el.scrollIntoView({block:'start'}); } }
+document.addEventListener('click',e=>{ const a=e.target.closest('[data-open]'); if(!a) return; e.preventDefault(); openCard(a.dataset.open); });
+
 /* ---------- what-if ---------- */
-const WI=[['cash','Если можно заплатить переводом или картой','transfer'],['price','Если бюджет можно поднять','cash'],['screen','Если смириться с экраном без полного sRGB','cash'],['memory','Если принять 16 ГБ или 1×32','cash'],['cpu','Если принять слабый процессор','cash']];
+const WI=[['cash','Если можно заплатить переводом или картой','transfer'],['price','Если бюджет можно поднять','cash'],['screen','Если смириться с экраном без полного sRGB','cash'],['memory','Если докупить или заменить память до 32 ГБ','memup'],['cpu','Если принять слабый процессор','cash']];
 function renderWhatIf(){
   const el=$('#whatif'); const out=[], none=[];
   for(const [c,label,mode] of WI){
     const cands=L.filter(x=>{ const f=failsFor(x,'cash',LIMIT).filter(z=>!SOFT.has(z)); return f.length===1 && f[0]===c; })
-      .map(x=>({x,ps:personal(x,mode),avg:num((x.scores||{}).avg)??0,p:priceFor(x,mode).v ?? priceFor(x,'any').v})).sort((a,b)=>(b.avg-a.avg)||(b.ps-a.ps));
-    if(!cands.length){ none.push(label.replace(/^Если /,'').toLowerCase()); continue; }
+      .filter(x=>mode!=='memup' || (x.mem_upgrade&&x.mem_upgrade.possible))
+      .map(x=>({x,ps:personal(x,mode==='memup'?'cash':mode),avg:num((x.scores||{}).avg)??0,p: critOf(x) ?? (priceFor(x,mode==='memup'?'cash':mode).v ?? priceFor(x,'any').v)})).sort((a,b)=> c==='price' ? (a.p??1e9)-(b.p??1e9) : (((a.p??1e9)>LIMIT)-((b.p??1e9)>LIMIT)||(b.avg-a.avg)||(b.ps-a.ps)));
+    if(!cands.length){ none.push(label.replace(/^Если /,'').replace(/^./,c=>c.toLowerCase())); continue; }
     const b=cands[0], x=b.x;
-    out.push(`<div class="wi"><span class="cond">${esc(label)}</span><span class="m">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="p">${eur(b.p)}</span><span class="d">${esc(x.fail_notes||'')}</span>${failsFor(x,'cash',LIMIT).includes('cash_unknown')?'<span class="pill warn" style="justify-self:start">? наличные не проверены</span>':''}${cands.length>1?`<span class="d">ещё ${cands.length-1} с той же уступкой — в списке ниже</span>`:''}<a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a></div>`);
+    out.push(`<div class="wi"><span class="cond">${esc(label)}</span><span class="m">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="p">${eur(b.p)}</span>${b.p!=null&&b.p>LIMIT?`<span class="d">с докупкой до 32 ГБ и 1 ТБ — дороже потолка на ${eur(b.p-LIMIT)}</span>`:''}<span class="d">${esc(x.fail_notes||'')}</span>${failsFor(x,'cash',LIMIT).includes('cash_unknown')?`<span class="pill warn" style="justify-self:start" title="${esc(CASH_TIP)}">? где купить за наличные — не проверяли</span>`:''}${cands.length>1?`<span class="d">ещё ${cands.length-1} с той же уступкой — в списке ниже</span>`:''}<a class="more-link" href="#${esc(cardId(x))}" data-open="${esc(cardId(x))}">Подробнее</a></div>`);
   }
   el.innerHTML=out.join('');
   const nn=$('#whatif-none'); if(nn){ nn.hidden=!none.length; nn.textContent=none.length?'Отдельного варианта нет для «'+none.join('» и «')+'»: все ноутбуки, которые упираются в эти критерии, не проходят ещё и другие.':''; }
-  el.querySelectorAll('[data-open]').forEach(a=>a.addEventListener('click',()=>{ const d=document.getElementById(a.dataset.open); if(d) d.open=true; }));
 }
 
 /* ---------- list ---------- */
+/* ---------- фильтры как в магазине ---------- */
+const SORTS=[['rec','Рекомендуемые',null],['price','Цена с докупкой до 32 ГБ и 1 ТБ','asc'],['avg','Оценка (из 10)','desc'],['ps','Ваша оценка','desc'],['srgb','Экран: охват sRGB','desc'],['cpu','Процессор (Cinebench R23)','desc'],['gpu','Графика (Time Spy)','desc'],['ram','Память, ГБ','desc'],['weight','Вес','asc'],['battery','Батарея','desc'],['repair','Надёжность и ремонт','desc']];
+const RAMGB={'2x16':32,'soldered32':32,'1x32':32,'1x16+slot':16,'2x8':16,'soldered16+slot':16,'soldered16':16,'1x24+slot':24,'soldered8+slot':8};
+const lay=x=>String((x.memory||{}).layout||'').toLowerCase().replace(/\s/g,'');
+function ramGB(x){ const m=lay(x).match(/^(\d+)x(\d+)/); return num((x.memory||{}).size_gb) ?? RAMGB[lay(x)] ?? (m?(+m[1])*(+m[2]):null); }
+function memInst(x){ const l=lay(x); if(!l) return null; if(l.startsWith('soldered')) return l.includes('slot')?'mixed':'soldered'; return 'slots'; }
+function memStatus(x){ const l=lay(x); if((num((x.memory||{}).size_gb)??0)>=32 && !l.startsWith('1x32')) return 'ok'; if(l==='2x16'||l==='soldered32') return 'ok'; const u=x.mem_upgrade; if(u&&typeof u.possible==='boolean') return u.possible?'can':'no'; if(!l) return null; return (l==='soldered16'||l==='soldered8+slot')?'no':'can'; }
+function gpuKind(x){ const g=x.gpu||{}; return /dgpu|дискрет/i.test(g.type||'')||/rtx|gtx|geforce|radeon rx/i.test(g.name||'')?'d':'i'; }
+function portsOf(x){ const s=(x.ports||[]).filter(p=>!/^\s*без/i.test(p)).join(' | ').toLowerCase(); const o=[];
+  if(/usb4|thunderbolt|\btb4\b/.test(s)) o.push('usb4'); if(/hdmi 2\.1/.test(s)) o.push('hdmi21'); if(/microsd|кардридер|\bsd\b/.test(s)) o.push('sd'); if(/rj-?45|ethernet|\blan\b/.test(s)) o.push('rj45'); return o; }
+const G={
+  brand:{t:'Производитель',get:x=>[x.brand],opts:()=>[...new Set(L.map(x=>x.brand).filter(Boolean))].sort().map(b=>[b,b])},
+  vendor:{t:'Процессор',get:x=>[x.branch],opts:()=>[['Intel','Intel'],['AMD','AMD']]},
+  gpu:{t:'Видеокарта',get:x=>[gpuKind(x)],opts:()=>[['i','Встроенная'],['d','Дискретная NVIDIA']]},
+  ram:{t:'Объём памяти с завода',get:x=>[ramGB(x)==null?'na':String(ramGB(x))],opts:()=>[...[...new Set(L.map(ramGB).filter(v=>v!=null))].sort((a,b)=>a-b).map(v=>[String(v),v+' ГБ']),['na','не указано']]},
+  mem:{t:'Как установлена',get:x=>[memInst(x)],opts:()=>[['slots','Слоты SO-DIMM'],['mixed','Распаяна + слот'],['soldered','Распаяна полностью']]},
+  upg:{t:'До 32 ГБ в двухканале',get:x=>[memStatus(x)],opts:()=>[['ok','Уже есть'],['can','Можно довести докупкой'],['no','Довести нельзя']]},
+  size:{t:'Диагональ',get:x=>{const v=num((x.screen||{}).size_in); return [v==null?null:String(Math.round(v*10)/10)];},opts:()=>[...new Set(L.map(x=>num((x.screen||{}).size_in)).filter(v=>v!=null).map(v=>Math.round(v*10)/10))].sort((a,b)=>a-b).map(v=>[String(v),dec(v)+'"'])},
+  panel:{t:'Матрица',get:x=>{const p=((x.screen||{}).panel||'').toUpperCase(); return [p.includes('OLED')?'OLED':p.includes('IPS')?'IPS':'other'];},opts:()=>[['OLED','OLED'],['IPS','IPS'],['other','Другая / не указана']]},
+  srgbg:{t:'Цветовой охват',get:x=>[screenOk(x)?'full':'part'],opts:()=>[['full','Полный sRGB (≥ 95 %)'],['part','Неполный или не проверен']]},
+  ssd:{t:'SSD с завода',get:x=>{const v=num((x.ssd||{}).size_gb); return [v==null?'na':v>=1900?'2048':v>=900?'1024':'512'];},opts:()=>[['512','512 ГБ'],['1024','1 ТБ'],['2048','2 ТБ'],['na','не указано']]},
+  codec:{t:'Аппаратно (выберите нужное)',all:true,get:x=>{const c=x.codecs||{}; return [c.hevc_422_decode&&'hevc422',c.h264_422_decode&&'h264422',c.av1_encode&&'av1enc'].filter(Boolean);},opts:()=>[['hevc422','HEVC 4:2:2 — тянет аппаратно'],['h264422','H.264 4:2:2 — тянет аппаратно'],['av1enc','AV1 — быстрый экспорт']]},
+  weight:{t:'Вес',get:x=>{const w=num(x.weight_kg); return [w==null?null:w<1.5?'lt15':w<=2?'15_20':'gt20'];},opts:()=>[['lt15','до 1,5 кг'],['15_20','1,5–2 кг'],['gt20','больше 2 кг']]},
+  ports:{t:'Есть порты (выберите нужные)',all:true,get:portsOf,opts:()=>[['usb4','USB4 / Thunderbolt'],['hdmi21','HDMI 2.1'],['sd','Кардридер SD'],['rj45','Ethernet RJ45']]}
+};
+const FACETS=[['price','Цена',[]],['brand','Бренд',['brand']],['cpu','Процессор',['vendor']],['gpu','Видеокарта',['gpu']],['mem','Память',['ram','mem','upg']],['scr','Экран',['size','panel','srgbg']],['ssd','SSD',['ssd']],['codec','Кодеки',['codec']],['weight','Вес',['weight']],['ports','Порты',['ports']]];
+const PAYL={cash:'наличными',transfer:'наличными или переводом',any:'любой оплатой'};
+function okGroup(x,k){ const sel=S.f[k]; if(!sel||!sel.length) return true; const v=G[k].get(x); return G[k].all? sel.every(s=>v.includes(s)) : sel.some(s=>v.includes(s)); }
+function baseRows(){ const fmt=CF.find(f=>f.id===S.codec); return L.map(x=>({x, pr:priceFor(x,S.pay), fails:failsFor(x,S.pay,S.budget), ps:personal(x,S.pay), cs:codecSupport(x,fmt)})); }
+function passes(r,skip){ const x=r.x, q=S.q.trim().toLowerCase();
+  if(S.onlypass && r.fails.length) return false;
+  if(skip!=='price' && (S.pmin!=null||S.pmax!=null)){ const v=critOf(x) ?? r.pr.v; if(v==null) return false; if(S.pmin!=null && v<S.pmin) return false; if(S.pmax!=null && v>S.pmax) return false; }
+  if(q && !q.split(/\s+/).every(w=>[x.brand,x.model,x.pn,(x.cpu||{}).name,(x.cpu||{}).codename,(x.gpu||{}).name,x.branch].join(' ').toLowerCase().includes(w))) return false;
+  for(const k in G){ if(k!==skip && !okGroup(x,k)) return false; }
+  return true; }
+function sortKey(r){ const x=r.x; switch(S.sort){
+  case 'price': return critOf(x) ?? r.pr.v; case 'avg': return num((x.scores||{}).avg); case 'ps': return r.ps; case 'srgb': return srgb(x);
+  case 'cpu': return num((x.cpu||{}).r23_multi); case 'gpu': return num((x.gpu||{}).timespy); case 'ram': return ramGB(x);
+  case 'weight': return num(x.weight_kg); case 'battery': return num(x.battery_wh); case 'repair': return sub(x,S.pay).repair; } return null; }
 function filtered(){
-  const q=S.q.trim().toLowerCase(); const fmt=CF.find(f=>f.id===S.codec);
-  let a=L.map(x=>({x, pr:priceFor(x,S.pay), fails:failsFor(x,S.pay,S.budget), ps:personal(x,S.pay), cs:codecSupport(x,fmt)}));
-  a=a.filter(r=>{ const x=r.x;
-    if(S.onlypass && r.fails.length) return false;
-    if(S.screenok && !screenOk(x)) return false;
-    if(S.vendor && x.branch!==S.vendor) return false;
-    if(S.panel && !(((x.screen||{}).panel||'').toUpperCase().includes(S.panel))) return false;
-    if(S.mem && memKind(x)!==S.mem) return false;
-    if(S.brand && x.brand!==S.brand) return false;
-    if(q && !([x.brand,x.model,x.pn,(x.cpu||{}).name,(x.gpu||{}).name].join(' ').toLowerCase().includes(q))) return false;
-    return true; });
-  const key={personal:r=>-r.ps, avg:r=>-(num((r.x.scores||{}).avg)??0), price:r=>r.pr.v??1e9, srgb:r=>-(srgb(r.x)??0), cpu:r=>-(num((r.x.cpu||{}).r23_multi)??0), gpu:r=>-(num((r.x.gpu||{}).timespy)??0), repair:r=>-sub(r.x,S.pay).repair}[S.sort]||(r=>-r.ps);
-  const BK=L.filter(x=>x.status==='backup'); const rank=x=>x.status==='pick'?0:x.status==='backup'?1+BK.indexOf(x):99;
-  a.sort((p,q)=> rank(p.x)-rank(q.x) || (p.fails.length?1:0)-(q.fails.length?1:0) || key(p)-key(q) || ((p.pr.v??1e9)-(q.pr.v??1e9)));
+  const a=baseRows().filter(r=>passes(r));
+  if(S.sort==='rec'){ const BK=L.filter(x=>x.status==='backup'); const rank=x=>x.status==='pick'?0:x.status==='backup'?1+BK.indexOf(x):99;
+    const hn=r=>r.fails.filter(f=>!SOFT.has(f)).length;
+    a.sort((p,q)=> rank(p.x)-rank(q.x) || (hn(p)?1:0)-(hn(q)?1:0) || hn(p)-hn(q) || (num((q.x.scores||{}).avg)??0)-(num((p.x.scores||{}).avg)??0) || q.ps-p.ps || ((p.pr.v??1e9)-(q.pr.v??1e9))); }
+  else { const d=S.dir==='asc'?1:-1; a.sort((p,q)=>{ const u=sortKey(p), v=sortKey(q); if(u==null&&v==null) return (p.pr.v??1e9)-(q.pr.v??1e9); if(u==null) return 1; if(v==null) return -1; return (u-v)*d || ((p.pr.v??1e9)-(q.pr.v??1e9)); }); }
   return a;
+}
+function initFacets(){
+  const host=$('#facets');
+  host.innerHTML=FACETS.map(([id,t])=>`<details class="facet" data-f="${id}"><summary>${t}</summary><div class="fpanel"></div></details>`).join('');
+  const place=d=>{ const p=d.querySelector('.fpanel'); p.style.left=''; const hb=host.getBoundingClientRect(), sb=d.querySelector('summary').getBoundingClientRect(); p.style.top=(sb.bottom-hb.top+8)+'px'; if(innerWidth<=600) return; const w=Math.min(600,hb.width); p.style.left=Math.max(0,Math.min(sb.left-hb.left, hb.width-w))+'px'; };
+  host.querySelectorAll('details.facet').forEach(d=>d.addEventListener('toggle',()=>{ if(d.open){ host.querySelectorAll('details.facet[open]').forEach(o=>{ if(o!==d) o.open=false; }); place(d); } }));
+  host.addEventListener('change',e=>{ const i=e.target; if(i.dataset.g){ const arr=S.f[i.dataset.g]; const k=arr.indexOf(i.value); if(i.checked&&k<0) arr.push(i.value); if(!i.checked&&k>=0) arr.splice(k,1); render(i.id); } });
+  let pt; host.addEventListener('input',e=>{ const i=e.target;
+    if(i.id==='pmin'||i.id==='pmax'){ clearTimeout(pt); pt=setTimeout(()=>{ const v=i.value.trim()===''?null:Math.max(0,+i.value); S[i.id]=isFinite(v)?v:null; render(i.id); },350); }
+    if(i.id==='budget'){ S.budget=+i.value; const o=$('#budget-v'); if(o) o.textContent=i.value; clearTimeout(pt); pt=setTimeout(()=>render('budget'),120); } });
+  host.addEventListener('click',e=>{ const b=e.target.closest('[data-pmax]'); if(b){ S.pmin=null; S.pmax=+b.dataset.pmax; render(); return; }
+    if(e.target.closest('.done')){ const d=e.target.closest('details'); if(d) d.open=false; } });
+  document.addEventListener('click',e=>{ if(!document.contains(e.target)) return; if(!e.target.closest('.facet')) host.querySelectorAll('details.facet[open]').forEach(d=>d.open=false); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') host.querySelectorAll('details.facet[open]').forEach(d=>{ d.open=false; d.querySelector('summary').focus(); }); });
+  $('#active').addEventListener('click',e=>{ const c=e.target.closest('.chip'); if(!c) return; const k=c.dataset.k, v=c.dataset.v;
+    if(k==='all'){ S.f=JSON.parse(JSON.stringify(F0)); S.pmin=S.pmax=null; S.q=''; $('#q').value=''; S.onlypass=false; $('#onlypass').checked=false; S.budget=LIMIT; }
+    else if(k==='price'){ S.pmin=S.pmax=null; } else if(k==='budget'){ S.budget=LIMIT; } else if(k==='q'){ S.q=''; $('#q').value=''; } else if(k==='onlypass'){ S.onlypass=false; $('#onlypass').checked=false; }
+    else { const a=S.f[k]; const i=a.indexOf(v); if(i>=0) a.splice(i,1); }
+    render(); });
+}
+function renderFacets(rows,focusId){
+  const base=baseRows(), host=$('#facets');
+  const cnt=(k,v)=>base.filter(r=>passes(r,k) && (G[k].all? G[k].get(r.x).includes(v) && S.f[k].filter(s=>s!==v).every(s=>G[k].get(r.x).includes(s)) : G[k].get(r.x).includes(v))).length;
+  FACETS.forEach(([id,t,keys])=>{ const d=host.querySelector(`[data-f="${id}"]`); if(!d) return;
+    let n=keys.reduce((s,k)=>s+S.f[k].length,0); if(id==='price') n=(S.pmin!=null||S.pmax!=null?1:0)+(S.budget!==LIMIT?1:0);
+    d.classList.toggle('on',n>0); d.querySelector('summary').innerHTML=esc(t)+(n?` <span class="n">${n}</span>`:'');
+    if(id==='price' && ['budget','pmin','pmax'].includes(focusId) && d.querySelector('#'+focusId)) return; // не мешать вводу и перетаскиванию
+    let h='';
+    if(id==='price'){ h=`<div class="fgroup"><span class="lab">Цена с докупкой до 32 ГБ и 1 ТБ (${PAYL[S.pay]}), €</span><div class="prange"><input type="number" id="pmin" inputmode="numeric" min="0" step="10" placeholder="от" value="${S.pmin??''}"> — <input type="number" id="pmax" inputmode="numeric" min="0" step="10" placeholder="до" value="${S.pmax??''}"></div>
+        <div class="opts">${[800,1000,1100,1300].map(v=>`<button type="button" class="opt${S.pmax===v&&S.pmin==null?' sel':''}" data-pmax="${v}">до ${v.toLocaleString('ru-RU')} €</button>`).join('')}</div></div>
+        <div class="fgroup"><span class="lab">Потолок для критериев — <b id="budget-v">${S.budget}</b> €</span><input type="range" id="budget" min="600" max="1600" step="10" value="${S.budget}"><p class="hint" style="margin:0">Дороже потолка — пометка «дороже бюджета», ноутбук не скрывается. Скрывает только «Цена от–до».</p></div>`; }
+    else h=keys.map(k=>{ const g=G[k]; return `<div class="fgroup"><span class="lab">${esc(g.t)}</span><div class="opts">${g.opts().map(([v,lab])=>{ const c=cnt(k,v), on=S.f[k].includes(v); if(!c && !on) return ''; return `<label class="opt"><input type="checkbox" id="f-${k}-${esc(v)}" data-g="${k}" value="${esc(v)}" ${on?'checked':''}>${esc(lab)} <span class="c">${c}</span></label>`; }).join('')}</div></div>`; }).join('');
+    d.querySelector('.fpanel').innerHTML=h+`<button type="button" class="btn primary done">Показать ${rows.length}</button>`;
+  });
+  if(focusId){ const el=document.getElementById(focusId); if(el){ el.focus({preventScroll:true}); if(el.type==='number'){ const v=el.value; el.value=''; el.value=v; } } }
+}
+function renderActive(){
+  const ch=[], lab=(k,v)=>((G[k].opts().find(o=>o[0]===v)||[])[1])||v;
+  for(const k in G) S.f[k].forEach(v=>ch.push([k,v,(k==='ram'||k==='size'||k==='ssd'||k==='weight'||k==='panel'?'':G[k].t.replace(/ \(.*\)$/,'')+': ')+lab(k,v)]));
+  if(S.pmin!=null||S.pmax!=null) ch.push(['price','',`Цена ${S.pmin!=null?'от '+S.pmin+' ':''}${S.pmax!=null?'до '+S.pmax+' ':''}€`]);
+  if(S.budget!==LIMIT) ch.push(['budget','',`Потолок ${S.budget} €`]);
+  if(S.q.trim()) ch.push(['q','',`«${S.q.trim()}»`]);
+  if(S.onlypass) ch.push(['onlypass','','Только проходящие']);
+  $('#active').innerHTML=ch.map(([k,v,t])=>`<button type="button" class="chip" data-k="${esc(k)}" data-v="${esc(v)}" aria-label="Убрать фильтр: ${esc(t)}">${esc(t)}</button>`).join('')+(ch.length>1?'<button type="button" class="chip reset" data-k="all">Сбросить всё</button>':'');
 }
 const maxOf=(f)=>Math.max(1,...L.map(f).filter(v=>v!=null));
 let MAXCPU=1,MAXGPU=1;
@@ -605,17 +722,20 @@ const MEM={'2x16':'2 × 16 ГБ SO-DIMM','1x16+slot':'1 × 16 ГБ SO-DIMM + с�
 const memLabel=l=> l==null?null:(MEM[String(l).toLowerCase().replace(/\s/g,'')]||l);
 const pair=(a,b)=> (num(a)==null&&num(b)==null)?null:`<span class="mono">${fmt(num(a))} / ${fmt(num(b))}</span>`;
 const one=a=> num(a)==null?null:`<span class="mono">${fmt(num(a))}</span>`;
-function scoresHTML(x){
-  const sc=x.scores||{};
-  const T=[['Надёжность',sc.problems,'в отчёте — «Проблемность»: надёжность бренда и модели, известные болячки, риск с HEVC; 10 — проблем нет'],['Ремонт',sc.repair,'слоты памяти и SSD, запчасти, сервис-мануал'],['Цена',sc.price,'итоговая сумма с докупкой: до 700 € — 10, 1000 € — 7, 1100 € — 5, дороже — меньше'],['Портатив\u00adность',sc.portability,'вес и батарея'],['Мощность',sc.power,'процессор, графика и кодеки, экран, порты']];
+function scoresHTML(x,failing){
+  const sc=x.scores||{}, p=x.prices||{};
+  const T=[['Надёжность',sc.problems,'в отчёте — «Проблемность»: надёжность бренда и модели, известные болячки, риск с HEVC; 10 — проблем нет'],['Ремонт',sc.repair,'слоты памяти и SSD, запчасти, сервис-мануал'],['Цена',sc.price,'сумма «до критериев» — ноутбук + всё, что нужно докупить до 32 ГБ в двухканале и 1 ТБ: до 700 € — 10, 1000 € — 7, 1100 € — 5, дороже — меньше'],['Портатив\u00adность',sc.portability,'вес и батарея'],['Мощность',sc.power,'процессор, графика и кодеки, экран, порты']];
   const tile=(t,v,tip,cls='')=>{ const n=num(v); return `<div class="tile${cls}${n==null?' na':''}" title="${esc(tip)}"><span class="t">${t}</span><span class="n">${n==null?'—':esc(dec(n))}</span><span class="track"><i style="width:${n==null?0:Math.max(0,Math.min(100,n*10))}%"></i></span></div>`; };
+  const crit = p.criteria_total!=null ? `Итого, чтобы ноутбук подошёл (32 ГБ в двухканале и 1 ТБ), — <b>${eur(p.criteria_total)}</b>${p.criteria_kind==='cash'?' (наличными)':(x.fails||[]).includes('cash')?' (онлайн: за наличные купить нельзя)':' (онлайн: где купить за наличные, не проверяли)'}${(p.criteria_parts||[]).length?': ноутбук с докупкой из «Цены и оплаты» + '+p.criteria_parts.map(q=>esc(q[0])+' '+eur(q[1])).join(' + '):''}.` : `Цена и Оценка не ставятся: ${esc(p.criteria_reason||'нет данных')}.`;
+  const avgTip = sc.avg==null ? 'не ставится: '+(p.criteria_reason||'нет цены') : failing ? 'ноутбук не проходит жёсткие критерии — оценка только для сравнения' : 'среднее пяти оценок, округление до 0,5';
   const facts=[['Вес',x.weight_kg!=null?esc(dec(x.weight_kg))+' кг':null],['Батарея',x.battery_wh!=null?esc(dec(x.battery_wh))+' Вт·ч':null]];
   const note=String(sc.note||'').replace(/^шкала веток[^;]*;\s*/,'').replace(/Средн\./g,'Средняя').replace(/Пробл\./g,'Проблемность').replace(/Порт\./g,'Портативность').replace(/Мощн\./g,'Мощность');
-  return `<section class="scorebox" aria-label="Оценки отчёта"><p class="sub">Оценки отчёта, из 10</p>
-    <div class="scores">${tile('Средняя',sc.avg,'среднее пяти оценок, округление до 0,5',' avg')}${T.map(r=>tile(...r)).join('')}</div>
+  return `<section class="scorebox" aria-label="Оценки отчёта"><p class="sub">Оценки из 10</p>
+    <div class="scores">${tile(failing&&sc.avg!=null?'Оценка*':'Оценка',sc.avg,avgTip,' avg'+(failing?' fail':''))}${T.map(r=>tile(...r)).join('')}</div>
+    <p class="hint" style="margin-top:8px">${failing&&sc.avg!=null?'* Ноутбук не проходит жёсткие критерии: оценку сравнивайте только с такими же. ':''}${crit}</p>
     <div class="facts" style="margin-top:12px">${facts.map(f=>`<span><span class="muted">${f[0]}</span> ${f[1]==null?'<span class="muted">нет данных</span>':'<b>'+f[1]+'</b>'}</span>`).join('')}</div>
     ${(x.ports||[]).length?`<div class="chips" style="margin-top:8px" aria-label="Порты">${x.ports.map(p=>'<span class="pill">'+esc(p)+'</span>').join('')}</div>`:'<div class="facts"><span class="muted">Порты: нет данных</span></div>'}
-    <details class="how"><summary>Что значат оценки и как посчитано</summary><p><b>Средняя</b> — среднее пяти оценок; 10 — лучше всего.<br>${T.map(r=>'<b>'+r[0].replace('\u00ad','')+'</b> — '+esc(r[2])).join('<br>')}</p>${note?`<p>${esc(note)}</p>`:''}${x.specs_source?`<p>Вес, батарея, порты: ${link(x.specs_source,'источник')}</p>`:''}</details>
+    <details class="how"><summary>Что значат оценки и как посчитано</summary><p><b>Оценка</b> — среднее пяти оценок ниже; 10 — лучше всего. Она не отсеивает: плохой экран, отключённый HEVC или «только картой» её не обнуляют, поэтому у отсеянного ноутбука оценка бывает выше, чем у выбранного. Сравнивайте её только между ноутбуками с зелёной отметкой «проходит все жёсткие критерии». Нет цены нового или 32 ГБ не набрать — Цена и Оценка не ставятся.<br>${T.map(r=>'<b>'+r[0].replace('\u00ad','')+'</b> — '+esc(r[2])).join('<br>')}</p>${note?`<p>${esc(note)}</p>`:''}${x.specs_source?`<p>Вес, батарея, порты: ${link(x.specs_source,'источник')}</p>`:''}</details>
   </section>`;
 }
 // На GitHub Pages .md открываем на github.com — там они отрисованы, а не голым текстом
@@ -638,8 +758,11 @@ function cardHTML(r){
   const x=r.x, c=x.cpu||{}, g=x.gpu||{}, s=x.screen||{}, m=x.memory||{}, d=x.ssd||{}, p=x.prices||{}, rel=x.reliability||{}, sc=x.scores||{}, cd=x.codecs||{};
   const v=srgb(x), ok=screenOk(x);
   const status = x.status==='pick'?'<span class="pill acc">Выбор</span>':x.status==='backup'?'<span class="pill acc">Запасной</span>':'';
-  const failPills = r.fails.length ? r.fails.map(f=>`<span class="pill ${SOFT.has(f)?'warn':'bad'}">${SOFT.has(f)?'?':'✕'} ${esc(FAIL_LABEL[f]||f)}</span>`).join('') : '<span class="pill ok">✓ проходит все жёсткие критерии</span>';
-  const codecPill = r.cs==null?'' : r.cs?'<span class="pill ok">исходник: аппаратно</span>':'<span class="pill warn">исходник: на процессоре</span>';
+  const hard=r.fails.filter(f=>!SOFT.has(f));
+  // «наличные не проверены» показываем, только когда это единственное, что мешает: иначе ноутбук и так отпадает
+  const failPills = hard.length ? hard.map(f=>`<span class="pill bad"${f==='memory'&&x.mem_upgrade?` title="${esc(memUpText(x))}"`:''}>✕ ${esc(f==='memory'&&x.mem_upgrade?memUpText(x,true):f==='price'?`дороже ${S.budget} € с докупкой до 32 ГБ и 1 ТБ`:(FAIL_LABEL[f]||f))}</span>`).join('')
+    : r.fails.length ? `<span class="pill warn" title="${esc(CASH_TIP)}">? где купить за наличные — не проверяли</span>` : '<span class="pill ok">✓ проходит все жёсткие критерии</span>';
+  const codecPill = r.cs==null?'' : r.cs?'<span class="pill ok">✓ файлы с камеры тянет без тормозов</span>':'<span class="pill warn">⚠ файлы с камеры — только процессором, нужны прокси</span>';
   const pr=r.pr;
   const addons=(p.addons||[]).map(a=>`${esc(a.what)} — ${eur(num(a.eur))}`).join('; ');
   const src=(x.sources||[]).map(z=>`<li>${link(z.url,z.title||z.url)}</li>`).join('');
@@ -647,41 +770,43 @@ function cardHTML(r){
   return `<details class="card${r.fails.length?' fail':''}" id="${esc(cardId(x))}">
   <summary>
     <span class="c-lead">${x.photos?`<img class="thumb" loading="lazy" src="${esc(x.photos.dir+x.photos.thumb)}" alt="">`:'<span class="nophoto">нет фото</span>'}${ring(v,ok)}</span>
-    <div class="c-title"><span class="c-name">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="c-pn">${esc(x.pn||'')} · ${esc(c.name||'')}${g.name?' · '+esc(g.name):''}</span></div>
-    <div class="c-price"><span class="v">${eur(pr.v)}</span><span class="s clamp2" title="${esc(pr.how||'')}">${esc(pr.unknown ? (pr.v==null?'нет цены нового товара':shortSeller(p.any_seller)+' · любая оплата') : S.pay==='cash' ? shortSeller(p.cash_seller)+' · оплата в магазине' : (pr.how||''))}</span></div>
+    <div class="c-title"><span class="c-name">${esc(x.brand||'')} ${esc(x.model||'')}</span><span class="c-pn">${[x.pn,c.name,g.name].filter(Boolean).map(esc).join(' · ')}</span></div>
+    <div class="c-price"><span class="v">${eur(pr.v)}</span><span class="s clamp2" title="${esc(pr.how||'')}">${esc(pr.unknown ? (pr.v==null?'нет цены нового товара':[shortSeller(p.any_seller),'цена онлайн, наличные не проверяли'].filter(Boolean).join(' · ')) : pr.v==null ? (hard.includes('cash')&&pa.v!=null?'за наличные не продают; онлайн — '+eur(pa.v):(pr.how||'нет цены')) : S.pay==='cash' ? [shortSeller(p.cash_seller),'оплата в магазине'].filter(Boolean).join(' · ') : (pr.how||''))}</span>${critOf(x)!=null&&pr.v!=null&&critOf(x)>pr.v+0.5?`<span class="s">с памятью и SSD до 32 ГБ и 1 ТБ: <b>${eur(critOf(x))}</b></span>`:''}</div>
     <div class="c-meta">${status}<span class="pill brand">${esc(x.branch||'')}</span>${failPills}${codecPill}
       <label class="cmp" onclick="event.stopPropagation()"><input type="checkbox" data-cmp="${esc(x.id)}" ${CMP.has(x.id)?'checked':''}> сравнить</label></div>
     <span class="chev" aria-hidden="true"></span>
     <div class="meters">
       ${meter('CPU',num(c.r23_multi),MAXCPU,'')}
       ${meter('GPU',num(g.timespy),MAXGPU,'')}
-      ${meter('Отчёт',num((x.scores||{}).avg),10,'',f1(num((x.scores||{}).avg)),'Оценка из отчёта — среднее пяти оценок, как в плитках внутри карточки')}
+      ${meter('Оценка',num((x.scores||{}).avg),10,hard.length?'mute':'',f1(num((x.scores||{}).avg))+(hard.length&&num((x.scores||{}).avg)!=null?'*':''),hard.length?'Оценка отчёта; ноутбук не проходит жёсткие критерии — только для сравнения':'Оценка из отчёта — среднее пяти оценок, как в плитках внутри карточки')}
       ${meter('Ваша',r.ps,10,'',f1(r.ps),'Ваша оценка — по весам из «Что для вас важнее»')}
     </div>
   </summary>
   <div class="c-body">
     ${x.photos&&x.photos.files.length>1?`<div class="gallery" aria-label="Фотографии">${x.photos.files.map((f,i)=>`<button type="button" data-lb="${esc(x.id)}" data-i="${i}" aria-label="Фото ${i+1}"><img loading="lazy" src="${esc(x.photos.dir+f)}" alt=""></button>`).join('')}</div>`:''}
-    ${r.fails.length && x.fail_notes?`<div class="why"><b>Почему не проходит:</b> ${esc(x.fail_notes)}</div>`:''}
-    ${scoresHTML(x)}
+    ${r.fails.length && x.fail_notes?`<div class="why"><b>Почему не проходит:</b> ${srcText(x.fail_notes)}${x.mem_upgrade&&hard.includes('memory')?`<br><b>Чтобы память стала по критериям:</b> ${esc(memUpText(x))}`:''}</div>`:''}
+    ${scoresHTML(x,hard.length>0)}
     ${(x.pros||[]).length||(x.cons||[]).length?`<div class="c-grid two"><div><p class="sub">Плюсы</p><ul class="tight">${(x.pros||[]).map(t=>'<li>'+esc(t)+'</li>').join('')}</ul></div><div><p class="sub">Минусы</p><ul class="tight">${(x.cons||[]).map(t=>'<li>'+esc(t)+'</li>').join('')}</ul></div></div>`:''}
     <div class="c-grid">
-      <div><p class="sub">Цена и оплата</p>${kv([['Наличными',pc.unknown?'<span class="pill warn">не проверено</span>':pc.v==null?'<span class="pill bad">нельзя</span>':eur(pc.v)+(p.cash_seller?' · '+esc(p.cash_seller):'')+(p.cash_method?' · '+esc(p.cash_method):'')],['Переводом',p.transfer_eur!=null?eur(num(p.transfer_eur)+addonsSum(x)):null],['Любая оплата',(pc.unknown||pc.v==null||pa.v!==pc.v)?eur(pa.v)+(p.any_seller?' · '+esc(p.any_seller):''):null],['Докупка',addons||null],['Проверено',p.checked?`<span title="${esc(p.checked)}">${esc(String(p.checked).split(/ — | \(|; /)[0])}</span>`:null],['Ссылки',[link(p.idealo_url,'idealo'),link(p.shop_url,'магазин')].filter(Boolean).join(' · ')]])}</div>
+      <div><p class="sub">Цена и оплата</p>${kv([['Наличными',pc.unknown?(hard.length?'<span class="muted">не проверяли: ноутбук и так не проходит другие критерии</span>':'<span class="pill warn">не проверено — позвонить в магазин</span>'):pc.v==null?'<span class="pill bad">нельзя</span>':eur(num(p.cash_eur)??pc.v)+(p.cash_seller?' · '+esc(p.cash_seller):'')+(p.cash_method?' · '+esc(p.cash_method):'')],['Переводом',p.transfer_eur!=null?eur(num(p.transfer_eur)):null],['Любая оплата',(pc.unknown||pc.v==null||pa.v!==pc.v)?(num(p.any_eur)!=null?eur(num(p.any_eur))+(p.any_seller?' · '+esc(p.any_seller):''):(p.note?esc(p.note):'—')):null],['Докупка',addons||null],['Итого с памятью и SSD',p.criteria_total!=null?eur(p.criteria_total)+((p.criteria_parts||[]).length?' — плюс '+p.criteria_parts.map(q=>esc(q[0])+' '+eur(q[1])).join(', '):''):esc(p.criteria_reason)],['Проверено',p.checked?`<span title="${esc(p.checked)}">${esc(String(p.checked).split(/ — | \(|; /)[0])}</span>`:null],['Ссылки',[link(p.idealo_url,'idealo'),link(p.shop_url,'магазин')].filter(Boolean).join(' · ')]])}</div>
       <div><p class="sub">Экран</p>${kv([['Матрица',esc([s.size_in?dec(s.size_in)+'"':'',s.panel,s.resolution,s.hz?s.hz+' Гц':''].filter(Boolean).join(' · '))],['sRGB замер',s.srgb_measured!=null?esc(dec(s.srgb_measured))+' %':'нет замера'],['DCI-P3 замер',s.p3_measured!=null?esc(dec(s.p3_measured))+' %':null],['По даташиту',esc(s.srgb_spec!=null?s.srgb_spec+' % sRGB':'')],['Охват (даташит)',esc(s.gamut_spec)],['Яркость',s.nits?esc(s.nits)+' нит':null],['ШИМ',esc(s.pwm)],['Источник',link(s.source)]])}</div>
       <div><p class="sub">Процессор</p>${kv([['Модель',esc(c.name)],['Архитектура',esc(c.codename)],['Ядра/потоки',esc(c.cores_threads)],['TDP',c.tdp_w?esc(c.tdp_w)+' Вт':null],['R23 Multi / Single',pair(c.r23_multi,c.r23_single)],['CB2024 Multi / Single',pair(c.cb2024_multi,c.cb2024_single)],['Geekbench 6 Multi',one(c.gb6_multi)],['Источник',link(c.source)]])}</div>
       <div><p class="sub">Графика и кодеки</p>${kv([['GPU',esc(g.name)+(g.type?' ('+esc(g.type)+')':'')],['Time Spy',one(g.timespy)],['Steel Nomad Light',one(g.steel_nomad_light)],['Puget Resolve / Premiere',pair(g.puget_resolve,g.puget_premiere)],['HEVC 4:2:2 декод',yn(cd.hevc_422_decode)],['H.264 4:2:2 декод',yn(cd.h264_422_decode)],['AV1 кодирование',yn(cd.av1_encode)],['Заметка',esc(cd.note)],['Источник',link(g.source)]])}</div>
-      <div><p class="sub">Память и SSD</p>${kv([['Раскладка',esc(memLabel(m.layout))],['Тип',esc(m.type)],['Расширение',esc(m.upgrade_note)],['SSD',d.size_gb?esc(d.size_gb)+' ГБ':null],['Свободный M.2',d.free_m2===true?'есть':d.free_m2===false?'нет':null],['SSD заметка',esc(d.note)],['Источник',link(m.source)]])}</div>
+      <div><p class="sub">Память и SSD</p>${kv([['Раскладка',esc(memLabel(m.layout))],['До 32 ГБ двухканал',x.mem_upgrade?esc(memUpText(x)):null],['Тип',esc(m.type)],['Расширение',esc(m.upgrade_note)],['SSD',d.size_gb?esc(d.size_gb)+' ГБ':null],['Свободный M.2',d.free_m2===true?'есть':d.free_m2===false?'нет':null],['SSD заметка',esc(d.note)],['Источник',link(m.source)]])}</div>
       <div><p class="sub">Надёжность и ремонт</p>${kv([['Бренд',esc(rel.brand_rank_note)],['Болячки модели',esc(rel.model_issues)],['Гарантия',esc(x.warranty)],['Запчасти, лет',esc(rel.parts_years)],['Детали в продаже',esc(rel.parts_available)],['Сервис-мануал',rel.service_manual===true?'есть':rel.service_manual===false?'нет':null],['Продаётся',esc(rel.prevalence)],['Источники',(rel.sources||[]).map((u,i)=>link(typeof u==='string'?u:u.url,typeof u==='string'?'['+(i+1)+']':(u.title||'['+(i+1)+']'))).join(' ')]])}</div>
     </div>
-    ${src?`<details class="how src"><summary>Все источники (${(x.sources||[]).length})</summary><ul class="tight">${src}</ul></details>`:''}
+    ${src?`<details class="how src"><summary>Источники цен и характеристик (${(x.sources||[]).length})</summary><ul class="tight">${src}</ul></details>`:''}
   </div></details>`;
 }
 
-function render(){
+function render(focusId){
   save();
   const rows=filtered();
+  renderFacets(rows,focusId); renderActive();
+  const sd=$('#sortdir'); sd.hidden=S.sort==='rec'; sd.textContent=S.dir==='asc'?'↑ По возрастанию':'↓ По убыванию'; $('#sort').value=S.sort;
   const pass=rows.filter(r=>!r.fails.length).length;
   $('#count').textContent = `Показано ${rows.length} из ${L.length} · проходят все критерии: ${pass}`;
-  $('#list').innerHTML = rows.length? rows.map(cardHTML).join('') : '<div class="empty">Под эти фильтры ничего не подходит. Ослабьте бюджет, способ оплаты или требование к экрану.</div>';
+  let sep=false; $('#list').innerHTML = rows.length? rows.map(r=>{ let h=''; if(S.sort==='rec' && !sep && r.fails.some(f=>!SOFT.has(f))){ sep=true; h='<p class="listsep">Дальше — ноутбуки, которые не проходят жёсткие критерии. Их оценки сравнивайте только между собой: у отсеянного оценка бывает выше, чем у выбранного.</p>'; } return h+cardHTML(r); }).join('') : '<div class="empty">Под эти фильтры ничего не подходит. Уберите часть фильтров — выбранные видны над списком, у каждого есть крестик.</div>';
   document.querySelectorAll('[data-cmp]').forEach(cb=>cb.addEventListener('change',()=>{ if(cb.checked){ if(CMP.size>=3){cb.checked=false;return;} CMP.add(cb.dataset.cmp);} else CMP.delete(cb.dataset.cmp); updCmp(); save(); }));
   updCmp(); renderPerf(rows);
   if(!$('#compare').hidden) renderCompare();
@@ -750,11 +875,11 @@ function enhanceTable(t){
 
 /* ---------- compare ---------- */
 function renderCompare(){
-  const xs=L.filter(x=>CMP.has(x.id)); const t=$('#cmptable');
+  const xs=[...CMP].map(id=>L.find(x=>x.id===id)).filter(Boolean); const t=$('#cmptable');
   if(xs.length<2){ $('#compare').hidden=true; return; }
   const rowsDef=[
     ['Цена ('+({cash:'наличные',transfer:'наличные/перевод',any:'любая'}[S.pay])+')',x=>priceFor(x,S.pay).v,v=>eur(v),'min'],
-    ['Наличные',x=>{const c=priceFor(x,'cash'); return c.unknown?'не проверены':c.v==null?'нельзя':'можно';}],
+    ['Наличные',x=>{const c=priceFor(x,'cash'); return c.unknown?'не проверяли':c.v==null?'нельзя':'можно';}],
     ['Экран sRGB, %',x=>srgb(x),v=>v==null?'—':Math.round(v),'max'],
     ['Матрица',x=>[(x.screen||{}).panel,(x.screen||{}).resolution].filter(Boolean).join(' · ')],
     ['Процессор',x=>(x.cpu||{}).name],
@@ -768,13 +893,16 @@ function renderCompare(){
     ['H.264 4:2:2',x=>(x.codecs||{}).h264_422_decode,v=>v===true?'да':v===false?'нет':'—'],
     ['Память',x=>memLabel((x.memory||{}).layout)],
     ['Вес, кг',x=>num(x.weight_kg),v=>v==null?'—':dec(v),'min'],
-    ['Ремонт / Надёжность',x=>[(x.scores||{}).repair,(x.scores||{}).problems].map(v=>v==null?'—':dec(v)).join(' / ')],
-    ['Оценка отчёта',x=>num((x.scores||{}).avg),v=>v==null?'—':dec(v),'max'],
+    ['Надёжность / Ремонт',x=>[(x.scores||{}).problems,(x.scores||{}).repair].map(v=>v==null?'—':dec(v)).join(' / ')],
+    ['Оценка',x=>num((x.scores||{}).avg),v=>v==null?'—':dec(v),'max'],
+    ['Итого до 32 ГБ и 1 ТБ',x=>critOf(x),v=>v==null?'—':eur(v),'min'],
+    ['SSD, ГБ',x=>num((x.ssd||{}).size_gb),fmt,'max'],
+    ['Puget Premiere',x=>num((x.gpu||{}).puget_premiere),fmt,'max'],
     ['Ваша оценка',x=>personal(x,S.pay),f1,'max'],
     ['Не проходит',x=>failsFor(x,S.pay,S.budget).map(f=>FAIL_LABEL[f]||f).join(', ')||'—'],
   ];
   let h='<thead><tr><th></th>'+xs.map(x=>`<th>${esc(x.brand||'')} ${esc(x.model||'')}<br><span class="c-pn">${esc(x.pn||'')}</span></th>`).join('')+'</tr></thead><tbody>';
-  rowsDef.forEach(([lab,get,f,best])=>{ const vals=xs.map(get); let bi=-1;
+  rowsDef.forEach(([lab,get,f,best])=>{ const vals=xs.map(get); if(vals.every(v=>v==null||v==='')) return; let bi=-1;
     if(best){ const nums=vals.map(v=>typeof v==='number'?v:null); const cand=nums.filter(v=>v!=null); if(cand.length>1){ const b=best==='max'?Math.max(...cand):Math.min(...cand); bi=nums.indexOf(b);} }
     h+=`<tr><td class="muted">${lab}</td>`+vals.map((v,i)=>`<td class="${typeof v==='number'?'num':''} ${bi>=0&&vals[i]===vals[bi]?'best':''}">${esc(f?f(v):(v??'—'))}</td>`).join('')+'</tr>'; });
   t.innerHTML=h+'</tbody>';
@@ -798,6 +926,14 @@ function renderPerf(rows){
 const REF=D.reference||[]; let RSORT={t:0,c:-1,d:-1};
 const plain=h=>{const d=document.createElement('div'); d.innerHTML=h; return d.textContent.trim();};
 const refNum=h=>{const s=plain(h).replace(/[\u00a0\u202f\s]/g,'').replace(',','.'); const m=s.match(/^[-+]?\d+(\.\d+)?/); return m?+m[0]:null;};
+const plural=(n,a,b,c)=>{ const m10=n%10, m100=n%100; return m10===1&&m100!==11?a: m10>=2&&m10<=4&&(m100<12||m100>14)?b:c; };
+// «13 564 (35; 10 851–14 771)» → крупно медиана, мелко «35 ноутбуков · разброс 10 851–14 771»
+function refCell(h){ const s=plain(h); const m=s.match(/^([-+]?[\d\u00a0\u202f ]+(?:[.,]\d+)?)\s*(\*)?\s*\((\d+)(?:;\s*([^)]+))?\)\s*(\*)?$/); if(!m) return h;
+  const n=+m[3]; return `<span class="mv">${esc(m[1].trim())}${m[2]||m[5]?'*':''}</span><span class="mn">${n} ${plural(n,'ноутбук','ноутбука','ноутбуков')}${m[4]?', от '+esc(m[4].trim().replace(/[–—-]/,' до ')):''}</span>`; }
+const tidy=s=>String(s).replace(/\s*\(n\s*=?\s*(\d+)\)/g,(m,n)=>` (${n} ${plural(+n,'ноутбук','ноутбука','ноутбуков')})`).replace(/\bn\s*=\s*(\d+)/g,(m,n)=>`${n} ${plural(+n,'ноутбук','ноутбука','ноутбуков')}`);
+function chipCell(kind,name){ const c=((D.chips||{})[kind]||{})[name]; if(!c) return '<span class="muted">—</span>';
+  return `<div class="pc">${(c.pros||[]).map(t=>`<span class="p">${esc(tidy(t))}</span>`).join('')}${(c.cons||[]).map(t=>`<span class="m">${esc(tidy(t))}</span>`).join('')}${(c.sources||[]).length?`<span class="src-links">${c.sources.map((u,i)=>link(u,'['+(i+1)+']')).join(' ')}</span>`:''}</div>`; }
+const REF_NOTE={gpu:'* — у этого видеоядра нет своей страницы тестов на notebookcheck: число взято из общего списка видеокарт (там медиана бывает дробной).'};
 function renderRef(){
   const sec=$('#refsec'); if(!REF.length){ sec.hidden=true; return; }
   const sel=$('#refsel'); if(!sel.options.length){ REF.forEach((r,i)=>{const o=document.createElement('option'); o.value=i; o.textContent=r.title+' ('+r.rows.length+')'; sel.appendChild(o);}); sel.value=store.get('ref',0); sel.onchange=()=>{RSORT={t:+sel.value,c:-1,d:-1}; store.set('ref',+sel.value); renderRef();}; }
@@ -805,8 +941,12 @@ function renderRef(){
   let rows=T.rows.slice();
   if(RSORT.c>=0){ const c=RSORT.c; rows.sort((a,b)=>{const va=refNum(a[c]||''),vb=refNum(b[c]||''); if(va==null&&vb==null) return plain(a[c]||'').localeCompare(plain(b[c]||''))*RSORT.d; if(va==null) return 1; if(vb==null) return -1; return (va-vb)*RSORT.d;}); }
   const t=$('#reftable');
-  t.innerHTML='<thead><tr>'+T.headers.map((h,i)=>`<th data-c="${i}" ${i===RSORT.c?`aria-sort="${RSORT.d<0?'descending':'ascending'}"`:''}>${h}</th>`).join('')+'</tr></thead><tbody>'+
-    rows.map(r=>'<tr>'+r.map((c,i)=>`<td class="${i>0&&refNum(c)!=null?'num':''}">${c}</td>`).join('')+'</tr>').join('')+'</tbody>';
+  const chipCol=!!(T.kind && (D.chips||{})[T.kind]);
+  const H=T.headers.map((h,i)=>`<th data-c="${i}" ${i===RSORT.c?`aria-sort="${RSORT.d<0?'descending':'ascending'}"`:''}>${h}</th>`); if(chipCol) H.splice(1,0,'<th class="pccol">Для монтажа: плюсы и минусы</th>');
+  t.classList.toggle("withpc",chipCol);
+  t.innerHTML='<thead><tr>'+H.join('')+'</tr></thead><tbody>'+
+    rows.map(r=>{ const cells=r.map((c,i)=>`<td class="${i>0&&refNum(c)!=null?'num':''}">${i>0?refCell(c):c}${i===0&&chipCol?`<details class="pcm"><summary>Плюсы и минусы</summary>${chipCell(T.kind,plain(r[0]))}</details>`:''}</td>`); if(chipCol) cells.splice(1,0,`<td class="pccol">${chipCell(T.kind,plain(r[0]))}</td>`); return '<tr>'+cells.join('')+'</tr>'; }).join('')+'</tbody>';
+  $('#refnote').innerHTML = REF_NOTE[T.kind]||'';
   t.querySelectorAll('th').forEach(th=>th.onclick=()=>{ const c=+th.dataset.c; RSORT = RSORT.c===c?{t:ti,c,d:-RSORT.d}:{t:ti,c,d:-1}; renderRef(); });
   enhanceTable(t);
 }
@@ -820,8 +960,10 @@ function renderCash(){
     (G.methods||[]).map(m=>`<tr><td class="tw" data-label="Способ"><b>${esc(m.method)}</b></td><td data-label="Работает">${pillFor(m.works)}</td><td class="tw" data-label="Где">${esc(m.where)}</td><td class="tw" data-label="Лимит">${esc(m.limit)}</td><td class="tw" data-label="Комиссия">${esc(m.fee)}</td><td class="tw" data-label="Нужен счёт">${esc(m.needs_account)}</td><td data-label="Источник">${link(m.source)}</td></tr>`).join('')+'</tbody>';
   const mk=G.markets||[];
   enhanceTable($('#cashtable'));
-  if(mk.length){ $('#cash-markets').innerHTML='<p class="sub">Где купить №1–№3: магазины, адреса, цены</p><div class="tablewrap wide"><table id="mktable"><thead><tr><th>Магазин</th><th>Город</th><th>Цена</th><th>Статус</th></tr></thead><tbody>'+
-    mk.map(m=>`<tr><td class="tw" data-label="Магазин">${m.url?link(m.url,m.market):esc(m.market)}</td><td class="tw" data-label="Город">${esc(m.city)}</td><td class="num" data-label="Цена">${eur(num(m.price_eur))}</td><td class="tw" data-label="Статус">${esc(m.status)}</td></tr>`).join('')+'</tbody></table></div>'; enhanceTable($('#mktable')); }
+  const mrow=m=>`<tr><td class="tw" data-label="Магазин">${m.url?link(m.url,m.market):esc(m.market)}</td><td class="tw" data-label="Город">${esc(m.city)}</td><td class="num" data-label="Цена">${eur(num(m.price_eur))}</td><td class="tw" data-label="Статус">${esc(m.status)}</td></tr>`;
+  const thd='<thead><tr><th>Магазин</th><th>Город</th><th>Цена</th><th>Статус</th></tr></thead>', N=8;
+  if(mk.length){ $('#cash-markets').innerHTML='<p class="sub">Где купить №1–№3: магазины, адреса, цены</p><div class="tablewrap wide"><table id="mktable">'+thd+'<tbody>'+mk.slice(0,N).map(mrow).join('')+'</tbody></table></div>'+(mk.length>N?`<details class="more" style="margin-top:10px"><summary>Ещё ${mk.length-N} магазинов</summary><div class="tablewrap wide" style="margin-top:8px"><table id="mktable2">${thd}<tbody>${mk.slice(N).map(mrow).join('')}</tbody></table></div></details>`:'');
+    enhanceTable($('#mktable')); if($('#mktable2')) enhanceTable($('#mktable2')); }
   if(G.phone_script_de){ $('#cash-phone').hidden=false; $('#phone-text').textContent=G.phone_script_de;
     $('#phone-copy').onclick=()=>{ const done=()=>{$('#phone-copied').textContent='Скопировано';}; try{ navigator.clipboard.writeText(G.phone_script_de).then(done,()=>{ const r=document.createRange(); r.selectNodeContents($('#phone-text')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); $('#phone-copied').textContent='Текст выделен — скопируйте вручную'; }); }catch(e){} }; }
 }
@@ -832,38 +974,12 @@ function renderBrands(){
   el.innerHTML=B.map(b=>`<details><summary><span>${esc(b.brand)}</span><span class="muted" style="font-weight:400">${esc(b.warranty||'')}</span></summary><div class="b-body">${kv([['Надёжность',esc(b.reliability)],['Сервис в Германии',esc(b.service_de)],['Гарантия',esc(b.warranty)],['Запчасти',esc(b.parts_policy)],['Где купить детали',esc(b.parts_shop_de)],['HEVC',esc(b.hevc_policy)],['Индекс ремонта',esc(b.repair_index)],['Заметки',esc(b.notes)],['Источники',(b.sources||[]).map((u,i)=>link(typeof u==='string'?u:u.url,typeof u==='string'?'['+(i+1)+']':(u.title||'['+(i+1)+']'))).join(' ')]])}</div></details>`).join('');
 }
 
-/* ---------- checklist & glossary ---------- */
-const CHECK=[
-  ['До поездки — дома, по телефону',[
-    ['Позвонить в магазин: есть ли ноутбук новым, в заводской упаковке, по цене с сайта; можно ли заплатить наличными; можно ли отложить; есть ли добровольный обмен (Umtausch) и на сколько дней.','Готовый текст по-немецки — <a href="#cash-phone">«Что сказать по телефону»</a>, кнопка «Скопировать». MEDIMAX по телефону не резервирует — только на сайте.'],
-    ['Решить, где взять SSD на 1 ТБ (M.2 2280, NVMe).','Medion — в том же expert Bad Salzungen: Verbatim Vi3000, 149,99 €; Lenovo — MediaMarkt: WD Blue SN5100, 159,99 €; Acer — не нужен, 1 ТБ уже стоит.'],
-    ['Взять наличные с запасом.','Цена в магазине может отличаться от сайта (AGB MEDIMAX, п. 3). Паспорт при оплате наличными до 10 000 € не нужен.']
-  ]],
-  ['В магазине, до оплаты',[
-    ['Сверить коробку: модель и номер P/N, коробка новая и запечатанная.','__PN__ Не брать «Aussteller» (витринный), «Vorführgerät» (демонстрационный) и «B-Ware» (уценка); «Restposten» (остаток снятой модели) — только в запечатанной коробке.'],
-    ['Если магазин обещает обмен — попросить отметку на чеке («Umtausch bis …»).','Закон не даёт 14 дней на отказ при покупке в магазине: это право есть только при покупке на расстоянии (онлайн, по телефону) и вне магазина (§ 312g BGB). Резерв на сайте expert или MEDIMAX покупкой онлайн не считается — договор заключают на кассе.'],
-    ['Сохранить чек.','2 года продавец по закону отвечает за брак (Gewährleistung, § 438 BGB), в первый год доказывать, что брак был сразу, не нужно (§ 477 BGB). Это не гарантия производителя: у Medion на аккумулятор её нет, у Lenovo на аккумулятор — 1 год.']
-  ]],
-  ['Дома, в первый день — до того как вскрывать корпус',[
-    ['Конфигурация совпадает с коробкой: Einstellungen → System → Info (Параметры → Система → О системе).','Процессор: Medion — Core Ultra 5 228V, Acer — Ryzen AI 5 330, Lenovo — Ryzen 7 7735HS. Память — 32 ГБ («доступно» может быть меньше: часть берёт графика). У всех трёх память распаяна и двухканальная по устройству платы — каналы проверять не нужно.'],
-    ['Графика определилась полным именем: Task-Manager → Leistung → GPU 0 (Диспетчер задач → Производительность → Графический процессор 0).','Medion — Intel Arc 130V (в даташите и на expert.de ошибочно «140V» — это не подмена); Acer — AMD Radeon 820M; Lenovo — AMD Radeon 680M. «Microsoft Basic Display Adapter» — нет драйвера: обновить Windows.'],
-    ['Аппаратный HEVC включён: DXVA Checker → Decoder Devices — есть HEVC_VLD_Main и HEVC_VLD_Main10.','Medion — ещё HEVC_VLD_Main422_10_Intel (аппаратный HEVC 4:2:2). У Acer и Lenovo строк 4:2:2 нет — так и должно быть. Нет HEVC_VLD_Main10 — сразу в тот же магазин с чеком и коробкой.'],
-    ['Видео с той камеры или телефона, на которые будут снимать, идёт плавно.','Взять 1–2 минуты исходника на флешке. Не открывается в «Фото» или в бесплатном DaVinci Resolve — поставить «HEVC-Videoerweiterungen vom Gerätehersteller» (0 €, Microsoft Store).'],
-    ['Экран: белый, серый и чёрный фон на весь экран — нет ли битых пикселей, пятен и полос.','Цвет: включить режим sRGB, если он есть. ШИМ: яркость 20–30 %, снять экран телефоном в замедленной съёмке — полосы означают мерцание (это не брак; если устают глаза — держать яркость выше).'],
-    ['Нагрузка: Cinebench R23 → Multi Core, 10 минут, от сети, режим «Производительность».','Ориентир — медиана notebookcheck для этого процессора: Medion ~9 900, Acer ~7 800, Lenovo ~13 100. Меньше на 20 % и больше — проверить режим питания и обновления. Шум и нагрев — записать.'],
-    ['Аппаратное кодирование: HandBrake → пресет «H.265 QSV 2160p 4K» (Medion) или «H.265 VCN 2160p 4K» (Acer, Lenovo), экспорт короткого ролика.','В списке Video Encoder должен быть «H.265 10-bit (Intel QSV)» или «H.265 10-bit (AMD VCE)». Нет — не установлен драйвер графики.'],
-    ['Обновить Windows и BIOS.','Acer — BIOS 1.07 («Modify fan table», сайт поддержки Acer). Medion — если заряд стоит на ~89 %, проверить в утилите Medion бережную зарядку и зарядить до 100 % (heise).'],
-    ['Только после всех проверок — ставить SSD.','Medion: слот M.2 один — SSD встаёт вместо заводского; клонировать диск (нужен USB-корпус для M.2 NVMe) или поставить Windows заново с флешки. Lenovo: второй слот свободен — просто добавить. Acer: ставить ничего не нужно. Вскрытый ноутбук магазин может не взять на обмен; коробку и чек не выбрасывать.']
-  ]]
-];
-function renderChecklist(){
-  const st=store.get('check3',{}); const el=$('#checklist'); let n=0;
-  const pk=L.find(x=>x.status==='pick'), bk=L.filter(x=>x.status==='backup');
-  const pn=[pk,...bk].filter(Boolean).map((x,i)=>`№${i+1} ${x.brand} — ${x.pn}`).join('; ')+'.';
-  el.innerHTML=CHECK.map(([g,items])=>`<h3 class="ck-head">${esc(g)}</h3><div class="ck-card">`+items.map(([tx,note])=>{ const i=n++; return `<label for="ck-${i}"><input type="checkbox" id="ck-${i}" ${st[i]?'checked':''}><span>${esc(tx)}${note?`<span class="ck-note">${note.replace('__PN__',esc(pn))}</span>`:''}</span></label>`; }).join('')+'</div>').join('');
-  el.querySelectorAll('input').forEach(c=>c.addEventListener('change',()=>{ st[+c.id.slice(3)]=c.checked; store.set('check3',st); }));
-}
+/* ---------- glossary ---------- */
 const GLOSS=[
+  ['Маркетплейс (МП)','Товар продаёт сторонний продавец через сайт большого магазина (Kaufland, Otto, Galaxus, Amazon); за наличные так обычно не купить.'],
+  ['P/N, номер модели','Точный номер комплектации (у Lenovo — MTM). От него зависят экран, память и SSD: у одной модели бывают разные экраны.'],
+  ['notebookcheck (NBC), медиана','Сайт тестов ноутбуков. Медиана — типичный результат среди протестированных ноутбуков с этим процессором или видеоядром.'],
+  ['PSREF','Официальный справочник характеристик Lenovo по каждому номеру модели.'],
   ['Gewährleistung и гарантия','Gewährleistung — по закону 2 года продавец отвечает за брак; в первый год доказывать, что брак был сразу, не нужно (§ 438, § 477 BGB). Идти — в тот же магазин с чеком. Гарантия — добровольное обещание производителя, условия свои (Medion — без аккумулятора, Lenovo — аккумулятор 1 год).'],
   ['R14 / R30','Срок возврата у интернет-магазина — 14 или 30 дней, как пишет idealo. Действует только при покупке онлайн. В магазине за наличные — только то, что магазин даёт сам.'],
   ['Aussteller, Vorführgerät, B-Ware, Restposten','Aussteller — стоял на витрине; Vorführgerät — демонстрационный, им пользовались; B-Ware — уценка (возврат, вскрытая или мятая упаковка); Restposten — остаток снятой модели, бывает и новым. Нужен новый в запечатанной коробке.'],
@@ -883,7 +999,8 @@ const GLOSS=[
 function renderGloss(){ $('#gloss').innerHTML=GLOSS.map(g=>`<div><b>${esc(g[0])}</b>${esc(g[1])}</div>`).join(''); }
 
 MAXCPU=maxOf(x=>num((x.cpu||{}).r23_multi)); MAXGPU=maxOf(x=>num((x.gpu||{}).timespy));
-initControls(); renderVerdict(); renderWhatIf(); renderRef(); renderCash(); renderBrands(); renderChecklist(); renderGloss(); render();
+try{ const io=new IntersectionObserver(es=>{ const vis=es.some(e=>e.isIntersecting)||[...document.querySelectorAll('#list,#compare:not([hidden])')].some(el=>{const r=el.getBoundingClientRect(); return r.bottom>0&&r.top<innerHeight;}); $('#strip').classList.toggle('away',!vis); }); ['#list','#compare','#h-filters'].forEach(s=>{ const el=$(s); if(el) io.observe(el); }); }catch(e){}
+initControls(); renderVerdict(); renderWhatIf(); renderRef(); renderCash(); renderBrands(); renderGloss(); render();
 $('#foot').innerHTML = `Цены финалистов — сайты expert и MEDIMAX, 01.10.2026, 02:58–03:15; остальных — idealo.de, дата — в строке «Проверено» у каждой карточки. Цены меняются несколько раз в день — перед поездкой позвоните в магазин. Подробный разбор — ${link('REPORT.md','REPORT.md')}. ${D.criteria_text?esc(D.criteria_text):''}`;
 })();
 </script>

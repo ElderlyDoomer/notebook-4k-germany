@@ -1,0 +1,1302 @@
+{
+ "_about": "Плюсы и минусы процессоров и видеоядер для монтажа 4K — к справочным таблицам страницы (агенты + критики, 01.10.2026). Источники — в sources.",
+ "cpu": {
+  "Core i5-13420H": {
+   "pros": [
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)",
+    "память SO-DIMM DDR5-5200 или DDR4 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "R23 11 084 — 26-е из 35, x265 4K 12,1 к/с — 31-е из 35",
+    "UHD 48 EU: Time Spy 801 — предпоследняя iGPU таблицы",
+    "Raptor Lake 2023: AV1 не кодирует, драйвер iGPU в legacy с 19.09.2025"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-i5-13420H-Processor-Benchmarks-and-Specs.677510.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core i7-13620H": {
+   "pros": [
+    "середина таблицы: R23 15 176 — 13-е из 35, x265 4K 16,6 к/с, Blender 391 с",
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)",
+    "память SO-DIMM DDR5-5200 или DDR4 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "UHD 64 EU: в Premiere (Puget) 1 599 против 2 433–3 661 у Arc 130V–140T",
+    "AV1 не кодирует; драйвер iGPU в legacy с 19.09.2025 — только критичные исправления",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-i7-13620H-Processor-Benchmarks-and-Specs.677505.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Core i9-13900H": {
+   "pros": [
+    "R23 17 471 — 5-е из 35, медиана по 28 ноутбукам",
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)",
+    "Iris Xe 96 EU: Time Spy 1 560 — сильнее UHD (801–1 110)"
+   ],
+   "cons": [
+    "разброс R23 ×1,55: 13 177 (Galaxy Book3 Ultra) — 20 385 (Stealth 17)",
+    "AV1 не кодирует; драйвер iGPU в legacy; Iris Xe без двухканала работает как UHD",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-i9-13900H-Processor-Benchmarks-and-Specs.677396.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core 5 210H": {
+   "pros": [
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)",
+    "быстрее i5-13420H на 7–11 %: R23 11 830 против 11 084, x265 13,4 против 12,1",
+    "память SO-DIMM DDR5 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "ловушка имени: это i5-13420H 2023 года (+200 МГц), Raptor Lake",
+    "UHD 48 EU: Time Spy 801 — предпоследняя iGPU таблицы",
+    "AV1 не кодирует; драйвер iGPU в legacy с 19.09.2025 — только критичные исправления"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-5-210H-Processor-Benchmarks-and-Specs.936302.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core 5 220H": {
+   "pros": [
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)",
+    "12 ядер (4P+8E); Iris Xe 80 EU: Time Spy 1 181 — чуть выше UHD 64 EU (1 110)"
+   ],
+   "cons": [
+    "ловушка имени: это i5-13500H 2023 года, Raptor Lake",
+    "R23 11 198 — 25-е из 35, x265 4K 12,5 к/с; данные одного ноутбука (n = 1)",
+    "AV1 не кодирует; драйвер iGPU в legacy; Iris Xe без двухканала работает как UHD"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-5-220H-Processor-Benchmarks-and-Specs.936297.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core 7 240H": {
+   "pros": [
+    "R23 15 225 — 12-е из 35, x265 4K 17,0 к/с — уровень i7-13620H",
+    "HEVC 4:2:2 10 бит декодирует аппаратно — в Resolve Studio и Premiere (Puget)"
+   ],
+   "cons": [
+    "ловушка имени: это i7-13620H 2023 года, Raptor Lake",
+    "UHD 64 EU: в Premiere (Puget) 1 599 против 2 433–3 661 у Arc 130V–140T",
+    "AV1 не кодирует; драйвер iGPU в legacy с 19.09.2025 — только критичные исправления"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-7-240H-Processor-Benchmarks-and-Specs.936272.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core 7 250H": {
+   "pros": [
+    "x265 4K 21,2 к/с — 5–6-е из 35, CB 2024 1 113 — 2-е из 34, Blender 306 с",
+    "HEVC 4:2:2 10 бит декодирует аппаратно; Iris Xe 96 EU (Time Spy 1 560)"
+   ],
+   "cons": [
+    "ловушка имени: это i7-13700H 2023 года (+400 МГц), Raptor Lake",
+    "Cinebench, Blender, x265 — один ноутбук (n = 1), не медиана",
+    "AV1 не кодирует; драйвер iGPU в legacy; Iris Xe без двухканала работает как UHD"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-7-250H-Processor-Benchmarks-and-Specs.936248.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 125H": {
+   "pros": [
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный",
+    "Arc 7-Core: Time Spy 2 940 — 7-е из 22 iGPU этих CPU"
+   ],
+   "cons": [
+    "R23 12 804 — 20-е из 35, x265 4K 13,8 к/с — 23-е",
+    "Arc работает только при ≥16 ГБ в двухканале, иначе это «Intel Graphics»",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-125H-Processor-Benchmarks-and-Specs.783325.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 135H": {
+   "pros": [
+    "Arc 8-Core: Time Spy 3 270 — 6-е из 22 iGPU этих CPU",
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный"
+   ],
+   "cons": [
+    "R23 11 876 — 22-е из 35, ниже 125H (12 804); данные 1–2 ноутбуков",
+    "Arc работает только при ≥16 ГБ в двухканале, иначе это «Intel Graphics»",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-135H-Processor-Benchmarks-and-Specs.783324.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 7 155H": {
+   "pros": [
+    "R23 15 028 — 14-е из 35; самая надёжная медиана таблицы (52 ноутбука)",
+    "Arc 8-Core: Time Spy 3 270 — 6-е из 22 iGPU этих CPU",
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный"
+   ],
+   "cons": [
+    "разброс R23 ×1,95: 9 769 (Prestige 13) — 19 007 (MagicBook Pro 16)",
+    "Puget, Resolve 20: «Intel Arc Graphics» 2 150 — ниже 860M (2 402) и 140T (2 489)",
+    "Arc работает только при ≥16 ГБ в двухканале, иначе это «Intel Graphics»"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-7-155H-Processor-Benchmarks-and-Specs.783323.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Core Ultra 5 125U": {
+   "pros": [
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный",
+    "Graphics 4-Core: Time Spy 1 902 — выше UHD и Iris Xe (801–1 560)"
+   ],
+   "cons": [
+    "R23 9 799 — 33-е из 35, x265 4K 11,1 к/с — 34-е: слаб для 4K",
+    "2 P-ядра, 15 Вт — в Intel-заметке «слаб для 4K»",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-125U-Processor-Benchmarks-and-Specs.783351.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 225U": {
+   "pros": [
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный",
+    "на 21 % быстрее 125U в R23 (11 844 против 9 799)"
+   ],
+   "cons": [
+    "ловушка имени: в ARK «Arrow Lake», а ядра и iGPU — от Meteor Lake-U",
+    "2 P-ядра, 15 Вт; R23 11 844 — 23-е из 35; данные 1–2 ноутбуков",
+    "Graphics 4-Core: Time Spy 1 902 — 14-е из 22 iGPU этих CPU"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-225U-Processor-Benchmarks-and-Specs.943067.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 225H": {
+   "pros": [
+    "Arc 130T в Premiere (Puget) 3 591 — как 140T (3 661), выше 780M (3 038)",
+    "HEVC 4:2:2 10 бит и AV1 — аппаратный декод и кодирование, драйвер актуальный",
+    "R23 14 630 — 16-е из 35, однопоток 1 969 — 6-е"
+   ],
+   "cons": [
+    "Arc 130T в 3DMark: Time Spy 2 378 — 11-е из 22 iGPU этих CPU, ниже 780M (2 808)",
+    "данные двух ноутбуков (n = 2) — не медиана",
+    "Arc работает только при ≥16 ГБ в двухканале, иначе это «Intel Graphics»"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-225H-Processor-Benchmarks-and-Specs.944682.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 235H": {
+   "pros": [
+    "Arc 140T: Time Spy 3 843 — 2-е из 22 iGPU этих CPU",
+    "Puget, Resolve: HEVC 4:2:2 10 бит у 140T 56 к/с против 42–43 у 860M/890M",
+    "GB6 Multi 14 451 — 4-е из 39 (один ноутбук)"
+   ],
+   "cons": [
+    "у NBC только Geekbench одного ноутбука — Cinebench, Blender и x265 нет",
+    "Arc работает только при ≥16 ГБ в двухканале, иначе это «Intel Graphics»",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-235H-Processor-Benchmarks-and-Specs.944681.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 7 255H": {
+   "pros": [
+    "R23 17 845 — 4-е из 35, однопоток 2 061 — 1-е; x265 4K 21,4 к/с",
+    "Arc 140T: Time Spy 3 843 — 2-е из 22 iGPU этих CPU; Premiere (Puget) 3 661 против 3 038 у 780M",
+    "Puget, Resolve: HEVC 4:2:2 10 бит 56 к/с против 42–43 у 860M/890M"
+   ],
+   "cons": [
+    "одна планка: 140T в E14 G7 — 2 466 против 3 629 у ThinkBook 14 G8 (−32 %)",
+    "Core Ultra H + 2×16 + 1 ТБ ≤ 1100 € на idealo не нашлось (30.09)",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-7-255H-Processor-Benchmarks-and-Specs.944139.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "Intel/notes/idealo-scan-intel-32gb.md"
+   ]
+  },
+  "Core Ultra 5 226V": {
+   "pros": [
+    "Arc 130V: Time Spy 3 401 — 3-е из 22 iGPU этих CPU",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование, плюс декод VVC"
+   ],
+   "cons": [
+    "всего 16 ГБ на корпусе процессора, без расширения — 32 ГБ невозможно",
+    "R23 9 850 — 32-е из 35, x265 4K 12,4 к/с: 8 ядер на 17 Вт",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-226V-Processor-Benchmarks-and-Specs.893266.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 228V": {
+   "pros": [
+    "32 ГБ LPDDR5X-8533 на корпусе: докупать нечего, ловушки «одна планка» нет",
+    "Arc 130V: Time Spy 3 401 — 3-е из 22 iGPU этих CPU",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование, плюс декод VVC"
+   ],
+   "cons": [
+    "Blender 689 с — последнее из 35, R23 9 932 — 31-е (данные 2 ноутбуков)",
+    "Premiere (Puget): Arc 130V 2 433–2 809 — ниже 140T (3 661) и 780M (3 038)",
+    "H.264 10 бит и H.264 4:2:2 — только процессором; память не расширить"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-228V-Processor-Benchmarks-and-Specs.893277.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 7 256V": {
+   "pros": [
+    "Arc 140V: Time Spy 4 044 — 1-е из 22 iGPU этих CPU",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование, плюс декод VVC"
+   ],
+   "cons": [
+    "всего 16 ГБ на корпусе процессора, без расширения — 32 ГБ невозможно",
+    "R23 10 407 — 29-е из 35, x265 4K 13,1 к/с: 8 ядер на 17 Вт",
+    "H.264 10 бит и H.264 4:2:2 — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-7-256V-Processor-Benchmarks-and-Specs.892554.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 7 258V": {
+   "pros": [
+    "32 ГБ LPDDR5X-8533 на корпусе: докупать нечего, ловушки «одна планка» нет",
+    "Arc 140V: Time Spy 4 044 — 1-е из 22 iGPU этих CPU; Resolve (Puget) HEVC 4:2:2 — 67 к/с",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование, плюс декод VVC"
+   ],
+   "cons": [
+    "R23 10 301 — 30-е из 35, x265 4K 12,4 к/с: 8 ядер на 17 Вт",
+    "разброс R23 ×1,40: 7 920 (Portégé Z40L-N) — 11 097 (Prestige 13 AI+)",
+    "H.264 10 бит и H.264 4:2:2 — только процессором; память не расширить"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-7-258V-Processor-Benchmarks-and-Specs.892883.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 5 325": {
+   "pros": [
+    "декодирует H.264 10 бит и 4:2:2 10 бит (Resolve Studio 21) — у iGPU это редкость",
+    "HEVC 4:2:2 и AV1 — декод и кодирование, плюс декод VVC",
+    "Graphics 4 Xe3: Time Spy 2 903 — 8-е из 22 iGPU этих CPU"
+   ],
+   "cons": [
+    "R23 10 984 — 27-е из 35: 4P + 4 LP-E, обычных E-ядер нет",
+    "H.264 4:2:2 берёт только Resolve Studio 21; Premiere и бесплатный — нет, тестов нет",
+    "ThinkBook 16 G9 IPL с ним и 2×16 — 1 204 €, выше потолка (idealo 30.09)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-325-Processor-Benchmarks-and-Specs.1196417.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "Intel/notes/idealo-prices.md",
+    "Intel/REPORT.md"
+   ]
+  },
+  "Core Ultra 5 336H": {
+   "pros": [
+    "декодирует H.264 10 бит и 4:2:2 10 бит (Resolve Studio 21) — у iGPU это редкость",
+    "GB6 Multi 13 882 — 6-е из 39; DDR5-7200 SO-DIMM возможна",
+    "HEVC 4:2:2 и AV1 — декод и кодирование, плюс декод VVC"
+   ],
+   "cons": [
+    "у NBC только Geekbench одного ноутбука — Cinebench, Blender и x265 нет",
+    "Graphics 4 Xe3: Time Spy 2 903 — ниже Arc 140T (3 843)",
+    "H.264 4:2:2 берёт только Resolve Studio 21; Premiere и бесплатный — нет, тестов нет"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-5-336H-Processor-Benchmarks-and-Specs.1196625.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "Core Ultra 7 356H": {
+   "pros": [
+    "R23 18 395 — 3-е из 35, GB6 Multi 16 012 — 1-е из 39, Blender 309 с",
+    "декодирует H.264 10 бит и 4:2:2 10 бит (Resolve Studio 21) — у iGPU это редкость",
+    "HEVC 4:2:2 и AV1 — декод и кодирование; DDR5-7200 SO-DIMM возможна"
+   ],
+   "cons": [
+    "Graphics 4 Xe3: Time Spy 2 903 — ниже Arc 140T (3 843) и 140V (4 044)",
+    "H.264 4:2:2 берёт только Resolve Studio 21; Premiere и бесплатный — нет, тестов нет",
+    "Panther Lake со слотами ≤ 1100 € на idealo не нашлось (30.09)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Core-Ultra-7-356H-Processor-Benchmarks-and-Specs.1196617.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "Intel/notes/idealo-scan-intel-32gb.md"
+   ]
+  },
+  "Ryzen 5 7535HS": {
+   "pros": [
+    "Radeon 660M: Time Spy 1 535 — выше UHD (801–1 110)",
+    "SO-DIMM DDR5-4800 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "R23 8 613 — 34-е из 35, однопоток 1 445 — последний, x265 4K 11,3 к/с",
+    "Zen 3+ 2022 года (= Ryzen 6000, Ryzen 5 150); RDNA 2 в maintenance mode",
+    "4:2:2 только процессором, AV1 не кодирует"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-5-7535HS-Processor-Benchmarks-and-Specs.681414.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 7 7735HS": {
+   "pros": [
+    "R23 13 106 — 18-е из 35, Blender 394 с — как i7-13620H (391)",
+    "Radeon 680M: Time Spy 2 303 — вдвое больше UHD 64 EU (1 110)",
+    "SO-DIMM DDR5-4800 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "Zen 3+ 2022 года (= Ryzen 7 170); однопоток 1 546 — 34-е из 35",
+    "RDNA 2 — драйвер в maintenance mode с 10.2025, новые функции только RDNA 3/4",
+    "4:2:2 только процессором, AV1 не кодирует"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-7-7735HS-Processor-Benchmarks-and-Specs.681410.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 5 220": {
+   "pros": [
+    "AV1 — декод и кодирование (VCN 4.0.2)",
+    "SO-DIMM DDR5-5600 — 2×16 поставить можно"
+   ],
+   "cons": [
+    "ловушка имени: = 8540U = 7545U (2023), 2 Zen 4 + 4 Zen 4c, без NPU",
+    "GB6 Multi 8 065 — 38-е из 39, других тестов нет; 740M: Time Spy 1 527",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-5-220-Processor-Benchmarks-and-Specs.946309.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 5 230": {
+   "pros": [
+    "6 полноценных ядер Zen 4; Radeon 760M: Time Spy 2 281",
+    "AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна"
+   ],
+   "cons": [
+    "ловушка имени: = 8640U (Hawk Point 2023), 28 Вт",
+    "GB6 Multi 8 437 — 36-е из 39 (один ноутбук), других тестов нет",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-5-230-Processor-Benchmarks-and-Specs.946303.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 5 240": {
+   "pros": [
+    "x265 4K 16,6 к/с — 14–16-е из 35, как i7-13620H",
+    "AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна"
+   ],
+   "cons": [
+    "ловушка имени: = 8645HS (Hawk Point 2023); данные одного ноутбука",
+    "Radeon 760M: Time Spy 2 281 — 13-е из 22 iGPU этих CPU",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-5-240-Processor-Benchmarks-and-Specs.946292.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 7 250": {
+   "pros": [
+    "8 ядер Zen 4: R23 14 676 — 15-е из 35, CB 2024 831",
+    "Radeon 780M: Time Spy 2 808 — 9-е из 22 iGPU этих CPU; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "ловушка имени: = 8840U (Hawk Point 2023), 28 Вт; от 260 отличается цифрой",
+    "одна планка: 780M в Dynabook Tecra A65-M — 1 587 вместо 2 808 (−43 %)",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-7-250-Processor-Benchmarks-and-Specs.945901.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 7 260": {
+   "pros": [
+    "R23 17 212 — 7-е из 35, Blender 298 с — 4-е, x265 4K 21,2 к/с",
+    "стабилен по корпусам: разброс R23 ×1,12 (обычно толстые 45+ Вт)",
+    "780M, AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна"
+   ],
+   "cons": [
+    "ловушка имени: = 8845HS ≈ 7840HS — кристалл 2023 года",
+    "4:2:2 у AMD нет ни в одном поколении — только с RTX 50 в паре",
+    "одна планка режет 780M на 44 % (Time Spy), имя iGPU при этом не меняется"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-7-260-Processor-Benchmarks-and-Specs.945912.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 7 7840HS": {
+   "pros": [
+    "R23 16 156 — 10-е из 35, x265 4K 20,4 к/с; разброс по ноутбукам ×1,11",
+    "Radeon 780M: Time Spy 2 808; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "Phoenix 2023 года — тот же кристалл, что 8845HS и Ryzen 7 260",
+    "одна планка режет 780M на 44 % (Time Spy), имя iGPU при этом не меняется",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-7-7840HS-Processor-Benchmarks-and-Specs.680876.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 7 8845HS": {
+   "pros": [
+    "R23 16 192 — 9-е из 35, Blender 318 с — 7-е, x265 4K 20,4 к/с",
+    "780M, AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна"
+   ],
+   "cons": [
+    "Hawk Point = Phoenix 2023 года; Ryzen 7 260 — он же под новым именем",
+    "одна планка режет 780M на 44 % (Time Spy), имя iGPU при этом не меняется",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-7-8845HS-Processor-Benchmarks-and-Specs.780991.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen 5 8645HS": {
+   "pros": [
+    "x265 4K 17,2 к/с — 12-е из 35, как Core 7 240H (17,0)",
+    "6 ядер Zen 4, AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна"
+   ],
+   "cons": [
+    "данные одного ноутбука (n = 1); Ryzen 5 240 — тот же чип",
+    "Radeon 760M: Time Spy 2 281 — 13-е из 22 iGPU этих CPU",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-5-8645HS-Processor-Benchmarks-and-Specs.780989.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 5 330": {
+   "pros": [
+    "Zen 5: однопоток R23 1 812 — выше Hawk Point и Phoenix (1 714–1 775)",
+    "AV1 — декод и кодирование (VCN 4.0.5)"
+   ],
+   "cons": [
+    "4 ядра: R23 7 840 и x265 4K 10,3 к/с — последние из 35",
+    "Radeon 820M (2 CU): Time Spy 786 — последняя iGPU; в Puget данных нет",
+    "4:2:2 декодирует процессор, а ядер всего 4"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-5-330-Processor-Benchmarks-and-Specs.1049553.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 5 340": {
+   "pros": [
+    "R23 12 532 — 21-е из 35, однопоток 1 916 — 10-е",
+    "Zen 5, AV1 — декод и кодирование; RDNA 3.5 в основной ветке драйвера"
+   ],
+   "cons": [
+    "Radeon 840M (4 CU): Time Spy 1 415 — 18-е из 22 iGPU этих CPU",
+    "данные двух ноутбуков; на Krackan часто распаянная память",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-5-340-Processor-Benchmarks-and-Specs.950403.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 7 350": {
+   "pros": [
+    "R23 16 014 — 11-е из 35, x265 4K 20,6 к/с — 8-е (медиана 18 ноутбуков)",
+    "860M в Resolve 20 (Puget) 2 402 — выше Arc Meteor Lake (2 150)",
+    "Zen 5, AV1 — декод и кодирование; RDNA 3.5 в основной ветке драйвера"
+   ],
+   "cons": [
+    "Resolve (Puget): HEVC 4:2:2 10 бит 43 к/с против 56 у Arc 140T",
+    "разброс R23 ×1,44: 12 647 (Zenbook 14) — 18 243 (Nitro 18); часто распайка",
+    "одна планка: 860M в ExpertBook PM3406 — 1 698 вместо 2 565 (−34 %)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-7-350-Processor-Benchmarks-and-Specs.949825.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 7 445": {
+   "pros": [
+    "Zen 5, AV1 — декод и кодирование; SO-DIMM DDR5-5600 возможна",
+    "RDNA 3.5 — в основной ветке драйвера AMD"
+   ],
+   "cons": [
+    "ловушка имени: «AI 7» с 6 ядрами (2 Zen 5 + 4 Zen 5c) ≈ AI 5 340",
+    "R23 10 590 — 28-е из 35, ниже AI 5 340; 840M: Time Spy 1 415",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-7-445-Processor-Benchmarks-and-Specs.1197764.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 7 450": {
+   "pros": [
+    "x265 4K 22,3 к/с — 3-е из 35, Blender 294 с — 3-е, однопоток 2 034",
+    "= AI 7 350 +100 МГц и LPDDR5X-8533; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "Radeon 860M: Time Spy 2 565 — 10-е из 22 iGPU этих CPU, ниже Arc 140T (3 843)",
+    "данные 2–5 ноутбуков; одна планка режет iGPU на 30–47 %",
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-7-450-Processor-Benchmarks-and-Specs.1197762.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 9 365": {
+   "pros": [
+    "R23 18 698, Blender 270 с, x265 4K 22,4 к/с — везде 2-е из 35",
+    "Radeon 880M: Time Spy 3 335 — 4-е из 22 iGPU этих CPU; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "HEVC и H.264 4:2:2 — только процессором: у AMD нет ни в одном поколении",
+    "Strix Point часто с распаянной LPDDR5X — слоты проверять по даташиту",
+    "Puget по 880M сомнителен: в Resolve < 10 прогонов, в Premiere — выбросы"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-9-365-Processor-Benchmarks-and-Specs.843618.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  },
+  "Ryzen AI 9 HX 370": {
+   "pros": [
+    "1-е из 35: R23 21 761, Blender 221 с, x265 4K 26,2 к/с",
+    "Radeon 890M в Resolve 20 (Puget) 2 872 — на 15 % выше Arc 140T (2 489)",
+    "AV1 — декод и кодирование; экспорт HEVC 10 бит 70,9 к/с против 52,4 у 140T"
+   ],
+   "cons": [
+    "Resolve (Puget): HEVC 4:2:2 10 бит 41,9 к/с против 56,3 у Arc 140T",
+    "разброс R23 ×2,29: 10 435 (ProArt P16) — 23 902 (Zephyrus G14)",
+    "часто распаянная LPDDR5X (Zenbook S 16, ProArt, TUF A16 2024)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Ryzen-AI-9-HX-370-Processor-Benchmarks-and-Specs.836729.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/amd-codecs.md"
+   ]
+  }
+ },
+ "gpu": {
+  "Intel UHD Graphics Xe G4 48EUs": {
+   "pros": [
+    "Аппаратный декод HEVC 4:2:2 10 бит (Quick Sync) — в Resolve Studio и Premiere, по Puget",
+    "H.264 8 бит и HEVC 4:2:0 — декод и кодирование; AV1 — декод"
+   ],
+   "cons": [
+    "Time Spy 801 (n14) — 30-е место из 31, почти самый слабый в таблице",
+    "Драйверы Intel 11–14 пок. — legacy с 19.09.2025: только критичные исправления",
+    "Нет AV1-кодирования и декода H.264 10 бит / 4:2:2; Premiere (Puget): UHD 1 599 против 3 661 у 140T"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Tiger-Lake-U-Xe-Graphics-G4-48-EUs-GPU-Benchmarks-and-Specs.466210.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/support/articles/000101986/graphics.html",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-davinci-resolve-studio-2122/",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/Intel%20UHD%20Graphics/Intel%20Iris%20Xe%20Graphics/"
+   ]
+  },
+  "Intel UHD Graphics 64EUs": {
+   "pros": [
+    "Аппаратный декод HEVC 4:2:2 10 бит (Quick Sync) — в Resolve Studio и Premiere, по Puget",
+    "Time Spy 1 110 (n12) — на 39 % выше UHD 48 EU (801)"
+   ],
+   "cons": [
+    "Time Spy 1 110 — 29-е из 31; Premiere (Puget): UHD 1 599 — вдвое ниже Arc 140T (3 661)",
+    "Драйверы Intel 11–14 пок. — legacy с 19.09.2025: только критичные исправления",
+    "Нет AV1-кодирования и декода H.264 10 бит / 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-UHD-Graphics-64EUs-Alder-Lake-GPU-Benchmarks-and-Specs.589905.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/support/articles/000101986/graphics.html",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-davinci-resolve-studio-2122/",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/Intel%20UHD%20Graphics/Intel%20Iris%20Xe%20Graphics/"
+   ]
+  },
+  "Intel Iris Xe Graphics G7 80EUs": {
+   "pros": [
+    "Аппаратный декод HEVC 4:2:2 10 бит (Quick Sync) — в Resolve Studio и Premiere, по Puget",
+    "H.264 8 бит и HEVC 4:2:0 — декод и кодирование; AV1 — декод"
+   ],
+   "cons": [
+    "Time Spy 1 181 (n111) — 28-е из 31, в 2,8 раза ниже Arc 8-Core (3 270)",
+    "С одной планкой работает как UHD (Intel) — нужен двухканал",
+    "Драйверы legacy с 19.09.2025; нет AV1-кодирования и декода H.264 10 бит / 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Tiger-Lake-U-Xe-Graphics-G7-80EUs-GPU-Benchmarks-and-Specs.466209.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/support/articles/000101986/graphics.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000094617/graphics.html",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-davinci-resolve-studio-2122/"
+   ]
+  },
+  "Intel Iris Xe Graphics G7 96EUs": {
+   "pros": [
+    "Аппаратный декод HEVC 4:2:2 10 бит (Quick Sync) — в Resolve Studio и Premiere, по Puget",
+    "Стоит при i9-13900H: R23 17 471 — верх списка процессоров"
+   ],
+   "cons": [
+    "Time Spy 1 560 (n218) — 24-е из 31; разброс 707–1 871 (×2,65) по ноутбукам",
+    "С одной планкой работает как UHD (Intel); драйверы legacy с 19.09.2025",
+    "Нет AV1-кодирования и H.264 10 бит / 4:2:2; Premiere (Puget): 1 651 против 3 661 у 140T"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Tiger-Lake-U-Xe-Graphics-G7-96EUs-GPU-Benchmarks-and-Specs.462145.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/support/articles/000101986/graphics.html",
+    "https://www.intel.com/content/www/us/en/support/articles/000094617/graphics.html",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-davinci-resolve-studio-2122/",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/Intel%20UHD%20Graphics/Intel%20Iris%20Xe%20Graphics/"
+   ]
+  },
+  "Intel Arc 7-Cores (Meteor Lake)": {
+   "pros": [
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование (медиаблок Meteor Lake)",
+    "Time Spy 2 940,5 (n8) — 16-е из 31, выше 780M (2 808)",
+    "Драйверы — актуальная ветка (legacy — только 11–14 пок.)"
+   ],
+   "cons": [
+    "Числа — из Benchmark List NBC (на странице GPU тестов нет); в Puget — лишь общим «Intel Arc»",
+    "Arc — только при двух планках (≥ 16 ГБ, двухканал); с одной — «Intel Graphics»",
+    "Нет декода H.264 10 бит и 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-7-Cores-iGPU-Benchmarks-and-Specs.782931.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/products/sku/236847/intel-core-ultra-7-processor-155h-24m-cache-up-to-4-80-ghz/specifications.html",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.notebookcheck.net/Mobile-Graphics-Cards-Benchmark-List.844.0.html"
+   ]
+  },
+  "Intel Arc 8-Cores (Meteor Lake)": {
+   "pros": [
+    "Time Spy 3 270 (n48) — 15-е из 31, почти как 880M/890M (~3 330)",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование; драйверы — актуальная ветка"
+   ],
+   "cons": [
+    "Разброс Time Spy 2 018–3 770 (×1,87) — решает корпус и лимит мощности",
+    "Arc — только при двух планках (≥ 16 ГБ, двухканал); с одной — «Intel Graphics»",
+    "Нет декода H.264 10 бит и 4:2:2; в Puget отдельно не измерен (только «Intel Arc»)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-8-Cores-iGPU-Benchmarks-and-Specs.782930.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://www.intel.com/content/www/us/en/products/sku/236847/intel-core-ultra-7-processor-155h-24m-cache-up-to-4-80-ghz/specifications.html",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md"
+   ]
+  },
+  "Intel Graphics 4-Cores (Meteor/Arrow Lake-U)": {
+   "pros": [
+    "Медиаблок как у Arc: HEVC 4:2:2 10 бит и AV1 — декод и кодирование",
+    "Драйверы — актуальная ветка (legacy — только 11–14 пок.)"
+   ],
+   "cons": [
+    "Time Spy 1 902 (n33) — 23-е из 31, на 42 % ниже Arc 8-Core (3 270)",
+    "U-процессоры 15 Вт: Ultra 5 125U — R23 9 799, низ списка процессоров",
+    "В Puget отдельно не измерен (смесь «Intel Graphics»); нет декода H.264 10 бит / 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Graphics-4-Cores-iGPU-Arc-Benchmarks-and-Specs.782932.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.intel.com/content/www/us/en/support/articles/000101986/graphics.html"
+   ]
+  },
+  "Intel Arc 130T": {
+   "pros": [
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование (медиаблок Meteor/Arrow Lake)",
+    "Premiere 25.1 (Puget, 24 прогона): 3 591 — почти как Arc 140T (3 661)",
+    "Драйверы — актуальная ветка (legacy — только 11–14 пок.)"
+   ],
+   "cons": [
+    "Time Spy 2 378 по 2 ноутбукам — 20-е из 31, на 38 % ниже Arc 140T (3 843)",
+    "Arc — только при двух планках; с одной — «Intel Graphics»",
+    "Нет декода H.264 10 бит / 4:2:2; в HP ProBook 4 G1i (C7SR2ES) HEVC отключён"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-130T-Benchmarks-and-Specs.942051.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.intel.com/content/www/us/en/products/sku/236847/intel-core-ultra-7-processor-155h-24m-cache-up-to-4-80-ghz/specifications.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/Intel%20Arc%20130T%20GPU%20%2816GB%29/Intel%20Arc%20140T%20GPU%20%2816GB%29/",
+    "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09102587"
+   ]
+  },
+  "Intel Arc 140T": {
+   "pros": [
+    "Time Spy 3 843 (n20) — 11-е из 31, 4-й из 24 встроенных",
+    "Resolve (Puget): 4K HEVC 4:2:2 10 бит — 56 кадр/с против 43 у 860M",
+    "Premiere 25.1 (Puget, 70 прогонов): 3 661 против 2 882 у 860M"
+   ],
+   "cons": [
+    "С одной планкой 2 466 в Time Spy (ThinkPad E14 G7, −32 %) — нужен двухканал",
+    "Разброс Time Spy 2 466–4 387 (×1,78) по ноутбукам",
+    "Нет декода H.264 10 бит и 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-140T-Benchmarks-and-Specs.942050.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.notebookcheck.com/Lenovo-ThinkPad-E14-G7-im-Test-Guenstiges-Office-Notebook-hebt-sich-mit-120-Hz-Display-von-der-Konkurrenz-ab.1066977.0.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/Intel%20Arc%20130T%20GPU%20%2816GB%29/Intel%20Arc%20140T%20GPU%20%2816GB%29/",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/Intel%20Arc%20130T%20GPU%20%2816GB%29/Intel%20Arc%20140T%20GPU%20%2816GB%29/"
+   ]
+  },
+  "Intel Arc 130V": {
+   "pros": [
+    "Time Spy 3 401 (n10) — 12-е из 31, почти как 880M/890M (~3 330)",
+    "HEVC 4:2:2 10 бит и AV1 — декод и кодирование; VVC — декод",
+    "ОЗУ LPDDR5X-8533 в корпусе процессора, 2 канала (Intel ARK)"
+   ],
+   "cons": [
+    "ОЗУ 16 или 32 ГБ навсегда — расширить нельзя, брать только 32 ГБ",
+    "Ultra 5 226V/228V: 8 ядер, R23 ~9 900 — низ списка процессоров",
+    "Нет декода H.264 10 бит и 4:2:2; в Resolve (Puget) — меньше 10 прогонов"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-Graphics-130V-Benchmarks-and-Specs.854992.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.intel.com/content/www/us/en/products/sku/240955/intel-core-ultra-5-processor-228v-8m-cache-up-to-4-50-ghz/specifications.html"
+   ]
+  },
+  "Intel Arc 140V": {
+   "pros": [
+    "Time Spy 4 044 (n42) — 10-е из 31, лучший встроенный до Panther Lake",
+    "Resolve (Puget): 4K HEVC 4:2:2 10 бит — 67 кадр/с против 42–43 у 860M/890M",
+    "HEVC 4:2:2 и AV1 — декод и кодирование; ОЗУ в корпусе процессора, 2 канала"
+   ],
+   "cons": [
+    "ОЗУ 16 или 32 ГБ навсегда — расширить нельзя",
+    "Ultra 7 258V: 8 ядер, R23 10 301 — вдвое ниже HX 370 (21 761)",
+    "Нет декода H.264 10 бит и 4:2:2"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-Graphics-140V-Benchmarks-and-Specs.854991.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://raw.githubusercontent.com/intel/media-driver/master/docs/media_features.md",
+    "https://www.intel.com/content/www/us/en/products/sku/240957/intel-core-ultra-7-processor-258v-12m-cache-up-to-4-80-ghz/specifications.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/Intel%20Arc%20140V%20GPU%20%2816GB%29/Intel%20Arc%20140V%20GPU%20%288GB%29/"
+   ]
+  },
+  "Intel Arc B370 (10 Xe3)": {
+   "pros": [
+    "Time Spy 6 050 — 7-е из 31, выше RTX 3050 (4 497)",
+    "Panther Lake: декод H.264 4:2:2 10 бит (только Resolve Studio 21); HEVC 4:2:2 и AV1 — декод и кодирование",
+    "Resolve 20–21 (Puget, PB 2.x): 32 201 — на уровне B390 (31 825)"
+   ],
+   "cons": [
+    "Медиана по 2 ноутбукам; в Puget — меньше 10 прогонов",
+    "Ultra 5 338H — только LPDDR5X (ARK): слотов SO-DIMM нет, не расширить",
+    "Среди 109 ноутбуков страницы с ним нет ни одного"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-B370-10-Xe3-Panther-Lake-iGPU-Benchmarks-and-Specs.1193672.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://cdrdv2.intel.com/v1/dl/getContent/872188?fileName=872188-002.pdf",
+    "https://www.blackmagicdesign.com/support/readme/2cda7ec076ea4b25aaa007fc68a5cbfc",
+    "https://www.intel.com/content/www/us/en/products/sku/245531/intel-core-ultra-5-processor-338h-18m-cache-up-to-4-70-ghz/specifications.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/33/GPU/Intel%20Arc%20B370%20GPU/Intel%20Arc%20B390%20GPU/",
+    "data/laptops.json + data/patch-*.json"
+   ]
+  },
+  "Intel Arc B390 (12 Xe3)": {
+   "pros": [
+    "Time Spy 6 653 (n22) — лучший встроенный в таблице, 6-е из 31",
+    "Resolve 20 (Puget): 3 381 — почти RTX 3050 (3 487); 4K HEVC 4:2:2 — 85 кадр/с",
+    "Декод H.264 4:2:2 10 бит (только Resolve Studio 21); HEVC 4:2:2 и AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "Ultra X7/X9 — только LPDDR5X (ARK): слотов SO-DIMM нет, не расширить",
+    "До RTX 4050 далеко: GPU Effects в Resolve 17,0 против 27,6",
+    "Среди 109 ноутбуков страницы с ним нет ни одного"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Arc-B390-12-Xe3-Panther-Lake-iGPU-Benchmarks-and-Specs.1169503.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://cdrdv2.intel.com/v1/dl/getContent/872188?fileName=872188-002.pdf",
+    "https://www.blackmagicdesign.com/support/readme/2cda7ec076ea4b25aaa007fc68a5cbfc",
+    "https://www.intel.com/content/www/us/en/products/sku/245527/intel-core-ultra-x7-processor-358h-18m-cache-up-to-4-80-ghz/specifications.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/Intel%20Arc%20B370%20GPU/Intel%20Arc%20B390%20GPU/",
+    "data/laptops.json + data/patch-*.json"
+   ]
+  },
+  "Intel Graphics 4 Xe3 (Panther Lake)": {
+   "pros": [
+    "Медиаблок Panther Lake: декод H.264 4:2:2 10 бит (Resolve Studio 21), HEVC 4:2:2 — декод и кодирование",
+    "Time Spy 2 903 (n20) — 17-е из 31, на уровне 780M (2 808)",
+    "При Ultra 7 356H: R23 18 395 — верх списка процессоров"
+   ],
+   "cons": [
+    "В 2,3 раза слабее B390 (6 653) — 4 ядра Xe3",
+    "H.264 4:2:2 — только Resolve Studio 21; Premiere и бесплатный Resolve — нет",
+    "В списке страницы: 21UR005AGE — 1204 € (выше потолка), 83S60034GE — 2×8 ГБ"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Intel-Graphics-4-Xe3-Panther-Lake-Benchmarks-and-Specs.1193658.0.html",
+    "AMD/notes/perf-tables.md",
+    "Intel/notes/intel-cpu.md",
+    "https://cdrdv2.intel.com/v1/dl/getContent/872188?fileName=872188-002.pdf",
+    "https://www.blackmagicdesign.com/support/readme/2cda7ec076ea4b25aaa007fc68a5cbfc",
+    "data/laptops.json + data/patch-*.json"
+   ]
+  },
+  "AMD Radeon 660M": {
+   "pros": [
+    "Time Spy 1 535 (n13) — 25-е из 31, на уровне Iris Xe 96 EU (1 560)",
+    "H.264 8 бит и HEVC 4:2:0 8/10 бит — декод и кодирование; AV1 — декод"
+   ],
+   "cons": [
+    "RDNA 2: драйверы в maintenance mode с 10.2025, новых функций не будет",
+    "Нет AV1-кодирования и 4:2:2 (H.264/HEVC) — только процессором; в Puget данных почти нет",
+    "Ловушка: Ryzen 5 130/150 («Ryzen 100», 2025) — тот же Rembrandt, Zen 3+"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-660M-GPU-Benchmarks-and-Specs.589879.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-25-10-2.html",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support"
+   ]
+  },
+  "AMD Radeon 680M": {
+   "pros": [
+    "Time Spy 2 303 (n41) — 21-е из 31, лучший RDNA 2: как 760M (2 281) и Arc 130T (2 378)",
+    "H.264 8 бит и HEVC 4:2:0 8/10 бит — декод и кодирование; AV1 — декод"
+   ],
+   "cons": [
+    "RDNA 2: драйверы в maintenance mode с 10.2025, новых функций не будет",
+    "Нет AV1-кодирования и 4:2:2; Puget — меньше 10 прогонов, в Premiere выброс",
+    "Ловушка: Ryzen 7 160/170 («Ryzen 100», 2025) — тот же Rembrandt, Zen 3+"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-680M-GPU-Benchmarks-and-Specs.589860.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-25-10-2.html",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support"
+   ]
+  },
+  "AMD Radeon 740M": {
+   "pros": [
+    "RDNA 3, драйверы в основной ветке; AV1 — декод и кодирование",
+    "H.264 8 бит и HEVC 4:2:0 8/10 бит — декод и кодирование"
+   ],
+   "cons": [
+    "Time Spy 1 527 (n5) — 26-е из 31, на 46 % ниже 780M (2 808): всего 4 CU",
+    "Ловушка: Ryzen 5 220 = Hawk Point 2023 (8540U), 2 ядра Zen 4 + 4 Zen 4c",
+    "4:2:2 (H.264 и HEVC) не декодирует — только процессором"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-740M-GPU-Benchmarks-and-Specs.716455.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support"
+   ]
+  },
+  "AMD Radeon 760M": {
+   "pros": [
+    "Premiere 23–25 (Puget, 16 прогонов): 3 150 — на уровне 780M (3 019)",
+    "RDNA 3, драйверы в основной ветке; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "Time Spy 2 281 (n5) — 22-е из 31, на 19 % ниже 780M (2 808)",
+    "Ловушка: Ryzen 5 230/240 = Hawk Point 2023 (8640U/8645HS)",
+    "Нет 4:2:2; в HP ProBook 4 G1a (C7SP9ES) с ним HEVC отключён"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-760M-GPU-Benchmarks-and-Specs.680920.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "AMD/notes/hevc-amd.md",
+    "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09111176",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/14/GPU/AMD%20Radeon%20760M%20Graphics/AMD%20Radeon%20780M%20Graphics/"
+   ]
+  },
+  "AMD Radeon 780M": {
+   "pros": [
+    "Time Spy 2 808 (n81) — 18-е из 31, выше 860M (2 565)",
+    "Premiere 25.1 (Puget, 68 прогонов): 3 038 — выше 860M (2 882)",
+    "RDNA 3, драйверы в основной ветке; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "С одной планкой −44 %: Time Spy 1 496 (EliteBook 845 G10)",
+    "Ловушка: Ryzen 7 250/260 = Hawk Point 2023 (8840U/8845HS)",
+    "Нет 4:2:2: Premiere, 4K HEVC 4:2:2 — 29 кадр/с (процессором)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-780M-GPU-Benchmarks-and-Specs.680539.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://www.notebookcheck.net/Testing-the-performance-of-AMD-Radeon-780M-760M-iGPUs-with-new-drivers.740311.0.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/AMD%20Radeon%20760M%20Graphics/AMD%20Radeon%20780M%20Graphics/"
+   ]
+  },
+  "AMD Radeon 820M": {
+   "pros": [
+    "Медиаблок VCN 4.0.5, как у 890M: AV1, H.264 8 бит, HEVC 4:2:0 — декод и кодирование",
+    "RDNA 3.5, драйверы в основной ветке"
+   ],
+   "cons": [
+    "Time Spy 786 по одному ноутбуку — 31-е из 31, последнее: всего 2 CU",
+    "Нет 4:2:2 (H.264/HEVC); в Puget данных нет ни в одной группе",
+    "Ловушка: Ryzen AI 5 330 — 4 ядра (1 Zen 5 + 3 Zen 5c), R23 7 840"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-820M-Benchmarks-and-Specs.1059782.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support"
+   ]
+  },
+  "AMD Radeon 840M": {
+   "pros": [
+    "AV1, H.264 8 бит, HEVC 4:2:0 — декод и кодирование (VCN 4.0.5)",
+    "RDNA 3.5, драйверы в основной ветке"
+   ],
+   "cons": [
+    "Time Spy 1 415 (n7) — 27-е из 31, на 45 % ниже 860M (2 565): 4 CU",
+    "Ловушка: Ryzen AI 7 445 — 6 ядер и 840M, «AI 7» не значит 8 ядер",
+    "Нет 4:2:2; Premiere 25.1 (Puget): 2 051 против 2 882 у 860M"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-840M-Benchmarks-and-Specs.950405.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/AMD%20Radeon%20840M%20Graphics/AMD%20Radeon%20860M%20Graphics/"
+   ]
+  },
+  "AMD Radeon 860M": {
+   "pros": [
+    "Resolve 20 (Puget, 19 прогонов): 2 402 — почти Arc 140T (2 489)",
+    "Resolve: экспорт HEVC 10 бит UHD — 65 кадр/с против 52 у Arc 140T",
+    "AV1 — декод и кодирование; RDNA 3.5, драйверы в основной ветке"
+   ],
+   "cons": [
+    "Time Spy 2 565 (n23) — 19-е из 31; с одной планкой 1 698 (ExpertBook PM3406, −34 %)",
+    "Нет 4:2:2: Resolve, 4K HEVC 4:2:2 — 43 кадр/с против 56 у Arc 140T",
+    "У Ryzen AI 300/400 память часто распаяна — проверять даташит"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-860M-Benchmarks-and-Specs.949852.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://www.notebookcheck.net/Asus-ExpertBook-PM3-Review-Office-laptop-with-AMD-long-battery-life-and-Copilot.1200511.0.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/AMD%20Radeon%20840M%20Graphics/AMD%20Radeon%20860M%20Graphics/"
+   ]
+  },
+  "AMD Radeon 880M": {
+   "pros": [
+    "Time Spy 3 335 (n8) — 13-е из 31, как 890M (3 331) при 12 CU против 16",
+    "При Ryzen AI 9 365: R23 18 698 — 2-е место среди процессоров",
+    "AV1 — декод и кодирование; RDNA 3.5, драйверы в основной ветке"
+   ],
+   "cons": [
+    "Нет 4:2:2 (H.264 и HEVC) — только процессором",
+    "Puget: в Resolve < 10 прогонов, в Premiere 25.1 вероятен выброс (GPU Effects 63,8)",
+    "У Ryzen AI 300 память часто распаяна — проверять даташит"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-880M-iGPU-Benchmarks-and-Specs.843543.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://github.com/GPUOpen-LibrariesAndSDKs/AMF/wiki/GPU%20and%20APU%20HW%20Features%20and%20Support",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/23/GPU/AMD%20Radeon%20880M%20Graphics/AMD%20Radeon%20890M%20Graphics/"
+   ]
+  },
+  "AMD Radeon 890M": {
+   "pros": [
+    "Resolve 20 (Puget, 18 прогонов): 2 872 — лучший встроенный до Panther Lake",
+    "При HX 370: R23 21 761 — самый быстрый процессор списка",
+    "Resolve: экспорт HEVC 10 бит UHD — 71 кадр/с; AV1 — декод и кодирование"
+   ],
+   "cons": [
+    "Time Spy 3 331 (n33) — 14-е из 31, не выше 880M (3 335) при 16 CU против 12",
+    "С одной планкой −47 %: Time Spy 1 950 против 3 658 (Minisforum AI X1 Pro)",
+    "Нет 4:2:2: Resolve, 4K HEVC 4:2:2 — 42 кадр/с против 67 у Arc 140V"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/AMD-Radeon-890M-Benchmarks-and-Specs.843536.0.html",
+    "AMD/notes/perf-tables.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/amd-cpu.md",
+    "https://www.notebookcheck.com/Minisforum-AI-X1-Pro-Einfaches-RAM-Upgrade-sorgt-fuer-spuerbar-mehr-Leistung-und-entfesselt-die-Radeon-890M.1293916.0.html",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/AMD%20Radeon%20880M%20Graphics/AMD%20Radeon%20890M%20Graphics/"
+   ]
+  },
+  "NVIDIA RTX 3050 Laptop": {
+   "pros": [
+    "Time Spy 4 497 (n23) — 9-е из 31, выше любого встроенного до Panther Lake",
+    "Resolve 20 (Puget, 16 прогонов): Color Node ×30 — 24 кадр/с против 4–15 у встроенных",
+    "Своя видеопамять — скорость не зависит от одноканала ОЗУ"
+   ],
+   "cons": [
+    "Ampere: нет декода 4:2:2 и H.264 10 бит, нет AV1-кодирования",
+    "4 ГБ видеопамяти — ниже порога ≥ 8 ГБ для ветки с дискреткой",
+    "TGP 35–80 Вт: Time Spy от 3 281 до 5 295 по ноутбукам"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/NVIDIA-GeForce-RTX-3050-Laptop-GPU-Benchmarks-and-Specs.513790.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "Intel/notes/intel-cpu.md",
+    "Intel/notes/candidates-gpu.md",
+    "Intel/notes/verify-hp-asus-msi-gigabyte.md",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%203050%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%203050%206GB%20Laptop%20GPU/"
+   ]
+  },
+  "NVIDIA RTX 3050 6GB Laptop": {
+   "pros": [
+    "Premiere 23–25 (Puget, 46 прогонов): 5 307 против 3 804 у RTX 3050 4 ГБ",
+    "Time Spy 4 571 — 8-е из 31; своя видеопамять 6 ГБ"
+   ],
+   "cons": [
+    "Ampere: нет декода 4:2:2 и H.264 10 бит, нет AV1-кодирования",
+    "Медиана по 3 ноутбукам; в Resolve (Puget) — меньше 10 прогонов",
+    "6 ГБ видеопамяти — ниже порога ≥ 8 ГБ для ветки с дискреткой"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/NVIDIA-GeForce-RTX-3050-6GB-Laptop-GPU-GPU-Benchmarks-and-Specs.692276.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "Intel/notes/candidates-gpu.md",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20Premiere%20Pro/14/GPU/NVIDIA%20GeForce%20RTX%203050%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%203050%206GB%20Laptop%20GPU/"
+   ]
+  },
+  "NVIDIA RTX 3050 A Laptop": {
+   "pros": [
+    "Архитектура Ada, как у RTX 40: AV1-кодирование ожидаемо, но не проверено",
+    "Своя видеопамять GDDR6 — скорость не зависит от одноканала ОЗУ"
+   ],
+   "cons": [
+    "У NBC нет ни одного теста, в Puget данных нет",
+    "1792 pipelines — меньше, чем у обычной RTX 3050 (2048); шина 64 бит",
+    "В матрице NVIDIA её нет — кодеки не проверены; у Ada 4:2:2 нет"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/NVIDIA-GeForce-RTX-3050-A-Laptop-GPU-Benchmarks-and-Specs.867762.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "Intel/notes/intel-cpu.md"
+   ]
+  },
+  "NVIDIA RTX 4050 Laptop": {
+   "pros": [
+    "Time Spy 8 125 (n41) — 5-е из 31, вдвое выше Arc 140V (4 044)",
+    "Resolve 20 (Puget, 15 прогонов): 4 458; GPU Effects 27,6 против 10–13 у iGPU до 890M",
+    "AV1 — декод и кодирование (NVENC 8)"
+   ],
+   "cons": [
+    "Нет декода HEVC 4:2:2 и H.264 10 бит / 4:2:2 — с AMD это ляжет на процессор",
+    "6 ГБ видеопамяти — ниже порога ≥ 8 ГБ для ветки с дискреткой",
+    "TGP решает: Dell XPS 14 на 30 Вт — 5 107 в Time Spy, LOQ 15APH8 на 95 Вт — 9 040 (×1,77)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/NVIDIA-GeForce-RTX-4050-Laptop-GPU-Benchmarks-and-Specs.675695.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "Intel/notes/intel-cpu.md",
+    "AMD/notes/amd-codecs.md",
+    "AMD/notes/candidates-gpu.md",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%203050%20A%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%204050%20Laptop%20GPU/"
+   ]
+  },
+  "NVIDIA RTX 4060 Laptop": {
+   "pros": [
+    "Time Spy 10 338 (n56) — 3-е из 31",
+    "Resolve 20 (Puget, 42 прогона): 5 486; Premiere 25.1 (70): 7 850",
+    "AV1 — декод и кодирование (NVENC 8)"
+   ],
+   "cons": [
+    "Нет декода HEVC 4:2:2 и H.264 10 бит / 4:2:2 — в отличие от RTX 50",
+    "TGP решает: на 45 Вт — 7 484, медленнее RTX 4050 на 95 Вт (9 040)",
+    "Resolve, 4K HEVC 4:2:2: 111 кадр/с против 222 у RTX 5050"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/NVIDIA-GeForce-RTX-4060-Laptop-GPU-Benchmarks-and-Specs.675692.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "Intel/notes/intel-cpu.md",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%204060%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%205050%20Laptop%20GPU/"
+   ]
+  },
+  "NVIDIA RTX 5050 Laptop": {
+   "pros": [
+    "NVDEC 6: декод H.264 и HEVC 4:2:2 — в Resolve Studio 20+ и Premiere 25.3+",
+    "Resolve (Puget): 4K HEVC 4:2:2 10 бит — 222 кадр/с, лучший в подтестах Puget",
+    "8 ГБ видеопамяти — проходит порог ≥ 8 ГБ ветки с дискреткой"
+   ],
+   "cons": [
+    "В 3D слабее RTX 4060: Time Spy 9 122 против 10 338",
+    "В матрице NVIDIA её нет: 4:2:2 — по whitepaper Blackwell",
+    "TGP решает: MSI Cyborg 15 на 45 Вт — 7 166 в Time Spy, Schenker Fusion 15 на 115 Вт — 9 828"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5050-Laptop-Benchmarks-and-Specs.934804.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf",
+    "https://www.nvidia.com/en-us/geforce/laptops/50-series/",
+    "Intel/notes/intel-cpu.md",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-davinci-resolve-studio-2122/",
+    "https://www.pugetsystems.com/labs/articles/what-h-264-and-h-265-hardware-decoding-is-supported-in-premiere-pro-2120/",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%204060%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%205050%20Laptop%20GPU/",
+    "AMD/notes/candidates-gpu.md"
+   ]
+  },
+  "NVIDIA RTX 5060 Laptop": {
+   "pros": [
+    "Resolve 20 (Puget, 90 прогонов): 7 324 — лучший общий балл в этой группе",
+    "H.264 и HEVC 4:2:2 — декод и кодирование; HEVC 4:2:2 в Resolve — 191 кадр/с",
+    "Time Spy 11 937 (n22) — 2-е из 31; 8 ГБ GDDR7"
+   ],
+   "cons": [
+    "TGP решает: MSI Cyborg 17 на 55 Вт — 9 090 в Time Spy, LOQ 15AHP11 на 105 Вт — 12 719",
+    "В списке страницы самый дешёвый — 1286,56 € (с планкой), выше потолка",
+    "В матрице NVIDIA её нет: 4:2:2 — по whitepaper Blackwell"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5060-Laptop-Benchmarks-and-Specs.934941.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf",
+    "https://www.nvidia.com/en-us/geforce/laptops/50-series/",
+    "Intel/notes/intel-cpu.md",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%205060%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%205070%20Laptop%20GPU/",
+    "data/laptops.json + data/patch-*.json"
+   ]
+  },
+  "NVIDIA RTX 5070 Laptop": {
+   "pros": [
+    "Time Spy 13 564 (n35) — 1-е из 31",
+    "В матрице NVIDIA: H.264 и HEVC 4:2:2 — декод и кодирование",
+    "Premiere 25.6+ (Puget, 28 прогонов): 83 121 — максимум в этой группе"
+   ],
+   "cons": [
+    "В Resolve не быстрее RTX 5060: 7 232 против 7 324; HEVC 4:2:2 — 135 против 191 кадр/с",
+    "TGP решает: Dell 16 Premium на 60 Вт — 10 851, лишь +10 % к RTX 5050 на 115 Вт (9 828)",
+    "В списке страницы — только б/у (C2VM8EA, 1129 €)"
+   ],
+   "sources": [
+    "https://www.notebookcheck.net/Nvidia-GeForce-RTX-5070-Laptop-Benchmarks-and-Specs.934942.0.html",
+    "AMD/notes/perf-tables.md",
+    "https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new",
+    "https://www.pugetsystems.com/pugetbench/results/compare/Puget%20Bench%20for%20DaVinci%20Resolve/27/GPU/NVIDIA%20GeForce%20RTX%205060%20Laptop%20GPU/NVIDIA%20GeForce%20RTX%205070%20Laptop%20GPU/",
+    "data/laptops.json + data/patch-*.json"
+   ]
+  }
+ }
+}

@@ -1,0 +1,645 @@
+{
+ "hp-elitebook-8-g1a-16-cn0q3ec": {
+  "layout": "2x16 или 1x32",
+  "type": "DDR5 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": null,
+  "max_gb": 64,
+  "path": "Раскладка не подтверждена: HP продаёт эту модель и с одной планкой 32 ГБ, и с двумя по 16 ГБ. Если стоят две по 16 ГБ — докупать нечего. Если одна на 32 ГБ — докупить вторую планку 32 ГБ DDR5: будет 64 ГБ в двухканале (HP допускает 64 ГБ — две по 32). Планку 16 ГБ к 32 ГБ не предлагаем: подтверждения, что на AMD такая пара работает в двухканале, не нашли",
+  "buy": [
+   {
+    "what": "ddr5_32",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09120200",
+  "verified": false,
+  "buy_best": [],
+  "source_extra": [
+   "https://partsurfer.hp.com/partsurfer/?searchtext=CN0Q3EC",
+   "AMD/notes/verify-hp-dell.md:39",
+   "https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_E16_Gen_3_AMD/ThinkPad_E16_Gen_3_AMD_Spec.pdf",
+   "https://en.wikipedia.org/wiki/Multi-channel_memory_architecture"
+  ],
+  "note": "QuickSpecs: 2 SODIMM, макс. 64 ГБ (2×32), среди конфигураций и 32 (1×32), и 32 (2×16); в BOM PartSurfer — оба модуля (16 и 32 ГБ), количество не указано. Icecat — 404. Почему вторая 32 ГБ, а не 16 ГБ (01.10.2026): у Intel двухканал при планках разного объёма описан в даташите (Flex Memory), у AMD такого документа не нашли — PSREF E16 Gen 3 AMD пишет только «dual-channel capable», QuickSpecs HP EliteBook 8 G1a 16 перечисляет лишь одинаковые пары или одну планку (2×32, 2×16, 1×32, 2×12, 1×16, 2×8, 1×8); в Википедии (Multi-channel memory architecture) сказано, что у AMD есть «эквивалент» Flex Memory, но без ссылки на источник. При любой оплате вторая планка 32 ГБ дешевле комплекта 2×16 (343,00 € против 372,76 €); за наличные дешевле комплект 2×16 (489,75 € против 537,90 €), но тогда 32 ГБ остаётся лишней и памяти будет 32, а не 64 ГБ."
+ },
+ "asus-expertbook-b1-bm1503cda-s72123": {
+  "layout": "1x16 или 2x8",
+  "type": "DDR5-4800 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": null,
+  "max_gb": 64,
+  "path": "Раскладка не подтверждена. Если стоит одна планка 16 ГБ и второй слот свободен — докупить ещё одну планку 16 ГБ DDR5 (32 ГБ в двухканале). Если стоят две по 8 ГБ — заменить их комплектом из двух планок по 16 ГБ DDR5 (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://www.one.de/laptops/laptop-highlights/laptop-mit-amd-prozessor/asus-expertbook-b1-bm1503cda-s72123/89702-base",
+  "verified": false,
+  "buy_best": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "source_extra": [
+   "https://gzhls.at/blob/ldb/4/1/3/4/187b24741cf9d760f91fc6f3f6c8825bb088.pdf",
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NX0821-M01U90"
+  ],
+  "note": "Заводская комплектация (one.de: «90NX0821-M02BX0 mit 16 GB DDR5 4800», SSD 256 ГБ, 2 слота); 16/1 ТБ и 32/64 ГБ на idealo — сборки продавцов. Icecat по S72123 — 404. Соседний -S71655 по даташиту ASUS — 2×8; макс. 64 — Icecat -S71655."
+ },
+ "lenovo-thinkpad-e16-g3-21sr000jge": {
+  "layout": "1x32",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить планку 16 ГБ DDR5 во второй слот — будет 48 ГБ: 32 ГБ из них работают в двухканале, остальные 16 ГБ — в одноканале (режим Intel Flex Memory, так написано в даташите Intel на этот процессор; на самом ноутбуке не проверяли). Дороже, но целиком в двухканале — вторая планка 32 ГБ (64 ГБ)",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=21SR000JGE&country_code=DE",
+  "verified": true,
+  "source_extra": [
+   "https://cdrdv2-public.intel.com/842704/842704-002.pdf"
+  ]
+ },
+ "acer-travelmate-p2-nx-bmgeg-002": {
+  "layout": "1x32",
+  "type": "DDR5 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить планку 16 ГБ DDR5 во второй слот — будет 48 ГБ: 32 ГБ из них работают в двухканале, остальные 16 ГБ — в одноканале (режим Intel Flex Memory, так написано в даташите Intel на этот процессор; на самом ноутбуке не проверяли). Дороже, но целиком в двухканале — вторая планка 32 ГБ (64 ГБ)",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://www.bluechip.de/media/76/08/77/1772618431/Datenblatt_113459.pdf?ts=1772618431",
+  "verified": true,
+  "note": "Даташит: «1 x 32 GB», «Up to 64 GB DDR5 RAM (2x 32 GB soDIMM)».",
+  "source_extra": [
+   "https://cdrdv2-public.intel.com/792044/792044-007.pdf"
+  ]
+ },
+ "acer-travelmate-p2-nx-bmceg-001": {
+  "layout": "1x32",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить планку 16 ГБ DDR5 во второй слот — будет 48 ГБ: 32 ГБ из них работают в двухканале, остальные 16 ГБ — в одноканале (режим Intel Flex Memory, так написано в даташите Intel на этот процессор; на самом ноутбуке не проверяли). Дороже, но целиком в двухканале — вторая планка 32 ГБ (64 ГБ)",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.BMCEG.001",
+  "verified": true,
+  "source_extra": [
+   "https://www.bluechip.de/media/76/08/77/1772618431/Datenblatt_113459.pdf?ts=1772618431",
+   "https://cdrdv2-public.intel.com/792044/792044-007.pdf"
+  ],
+  "note": "Число слотов — по даташиту сестры NX.BMGEG.002 (2× SO-DIMM); Icecat: «1 x 32 GB», max 64."
+ },
+ "acer-aspire-go-16-ag16-71p-7607": {
+  "layout": "2x16 (вывод, не подтверждено)",
+  "type": "DDR5 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": null,
+  "max_gb": 32,
+  "path": "Докупать нечего: у модели два слота, а Acer допускает максимум 32 ГБ, значит 32 ГБ с завода — это две планки по 16 ГБ; у соседней комплектации NX.JTGEG.00P (тот же Core 7 150U, 32 ГБ) в даташите Acer прямо написано «2 x 16 GB». Для этой комплектации раскладка в даташите не подтверждена",
+  "buy": [],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=en&Brand=Acer&ProductCode=NX.JTGEG.00N",
+  "verified": false,
+  "source_extra": [
+   "https://www.cyberport.de/notebook-und-tablet/notebooks/acer/pdp/1c26-cvw/acer-aspire-go-ag16-71p-79hw-16-wuxga-core-7-150u-16gb-512gb-win11.html",
+   "https://gzhls.at/blob/ldb/e/b/2/9/7cc7e848cb1274467015e3d5590107e87773.pdf",
+   "Intel/notes/verify-acer-aspire.md:42",
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NX.JTGEG.00N"
+  ],
+  "note": "P/N найден: NX.JTGEG.00N (Icecat «Acer Aspire Go 16 AG16-71P-7607», 32 ГБ DDR5, «Maximum internal memory 32 GB»; раскладки в Icecat нет, проверено 01.10.2026 — en и de). Сестра AG16-71P-79HW (Cyberport): 16 ГБ, «RAM-Steckplätze gesamt 2, frei 1», «maximaler Arbeitsspeicher 32 GB». Соседняя NX.JTGEG.00P (AG16-71P-70RK, Core 7 150U): даташит Acer 2026.02.03 — «Memory configuration 2 x 16 GB DDR5 RAM» (Intel/notes/verify-acer-aspire.md:42). Если вдруг окажется одна планка 32 ГБ — докупка 16 ГБ дала бы 48 ГБ, сверх максимума Acer."
+ },
+ "hp-omnibook-7-16-bm9t3ea": {
+  "layout": "soldered16",
+  "type": "DDR5-5600 (распайка)",
+  "slots_total": 0,
+  "slots_free": 0,
+  "max_gb": 16,
+  "path": "16 ГБ впаяны в плату, слотов для планок нет",
+  "buy": null,
+  "possible": false,
+  "source": "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09154107",
+  "verified": true,
+  "source_extra": [
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=BM9T3EA"
+  ],
+  "note": "Даташит HP: «16 GB DDR5-5600 MT/s (integriert)», «Speichersteckplätze: 0» (цитата из Intel/notes/verify-idealo-new-scan-16gb-gpu.md:14); Icecat: On-board, max 16. Тип — DDR5, не LPDDR."
+ },
+ "asus-expertbook-p1-p1503cva-s72336": {
+  "layout": "сборка продавца 32 ГБ: раскладка не указана (завод — 1x8 + слот)",
+  "type": "DDR5 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": null,
+  "max_gb": 64,
+  "path": "Раскладка сборки магазина one.de не подтверждена (с завода — одна планка 8 ГБ и свободный слот). Если стоят две по 16 ГБ — докупать нечего. Если одна планка 32 ГБ — докупить планку 16 ГБ DDR5 во второй слот: 48 ГБ, из них 32 ГБ в двухканале. Если 8 + 24 ГБ — заменить планку 8 ГБ на 16 ГБ: 40 ГБ, из них 32 ГБ в двухканале (режим Intel Flex Memory из даташита Intel; на самом ноутбуке не проверяли)",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://www.cyberport.de/notebook-und-tablet/notebooks/asus/pdp/1c27-4v0/asus-expertbook-p1-p1503cva-s72336-15-6-fhd-core-5-210h-8gb-256gb-nos.html",
+  "verified": false,
+  "buy_best": [],
+  "source_extra": [
+   "https://www.billiger.de/pricelist/5549327580-asus-expertbook-p1-15-6-intel-core-5-210h-32-gb-ram-1-tb-ssd-win11-pro",
+   "https://cdrdv2-public.intel.com/743844/743844-015.pdf"
+  ],
+  "note": "Заводской P1503CVA-S72336 (Cyberport): 8 ГБ / 256 ГБ / без ОС, «RAM-Steckplätze gesamt 2, frei 1», «maximaler Arbeitsspeicher 64 GB». 32 ГБ / 1 ТБ / Win11 Pro — переделка one.de."
+ },
+ "asus-vivobook-15-oled-x1505va-ma884w": {
+  "layout": "soldered8+8 SO-DIMM (слот занят)",
+  "type": "DDR4",
+  "slots_total": 1,
+  "slots_free": 0,
+  "max_gb": null,
+  "path": "8 ГБ впаяны в плату, слот для планки один. Даже с планкой 32 ГБ (всего 40 ГБ) в двухканале работают только 16 ГБ (8 + 8), остальное — в одноканале",
+  "buy": null,
+  "possible": false,
+  "source": "https://gzhls.at/blob/ldb/d/0/5/1/8ed93eb2af750bf06e092a7ac978464ab8bf.pdf",
+  "verified": true,
+  "note": "Даташит ASUS: «16GB DDR4 (8GB DDR4 Onboard + 8GB DDR4 SO-DIMM)», «1x DDR4 SO-DIMM slot»; максимум ASUS не указывает (Icecat «max 16» = установленному). В записи тип «DDR4/DDR5» — по даташиту DDR4."
+ },
+ "lenovo-ideapad-slim5-16iph11-83s60034ge": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83S60034GE&country_code=DE",
+  "verified": true
+ },
+ "hp-omnibook-5-16-oled-af1655ng": {
+  "layout": "soldered16",
+  "type": "LPDDR5X-7500 (распайка)",
+  "slots_total": 0,
+  "slots_free": 0,
+  "max_gb": 16,
+  "path": "16 ГБ впаяны в плату, слотов для планок нет",
+  "buy": null,
+  "possible": false,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=C53MFEA",
+  "verified": true,
+  "source_extra": [
+   "https://kaas.hpcloud.hp.com/pdf-public/pdf_10220266_en-US-1.pdf"
+  ],
+  "note": "MSG 16-af1xxx: «Integrated system memory» 8/16/24/32 ГБ LPDDR5/5X — объём задан на заводе; у этого SKU (Icecat C53MFEA) 16 ГБ On-board."
+ },
+ "hp-envy-x360-16-ad0177ng": {
+  "layout": "soldered16",
+  "type": "LPDDR5-6400 (распайка)",
+  "slots_total": 0,
+  "slots_free": 0,
+  "max_gb": 16,
+  "path": "16 ГБ впаяны в плату, слотов для планок нет",
+  "buy": null,
+  "possible": false,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=A4CM9EA",
+  "verified": true,
+  "source_extra": [
+   "https://www.notebookcheck.net/HP-Envy-x360-2-in-1-16-review-Ryzen-7-8840HS-beats-Core-Ultra-7-155U.837856.0.html"
+  ],
+  "note": "Icecat A4CM9EA: «LPDDR5-SDRAM 6400», On-board, max 16 (в записи — LPDDR5X); NBC: «no upgradeable RAM»."
+ },
+ "hp-elitebook-860-g11-9g0a4et": {
+  "layout": "1x32",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить планку 16 ГБ DDR5 во второй слот — будет 48 ГБ: 32 ГБ из них работают в двухканале, остальные 16 ГБ — в одноканале (режим Intel Flex Memory, так написано в даташите Intel на этот процессор; HP в QuickSpecs такую пару не перечисляет, на самом ноутбуке не проверяли). Дороже, но целиком в двухканале — вторая планка 32 ГБ (64 ГБ)",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=en&Brand=HP&ProductCode=9G0A4ET",
+  "verified": true,
+  "source_extra": [
+   "https://www8.hp.com/h20195/V2/GetPDF.aspx/c08880575",
+   "https://cdrdv2-public.intel.com/792044/792044-007.pdf"
+  ],
+  "note": "Icecat (en): EliteBook 840 G11 14\", «1 x 32 GB», «2x SO-DIMM», max 64; QuickSpecs 840 G11: 2 SODIMM, макс. 64 (2×32). Память чинится планкой, но модель 14\"."
+ },
+ "monster-tulpar-t5-v23-4": {
+  "layout": "2x8 или 1x16 (не подтверждено)",
+  "type": "DDR4-3200 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": null,
+  "max_gb": 64,
+  "path": "Раскладка не подтверждена. Если стоят две планки по 8 ГБ — заменить их комплектом из двух планок по 16 ГБ DDR4 (старые планки по 8 ГБ останутся лишними). Если стоит одна планка 16 ГБ и второй слот свободен — докупить ещё одну планку 16 ГБ DDR4 (32 ГБ в двухканале)",
+  "buy": [
+   {
+    "what": "ddr4_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://www.monsternotebook.com.tr/tulpar/monster-tulpar-t5-v23-4/",
+  "verified": false,
+  "buy_best": [
+   {
+    "what": "ddr4_16",
+    "qty": 1
+   }
+  ],
+  "source_extra": [
+   "https://www.amazon.de/dp/B0D2R83MY4"
+  ],
+  "note": "Расходится с записью: Monster (TR) для T5 V23.4 даёт базовую конфигурацию «16GB (1x16GB) DDR4 1.2V 3200MHz SODIMM» (с SSD 500 ГБ) и «64 GB'a kadar»; в записи 2×8 — по листингу Amazon/epey. Немецкий Amazon (16 ГБ / 1 ТБ) раскладку не указывает, «Ram Memory Maximum Size 64 GB». Число слотов (2) — по данным проекта."
+ },
+ "medion-erazer-scout-e1-30039767": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://service.medion.com/de/product-detail/30039767",
+  "verified": true,
+  "source_extra": [
+   "Intel/notes/browser-check-mem-acer-medion-other.md:14"
+  ],
+  "note": "Сервис Medion: 2×8, оба слота заняты, максимум 32 ГБ (магазин пишет 64)."
+ },
+ "captiva-power-starter-i82-531": {
+  "layout": "2x16 (вывод: 2 слота, свободных 0)",
+  "type": "DDR4-3200 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 64,
+  "path": "Докупать нечего: 32 ГБ стоят в двух занятых слотах, значит это две планки по 16 ГБ (вывод, даташитом не подтверждено)",
+  "buy": [],
+  "possible": true,
+  "source": "https://www.cyberport.de/notebook-und-tablet/notebooks/captiva/pdp/1c05-986/captiva-power-starter-laptop-i82-531-15-6-fhd-intel-i7-1255u-32gb-1tb-ssd-win11.html",
+  "verified": false,
+  "source_extra": [
+   "https://www.captiva-power.de/produkte/business-office-notebook/business-office-i82-531ge"
+  ],
+  "note": "Captiva: «RAM Typ DDR4, Channel Single, Dual, Steckplätze (max.) 2, Geschwindigkeit 3200, RAM 32, max. RAM Größe 64» — раскладку не пишет; Cyberport: «RAM-Steckplätze gesamt 2, frei 0»."
+ },
+ "lenovo-thinkpad-e16-g3-amd-21st004gge": {
+  "layout": "1x32",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить вторую планку 32 ГБ DDR5 — будет 64 ГБ в двухканале (в справочнике Lenovo максимум — 64 ГБ; с завода такой объём Lenovo ставит только по спецзаказу). Планку 16 ГБ к 32 ГБ не предлагаем: подтверждения, что на AMD такая пара работает в двухканале, не нашли",
+  "buy": [
+   {
+    "what": "ddr5_32",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=21ST004GGE&country_code=DE",
+  "verified": true,
+  "note": "Почему вторая 32 ГБ, а не 16 ГБ (01.10.2026): у Intel двухканал при планках разного объёма описан в даташите (Flex Memory), у AMD такого документа не нашли — PSREF E16 Gen 3 AMD пишет только «dual-channel capable», QuickSpecs HP EliteBook 8 G1a 16 перечисляет лишь одинаковые пары или одну планку (2×32, 2×16, 1×32, 2×12, 1×16, 2×8, 1×8); в Википедии (Multi-channel memory architecture) сказано, что у AMD есть «эквивалент» Flex Memory, но без ссылки на источник. При любой оплате вторая планка 32 ГБ дешевле комплекта 2×16 (343,00 € против 372,76 €); за наличные дешевле комплект 2×16 (489,75 € против 537,90 €), но тогда 32 ГБ остаётся лишней и памяти будет 32, а не 64 ГБ.",
+  "source_extra": [
+   "https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_E16_Gen_3_AMD/ThinkPad_E16_Gen_3_AMD_Spec.pdf",
+   "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09120200",
+   "https://en.wikipedia.org/wiki/Multi-channel_memory_architecture"
+  ]
+ },
+ "hp-elitebook-8-g1a-16-ct3v8es": {
+  "layout": "1x32",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 64,
+  "path": "Стоит одна планка 32 ГБ, второй слот свободен. Докупить вторую планку 32 ГБ DDR5 — будет 64 ГБ в двухканале (HP допускает 64 ГБ — две планки по 32 ГБ). Планку 16 ГБ к 32 ГБ не предлагаем: подтверждения, что на AMD такая пара работает в двухканале, не нашли",
+  "buy": [
+   {
+    "what": "ddr5_32",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://partsurfer.hp.com/partsurfer/?searchtext=CT3V8ES",
+  "verified": true,
+  "source_extra": [
+   "https://www8.hp.com/h20195/V2/GetPDF.aspx/c09120200",
+   "AMD/notes/verify-hp-dell.md:39",
+   "https://psref.lenovo.com/syspool/Sys/PDF/ThinkPad/ThinkPad_E16_Gen_3_AMD/ThinkPad_E16_Gen_3_AMD_Spec.pdf",
+   "https://en.wikipedia.org/wiki/Multi-channel_memory_architecture"
+  ],
+  "note": "PartSurfer: в BOM только модуль N77400-001 32 ГБ; QuickSpecs EliteBook 8 G1a 16: 2 SODIMM, макс. 64 (2×32). Почему вторая 32 ГБ, а не 16 ГБ (01.10.2026): у Intel двухканал при планках разного объёма описан в даташите (Flex Memory), у AMD такого документа не нашли — PSREF E16 Gen 3 AMD пишет только «dual-channel capable», QuickSpecs HP EliteBook 8 G1a 16 перечисляет лишь одинаковые пары или одну планку (2×32, 2×16, 1×32, 2×12, 1×16, 2×8, 1×8); в Википедии (Multi-channel memory architecture) сказано, что у AMD есть «эквивалент» Flex Memory, но без ссылки на источник. При любой оплате вторая планка 32 ГБ дешевле комплекта 2×16 (343,00 € против 372,76 €); за наличные дешевле комплект 2×16 (489,75 € против 537,90 €), но тогда 32 ГБ остаётся лишней и памяти будет 32, а не 64 ГБ."
+ },
+ "lenovo-ideapad-slim5-16akp10-83hy009nge": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83HY009NGE&country_code=DE",
+  "verified": true
+ },
+ "asus-expertbook-b1-bm1503cda-s71655": {
+  "layout": "2x8",
+  "type": "DDR5 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 64,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://gzhls.at/blob/ldb/4/1/3/4/187b24741cf9d760f91fc6f3f6c8825bb088.pdf",
+  "verified": true,
+  "source_extra": [
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NX0821-M01U90"
+  ],
+  "note": "Даташит ASUS: «16GB DDR5 (2x 8GB DDR5 SO-DIMM)», «2x DDR5 SO-DIMM slots»; максимум 64 — Icecat."
+ },
+ "msi-venture-a16-ai-a3hmg-036": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 96,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&GTIN=4711377358880",
+  "verified": true,
+  "source_extra": [
+   "AMD/notes/brands-amd.md:136"
+  ],
+  "note": "Icecat: «2 x 8 GB», «Zweikanalig», max 96; 2 слота SO-DIMM — brands-amd.md."
+ },
+ "lenovo-ideapad-slim5a-16agp11-83s2003gge": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83S2003GGE&country_code=DE",
+  "verified": true
+ },
+ "lenovo-ideapad-slim5-15arp10-83j3005fge": {
+  "layout": "soldered16",
+  "type": "LPDDR5X-6400 (распайка)",
+  "slots_total": 0,
+  "slots_free": 0,
+  "max_gb": 16,
+  "path": "16 ГБ впаяны в плату, слотов для планок нет (Lenovo: «16GB soldered memory, not upgradable»)",
+  "buy": null,
+  "possible": false,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83J3005FGE&country_code=DE",
+  "verified": true
+ },
+ "asus-vivobook-16-oled-m1605naq": {
+  "layout": "soldered8+8 SO-DIMM (слот занят)",
+  "type": "DDR5",
+  "slots_total": 1,
+  "slots_free": 0,
+  "max_gb": 24,
+  "path": "8 ГБ впаяны в плату, слот для планки один; ASUS допускает максимум 24 ГБ — 32 ГБ не набрать",
+  "buy": null,
+  "possible": false,
+  "source": "https://www.asus.com/de/laptops/for-home/vivobook/asus-vivobook-16-oled-m1605/techspec/",
+  "verified": true,
+  "note": "asus.com, столбец M1605NAQ: «8GB DDR5 on board, 8GB DDR5 SO-DIMM, Maximaler Arbeitsspeicher bis zu: 24GB», «1x DDR5 SO-DIMM slot»."
+ },
+ "hp-omen-16-ap-c2vm8ea": {
+  "layout": "2x16",
+  "type": "DDR5-5200 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Докупать нечего: с завода две планки по 16 ГБ (Icecat), HP допускает до 32 ГБ",
+  "buy": [],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=C2VM8EA",
+  "verified": true,
+  "source_extra": [
+   "https://kaas.hpcloud.hp.com/pdf-public/pdf_11834162_en-US-1.pdf"
+  ],
+  "note": "Расходится с записью («раскладка не проверена»): Icecat — «2 x 16 GB», «RAM slots available 2», max 32; MSG 16-ap0xxx: 2 SODIMM «supporting up to 32 GB» (конфигурация 32 GB (16 × 2) там помечена «for use in PRC»). Отпадает только по «нет новых»."
+ },
+ "acer-nitro-v-16-ai-anv16-42-r38v": {
+  "layout": "1x16",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 32,
+  "path": "Стоит одна планка 16 ГБ, второй слот свободен. Докупить ещё одну планку 16 ГБ DDR5 — будет 32 ГБ в двухканале",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Acer&ProductCode=NH.U1GEG.003",
+  "verified": true,
+  "note": "Icecat NH.U1GEG.003 = «Nitro V 16 AI ANV16-42-R38V … 16 GB»: «1 x 16 GB», «2x SO-DIMM», max 32 — в записи «не проверено»."
+ },
+ "hp-victus-15-fb3051ng": {
+  "layout": "1x16",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 16,
+  "path": "Стоит одна планка 16 ГБ, второй слот свободен. Докупить ещё одну планку 16 ГБ DDR5 — будет 32 ГБ в двухканале. Но HP указывает максимум 16 ГБ (Icecat; сервисное руководство серии 15-fb3xxx, где этот процессор не перечислен): 32 ГБ — сверх официального максимума",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=BV8D4EA",
+  "verified": true,
+  "source_extra": [
+   "https://kaas.hpcloud.hp.com/pdf-public/pdf_11551834_en-US-1.pdf"
+  ],
+  "official": false,
+  "note": "Icecat BV8D4EA: «1 x 16 GB», «RAM slots available 2», max 16; MSG 15-fb3xxx: «Two memory slots supporting up to 16 GB» (16×1 или 8×2) — но Ryzen 5 240 / RTX 5050 в этой версии MSG не перечислены."
+ },
+ "lenovo-loq-15arp9-83jc00n6pb": {
+  "layout": "2x8",
+  "type": "DDR5-4800 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83JC00N6PB&country_code=DE",
+  "verified": true
+ },
+ "lenovo-loq-essential-15-83sc0028sp": {
+  "layout": "1x16",
+  "type": "DDR5-4800 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 1,
+  "max_gb": 16,
+  "path": "Стоит одна планка 16 ГБ, второй слот свободен. Докупить ещё одну планку 16 ГБ DDR5 — будет 32 ГБ в двухканале. Lenovo в справочнике (PSREF) пишет максимум 16 ГБ — по результатам тестов с модулями, которые Lenovo сейчас продаёт; 32 ГБ сверх официального максимума",
+  "buy": [
+   {
+    "what": "ddr5_16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83SC0028SP&country_code=DE",
+  "verified": true,
+  "source_extra": [
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=Lenovo&ProductCode=83SC0028SP"
+  ],
+  "official": false,
+  "note": "Расходится с записью («32 ГБ / 1 ТБ»): PSREF и Icecat — «1x 16GB SODIMM DDR5-4800», «Two DDR5 SODIMM slots, dual-channel capable», «Up to 16GB DDR5-4800 offering». «32 ГБ» в предложении idealo — вероятно, доставка продавца, не подтверждено."
+ },
+ "asus-tuf-a16-fa607nuq-rl038w": {
+  "layout": "2x8",
+  "type": "DDR5 SO-DIMM (4800 по Icecat, 5200 по geizhals)",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 64,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=ASUS&ProductCode=90NR0QF3-M00570",
+  "verified": true,
+  "source_extra": [
+   "https://geizhals.de/asus-tuf-gaming-a16-fa607nuq-rl038w-90nr0qf3-m00570-a3791099.html"
+  ]
+ },
+ "hp-hyperx-omen-15-dl0c7ea": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними). HP в сервисном руководстве указывает 32 ГБ (две по 16 ГБ) среди поддерживаемых конфигураций — в списке для DDR5-5200; в списке для DDR5-5600 максимум 24 ГБ",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://kaas.hpcloud.hp.com/pdf-public/pdf_13287745_en-US-1.pdf",
+  "verified": true,
+  "source_extra": [
+   "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=HP&ProductCode=DL0C7EA"
+  ],
+  "note": "Icecat пишет «RAM maximal 16 GB», но сервисное руководство HP (MSG HyperX OMEN 15, 15-gb0xxx; Ryzen 5 240 + RTX 5060 — плата P78807-601) — «Two SODIMM slots, customer upgradeable», «Supports DDR5-5200 memory … 32 GB (16 GB × 2)»; для DDR5-5600 — до 24 ГБ (24 GB × 1). Верим MSG (перепроверено 01.10.2026)."
+ },
+ "msi-thin-15-b13uc-3073": {
+  "layout": "2x8",
+  "type": "DDR4-3200 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 64,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR4 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr4_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://live.icecat.biz/api?UserName=openIcecat-live&Language=de&Brand=MSI&ProductCode=Thin+15+B13UC-3073",
+  "verified": true,
+  "source_extra": [
+   "https://geizhals.de/msi-thin-15-b13uc-3073-0016r8-3073-a3521512.html"
+  ]
+ },
+ "lenovo-ideapad-5-2in1-15agp11-83um002yge": {
+  "layout": "2x8",
+  "type": "DDR5-5600 SO-DIMM",
+  "slots_total": 2,
+  "slots_free": 0,
+  "max_gb": 32,
+  "path": "Стоят две планки по 8 ГБ, свободных слотов нет. Заменить их комплектом из двух планок по 16 ГБ DDR5 — будет 32 ГБ в двухканале (старые планки по 8 ГБ останутся лишними)",
+  "buy": [
+   {
+    "what": "ddr5_2x16",
+    "qty": 1
+   }
+  ],
+  "possible": true,
+  "source": "https://psref.lenovo.com/api/model/pdfexport/singleModel?model_code=83UM002YGE&country_code=DE",
+  "verified": true
+ }
+}

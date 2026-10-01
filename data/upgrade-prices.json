@@ -1,0 +1,262 @@
+{
+ "checked": "2026-10-01 15:38–15:54 (idealo.de, reichelt.de, electronis.de, mediamarkt.de, expert API, alternate.de — Chrome пользователя)",
+ "items": {
+  "ddr5_16": {
+   "any": {
+    "eur": 187.56,
+    "seller": "Galaxus.de (Marktplatzhändler), МП; в строке idealo — только Rechnung",
+    "product": "Kingston ValueRAM KVR56S46BS8-16 (16 ГБ DDR5-5600 SO-DIMM), предложение одно",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/213624753_-valueram-16gb-ddr5-5600mhz-cl46-so-dimm-on-die-ecc-kvr56s46bs8-16-kingston.html",
+    "time": "2026-10-01 15:41"
+   },
+   "cash": {
+    "eur": 244.9,
+    "seller": "MediaMarkt / Saturn (продаёт сам магазин, не маркетплейс)",
+    "product": "Lexar 16GB DDR5-4800 SO-DIMM CL40 LD5DS016G-B4800GSST (MediaMarkt арт. 3066350, плашка «Nur Online»)",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204730229.html",
+    "shop_url": "https://www.mediamarkt.de/de/product/_lexar-ddr5-16gb-so-dimm-4800mhz-cl40-11v-notebook-arbeitsspeicher-3066350.html",
+    "how": "онлайн-заказ с «Abholung» (0 €) в любом MediaMarkt/Saturn, оплата при получении наличными («Bezahlung bei Abholung … mit Bargeld», https://www.mediamarkt.de/de/service/zahlung/zahlungsmoeglichkeiten); для Берлина карточка показала «Marktabholung ab 05.10.2026 nach Bestellung». Заказ не оформлял — что «Nur Online»-товар можно оплатить при получении, видно только в корзине (не проверено)",
+    "time": "2026-10-01 15:48"
+   },
+   "cash_alt": [
+    {
+     "eur": 249.85,
+     "seller": "reichelt.de",
+     "product": "Patriot Signature 16GB DDR5-4800 CL40 PSD516G480081S",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204241859.html",
+     "how": "Nachnahme (наличными курьеру DHL): 239,90 € + 9,95 € «DHL Nachnahme bis 10 kg» (https://www.reichelt.de/de/de/shop/service/-12_28; Nachnahme для Германии — https://www.reichelt.de/de/de/shop/service/-12_55); работает в любом городе"
+    }
+   ]
+  },
+  "ddr5_32": {
+   "any": {
+    "eur": 343.0,
+    "seller": "asaboshisystems.de (только Vorkasse)",
+    "product": "HP 32GB DDR5-5600 SO-DIMM 83P92AA",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204177782.html",
+    "time": "2026-10-01 15:43"
+   },
+   "cash": {
+    "eur": 537.9,
+    "seller": "reichelt.de",
+    "product": "Corsair Vengeance 32GB DDR5-4800 CL40 SO-DIMM CMSX32GX5M1A4800C40",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/201990581.html",
+    "how": "Nachnahme: 527,95 € + 9,95 € DHL Nachnahme (https://www.reichelt.de/de/de/shop/service/-12_28)",
+    "time": "2026-10-01 15:47"
+   },
+   "cash_alt": [
+    {
+     "eur": 516.14,
+     "eur_note": "+ сбор Nachnahme: на сайте указан только для заказов до 300 € (6,50 €), для 509 € — не указан",
+     "seller": "electronis.de (Potsdam)",
+     "product": "G.Skill Ripjaws 32GB DDR5-5600 CL46 F5-5600S4645A32GX1-RS",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/203196474.html",
+     "how": "Nachnahme только DHL, «Sie bezahlen die Ware einfach in bar beim Paketzusteller» (https://www.electronis.de/index.php?page=shipping): 509,24 € + 6,90 € доставка + сбор"
+    },
+    {
+     "eur": 544.9,
+     "seller": "MediaMarkt / Saturn",
+     "product": "Lexar 32GB DDR5-5600 SO-DIMM LD5S32G56C46ST-BGS (MediaMarkt арт. 3066355)",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/208880307.html",
+     "how": "Abholung в рынке, оплата наличными при получении"
+    }
+   ]
+  },
+  "ddr5_2x16": {
+   "any": {
+    "eur": 372.76,
+    "seller": "Amazon (Rechnung, Lastschrift)",
+    "product": "Integral SODIMM Kit 32GB (2x16GB) DDR5-4800 IN5V16GNHRBXK2, предложение одно",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211727285.html",
+    "time": "2026-10-01 15:44"
+   },
+   "cash": {
+    "eur": 489.75,
+    "seller": "reichelt.de",
+    "product": "две отдельные планки Patriot PSD516G480081S (DDR5-4800)",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204241859.html",
+    "how": "Nachnahme в любой город: 2 × 239,90 € + 9,95 € (https://www.reichelt.de/de/de/shop/service/-12_28); две одинаковые планки работают в двухканале; у reichelt «begrenzte Stückzahl» — наличие 2 шт. не проверено",
+    "time": "2026-10-01 15:57 (перепроверено критиком: idealo 239,90 €, reichelt — 239,90 €, «begrenzte Stückzahl»)"
+   },
+   "cash_alt": [
+    {
+     "eur": 555.9,
+     "seller": "reichelt.de",
+     "product": "Corsair Vengeance 32GB Kit (2x16) DDR5-5600 CL48 CMSX32GX5M2A5600C48",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/203480557.html",
+     "how": "Nachnahme: 545,95 € + 9,95 €",
+     "time": "2026-10-01 15:47"
+    },
+    {
+     "eur": 516.14,
+     "eur_note": "+ сбор Nachnahme (для > 300 € на сайте не указан)",
+     "seller": "electronis.de",
+     "product": "G.Skill Ripjaws 32GB (2x16) DDR5-5600 CL46 F5-5600S4645A16GX2-RS",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/203080047.html",
+     "how": "Nachnahme: 509,24 € + 6,90 € + сбор"
+    },
+    {
+     "eur": 489.8,
+     "seller": "MediaMarkt / Saturn",
+     "product": "две отдельные планки Lexar LD5DS016G-B4800GSST",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/204730229.html",
+     "how": "2 × 244,90 €, Abholung, оплата наличными при получении"
+    }
+   ]
+  },
+  "ddr4_16": {
+   "any": {
+    "eur": 103.38,
+    "seller": "galaxus.de (Rechnung, Vorkasse)",
+    "product": "Dahua C300 SO-DIMM 16GB DDR4-3200 CL22 DHI-DDR-C300S16G32",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/213792364.html",
+    "time": "2026-10-01 15:45"
+   },
+   "cash": {
+    "eur": 121.76,
+    "seller": "electronis.de (Potsdam)",
+    "product": "Mushkin Redline 16GB DDR4-3200 CL22 SO-DIMM MRA4S320NNNF16G",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/208648711.html",
+    "how": "Nachnahme (только DHL, наличными курьеру): 108,36 € + 6,90 € доставка + 6,50 € сбор «bis € 300 Warenwert» (https://www.electronis.de/index.php?page=shipping)",
+    "time": "2026-10-01 15:49"
+   },
+   "cash_alt": [
+    {
+     "eur": 129.0,
+     "seller": "notebooksbilliger.de (7 Stores)",
+     "product": "Verbatim SODIMM DDR4 16GB 3200MHz 30110",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/214037695.html",
+     "how": "самовывоз в Store с оплатой «erst bei Abholung» — слово «bar» у NBB не написано (AMD/notes/cash-channels.md)"
+    },
+    {
+     "eur": 169.9,
+     "seller": "MediaMarkt / Saturn",
+     "product": "Lexar 16GB DDR4-3200 LD4AS016G-B3200GSST",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202292198.html",
+     "how": "Abholung, оплата наличными при получении"
+    }
+   ]
+  },
+  "ddr4_2x16": {
+   "any": {
+    "eur": 206.76,
+    "seller": "galaxus.de (Rechnung, Vorkasse)",
+    "product": "две планки Dahua C300 16GB DDR4-3200 DHI-DDR-C300S16G32 (2 × 103,38 €; доставка «bis Sa. 31.10.»; наличие 2 шт. не проверено)",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/213792364.html",
+    "time": "2026-10-01 15:58"
+   },
+   "cash": {
+    "eur": 230.12,
+    "seller": "electronis.de",
+    "product": "две отдельные планки Mushkin MRA4S320NNNF16G",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/208648711.html",
+    "how": "Nachnahme (только DHL, наличными курьеру): 2 × 108,36 € + 6,90 € + 6,50 € сбор «bis € 300 Warenwert» (https://www.electronis.de/index.php?page=shipping); наличие 2 шт. не проверено"
+   },
+   "cash_alt": [
+    {
+     "eur": 268.85,
+     "seller": "electronis.de",
+     "product": "G.Skill Ripjaws 32GB Kit (2x16) DDR4-3200 CL22 F4-3200C22D-32GRS",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/200610619.html",
+     "how": "Nachnahme: 255,45 € + 6,90 € + 6,50 €",
+     "time": "2026-10-01 15:49"
+    },
+    {
+     "eur": 281.0,
+     "seller": "Alternate (только Linden, Hessen)",
+     "product": "Mushkin Redline 32GB Kit DDR4-3200 MRA4S320NNNF16GX2",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202038172.html",
+     "how": "самовывоз в Linden, «Bar bis € 10.000» (https://www.alternate.de/HILFE/Zahlungsarten)"
+    }
+   ],
+   "any_alt": [
+    {
+     "eur": 220.95,
+     "seller": "Amazon Marketplace, МП (Rechnung, Lastschrift)",
+     "product": "Integral 32GB (2x16GB) DDR4-3200 SODIMM Kit IN4V16GNGRTXK2, предложение одно",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/211724288.html",
+     "time": "2026-10-01 15:46"
+    }
+   ]
+  },
+  "ssd_2280_1tb": {
+   "any": {
+    "eur": 129.99,
+    "seller": "Amazon Marketplace, МП (Rechnung, Lastschrift)",
+    "product": "Biwin Black Opal NV3500 Gen3 1TB (M.2 2280 NVMe), предложение одно",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/207080878.html",
+    "time": "2026-10-01 15:46"
+   },
+   "cash": {
+    "eur": 149.9,
+    "seller": "reichelt.de",
+    "product": "Klevv CRAS C715 1TB (M.2 2280 NVMe, PCIe 3.0 x4)",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/209764963.html",
+    "how": "Nachnahme в любой город: 139,95 € + 9,95 € DHL Nachnahme",
+    "time": "2026-10-01 15:50"
+   },
+   "cash_alt": [
+    {
+     "eur": 129.9,
+     "seller": "Alternate (только Linden, Hessen)",
+     "product": "Verbatim Vi3000 1TB M.2 2280 NVMe (alternate 1909890, «Sofort verfügbar»)",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202702551_-vi3000-1tb-verbatim.html",
+     "shop_url": "https://www.alternate.de/Verbatim/Vi3000-1-TB-SSD/html/product/1909890",
+     "how": "заказ на самовывоз в Linden, оплата «Bar» в Store; наличие самовывоза для товара — только в корзине (не проверено)"
+    },
+    {
+     "eur": 139.99,
+     "seller": "expert Jakob Lichtenfels (96215 Lichtenfels), 2 шт.",
+     "product": "Verbatim Vi3000 1TB (expert webcode 17320020417)",
+     "url": "https://www.expert.de/shop/unsere-produkte/computer-zubehor/speichermedien/interne-festplatten/17320020417-vi3000-pcie-nvme-m-2-ssd-1tb-interne-festplatte-49375.html?branch_id=21476261",
+     "how": "«Reservieren», оплата в рынке (API expert pricepds по 320 рынкам, 15:51: AVAILABLE только в 3 рынках — Lichtenfels 139,99, Bad Salzungen 149,99, Uelzen 179)"
+    }
+   ]
+  },
+  "ssd_2242_1tb": {
+   "any": {
+    "eur": 216.8,
+    "seller": "notebookkontor.de (только Vorkasse), «ABVERKAUF, nur noch wenige verfügbar»",
+    "product": "Lenovo ThinkPad 1TB M.2 2242 NVMe OPAL2 4XB1B85887",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/201448069.html",
+    "time": "2026-10-01 15:47"
+   },
+   "cash": {
+    "eur": 361.3,
+    "eur_note": "+ сбор Nachnahme (для > 300 € на сайте не указан)",
+    "seller": "electronis.de",
+    "product": "Transcend MTE400S 1TB M.2 2242",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202282284.html",
+    "how": "Nachnahme: 354,40 € + 6,90 € + сбор",
+    "time": "2026-10-01 15:53"
+   }
+  },
+  "ssd_2230_1tb": {
+   "any": {
+    "eur": 161.17,
+    "seller": "jacob.de (Rechnung, Vorkasse)",
+    "product": "PNY CS2230 1TB (M.2 2230 NVMe PCIe 3.0)",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/202293419.html",
+    "time": "2026-10-01 15:47"
+   },
+   "cash": {
+    "eur": 234.85,
+    "seller": "reichelt.de",
+    "product": "Kingston NV3 1TB 2230",
+    "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/206803359.html",
+    "how": "Nachnahme в любой город: 224,90 € + 9,95 €",
+    "time": "2026-10-01 15:53"
+   },
+   "cash_alt": [
+    {
+     "eur": 195.9,
+     "seller": "Alternate (только Linden, Hessen)",
+     "product": "Patriot Viper VP4000 Mini 1TB (M.2 2230)",
+     "url": "https://www.idealo.de/preisvergleich/OffersOfProduct/203608656.html",
+     "how": "самовывоз в Linden, оплата наличными в Store (не проверял, доступен ли самовывоз для товара)"
+    }
+   ]
+  }
+ },
+ "notes": "Цены «any» — минимальная цена нового товара с доставкой на idealo (категория RAM 4552 / SSD 14613, сортировка по цене, карточки открыты; 15:38–15:47). «cash» — самый дешёвый способ (для 2×16 — комплект или две одинаковые планки, что дешевле) заплатить наличными, который работает в любом городе (Nachnahme reichelt/electronis или Abholung в MediaMarkt/Saturn); «cash_alt» — другие варианты, в т.ч. дешевле, но только в одном городе/рынке. Nachnahme: reichelt — 9,95 € вместо 5,95 € доставки (idealo-итог reichelt + 4,00 €); electronis — 6,90 € + 6,50 € до 300 € стоимости, для дороже — сбор не указан; оплата наличными курьеру DHL (AMD/notes/cash-channels.md, п. 2: DHL до 3 500 €). Галочки «наличными в магазине»: MediaMarkt/Saturn — «Bezahlung bei Abholung» с Bargeld, кроме маркетплейса; expert — «Reservieren», оплата в Fachmarkt (слова «bar» нет); Alternate — только Linden; у expert RAM в ассортименте нет (категория PC-Komponenten без памяти); Euronics и MEDIMAX в предложениях idealo по этим товарам не встретились, сайты по RAM/SSD отдельно не сканировал. Сравнение с 30.09: DDR5 16 ГБ за 187,56 € — всё ещё одно предложение Galaxus МП (без наличных); Verbatim Vi3000 подорожал 120,99 → 137,89 € (alternate, доставка) — минимальная SSD 2280 теперь Biwin 129,99 €; DDR4 16 ГБ 113,17 → 103,38 €; SSD 2230 227,20 → 161,17 € (PNY CS2230). Не учтено: eBay-предложение «1x 16GB RAM DDR4 3200Mhz … für Panasonic Toughbook» 97,50 € (продавец superfonse2000) висит в трёх карточках Samsung DDR4 — состояние «neu» в строке не указано, бренд не указан → в «any» не взял. Lexar LD5U16G56C46ST-BGS 213,37 € из поиска — UDIMM (настольная), не подходит. Заказы, корзины, формы — не трогал; куки — «Alle ablehnen»/«Nur notwendige». Планки DDR5-4800 (Lexar, Patriot) в паре с заводской DDR5-5600 заработают обе на 4800 — Crucial: частота падает до самой медленной планки (Intel/notes/browser-check-cpu-docs.md, п. 6.11). Критик 01.10, 15:56–15:58: в Chrome перепроверены Kingston 187,56 (Galaxus МП), Patriot 239,90 reichelt (+ DHL Nachnahme 9,95 — страница reichelt), Lexar 244,90 MediaMarkt, Mushkin 108,36 electronis (+ 6,90; Nachnahme 6,50 «bis € 300 Warenwert»), Klevv 139,95 reichelt, Dahua 103,38 galaxus — совпадают."
+}
