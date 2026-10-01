@@ -620,9 +620,18 @@ function scoresHTML(x){
 }
 // На GitHub Pages .md открываем на github.com — там они отрисованы, а не голым текстом
 const GH=(()=>{ const m=location.hostname.match(/^([^.]+)\.github\.io$/), repo=location.pathname.split('/')[1]; return m&&repo?`https://github.com/${m[1]}/${repo}/blob/main/`:null; })();
-function link(u,t){ if(!u) return ''; let h=/^(https?:|mailto:|#|\/|\.\.\/)/i.test(u)?u:'../'+u;
+function href(u){ let h=/^(https?:|mailto:|#|\/|\.\.\/)/i.test(u)?u:'../'+u;
   if(GH && /\.md(#.*)?$/i.test(u) && !/^(https?:|mailto:)/i.test(u)) h=GH+u.replace(/^(\.\.\/|\/)+/,'');
-  return `<a href="${esc(h)}" target="_blank" rel="noopener">${esc(t||'источник')}</a>`; }
+  return h; }
+const a_=(h,t)=>`<a href="${esc(href(h))}" target="_blank" rel="noopener">${esc(t)}</a>`;
+// Источник бывает фразой со ссылками внутри: ссылки делаем кликабельными (подпись — домен), остальное — текст
+const SRC_RE=/(https?:\/\/[^\s;,)»"]+[^\s;,)»".:])|((?:AMD|Intel)\/(?:notes\/)?[\w.-]+\.md|REPORT\.md|idealo-howto\.md)/g;
+function srcText(s){ let out='', last=0, m; SRC_RE.lastIndex=0;
+  while((m=SRC_RE.exec(s))){ out+=esc(s.slice(last,m.index)); const u=m[0]; out+=a_(u, m[1]?(()=>{try{return new URL(u).hostname.replace(/^www\./,'')}catch(e){return u}})():u); last=m.index+u.length; }
+  return out+esc(s.slice(last)); }
+function link(u,t){ if(!u) return ''; u=String(u).trim(); if(/^[a-z0-9-]+(\.[a-z0-9-]+)*\.(com|de|net|org|io|eu|biz)(\/\S*)?$/i.test(u)) u='https://'+u;
+  if(/\s/.test(u) || !/^(https?:|mailto:|#|\.{0,2}\/)|\/|\.[a-z0-9]{2,5}(#.*)?$/i.test(u)){ if(t && t!=='источник'){ SRC_RE.lastIndex=0; const m=SRC_RE.exec(u); return m?a_(m[0],t):`<span title="${esc(u)}">${esc(t)}</span>`; } return srcText(u); }
+  return a_(u, t||'источник'); }
 function yn(v,y='да',n='нет'){ return v===true?`<span class="pill ok">${y}</span>`: v===false?`<span class="pill bad">${n}</span>`:'<span class="muted">не проверено</span>'; }
 
 function cardHTML(r){
